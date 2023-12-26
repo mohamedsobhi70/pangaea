@@ -10,6 +10,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/owl.theme.default.css">
+    <link rel="stylesheet" href="assets/styles/owl.carousel.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <title>Pangaea - Home Page</title>
 </head>
@@ -172,14 +174,14 @@
                         <div class="flex flex-col divide-y divide-Neutral-200">
                             <div class="flex flex-col gap-2 pb-6">
                                 <label for="location" class="text-Neutral-900 font-medium tracking-wide">
-                                    Location
+                                    Where to
                                 </label>
                                 <input type="text" class="focus:outline-none text-Neutral-500" name="location"
                                     id="location" placeholder="Search for a place or activity">
                             </div>
                             <div class="flex flex-col gap-2 pt-6">
                                 <label for="check" class="text-Neutral-900 font-medium tracking-wide">
-                                    Check in - Check out
+                                    When
                                 </label>
                                 <input type="text" class="focus:outline-none text-Neutral-500" name="check" id="check"
                                     placeholder="Select dates">
@@ -892,58 +894,6 @@
                             </div>
                         </div>
 
-                        <!-- item -->
-                        <div class="community-box">
-                            <div class="p-5 flex flex-col gap-6">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
-                                        <img src="assets/images/community.png" width="44" height="44" alt="person"
-                                            class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <h4 class="text-Black font-semibold text-base">
-                                            Robert Fox
-                                        </h4>
-                                        <p class="text-Gray text-xs">
-                                            Posted 2 hours ago
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="community-box-content">
-                                    <h4>
-                                        Things You Need to Prepare Before Going to Australia
-                                    </h4>
-                                    <p>
-                                        Planning a trip to Australia? Here are some important things you should prepare
-                                        before you go to make your journey smoother:
-                                        <br>
-                                        Visa: Make sure you have the appropriate visa to enter Australia. The type of
-                                        visa
-                                        you need may depend on your purpose of visit (Tripism, work, study, etc.). Visit
-                                        the
-                                        official Australian government website to apply for the right visa.
-
-                                    </p>
-                                    <a href="#"
-                                        class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
-                                        Read more...
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-2 border-t border-Neutral-200">
-                                <div class="p-5 flex items-center justify-center gap-2">
-                                    <img src="assets/images/icons/like.svg" width="16" height="16" alt="like">
-                                    12 likes
-                                </div>
-                                <div class="p-5 flex items-center justify-center gap-2">
-                                    <img src="assets/images/icons/message-text.svg" width="16" height="16" alt="like">
-                                    12 replies
-                                </div>
-                            </div>
-                        </div>
-
 
                     </div>
 
@@ -968,7 +918,7 @@
                         </div>
                         <div class="col-span-2">
                             <div class="col-span-1 p-10 rounded-[20px] bg-[#403F4C] flex flex-col items-start gap-10">
-                               
+
                                 <div class="flex flex-col gap-5">
                                     <div class="icon-container bg-[#FFFFFF1F]">
                                         <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
@@ -999,20 +949,326 @@
 
         <!-- ====================================================== -->
 
+        <!-- Start Partners & Testimonials Section  -->
+        <section class="py-24 overflow-x-hidden">
+
+            <div class="container flex flex-col gap-16">
+
+                <!-- Partners  -->
+                <div class="flex flex-col gap-12">
+                    <header class="flex flex-col items-center gap-3">
+                        <h2 class="text-3xl text-Black font-semibold text-center">
+                            Our Partners & Clients
+                        </h2>
+                    </header>
+
+                    <div class="owl-carousel owl-theme partners-owl">
+
+                        <!-- Slides -->
+                        <div class="item flex items-center justify-center">
+                            <img src="assets/images/partner-1.webp" width="80" height="80" alt="partner">
+                        </div>
+                        <div class="item flex items-center justify-center">
+                            <img src="assets/images/partner-2.webp" width="80" height="80" alt="partner">
+                        </div>
+                        <div class="item flex items-center justify-center">
+                            <img src="assets/images/partner-3.webp" width="80" height="80" alt="partner">
+                        </div>
+                        <div class="item flex items-center justify-center">
+                            <img src="assets/images/partner-4.webp" width="80" height="80" alt="partner">
+                        </div>
+                        <div class="item flex items-center justify-center">
+                            <img src="assets/images/partner-5.webp" width="80" height="80" alt="partner">
+                        </div>
+                        <div class="item flex items-center justify-center">
+                            <img src="assets/images/partner-6.webp" width="80" height="80" alt="partner">
+                        </div>
+                        <div class="item flex items-center justify-center">
+                            <img src="assets/images/partner-7.webp" width="80" height="80" alt="partner">
+                        </div>
+                        <div class="item flex items-center justify-center">
+                            <img src="assets/images/partner-8.webp" width="80" height="80" alt="partner">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Testimonials -->
+                <div class="owl-carousel owl-theme testimonials-owl">
+
+                    <!-- Slides -->
+                    <div class="item flex flex-col items-center gap-10">
+                        <p class="lg:w-10/12 text-Black text-center text-3xl leading-[140%] font-Eczar">
+                            "Kudos to Pangaea for an exceptional travel experience! From seamless booking to
+                            personalized recommendations, every detail was perfect. Responsive and attentive, they made
+                            me feel like a VIP. Highly recommend an unforgettable journey!"
+                        </p>
+                        <div class="flex flex-col items-center gap-3">
+                            <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
+                                <img src="assets/images/community.png" width="44" height="44" alt="person">
+                            </div>
+                            <div class="flex flex-col">
+                                <h6 class="text-Black text-base leading-[160%] font-semibold text-center">
+                                    Jonia Silalahi
+                                </h6>
+                                <p class="text-[10px] text-Gray leading-[170%] tracking-[-0.2px] text-center">
+                                    Alula Adventure - 24 August 2023
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Partners & Testimonials Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start Partners & Testimonials Section  -->
+        <section
+            class="py-[120px] cta-section rounded-3xl overflow-hidden bg-[url(../images/ctabg.webp)] bg-cover bg-center ">
+
+            <div class="container grid lg:grid-cols-2">
+                <div class="bg-white rounded-3xl p-8 flex flex-col gap-6 items-start">
+                    <div class="flex flex-col gap-4">
+                        <h2 class="text-Black text-4xl font-semibold leading-[140%]">
+                            Join Our Adventure Today!
+                        </h2>
+                        <p class="text-Gray text-lg leading-[160%]">
+                            Don't miss out on incredible experiences. Explore the world with us and create memories that
+                            will last a lifetime
+                        </p>
+                    </div>
+                    <a href="" class="py-3.5 px-8 rounded-full bg-[#DB3B3B] text-white font-semibold">
+                        Explore Trips
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Partners & Testimonials Section  -->
+
+        <!-- ====================================================== -->
+
     </main>
     <!-- End Main Page Content  -->
 
     <!-- ============================================================================== -->
 
     <!-- Start Footer  -->
-    <footer>
+    <footer class="py-24">
+        <div class="container flex flex-col gap-24">
+            <div class="grid grid-cols-12 items-center">
+                <div class="col-span-5 flex flex-col items-start gap-10">
+                    <img src="assets/images/logo-footer.svg" width="146" height="49" alt="logo">
+                    <p class="font-Eczar text-4xl leading-[120%] font-semibold tracking-[-0.72px]">
+                        Explore for Your Next Remarkable Journey
+                    </p>
+                </div>
+                <div class="lg:col-start-8 col-span-5 bg-[#EEF6F3] py-6 px-5 rounded-xl flex flex-col gap-6">
+                    <div class="flex flex-col gap-3">
+                        <h2 class="text-Black text-2xl font-semibold leading-[120%]">
+                            Keep up with Pangaea
+                        </h2>
+                        <p class="text-Gray text-sm leading-[140%]">
+                            Be the first to know about our new trips and offers. We don't spam. Promise.
+                        </p>
+                    </div>
+                    <form>
+                        <div class="bg-white rounded-full p-4 flex items-center gap-2.5">
+                            <input type="email" placeholder="Enter email address" class="flex-1 focus:outline-none">
+                            <button type="submit">
+                                <img src="assets/images/icons/send.svg" width="16" height="16" alt="Send">
+                                <span class="sr-only">Emails</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
+            <div class="grid grid-cols-2 lg:grid-cols-6 gap-5">
+                <div class="flex flex-col gap-5">
+                    <h6 class="footer-head">
+                        Popular country
+                    </h6>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Saudi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Japan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Thailand
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Indonesia
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Australia
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <h6 class="footer-head">
+                        Offers & Discounts
+                    </h6>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Specials offer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Discount coupons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Special events
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <h6 class="footer-head">
+                        Trips category
+                    </h6>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Cycling
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Hiking
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Camping
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Water sport
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Glamping
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <h6 class="footer-head">
+                        Community
+                    </h6>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Events
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Posts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Workshops
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Faq
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <h6 class="footer-head">
+                        About us
+                    </h6>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Brand partnerships
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Contact us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <h6 class="footer-head">
+                        Legals
+                    </h6>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Terms of use
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Legal
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Newsletter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
     <!-- End Footer  -->
 
     <!-- ============================================================================== -->
 
     <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/owl.carousel.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/litepicker/2.0.12/litepicker.js"
         integrity="sha512-ZbnsrTCJAJWynwgi3ndt7jcjwrJfHNzUh/mZakBRhZG8lYgMVtZLxY2CG4GuONoER9E8iiuupt4fnrNfXy+aGA=="

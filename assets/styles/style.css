@@ -444,6 +444,10 @@ video {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 1.25rem;
   font-family: Jost, sans-serif;
@@ -509,7 +513,7 @@ h1,
   inset-inline-start: 0px;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(180deg, rgba(6, 45, 42, 0.92) 0%, rgba(19, 111, 99, 0.92) 100%);
+  background-image: linear-gradient(180deg, rgba(6, 45, 42, 0.72) 0%, rgba(19, 111, 99, 0.72) 100%);
 }
 
 .value-box {
@@ -585,6 +589,32 @@ h1,
   line-height: 160%;
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.footer-head {
+  font-weight: 500;
+  line-height: -120%;
+  letter-spacing: -0.32px;
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity));
+}
+
+.footer-nav-link {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 140%;
+  --tw-text-opacity: 1;
+  color: rgb(151 154 155 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-nav-link:hover {
+  padding-inline-start: 0.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
 }
 
 *, ::before, ::after {
@@ -761,6 +791,10 @@ h1,
   grid-column: span 2 / span 2;
 }
 
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
 .flex {
   display: flex;
 }
@@ -829,12 +863,20 @@ h1,
   width: 100%;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
 
 .grow {
   flex-grow: 1;
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .grid-cols-2 {
@@ -905,6 +947,10 @@ h1,
   gap: 0.625rem;
 }
 
+.gap-24 {
+  gap: 6rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -942,6 +988,10 @@ h1,
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .rounded-2xl {
@@ -1033,6 +1083,11 @@ h1,
   background-color: #22AAA11F;
 }
 
+.bg-\[\#403F4C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 63 76 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#DB3B3B\] {
   --tw-bg-opacity: 1;
   background-color: rgb(219 59 59 / var(--tw-bg-opacity));
@@ -1041,6 +1096,10 @@ h1,
 .bg-\[\#EEF6F3\] {
   --tw-bg-opacity: 1;
   background-color: rgb(238 246 243 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#FFFFFF1F\] {
+  background-color: #FFFFFF1F;
 }
 
 .bg-\[\#db5461e6\] {
@@ -1056,21 +1115,20 @@ h1,
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[\#403F4C\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 63 76 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#FFFFFF1F\] {
-  background-color: #FFFFFF1F;
+.bg-\[url\(\.\.\/images\/ctabg\.webp\)\] {
+  background-image: url(../images/ctabg.webp);
 }
 
 .bg-hot-deal-grad {
   background-image: linear-gradient(180deg, rgba(64, 63, 76, 0.00) 0%, #403F4C 100%);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .object-cover {
@@ -1086,12 +1144,20 @@ h1,
   padding: 0.75rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-5 {
   padding: 1.25rem;
 }
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .px-1 {
@@ -1102,6 +1168,11 @@ h1,
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-8 {
@@ -1154,9 +1225,19 @@ h1,
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-\[100px\] {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.py-\[120px\] {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .py-\[15px\] {
@@ -1222,6 +1303,11 @@ h1,
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-40 {
   font-size: 40px;
 }
@@ -1236,6 +1322,10 @@ h1,
   line-height: 1;
 }
 
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .text-\[21px\] {
   font-size: 21px;
 }
@@ -1243,6 +1333,11 @@ h1,
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -1260,11 +1355,6 @@ h1,
   line-height: 1rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1277,8 +1367,20 @@ h1,
   font-weight: 600;
 }
 
+.leading-\[120\%\] {
+  line-height: 120%;
+}
+
+.leading-\[140\%\] {
+  line-height: 140%;
+}
+
 .leading-\[160\%\] {
   line-height: 160%;
+}
+
+.leading-\[170\%\] {
+  line-height: 170%;
 }
 
 .leading-none {
@@ -1287,6 +1389,14 @@ h1,
 
 .tracking-\[-0\.24px\] {
   letter-spacing: -0.24px;
+}
+
+.tracking-\[-0\.2px\] {
+  letter-spacing: -0.2px;
+}
+
+.tracking-\[-0\.72px\] {
+  letter-spacing: -0.72px;
 }
 
 .tracking-tight {
@@ -1356,13 +1466,13 @@ h1,
   color: rgb(19 111 99 / var(--tw-text-opacity));
 }
 
+.text-\[\#FFFFFFA3\] {
+  color: #FFFFFFA3;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[\#FFFFFFA3\] {
-  color: #FFFFFFA3;
 }
 
 .opacity-70 {
@@ -1407,6 +1517,41 @@ h1,
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.partners-owl .owl-dots .owl-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.partners-owl.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.partners-owl .owl-dots .owl-dot span {
+  margin: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 232 232 / var(--tw-bg-opacity));
+}
+
+.partners-owl .owl-dots .owl-dot.active span,
+.partners-owl .owl-dots .owl-dot:hover span {
+  --tw-bg-opacity: 1;
+  background-color: rgb(48 156 152 / var(--tw-bg-opacity));
+}
+
+.partners-owl .owl-item img {
+  width: auto;
+}
+
+.partners-owl.owl-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
 .hover\:opacity-100:hover {
   opacity: 1;
 }
@@ -1429,6 +1574,14 @@ h1,
     grid-column: span 5 / span 5;
   }
 
+  .lg\:col-start-8 {
+    grid-column-start: 8;
+  }
+
+  .lg\:w-10\/12 {
+    width: 83.333333%;
+  }
+
   .lg\:w-\[200px\] {
     width: 200px;
   }
@@ -1439,5 +1592,13 @@ h1,
 
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
