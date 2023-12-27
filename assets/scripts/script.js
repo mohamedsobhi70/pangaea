@@ -99,8 +99,6 @@ $(window).on("load", function () {
             const nextBtn = carousel.siblings('.nxtBtn');
             const prevBtn = carousel.siblings('.prevBtn');
 
-            console.log(nextBtn);
-            console.log(prevBtn);
             nextBtn.click(function () {
                 carousel.trigger('next.owl.carousel');
             });
@@ -114,64 +112,199 @@ $(window).on("load", function () {
 
 
     // Partner Slider 
-    $('.partners-owl').owlCarousel({
-        rtl: true,
-        nav: false,
-        dots: true,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 6000,
-        autoplayHoverPause: true,
-        margin: 16,
-        responsive: {
-            0: {
-                stagePadding: 20,
-                items: 2,
-            },
-            768: {
-                stagePadding: 20,
-                items: 4,
-            },
-            1024: {
-                stagePadding: 0,
-                items: 6,
-            }
+    if ($('.partners-owl').length > 0) {
 
-        }
-    })
+        $('.partners-owl').owlCarousel({
+            rtl: true,
+            nav: false,
+            dots: true,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            margin: 16,
+            responsive: {
+                0: {
+                    stagePadding: 20,
+                    items: 3,
+                },
+                768: {
+                    stagePadding: 20,
+                    items: 5,
+                },
+                1024: {
+                    stagePadding: 0,
+                    items: 6,
+                }
+
+            }
+        })
+    }
 
     // Testimonials Slider 
-    $('.testimonials-owl').owlCarousel({
-        rtl: true,
-        nav: false,
-        dots: false,
-        loop: true,
-        items: 1,
-        margin: 16,
-        autoplay: true,
-        autoplayTimeout: 6000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                stagePadding: 20,
-            },
-            768: {
-                stagePadding: 20,
-            },
-            1024: {
-                stagePadding: 0,
+    if ($('.testimonials-owl').length > 0) {
+
+        $('.testimonials-owl').owlCarousel({
+            rtl: true,
+            nav: false,
+            dots: false,
+            loop: true,
+            items: 1,
+            margin: 32,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    stagePadding: 20,
+                },
+                768: {
+                    stagePadding: 20,
+                },
+                1024: {
+                    stagePadding: 0,
+                }
+
             }
+        })
+    }
 
-        }
-    })
+    // Our Values Slider 
+    if ($('.values-owl').length > 0) {
 
-    // check in - check out 
-    const checkin = new Litepicker({
-        element: document.getElementById('check'),
-        format: "DD MMM",
-        singleMode: false,
-        minDate: new Date(),
-        disallowLockDaysInRange: true,
-    });
+        $('.values-owl').owlCarousel({
+            nav: false,
+            dots: false,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1.1,
+                    margin: 20,
+                    stagePadding: 20,
+                },
+                768: {
+                    items: 2,
+                    margin: 20,
+                    stagePadding: 20,
+                },
+                1024: {
+                    items: 3,
+                    margin: 30,
+                    stagePadding: 0,
+                }
+
+            }
+        })
+    }
+
+    // Our Values Slider 
+    if ($('.guides-owl').length > 0) {
+
+        $('.guides-owl').owlCarousel({
+            nav: false,
+            dots: false,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1.1,
+                    margin: 20,
+                    stagePadding: 20,
+                },
+                768: {
+                    items: 2,
+                    margin: 20,
+                    stagePadding: 20,
+                },
+                1024: {
+                    items: 3,
+                    margin: 30,
+                    stagePadding: 0,
+                }
+
+            }
+        })
+    }
+
+    // Community Slider 
+    if ($('.community-owl').length > 0) {
+
+        $('.community-owl').owlCarousel({
+            nav: false,
+            dots: false,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1.1,
+                    margin: 20,
+                    stagePadding: 20,
+                },
+                768: {
+                    items: 2,
+                    margin: 20,
+                    stagePadding: 20,
+                },
+                1024: {
+                    margin: 30,
+                    stagePadding: 0,
+                }
+
+            }
+        })
+    }
+
+    // check in check out Home Page
+    if ($('#check').length > 0) {
+
+        // check in - check out 
+        const checkin = new Litepicker({
+            element: document.getElementById('check'),
+            format: "DD MMM",
+            singleMode: false,
+            minDate: new Date(),
+            disallowLockDaysInRange: true,
+        });
+    }
+
+    // Hot Deal 
+    if ($('.hot-deal-box').length > 0) {
+        $('.hot-deal-box').each(function () {
+            $(this).on("mouseover", function () {
+                if ($(this).find("video").length > 0) {
+                    $(this).find("video").get(0).play();
+                }
+            });
+
+            $(this).on("mouseleave", function () {
+                if ($(this).find("video").length > 0) {
+                    const video = $(this).find("video").get(0);
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+
+            $(this).on("touchstart", function () {
+                if ($(this).find("video").length > 0) {
+                    $(this).find("video").get(0).play();
+                }
+            });
+
+            $(this).on("touchend", function () {
+                if ($(this).find("video").length > 0) {
+                    const video = $(this).find("video").get(0);
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+        });
+    }
 
 });
