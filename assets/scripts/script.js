@@ -200,7 +200,7 @@ $(window).on("load", function () {
         })
     }
 
-    // Our Values Slider 
+    // Latest Guides Slider 
     if ($('.guides-owl').length > 0) {
 
         $('.guides-owl').owlCarousel({
@@ -222,7 +222,7 @@ $(window).on("load", function () {
                     stagePadding: 20,
                 },
                 1024: {
-                    items: 3,
+                    items: 4,
                     margin: 30,
                     stagePadding: 0,
                 }
