@@ -142,6 +142,7 @@
 
     <!-- Start Main Page Content  -->
     <main>
+
         <!-- Start Hero Section  -->
         <section class="hero-section pt-72 pb-[138px]">
             <div class="overlay"></div>
@@ -229,6 +230,16 @@
                         class="h-[557px] relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                         <img src="assets/images/trip-1.webp" width="410" height="558" alt="trip"
                             class="h-full w-full object-cover">
+                        <button
+                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-16 h-16 flex items-center justify-center bg-[#403F4CB8] rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"
+                                fill="none">
+                                <path
+                                    d="M16.2054 9.31268C17.4404 10.0986 17.4404 11.9014 16.2054 12.6873L3.07354 21.044C1.74209 21.8913 -0.000210767 20.9348 -0.000210698 19.3567L-0.000209968 2.64335C-0.000209899 1.06517 1.74209 0.108736 3.07354 0.956023L16.2054 9.31268Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="sr-only">Play Video</span>
+                        </button>
                         <div class="absolute top-0 start-0 w-full p-5 flex justify-between">
                             <span
                                 class="flex items-center gap-2 rounded-full bg-[#db5461e6] py-2 px-4 text-white text-sm backdrop-blur-[35px]">
@@ -256,15 +267,15 @@
                                 </h3>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/Run.svg" width="18" height="18" alt="run">
                                     Intermediate
                                 </div>
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/Calendar.svg" width="18" height="18" alt="run">
                                     Everyday
                                 </div>
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/BankCarrd.svg" width="18" height="18" alt="run">
                                     3 Days
                                 </div>
@@ -290,11 +301,45 @@
                         </div>
 
                         <div class="flex flex-col h-full">
-                            <div class="grow">
-                                <img src="assets/images/trip-2.webp" width="410" height="300"
-                                    class="w-full h-full object-cover" alt="trip2">
+                            <div class="h-[300px] relative">
+                                <div class="owl-carousel owl-theme trip-owl h-full">
+                                    <!-- Slides -->
+                                    <div class="item h-full">
+                                        <img src="assets/images/trip-2.webp" width="410" height="300"
+                                            class="w-full h-full object-cover" alt="trip2">
+                                    </div>
+                                    <div class="item h-full">
+                                        <img src="assets/images/trip-3.webp" width="410" height="300"
+                                            class="w-full h-full object-cover" alt="trip2">
+                                    </div>
+                                    <div class="item h-full">
+                                        <img src="assets/images/trip-2.webp" width="410" height="300"
+                                            class="w-full h-full object-cover" alt="trip2">
+                                    </div>
+                                    <div class="item h-full">
+                                        <img src="assets/images/trip-3.webp" width="410" height="300"
+                                            class="w-full h-full object-cover" alt="trip2">
+                                    </div>
+                                </div>
+
+                                <button class="prevBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path d="M10 4L6 8L10 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+
+                                <button class="nxtBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path d="M6 12L10 8L6 4" stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+
                             </div>
-                            <div class="p-6 bg-white flex flex-col gap-8">
+                            <div class="p-6 bg-white flex flex-col gap-8 shrink-0">
                                 <div class="flex flex-col gap-3">
                                     <div class="flex flex-col gap-1">
                                         <span class="text-Gray text-sm font-semibold">
@@ -363,19 +408,54 @@
                             </div>
                         </div>
 
+
                         <div class="flex flex-col h-full">
-                            <div class="grow">
-                                <img src="assets/images/trip-3.webp" width="410" height="300"
-                                    class="w-full h-full object-cover" alt="trip2">
+                            <div class="h-[300px] relative">
+                                <div class="owl-carousel owl-theme trip-owl h-full">
+                                    <!-- Slides -->
+                                    <div class="item h-full">
+                                        <img src="assets/images/trip-3.webp" width="410" height="300"
+                                            class="w-full h-full object-cover" alt="trip2">
+                                    </div>
+                                    <div class="item h-full">
+                                        <img src="assets/images/trip-2.webp" width="410" height="300"
+                                            class="w-full h-full object-cover" alt="trip2">
+                                    </div>
+                                    <div class="item h-full">
+                                        <img src="assets/images/trip-3.webp" width="410" height="300"
+                                            class="w-full h-full object-cover" alt="trip2">
+                                    </div>
+                                    <div class="item h-full">
+                                        <img src="assets/images/trip-2.webp" width="410" height="300"
+                                            class="w-full h-full object-cover" alt="trip2">
+                                    </div>
+                                </div>
+
+                                <button class="prevBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path d="M10 4L6 8L10 12" stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+
+                                <button class="nxtBtn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path d="M6 12L10 8L6 4" stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+
                             </div>
-                            <div class="p-6 bg-white flex flex-col gap-8">
+                            <div class="p-6 bg-white flex flex-col gap-8 shrink-0">
                                 <div class="flex flex-col gap-3">
                                     <div class="flex flex-col gap-1">
                                         <span class="text-Gray text-sm font-semibold">
-                                            AlUla, Saudi Arabia
+                                            Asir, Saudi Arabia
                                         </span>
                                         <h3 class="text-Black text-2xl font-semibold">
-                                            Alula | Treasure Hunt with Decathlon
+                                            Abseiling Adventure | Pangaea Center
                                         </h3>
                                     </div>
                                     <div class="flex items-center gap-4">
@@ -402,7 +482,7 @@
                                             From
                                         </span>
                                         <p class="text-Black text-xl tracking-tight	font-bold">
-                                            SAR 2,300
+                                            SAR 200
                                         </p>
                                     </div>
                                     <a href="#"
@@ -509,6 +589,16 @@
                         class="h-[557px] relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                         <img src="assets/images/trip-1.webp" width="410" height="558" alt="trip"
                             class="h-full w-full object-cover">
+                        <button
+                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-16 h-16 flex items-center justify-center bg-[#403F4CB8] rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"
+                                fill="none">
+                                <path
+                                    d="M16.2054 9.31268C17.4404 10.0986 17.4404 11.9014 16.2054 12.6873L3.07354 21.044C1.74209 21.8913 -0.000210767 20.9348 -0.000210698 19.3567L-0.000209968 2.64335C-0.000209899 1.06517 1.74209 0.108736 3.07354 0.956023L16.2054 9.31268Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="sr-only">Play Video</span>
+                        </button>
                         <div class="absolute top-0 start-0 w-full p-5 flex justify-between">
                             <span
                                 class="flex items-center gap-2 rounded-full bg-[#db5461e6] py-2 px-4 text-white text-sm backdrop-blur-[35px]">
@@ -536,15 +626,15 @@
                                 </h3>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/Run.svg" width="18" height="18" alt="run">
                                     Intermediate
                                 </div>
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/Calendar.svg" width="18" height="18" alt="run">
                                     Everyday
                                 </div>
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/BankCarrd.svg" width="18" height="18" alt="run">
                                     3 Days
                                 </div>
@@ -557,6 +647,16 @@
                         class="h-[557px] relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                         <img src="assets/images/trip-1.webp" width="410" height="558" alt="trip"
                             class="h-full w-full object-cover">
+                        <button
+                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-16 h-16 flex items-center justify-center bg-[#403F4CB8] rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"
+                                fill="none">
+                                <path
+                                    d="M16.2054 9.31268C17.4404 10.0986 17.4404 11.9014 16.2054 12.6873L3.07354 21.044C1.74209 21.8913 -0.000210767 20.9348 -0.000210698 19.3567L-0.000209968 2.64335C-0.000209899 1.06517 1.74209 0.108736 3.07354 0.956023L16.2054 9.31268Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="sr-only">Play Video</span>
+                        </button>
                         <div class="absolute top-0 start-0 w-full p-5 flex justify-between">
                             <span
                                 class="flex items-center gap-2 rounded-full bg-[#db5461e6] py-2 px-4 text-white text-sm backdrop-blur-[35px]">
@@ -584,15 +684,15 @@
                                 </h3>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/Run.svg" width="18" height="18" alt="run">
                                     Intermediate
                                 </div>
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/Calendar.svg" width="18" height="18" alt="run">
                                     Everyday
                                 </div>
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/BankCarrd.svg" width="18" height="18" alt="run">
                                     3 Days
                                 </div>
@@ -605,6 +705,16 @@
                         class="h-[557px] relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                         <img src="assets/images/trip-1.webp" width="410" height="558" alt="trip"
                             class="h-full w-full object-cover">
+                        <button
+                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-16 h-16 flex items-center justify-center bg-[#403F4CB8] rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"
+                                fill="none">
+                                <path
+                                    d="M16.2054 9.31268C17.4404 10.0986 17.4404 11.9014 16.2054 12.6873L3.07354 21.044C1.74209 21.8913 -0.000210767 20.9348 -0.000210698 19.3567L-0.000209968 2.64335C-0.000209899 1.06517 1.74209 0.108736 3.07354 0.956023L16.2054 9.31268Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="sr-only">Play Video</span>
+                        </button>
                         <div class="absolute top-0 start-0 w-full p-5 flex justify-between">
                             <span
                                 class="flex items-center gap-2 rounded-full bg-[#db5461e6] py-2 px-4 text-white text-sm backdrop-blur-[35px]">
@@ -632,15 +742,15 @@
                                 </h3>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/Run.svg" width="18" height="18" alt="run">
                                     Intermediate
                                 </div>
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/Calendar.svg" width="18" height="18" alt="run">
                                     Everyday
                                 </div>
-                                <div class="flex items-center gap-2 text-Neutral-400 text-sm font-medium">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
                                     <img src="assets/images/icons/BankCarrd.svg" width="18" height="18" alt="run">
                                     3 Days
                                 </div>
@@ -851,9 +961,9 @@
                                             class="w-full h-full object-cover">
                                     </div>
                                     <div class="flex flex-col">
-                                        <h4 class="text-Black font-semibold text-base">
+                                        <p class="text-Black font-semibold text-base">
                                             Robert Fox
-                                        </h4>
+                                        </p>
                                         <p class="text-Gray text-xs">
                                             Posted 2 hours ago
                                         </p>
@@ -861,20 +971,84 @@
                                 </div>
 
                                 <div class="community-box-content">
-                                    <h4>
+                                    <h3>
                                         Things You Need to Prepare Before Going to Australia
-                                    </h4>
-                                    <p>
-                                        Planning a trip to Australia? Here are some important things you should prepare
-                                        before you go to make your journey smoother:
-                                        <br>
-                                        Visa: Make sure you have the appropriate visa to enter Australia. The type of
-                                        visa
-                                        you need may depend on your purpose of visit (Tripism, work, study, etc.). Visit
-                                        the
-                                        official Australian government website to apply for the right visa.
+                                    </h3>
+                                    <div>
+                                        <p class="">
+                                            Planning a trip to Australia? Here are some important things you should
+                                            prepare before you go to make your journey smoother:
 
-                                    </p>
+                                        </p>
+                                        <br>
+                                        <ol>
+                                            <li>
+                                                Visa: Make sure you have the appropriate visa to enter Australia. The
+                                                type of visa you need may depend on your purpose of visit (Tripism,
+                                                work, study, etc.). Visit the official Australian government website to
+                                                apply for the right visa.
+                                            </li>
+                                        </ol>
+
+                                    </div>
+                                    <a href="#"
+                                        class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
+                                        Read more...
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 border-t border-Neutral-200">
+                                <div class="p-5 flex items-center justify-center gap-2">
+                                    <img src="assets/images/icons/like.svg" width="16" height="16" alt="like">
+                                    12 likes
+                                </div>
+                                <div class="p-5 flex items-center justify-center gap-2">
+                                    <img src="assets/images/icons/message-text.svg" width="16" height="16" alt="like">
+                                    12 replies
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- item -->
+                        <div class="community-box">
+                            <div class="p-5 flex flex-col gap-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
+                                        <img src="assets/images/community.png" width="44" height="44" alt="person"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="text-Black font-semibold text-base">
+                                            Robert Fox
+                                        </p>
+                                        <p class="text-Gray text-xs">
+                                            Posted 2 hours ago
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="community-box-content">
+                                    <h3>
+                                        Things You Need to Prepare Before Going to Australia
+                                    </h3>
+                                    <div>
+                                        <p class="">
+                                            Planning a trip to Australia? Here are some important things you should
+                                            prepare before you go to make your journey smoother:
+
+                                        </p>
+                                        <br>
+                                        <ol>
+                                            <li>
+                                                Visa: Make sure you have the appropriate visa to enter Australia. The
+                                                type of visa you need may depend on your purpose of visit (Tripism,
+                                                work, study, etc.). Visit the official Australian government website to
+                                                apply for the right visa.
+                                            </li>
+                                        </ol>
+
+                                    </div>
                                     <a href="#"
                                         class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
                                         Read more...
@@ -1008,9 +1182,9 @@
                                 <img src="assets/images/community.png" width="44" height="44" alt="person">
                             </div>
                             <div class="flex flex-col">
-                                <h6 class="text-Black text-base leading-[160%] font-semibold text-center">
+                                <p class="text-Black text-base leading-[160%] font-semibold text-center">
                                     Jonia Silalahi
-                                </h6>
+                                </p>
                                 <p class="text-[10px] text-Gray leading-[170%] tracking-[-0.2px] text-center">
                                     Alula Adventure - 24 August 2023
                                 </p>
@@ -1040,7 +1214,7 @@
                             will last a lifetime
                         </p>
                     </div>
-                    <a href="" class="py-3.5 px-8 rounded-full bg-[#DB3B3B] text-white font-semibold">
+                    <a href="#" class="py-3.5 px-8 rounded-full bg-[#DB3B3B] text-white font-semibold">
                         Explore Trips
                     </a>
                 </div>
@@ -1089,9 +1263,9 @@
 
             <div class="grid grid-cols-2 lg:grid-cols-6 gap-5">
                 <div class="flex flex-col gap-5">
-                    <h6 class="footer-head">
+                    <p class="footer-head">
                         Popular country
-                    </h6>
+                    </p>
                     <ul class="flex flex-col gap-2">
                         <li>
                             <a href="#" class="footer-nav-link">
@@ -1122,9 +1296,9 @@
                 </div>
 
                 <div class="flex flex-col gap-5">
-                    <h6 class="footer-head">
+                    <p class="footer-head">
                         Offers & Discounts
-                    </h6>
+                    </p>
                     <ul class="flex flex-col gap-2">
                         <li>
                             <a href="#" class="footer-nav-link">
@@ -1145,9 +1319,9 @@
                 </div>
 
                 <div class="flex flex-col gap-5">
-                    <h6 class="footer-head">
+                    <p class="footer-head">
                         Trips category
-                    </h6>
+                    </p>
                     <ul class="flex flex-col gap-2">
                         <li>
                             <a href="#" class="footer-nav-link">
@@ -1178,9 +1352,9 @@
                 </div>
 
                 <div class="flex flex-col gap-5">
-                    <h6 class="footer-head">
+                    <p class="footer-head">
                         Community
-                    </h6>
+                    </p>
                     <ul class="flex flex-col gap-2">
                         <li>
                             <a href="#" class="footer-nav-link">
@@ -1206,9 +1380,9 @@
                 </div>
 
                 <div class="flex flex-col gap-5">
-                    <h6 class="footer-head">
+                    <p class="footer-head">
                         About us
-                    </h6>
+                    </p>
                     <ul class="flex flex-col gap-2">
                         <li>
                             <a href="#" class="footer-nav-link">
@@ -1234,9 +1408,9 @@
                 </div>
 
                 <div class="flex flex-col gap-5">
-                    <h6 class="footer-head">
+                    <p class="footer-head">
                         Legals
-                    </h6>
+                    </p>
                     <ul class="flex flex-col gap-2">
                         <li>
                             <a href="#" class="footer-nav-link">

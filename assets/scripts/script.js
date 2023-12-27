@@ -80,8 +80,40 @@ $(window).on("load", function () {
     }
     // ===================================================================
 
+    // Trip Slider 
+    if ($('.trip-owl').length > 0) {
+
+        $('.trip-owl').each(function () {
+
+            const carousel = $(this);
+            carousel.owlCarousel({
+                rtl: true,
+                items: 1,
+                dots: true,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 6000,
+                autoplayHoverPause: true,
+            });
+
+            const nextBtn = carousel.siblings('.nxtBtn');
+            const prevBtn = carousel.siblings('.prevBtn');
+
+            console.log(nextBtn);
+            console.log(prevBtn);
+            nextBtn.click(function () {
+                carousel.trigger('next.owl.carousel');
+            });
+
+            prevBtn.click(function () {
+                carousel.trigger('prev.owl.carousel');
+            });
+        });
+    }
 
 
+
+    // Partner Slider 
     $('.partners-owl').owlCarousel({
         rtl: true,
         nav: false,
@@ -108,7 +140,7 @@ $(window).on("load", function () {
         }
     })
 
-
+    // Testimonials Slider 
     $('.testimonials-owl').owlCarousel({
         rtl: true,
         nav: false,
