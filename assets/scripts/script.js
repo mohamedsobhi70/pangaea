@@ -253,6 +253,7 @@ $(window).on("load", function () {
                     stagePadding: 20,
                 },
                 1024: {
+                    items: 2,
                     margin: 30,
                     stagePadding: 0,
                 }
