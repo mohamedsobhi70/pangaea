@@ -1,5 +1,13 @@
 $(window).on("load", function () {
 
+    if ($(".mobile-menu-btn")) {
+        $(".mobile-menu-btn").on("click", function () {
+            $(".mobile-menu").addClass("show")
+        })
+        $(".mobile-menu-close").on("click", function () {
+            $(".mobile-menu").removeClass("show")
+        })
+    }
     // ===================================================================
 
     // Tabs Component 
