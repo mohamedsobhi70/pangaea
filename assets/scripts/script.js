@@ -8,6 +8,13 @@ $(window).on("load", function () {
             $(".mobile-menu").removeClass("show")
         })
     }
+    if ($(".megamenu")) {
+        $(".nav-item").on("mouseenter", function () {
+            $(this).find(".megamenu").addClass("show")
+        }).on("mouseleave", function () {
+            $(this).find(".megamenu").removeClass("show")
+        })
+    }
     // ===================================================================
 
     // Tabs Component 
@@ -15,13 +22,13 @@ $(window).on("load", function () {
         $(".designpeer-tabs").each(function () {
             let $currentTab = $(this),
                 $currentTabId = "#" + $currentTab.attr("id").toString();
+            $currentTab.find(".designpeer-tabs-content > div:first-child").addClass("active");
 
-            $($currentTabId + " .designpeer-tabs-nav ul li").click(function () {
+            $($currentTabId + " .designpeer-tabs-nav ul li").on("mouseenter",function () {
                 var currentTabIndex = $(this).index(),
                     tabsContainer = $(this).closest(".designpeer-tabs"),
                     tabsNav = $(tabsContainer).children(".designpeer-tabs-nav").children("ul").children("li"),
-                    tabsContent = $(tabsContainer).children(".designpeer-tabs-content").children("div");
-
+                    tabsContent = $currentTab.find(".designpeer-tabs-content > div ");
                 $(this).parent("li").addClass("active");
                 $(tabsNav).removeClass("active");
                 $(this).addClass("active");
