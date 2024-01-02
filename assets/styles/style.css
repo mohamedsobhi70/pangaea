@@ -524,64 +524,94 @@ h1,
 
 .megamenu {
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 120%;
   inset-inline-start: 0px;
-  width: 100%;
-  padding-top: 0.75rem;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1.25rem;
   opacity: 0;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
 }
 
+@media (min-width: 1024px) {
+  .megamenu {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+    padding-top: 0.75rem;
+  }
+}
+
 .megamenu.show {
   visibility: visible;
-  position: absolute;
-  top: 100%;
+  top: 0px;
+  z-index: 10;
   padding-top: 0.75rem;
   opacity: 1;
 }
 
-.designpeer-tabs-content > div {
+@media (min-width: 1024px) {
+  .megamenu.show {
+    top: 100%;
+  }
+}
+
+.megamenu-tabs-content > .megamenu-tab-content-item {
   display: none;
 }
 
-.designpeer-tabs-content > div.active {
+.megamenu-tabs-content > .megamenu-tab-content-item.active {
   display: flex;
 }
 
-.megamenu .tab-item {
+.megamenu .megamenu-tab-item {
   display: flex;
   cursor: pointer;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 0.625rem;
   border-radius: 0.5rem;
   padding: 0.75rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+@media (min-width: 1024px) {
+  .megamenu .megamenu-tab-item:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+  }
+}
+
+.megamenu .megamenu-tab-item.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.megamenu .megamenu-tab-item svg {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
 
-.megamenu .tab-item:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
-
-.megamenu .tab-item.active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
-
-.megamenu .tab-item svg {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
-
-.megamenu .tab-item.active svg {
-  --tw-rotate: -90deg;
+.megamenu .megamenu-tab-item.active svg {
+  --tw-rotate: -180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 1024px) {
+  .megamenu .megamenu-tab-item.active svg {
+    --tw-rotate: -90deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 }
 
 .mobile-menu {
@@ -967,6 +997,10 @@ h1,
   bottom: 0px;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
 .left-1\/2 {
   left: 50%;
 }
@@ -983,16 +1017,16 @@ h1,
   top: 50%;
 }
 
+.z-\[1\] {
+  z-index: 1;
+}
+
 .order-last {
   order: 9999;
 }
 
 .col-span-1 {
   grid-column: span 1 / span 1;
-}
-
-.col-span-3 {
-  grid-column: span 3 / span 3;
 }
 
 .col-span-5 {
@@ -1081,18 +1115,6 @@ h1,
 
 .w-full {
   width: 100%;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[800px\] {
-  width: 800px;
-}
-
-.max-w-\[800px\] {
-  max-width: 800px;
 }
 
 .flex-1 {
@@ -1271,6 +1293,10 @@ h1,
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .rounded-xl {
@@ -1563,6 +1589,10 @@ h1,
   padding-top: 190px;
 }
 
+.pt-4 {
+  padding-top: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1661,6 +1691,10 @@ h1,
 
 .leading-\[170\%\] {
   line-height: 170%;
+}
+
+.leading-normal {
+  line-height: 1.5;
 }
 
 .tracking-\[-0\.24px\] {
@@ -1802,6 +1836,7 @@ h1,
 }
 
 .partners-owl.owl-theme .owl-nav.disabled + .owl-dots {
+  position: static;
   margin-top: 3rem;
   display: flex;
   align-items: center;
@@ -1835,7 +1870,7 @@ h1,
   height: 100%;
 }
 
-.trip-owl.owl-theme .owl-dots {
+.owl-dots {
   position: absolute;
   bottom: 1.25rem;
   margin-top: 0px;
@@ -1847,37 +1882,27 @@ h1,
   gap: 0.25rem;
 }
 
-.owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 0px;
-}
-
-.trip-owl.owl-theme .owl-dots .owl-dot span {
+.trip-dots .trip-dot {
   margin: 0px;
+  height: 0.625rem;
+  width: 0.625rem;
+  cursor: pointer;
+  border-radius: 9999px;
   background-color: #FFFFFF7A;
 }
 
-.trip-owl.owl-theme .owl-dots .owl-dot.active span {
+.trip-dots .trip-dot.active {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.trip-owl.owl-theme ~ .prevBtn,
-.trip-owl.owl-theme ~ .nxtBtn {
-  position: absolute;
-  bottom: 1.25rem;
-  z-index: 1;
-}
-
-.trip-owl.owl-theme ~ .prevBtn {
-  right: 60%;
-}
-
-.trip-owl.owl-theme ~ .nxtBtn {
-  left: 60%;
-}
-
 .community-owl.owl-carousel .owl-item img {
   width: auto;
+}
+
+.hover\:bg-Neutral-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
 .hover\:opacity-100:hover {
@@ -1984,8 +2009,12 @@ h1,
     width: 409px;
   }
 
-  .lg\:w-\[800px\] {
-    width: 800px;
+  .lg\:w-\[480px\] {
+    width: 480px;
+  }
+
+  .lg\:w-\[560px\] {
+    width: 560px;
   }
 
   .lg\:grow {
@@ -2077,6 +2106,10 @@ h1,
     border-radius: 1.5rem;
   }
 
+  .lg\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+
   .lg\:border-s-2 {
     border-inline-start-width: 2px;
   }
@@ -2108,6 +2141,10 @@ h1,
 
   .lg\:p-10 {
     padding: 2.5rem;
+  }
+
+  .lg\:p-4 {
+    padding: 1rem;
   }
 
   .lg\:px-0 {
@@ -2174,6 +2211,10 @@ h1,
     font-size: 21px;
   }
 
+  .lg\:font-normal {
+    font-weight: 400;
+  }
+
   .lg\:leading-none {
     line-height: 1;
   }
@@ -2186,5 +2227,11 @@ h1,
   .lg\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .lg\:shadow-sub-menu {
+    --tw-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+    --tw-shadow-colored: 0px 4px 24px 0px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
