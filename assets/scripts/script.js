@@ -267,7 +267,7 @@ $(window).on("load", function () {
             let pagination = slider.querySelector('.partner-pagination');
             new Swiper(slider, {
                 spaceBetween: 16,
-                 pagination: {
+                pagination: {
                     el: pagination,
                     clickable: true
                 },
@@ -295,108 +295,6 @@ $(window).on("load", function () {
             });
         });
     }
-
-
-    // Testimonials Slider
-    // if ($(".testimonials-owl").length > 0) {
-    //     $(".testimonials-owl").owlCarousel({
-    //         rtl: true,
-    //         nav: false,
-    //         dots: false,
-    //         loop: false,
-    //         items: 1,
-    //         margin: 32,
-    //         autoplay: true,
-    //         autoplayTimeout: 6000,
-    //         autoplayHoverPause: true,
-    //         responsive: {
-    //             0: {
-    //                 stagePadding: 20,
-    //             },
-    //             768: {
-    //                 stagePadding: 20,
-    //             },
-    //             1024: {
-    //                 stagePadding: 0,
-    //             },
-    //         },
-    //     });
-    // }
-
-
-    // Latest Guides 2 Columns Slider
-    // if ($(".guides2-owl").length > 0) {
-
-    //     function valuesSlider() {
-    //         if ($(window).width() < 1024) {
-    //             const carousel = $('.guides2-owl');
-    //             const dotsContainer = carousel.parent().find(".guides-dots");
-    //             carousel.owlCarousel({
-    //                 items: 1,
-    //                 dots: false, // Disable default dots
-    //                 loop: true,
-    //                 items: 1.1,
-    //                 margin: 20,
-    //                 stagePadding: 20,
-
-    //                 onInitialized: function (event) {
-    //                     const itemCount = event.item.count;
-    //                     for (let i = 0; i < itemCount; i++) {
-    //                         dotsContainer.append('<li class="guides-dot"></li>'); // Append custom dots
-    //                     }
-    //                     const dots = dotsContainer.find(".guides-dot");
-    //                     $(".guides-dot:first-child").addClass("active");
-    //                     dots.click(function () {
-    //                         carousel.trigger("to.owl.carousel", [$(this).index(), 200]);
-    //                     });
-    //                 },
-    //                 onTranslated: function () {
-    //                     const currentItem = carousel.find(".owl-item.active").index();
-    //                     dotsContainer.find(".guides-dot").removeClass("active");
-    //                     dotsContainer.find(".guides-dot").eq(currentItem).addClass("active");
-    //                 },
-    //             });
-
-    //         }
-    //         else {
-    //             $('.guides2-owl').trigger('destroy.owl.carousel');
-    //         }
-    //     }
-
-    //     valuesSlider();
-    //     $(window).resize(function () {
-    //         valuesSlider();
-    //     })
-    // }
-
-    // Community Slider
-    // if ($(".community-owl").length > 0) {
-    //     $(".community-owl").owlCarousel({
-    //         nav: false,
-    //         dots: false,
-    //         loop: true,
-    //         autoplay: true,
-    //         autoplayTimeout: 6000,
-    //         autoplayHoverPause: true,
-    //         responsive: {
-    //             0: {
-    //                 items: 1.1,
-    //                 margin: 20,
-    //                 stagePadding: 20,
-    //             },
-    //             768: {
-    //                 items: 2,
-    //                 margin: 20,
-    //                 stagePadding: 20,
-    //             },
-    //             1024: {
-    //                 items: 2,
-    //                 margin: 30,
-    //                 stagePadding: 0,
-    //             },
-    //         },
-    //     });
-    // }
 
     // check in check out Home Page
     if ($("#check").length > 0) {
@@ -460,4 +358,54 @@ $(window).on("load", function () {
             });
         });
     }
+
+
+    // Guides Page
+
+    // Guides Slider
+    if ($(".all-guides-slider").length > 0) {
+        const slider = document.querySelectorAll(".all-guides-slider");
+        slider.forEach(function (slider) {
+            const pagination = slider.querySelector(".all-guides-pagination");
+            let nextButton = slider.querySelector('.all-guides-next');
+            let prevButton = slider.querySelector('.all-guides-prev');
+            new Swiper(slider, {
+                spaceBetween: 30,
+
+                pagination: {
+                    el: pagination,
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: nextButton,
+                    prevEl: prevButton
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1.1,
+                        grid: {
+                            rows: 1,
+                            fill: "row",
+                        },
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        grid: {
+                            rows: 1,
+                            fill: "row",
+                        },
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        grid: {
+                            rows: 2,
+                            fill: "row",
+                        },
+                    },
+                },
+            });
+        });
+    }
+
+
 });

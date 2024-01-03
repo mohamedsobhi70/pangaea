@@ -1050,16 +1050,16 @@ h1,
   margin-bottom: -72px;
 }
 
-.-mt-48 {
-  margin-top: -12rem;
-}
-
 .mt-0 {
   margin-top: 0px;
 }
 
 .mt-\[72px\] {
   margin-top: 72px;
+}
+
+.-mt-24 {
+  margin-top: -6rem;
 }
 
 .block {
@@ -1116,6 +1116,10 @@ h1,
 
 .h-full {
   height: 100%;
+}
+
+.min-h-\[690px\] {
+  min-height: 690px;
 }
 
 .w-1 {
@@ -1603,10 +1607,6 @@ h1,
   padding-inline-start: 1.25rem;
 }
 
-.pt-0 {
-  padding-top: 0px;
-}
-
 .pt-18 {
   padding-top: 72px;
 }
@@ -1852,94 +1852,6 @@ h1,
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.partners-owl .owl-dots .owl-dot {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.partners-owl.owl-theme .owl-nav.disabled + .owl-dots {
-  position: static;
-  margin-top: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.partners-owl .owl-dots .owl-dot span {
-  margin: 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(233 232 232 / var(--tw-bg-opacity));
-}
-
-.partners-owl .owl-dots .owl-dot.active span,
-.partners-owl .owl-dots .owl-dot:hover span {
-  --tw-bg-opacity: 1;
-  background-color: rgb(48 156 152 / var(--tw-bg-opacity));
-}
-
-.partners-owl .owl-item img {
-  width: auto;
-}
-
-.partners-owl.owl-carousel .owl-stage-outer {
-  overflow: visible;
-}
-
-.trip-owl .owl-stage-outer,
-.trip-owl .owl-stage-outer .owl-stage,
-.trip-owl .owl-stage-outer .owl-stage .owl-item {
-  height: 100%;
-}
-
-.owl-dots {
-  position: absolute;
-  bottom: 1.25rem;
-  margin-top: 0px;
-  display: flex;
-  height: 1rem;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-}
-
-.trip-dots .trip-dot {
-  margin: 0px;
-  height: 0.625rem;
-  width: 0.625rem;
-  cursor: pointer;
-  border-radius: 9999px;
-  background-color: #FFFFFF7A;
-}
-
-.trip-dots .trip-dot.active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.community-owl.owl-carousel .owl-item img {
-  width: auto;
-}
-
-.guides-dots .guides-dot {
-  margin: 0px;
-  height: 0.5rem;
-  width: 1rem;
-  cursor: pointer;
-  border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
-}
-
-.guides-dots .guides-dot.active {
-  width: 2rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(48 156 152 / var(--tw-bg-opacity));
-}
-
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
   pointer-events: auto;
@@ -1962,7 +1874,7 @@ h1,
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
-. .swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   width: auto;
@@ -1995,6 +1907,23 @@ h1,
 .trip-slider .swiper-pagination-bullet-active {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.all-guides-pagination .swiper-pagination-bullet {
+  height: 0.5rem;
+  width: 1rem;
+  border-radius: 4px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.all-guides-pagination .swiper-pagination-bullet-active {
+  width: 2rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(48 156 152 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-Neutral-100:hover {
@@ -2179,10 +2108,6 @@ h1,
     gap: 3rem;
   }
 
-  .lg\:gap-16 {
-    gap: 4rem;
-  }
-
   .lg\:gap-24 {
     gap: 6rem;
   }
@@ -2284,6 +2209,10 @@ h1,
 
   .lg\:ps-4 {
     padding-inline-start: 1rem;
+  }
+
+  .lg\:pb-24 {
+    padding-bottom: 6rem;
   }
 
   .lg\:text-start {
