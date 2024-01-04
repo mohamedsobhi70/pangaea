@@ -291,6 +291,7 @@ $(window).on("load", function () {
         const sliders = document.querySelectorAll(".testimonials-slider");
         sliders.forEach(function (slider) {
             new Swiper(slider, {
+                spaceBetween: 30,
                 slidesPerView: 1,
             });
         });

@@ -1050,6 +1050,10 @@ h1,
   margin-bottom: -72px;
 }
 
+.-mt-24 {
+  margin-top: -6rem;
+}
+
 .mt-0 {
   margin-top: 0px;
 }
@@ -1058,8 +1062,12 @@ h1,
   margin-top: 72px;
 }
 
-.-mt-24 {
-  margin-top: -6rem;
+.-mt-56 {
+  margin-top: -14rem;
+}
+
+.-mt-80 {
+  margin-top: -20rem;
 }
 
 .block {
@@ -1979,6 +1987,10 @@ h1,
     margin-top: 0px;
   }
 
+  .lg\:-mt-24 {
+    margin-top: -6rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -2207,12 +2219,12 @@ h1,
     padding-bottom: 5rem;
   }
 
-  .lg\:ps-4 {
-    padding-inline-start: 1rem;
-  }
-
   .lg\:pb-24 {
     padding-bottom: 6rem;
+  }
+
+  .lg\:ps-4 {
+    padding-inline-start: 1rem;
   }
 
   .lg\:text-start {
