@@ -78,8 +78,7 @@
                     <div class="flex flex-col h-fit">
 
                         <!-- Category Filter  -->
-                        <div class="filter-item-container designpeer-accordion green-acc flex flex-col gap-3"
-                            data-toogle-speed="250">
+                        <div class="filter-item-container designpeer-accordion" data-toogle-speed="250">
                             <div class="designpeer-accordion-item ">
                                 <!-- accordion title  -->
                                 <div class="designpeer-tab-title flex items-center active-default">
@@ -155,8 +154,7 @@
 
 
                         <!-- DESTINATION Filter  -->
-                        <div class="filter-item-container designpeer-accordion green-acc flex flex-col gap-3"
-                            data-toogle-speed="250">
+                        <div class="filter-item-container designpeer-accordion" data-toogle-speed="250">
                             <div class="designpeer-accordion-item ">
                                 <!-- accordion title  -->
                                 <div class="designpeer-tab-title flex items-center">
@@ -173,17 +171,134 @@
 
                                 <!-- accordion Content  -->
                                 <div class="designpeer-tab-content pt-3">
-                                   <div class="flex flex-col gap-3">
+                                    <div class="flex flex-col gap-3">
+                                        <form>
+                                            <div class="bg-Neutral-50 rounded-lg flex items-center gap-3 p-3">
+                                                <button type="submit">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.66634 14.0001C11.1641 14.0001 13.9997 11.1646 13.9997 7.66675C13.9997 4.16895 11.1641 1.33342 7.66634 1.33342C4.16854 1.33342 1.33301 4.16895 1.33301 7.66675C1.33301 11.1646 4.16854 14.0001 7.66634 14.0001Z"
+                                                            stroke="#646768" stroke-width="1.71429"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M14.6663 14.6668L13.333 13.3334" stroke="#646768"
+                                                            stroke-width="1.71429" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                    <span class="sr-only">
+                                                        Search Icon
+                                                    </span>
+                                                </button>
+                                                <input type="search" name="seachdestination" id="seachdestination"
+                                                    placeholder="Search country here"
+                                                    class="bg-transparent grow text-sm">
+                                            </div>
+                                        </form>
 
-                                   </div>
+                                        <div class="flex flex-col gap-2">
+                                            <div class="designpeer-accordion bg-Neutral-50 rounded-lg" data-toogle-speed="250">
+                                                <div class="designpeer-accordion-item p-3">
+                                                    <!-- accordion title  -->
+                                                    <div class="designpeer-tab-title flex items-center">
+                                                        <span
+                                                            class="designpeer-accordion-title flex-1 text-xs text-Gray leading-[160%]">
+                                                            Africa & the Middle East
+                                                        </span>
+                                                        <span class="designpeer-toggle-icons">
+                                                            <img src="assets/images/icons/acc-down.svg"
+                                                                class="designpeer-toggle-icon" width="16" height="16"
+                                                                alt="plus">
+                                                            <img src="assets/images/icons/acc-up.svg"
+                                                                class="designpeer-alt-toggle-icon" width="16" height="16"
+                                                                alt="minus">
+                                                        </span>
+                                                    </div>
+    
+                                                    <!-- accordion Content  -->
+                                                    <div class="designpeer-tab-content pt-3">
+                                                        <div class="flex flex-col gap-2">
+                                                            <label class="dest-lbl">
+                                                                <input type="checkbox" name="Ethiopia" id="Ethiopia" class="peer form-input">
+                                                                <span class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
+                                                                    Ethiopia
+                                                                </span>
+                                                                <span class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
+                                                            </label>
+                                                            <label class="dest-lbl">
+                                                                <input type="checkbox" name="Iran" id="Iran" class="peer form-input">
+                                                                <span class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
+                                                                    Iran
+                                                                </span>
+                                                                <span class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
+                                                            </label>
+                                                            <label class="dest-lbl">
+                                                                <input type="checkbox" name="Kenya" id="Kenya" class="peer form-input">
+                                                                <span class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
+                                                                    Kenya
+                                                                </span>
+                                                                <span class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="designpeer-accordion bg-Neutral-50 rounded-lg" data-toogle-speed="250">
+                                                <div class="designpeer-accordion-item p-3">
+                                                    <!-- accordion title  -->
+                                                    <div class="designpeer-tab-title flex items-center">
+                                                        <span
+                                                            class="designpeer-accordion-title flex-1 text-xs text-Gray leading-[160%]">
+                                                            Asia
+                                                        </span>
+                                                        <span class="designpeer-toggle-icons">
+                                                            <img src="assets/images/icons/acc-down.svg"
+                                                                class="designpeer-toggle-icon" width="16" height="16"
+                                                                alt="plus">
+                                                            <img src="assets/images/icons/acc-up.svg"
+                                                                class="designpeer-alt-toggle-icon" width="16" height="16"
+                                                                alt="minus">
+                                                        </span>
+                                                    </div>
+    
+                                                    <!-- accordion Content  -->
+                                                    <div class="designpeer-tab-content pt-3">
+                                                        <div class="flex flex-col gap-2">
+                                                            <label class="dest-lbl">
+                                                                <input type="checkbox" name="Turkey" id="Turkey" class="peer form-input">
+                                                                <span class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
+                                                                    Turkey
+                                                                </span>
+                                                                <span class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
+                                                            </label>
+                                                            <label class="dest-lbl">
+                                                                <input type="checkbox" name="Saudi-arabia" id="Saudi-arabia" class="peer form-input">
+                                                                <span class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
+                                                                    Saudi Arabia
+                                                                </span>
+                                                                <span class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
+                                                            </label>
+                                                            <label class="dest-lbl">
+                                                                <input type="checkbox" name="kuwait" id="kuwait" class="peer form-input">
+                                                                <span class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
+                                                                    kuwait
+                                                                </span>
+                                                                <span class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
 
                         <!-- PRICE RANGE Filter  -->
-                        <div class="filter-item-container designpeer-accordion green-acc flex flex-col gap-3"
-                            data-toogle-speed="250">
+                        <div class="filter-item-container designpeer-accordion" data-toogle-speed="250">
                             <div class="designpeer-accordion-item ">
                                 <!-- accordion title  -->
                                 <div class="designpeer-tab-title flex items-center">
@@ -206,7 +321,8 @@
                                         <div class="flex flex-col gap-2">
                                             <label for="Minimum-price" class="text-xs text-[#292D32]">Minimum</label>
                                             <div class="flex-1 p-3 rounded-lg bg-[#F5F5F5] flex items-center gap-2">
-                                                <input type="number" name="Minimum-price" id="Minimum-price" min="1" value="0"
+                                                <input type="number" name="Minimum-price" id="Minimum-price" min="1"
+                                                    value="0"
                                                     class="form-input text-Black font-semibold focus:ring-0 focus:border-transparent p-0 bg-transparent focus:outline-none border-transparent w-full">
                                                 <span class="text-Gray text-base leading-[160%]">
                                                     SAR
@@ -221,7 +337,8 @@
                                         <div class="flex flex-col gap-2">
                                             <label for="Maximum-price" class="text-xs text-[#292D32]">Maximum</label>
                                             <div class="flex-1 p-3 rounded-lg bg-[#F5F5F5] flex items-center gap-2">
-                                                <input type="number" name="Maximum-price" id="Maximum-price" min="1" value="0"
+                                                <input type="number" name="Maximum-price" id="Maximum-price" min="1"
+                                                    value="0"
                                                     class="form-input text-Black font-semibold focus:ring-0 focus:border-transparent p-0 bg-transparent focus:outline-none border-transparent w-full">
                                                 <span class="text-Gray text-base leading-[160%]">
                                                     SAR
@@ -236,8 +353,7 @@
 
 
                         <!-- LENGTH Filter -->
-                        <div class="filter-item-container designpeer-accordion green-acc flex flex-col gap-3"
-                            data-toogle-speed="250">
+                        <div class="filter-item-container designpeer-accordion" data-toogle-speed="250">
                             <div class="designpeer-accordion-item ">
                                 <!-- accordion title  -->
                                 <div class="designpeer-tab-title flex items-center">
@@ -303,8 +419,7 @@
 
 
                         <!-- AGES Filter -->
-                        <div class="filter-item-container designpeer-accordion green-acc flex flex-col gap-3"
-                            data-toogle-speed="250">
+                        <div class="filter-item-container designpeer-accordion" data-toogle-speed="250">
                             <div class="designpeer-accordion-item ">
                                 <!-- accordion title  -->
                                 <div class="designpeer-tab-title flex items-center">
@@ -356,8 +471,7 @@
 
 
                         <!-- DIFFICULTY LEVEL Filter -->
-                        <div class="filter-item-container designpeer-accordion green-acc flex flex-col gap-3"
-                            data-toogle-speed="250">
+                        <div class="filter-item-container designpeer-accordion" data-toogle-speed="250">
                             <div class="designpeer-accordion-item ">
                                 <!-- accordion title  -->
                                 <div class="designpeer-tab-title flex items-center">
@@ -410,8 +524,7 @@
 
 
                         <!-- ACCOMMODATION TYPE Filter-->
-                        <div class="filter-item-container designpeer-accordion green-acc flex flex-col gap-3"
-                            data-toogle-speed="250">
+                        <div class="filter-item-container designpeer-accordion" data-toogle-speed="250">
                             <div class="designpeer-accordion-item ">
                                 <!-- accordion title  -->
                                 <div class="designpeer-tab-title flex items-center">
