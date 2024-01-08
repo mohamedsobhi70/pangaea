@@ -9,9 +9,10 @@ $(window).on("load", function () {
         });
     }
 
-    function mobileMenu() {
-        if ($(".megamenu")) {
-            if ($(window).width() > 1024) {
+    if ($(".megamenu")) {
+        function mobileMenu() {
+            if (window.innerWidth > 1023) {
+                console.log("des");
                 $(".nav-item")
                     .on("mouseenter", function () {
                         $(this).find(".megamenu").addClass("show");
@@ -20,22 +21,24 @@ $(window).on("load", function () {
                         $(this).find(".megamenu").removeClass("show");
                     });
             } else {
+                console.log("mob");
                 $(".nav-item .nav-link").on("click", function () {
                     $(this).siblings(".megamenu").addClass("show");
-                });
+                })
 
             }
-
         }
+
+        mobileMenu();
+        $(window).resize(function () {
+            mobileMenu();
+        });
+
+        $(".close-megamenu").on("click", function () {
+            $(this).closest(".megamenu").removeClass("show")
+        })
     }
 
-    mobileMenu();
-    $(window).resize(function () {
-        mobileMenu();
-    });
-    $(".close-megamenu").on("click", function () {
-        $(this).closest(".megamenu").removeClass("show")
-    })
     // ===================================================================
 
     if ($(".megamenu-tabs").length > 0) {
@@ -90,7 +93,7 @@ $(window).on("load", function () {
     // Accordion Component
     if ($(".designpeer-accordion").length > 0) {
         $(".designpeer-accordion").each(function () {
-            
+
             let $designpeerAccordion = $(this),
                 $accordionTitle = $designpeerAccordion.find(".designpeer-tab-title"),
                 $accordionType = $designpeerAccordion.data("accordion-type"),
@@ -386,5 +389,35 @@ $(window).on("load", function () {
         });
     }
 
+    // Category Page
+    // Price Slider
+    if ($(".price-slider").length > 0) {
 
-});
+        const range = document.querySelectorAll(".range-slider span input");
+        progress = document.querySelector(".range-slider .progress");
+        let gap = 3;
+        const inputValue = document.querySelectorAll(".numberVal input");
+
+        range.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minRange = parseInt(range[0].value);
+                let maxRange = parseInt(range[1].value);
+
+                if (maxRange - minRange < gap) {
+                    if (e.target.className === "range-min") {
+                        range[0].value = maxRange - gap;
+                    } else {
+                        range[1].value = minRange + gap;
+                    }
+                } else {
+                    progress.style.insetInlineStart = (minRange / range[0].max) * 100 + "%";
+                    progress.style.insetInlineEnd = 100 - (maxRange / range[1].max) * 100 + "%";
+                    inputValue[0].value = minRange;
+                    inputValue[1].value = maxRange;
+                }
+            });
+        });
+
+    }
+
+})
