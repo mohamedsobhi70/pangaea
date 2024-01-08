@@ -38,28 +38,6 @@ $(window).on("load", function () {
     })
     // ===================================================================
 
-    // Tabs Component
-    // if ($(".designpeer-tabs").length > 0) {
-    //     $(".designpeer-tabs").each(function () {
-    //         let $currentTab = $(this),
-    //             $currentTabId = "#" + $currentTab.attr("id").toString();
-    //         $currentTab.find(".designpeer-tabs-content > div:first-child").addClass("active");
-
-    //         $($currentTabId + " .designpeer-tabs-nav ul li").on("mouseenter", function () {
-    //             var currentTabIndex = $(this).index(),
-    //                 tabsContainer = $(this).closest(".designpeer-tabs"),
-    //                 tabsNav = $(tabsContainer).children(".designpeer-tabs-nav").children("ul").children("li"),
-    //                 tabsContent = $currentTab.find(".designpeer-tabs-content > div ");
-    //             $(this).parent("li").addClass("active");
-    //             $(tabsNav).removeClass("active");
-    //             $(this).addClass("active");
-
-    //             $(tabsContent).removeClass("active");
-    //             $(tabsContent).eq(currentTabIndex).addClass("active");
-    //         });
-    //     });
-    // }
-
     if ($(".megamenu-tabs").length > 0) {
         function megamenuTabs() {
             $(".megamenu-tabs").each(function () {
@@ -97,7 +75,6 @@ $(window).on("load", function () {
         megamenuTabs();
     }
 
-
     // To Duplicate the List 
     if ($(".megamenu-tab-item").length > 0) {
         $(".megamenu-tab-item").each(function () {
@@ -113,6 +90,7 @@ $(window).on("load", function () {
     // Accordion Component
     if ($(".designpeer-accordion").length > 0) {
         $(".designpeer-accordion").each(function () {
+            
             let $designpeerAccordion = $(this),
                 $accordionTitle = $designpeerAccordion.find(".designpeer-tab-title"),
                 $accordionType = $designpeerAccordion.data("accordion-type"),
