@@ -11,10 +11,10 @@ $(window).on("load", function () {
 
     if ($(".megamenu")) {
         function mobileMenu() {
-            if (window.innerWidth > 1023) {
+            if (window.innerWidth > 1280) {
                 $(".nav-item")
                     .on("mouseenter", function () {
-                        if (window.innerWidth > 1023) {
+                        if (window.innerWidth > 1280) {
                             $(this).find(".megamenu").addClass("show");
                         }
                     })
@@ -47,7 +47,7 @@ $(window).on("load", function () {
                 let $currentTab = $(this);
                 $currentTab.find(".megamenu-tabs-content > .megamenu-tab-content-item:first-child").addClass("active");
                 $currentTab.find(".megamenu-tabs-nav ul li").on("mouseenter", function () {
-                    if ($(window).width() > 1024) {
+                    if ($(window).width() > 1280) {
                         let currentTabIndex = $(this).index(),
                             tabsContainer = $(this).closest(".megamenu-tabs"),
                             tabsNav = $(tabsContainer).children(".megamenu-tabs-nav").children("ul").children("li"),
@@ -59,7 +59,7 @@ $(window).on("load", function () {
                         $(tabsContent).eq(currentTabIndex).addClass("active");
                     }
                 }).on("click", function () {
-                    if ($(window).width() < 1024) {
+                    if ($(window).width() < 1280) {
                         let th = $(this);
                         th.siblings().removeClass("active");
                         th.toggleClass("active");
@@ -68,7 +68,7 @@ $(window).on("load", function () {
                     }
                 });
                 $(window).resize(function () {
-                    if ($(window).width() > 1024) {
+                    if ($(window).width() > 1280) {
                         $(".co-list").slideUp(50);
                     }
                 })

@@ -2795,6 +2795,22 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (min-width: 1024px) {
+  .lg\:sticky {
+    position: sticky;
+  }
+
+  .lg\:top-0 {
+    top: 0px;
+  }
+
+  .lg\:top-24 {
+    top: 6rem;
+  }
+
+  .lg\:top-36 {
+    top: 9rem;
+  }
+
   .lg\:order-none {
     order: 0;
   }
