@@ -424,14 +424,17 @@ $(window).on("load", function () {
     if ($(".filter-box").length > 0) {
         $(".filter-btn").on("click", function () {
             $(".filter-box").addClass("show");
+            $("body").css("overflow","hidden");
         })
         $(".filter-close-btn").on("click", function () {
             $(".filter-box").removeClass("show");
+            $("body").css("overflow","visible");
         })
 
         $(".filter-box").on("click", function (e) {
             if (e.target.classList.contains("filter-box") || e.target.parentNode.classList.contains("filter-close-btn")) {
                 $(".filter-box").removeClass("show");
+                $("body").css("overflow","visible");
             }
         })
     }
