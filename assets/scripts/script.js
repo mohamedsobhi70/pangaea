@@ -12,16 +12,16 @@ $(window).on("load", function () {
     if ($(".megamenu")) {
         function mobileMenu() {
             if (window.innerWidth > 1023) {
-                console.log("des");
                 $(".nav-item")
                     .on("mouseenter", function () {
-                        $(this).find(".megamenu").addClass("show");
+                        if (window.innerWidth > 1023) {
+                            $(this).find(".megamenu").addClass("show");
+                        }
                     })
                     .on("mouseleave", function () {
                         $(this).find(".megamenu").removeClass("show");
                     });
             } else {
-                console.log("mob");
                 $(".nav-item .nav-link").on("click", function () {
                     $(this).siblings(".megamenu").addClass("show");
                 })
