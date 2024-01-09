@@ -420,4 +420,20 @@ $(window).on("load", function () {
 
     }
 
+    // Filter 
+    if ($(".filter-box").length > 0) {
+        $(".filter-btn").on("click", function () {
+            $(".filter-box").addClass("show");
+        })
+        $(".filter-close-btn").on("click", function () {
+            $(".filter-box").removeClass("show");
+        })
+
+        $(".filter-box").on("click", function (e) {
+            if (e.target.classList.contains("filter-box") || e.target.parentNode.classList.contains("filter-close-btn")) {
+                $(".filter-box").removeClass("show");
+            }
+        })
+    }
+
 })
