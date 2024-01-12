@@ -1406,6 +1406,31 @@ select:focus {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.sticky-trip-content {
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  inset-inline-start: 0px;
+  z-index: 30;
+  width: 100%;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(224 225 225 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  opacity: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.sticky-trip-content.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1891,6 +1916,35 @@ select:focus {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.scroll-m-40 {
+  scroll-margin: 10rem;
+}
+
+.scroll-m-9 {
+  scroll-margin: 2.25rem;
+}
+
+.scroll-m-96 {
+  scroll-margin: 24rem;
+}
+
+.scroll-m-32 {
+  scroll-margin: 8rem;
+}
+
+.scroll-m-48 {
+  scroll-margin: 12rem;
+}
+
+.scroll-m-80 {
+  scroll-margin: 20rem;
+}
+
+.scroll-mx-32 {
+  scroll-margin-left: 8rem;
+  scroll-margin-right: 8rem;
 }
 
 .list-inside {
@@ -3098,6 +3152,10 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 66.666667%;
   }
 
+  .lg\:w-60 {
+    width: 15rem;
+  }
+
   .lg\:w-\[190px\] {
     width: 190px;
   }
@@ -3207,6 +3265,11 @@ input[type="number"]::-webkit-outer-spin-button {
     padding-right: 0px;
   }
 
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -3215,6 +3278,11 @@ input[type="number"]::-webkit-outer-spin-button {
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .lg\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .lg\:py-\[100px\] {
@@ -3269,6 +3337,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .lg\:text-\[21px\] {
     font-size: 21px;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:text-sm {
