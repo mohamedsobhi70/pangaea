@@ -577,6 +577,22 @@
 
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
+                                            viewBox="0 0 25 24" fill="none">
+                                            <g clip-path="url(#clip0_1357_16314)">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M19.0095 8.84937C21.435 13.5691 19.4843 19.8923 13.9122 20.8108C6.61604 22.4094 1.74838 13.501 7.22997 8.27825C7.52283 7.98928 8.32941 7.24109 8.66605 7.00077C8.66605 7.50086 9.10776 11.3742 9.79856 11.0813C12.6406 11.0813 13.4034 6.00058 13.0113 3C15.5691 4.33683 17.7359 6.19906 19.0095 8.84937Z"
+                                                    stroke="#646768" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <circle cx="18.4551" cy="18" r="6" fill="#EB4335" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1357_16314">
+                                                    <rect width="24" height="24" fill="white"
+                                                        transform="translate(0.455078)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
                                         <span class="grow shrink-0">
                                             Hot Deals
                                         </span>
@@ -647,20 +663,37 @@
 
                         <div class="flex flex-col xl:items-end gap-6 xl:gap-1 px-5 py-8 xl:p-0">
                             <div class="grid grid-cols-2 items-center">
-                                <div class="pe-5 py-3 xl:py-0 flex items-center gap-2.5">
-                                    <span class="text-Black xl:text-Neutral-700 text-sm grow">
-                                        SAR
-                                    </span>
-                                    <img src="assets/images/icons/downarrow-1.svg" width="7" height="7"
-                                        alt="down-arrow">
+                                <div class="relative cur-lang">
+                                    <div class="pe-5 flex items-center justify-between gap-2.5 cursor-pointer">
+                                        <span class="text-Black xl:text-Neutral-700 text-sm grow">
+                                            SAR
+                                        </span>
+                                        <img src="assets/images/icons/downarrow-1.svg" width="7" height="7"
+                                            alt="down-arrow">
+                                    </div>
+                                    <div class="lang-curr-box">
+                                        <ul class="lang-cuur-container">
+                                            <li><a href="#">SAR</a></li>
+                                            <li><a href="#">AUD</a></li>
+                                            <li><a href="#">EGP</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div
-                                    class="ps-5 py-3 xl:py-0 flex items-center gap-2.5 border-s border-Black xl:border-Neutral-500 border-opacity-20">
-                                    <span class="text-Black xl:text-Neutral-700 text-sm grow">
-                                        English
-                                    </span>
-                                    <img src="assets/images/icons/downarrow-1.svg" width="7" height="7"
-                                        alt="down-arrow">
+                                <div class="relative cur-lang">
+                                    <div
+                                        class="ps-5 flex items-center justify-between gap-2.5 border-s border-Black xl:border-[#ffffff33] cursor-pointer">
+                                        <span class="text-Black xl:text-Neutral-700 text-sm grow">
+                                            English
+                                        </span>
+                                        <img src="assets/images/icons/downarrow-1.svg" width="7" height="7"
+                                            alt="down-arrow">
+                                    </div>
+                                    <div class="lang-curr-box">
+                                        <ul class="lang-cuur-container">
+                                            <li><a href="#">English</a></li>
+                                            <li><a href="#">AR</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
@@ -702,25 +735,36 @@
         <!-- Start Section  -->
         <section>
             <div class="flex flex-col gap-16">
-                <div class="bg-[#E4F5F4] py-6">
+                <div class="bg-[#E4F5F4] py-5 lg:py-6">
                     <div class="container flex flex-col lg:flex-row lg:items-center gap-3 justify-between px-5 lg:px-0">
-                        <h2 class="text-lg lg:text-2xl font-semibold">
-                            8 Results for "Bali Trips"
-                        </h2>
-                        <div class="shrink-0 flex items-center gap-5">
-                            <label for="sortby"
-                                class="text-Neutral-700 text-sm leading-[160%] font-Jost tracking-[-0.28px]">
-                                Sort by :
-                            </label>
-                            <select name="sortby" id="sortby"
-                                class="bg-white text-Neutral-700 text-sm rounded-xl ps-3 py-2 pe-12 border-none focus:ring-0">
-                                <option value="1">
-                                    Price : High to Low
-                                </option>
-                                <option value="2">
-                                    Price : Low to High
-                                </option>
-                            </select>
+                        <div class="flex justify-between items-center gap-3">
+                            <h2 class="text-2xl font-semibold">
+                                8 Results for "Bali Trips"
+                            </h2>
+                            <button
+                                class="flex lg:hidden items-center justify-center w-10 h-10 rounded-lg bg-white shrink-0 sort-by-btn">
+                                <img src="assets/images/icons/arrow-3.svg" width="24" height="24" alt="sort">
+                                <span class="sr-only">
+                                    Sort By
+                                </span>
+                            </button>
+                        </div>
+                        <div class="hidden lg:block sort-by">
+                            <div class="shrink-0 flex items-center gap-5">
+                                <label for="sortby"
+                                    class="text-Neutral-700 text-sm leading-[160%] font-Jost tracking-[-0.28px]">
+                                    Sort by :
+                                </label>
+                                <select name="sortby" id="sortby"
+                                    class="bg-white text-Neutral-700 text-sm rounded-xl ps-3 py-2 pe-12 border-none focus:ring-0 grow">
+                                    <option value="1">
+                                        Price : High to Low
+                                    </option>
+                                    <option value="2">
+                                        Price : Low to High
+                                    </option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -777,7 +821,8 @@
                         </div>
 
                         <!-- item -->
-                        <div class=" relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div
+                            class="trip-item relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                             <div class="absolute top-0 start-0 w-full p-5 flex justify-between z-10">
                                 <div class="ms-auto flex items-center gap-3">
                                     <span
@@ -878,7 +923,8 @@
                         </div>
 
                         <!-- item -->
-                        <div class=" relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div
+                            class="trip-item relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                             <div class="absolute top-0 start-0 w-full p-5 flex justify-between z-10">
                                 <div class="ms-auto flex items-center gap-3">
                                     <span
@@ -979,7 +1025,8 @@
                         </div>
 
                         <!-- item -->
-                        <div class=" relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div
+                            class="trip-item relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                             <div class="absolute top-0 start-0 w-full p-5 flex justify-between z-10">
                                 <div class="ms-auto flex items-center gap-3">
                                     <span
@@ -1080,7 +1127,8 @@
                         </div>
 
                         <!-- item -->
-                        <div class=" relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div
+                            class="trip-item relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                             <div class="absolute top-0 start-0 w-full p-5 flex justify-between z-10">
                                 <div class="ms-auto flex items-center gap-3">
                                     <span
@@ -1181,7 +1229,8 @@
                         </div>
 
                         <!-- item -->
-                        <div class=" relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div
+                            class="trip-item relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                             <div class="absolute top-0 start-0 w-full p-5 flex justify-between z-10">
                                 <div class="ms-auto flex items-center gap-3">
                                     <span
@@ -1282,7 +1331,8 @@
                         </div>
 
                         <!-- item -->
-                        <div class=" relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div
+                            class="trip-item relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                             <div class="absolute top-0 start-0 w-full p-5 flex justify-between z-10">
                                 <div class="ms-auto flex items-center gap-3">
                                     <span
@@ -1383,7 +1433,8 @@
                         </div>
 
                         <!-- item -->
-                        <div class=" relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div
+                            class="trip-item relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                             <div class="absolute top-0 start-0 w-full p-5 flex justify-between z-10">
                                 <div class="ms-auto flex items-center gap-3">
                                     <span
@@ -1714,7 +1765,7 @@
 
         <!-- Start Subscribe Section  -->
         <section class="bg-[#403F4C] px-5 lg:px-0">
-            <div class="container flex flex-col lg:flex-row gap-8 lg:items-center justify-between py-16">
+            <div class="container flex flex-col lg:flex-row gap-8 lg:items-center justify-between py-10 lg:py-16">
                 <div class="flex items-center gap-9 flex-col lg:flex-row">
                     <img src="assets/images/icons/newsletter.svg" width="60" height="60" alt="newsletter">
                     <div class="flex flex-col">
@@ -1752,13 +1803,13 @@
     <footer class="py-16 lg:py-24 px-5 lg:px-0">
         <div class="container flex flex-col gap-[60px] lg:gap-24">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
-                <div class="col-span-5 flex flex-col items-start gap-[28px] lg:gap-10">
+                <div class="lg:col-span-5 flex flex-col items-start gap-[28px] lg:gap-10">
                     <img src="assets/images/logo-footer.svg" width="146" height="49" alt="logo">
                     <p class="font-Eczar text-4xl leading-[120%] font-semibold tracking-[-0.72px]">
                         Explore for Your Next Remarkable Journey
                     </p>
                 </div>
-                <div class="lg:col-start-8 col-span-5 bg-[#EEF6F3] py-6 px-5 rounded-xl flex flex-col gap-6">
+                <div class="lg:col-start-8 lg:col-span-5 bg-[#EEF6F3] py-6 px-5 rounded-xl flex flex-col gap-6">
                     <div class="flex flex-col gap-3">
                         <h2 class="text-Black text-2xl font-semibold leading-[120%]">
                             Keep up with Pangaea

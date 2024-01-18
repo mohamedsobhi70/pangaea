@@ -8,6 +8,26 @@ $(window).on("load", function () {
             $(".mobile-menu").removeClass("show");
         });
     }
+    if ($(".mobile-search-btn")) {
+
+        $(".mobile-search-btn").on("click", function () {
+            $(".mobile-menu").addClass("show");
+            setTimeout(function () {
+                $(".header-search-box input").focus()
+            }, 100);
+        })
+    }
+   
+    if ($(".cur-lang")) {
+        $(".cur-lang").on("mouseenter", function () {
+            let th = $(this);
+            th.find(".lang-curr-box").addClass("show");
+        }).on("mouseleave",function(){
+            let th = $(this);
+            th.find(".lang-curr-box").removeClass("show");
+        })
+
+    }
 
     if ($(".megamenu")) {
         function mobileMenu() {
@@ -87,7 +107,12 @@ $(window).on("load", function () {
             $th.append(`<div class="co-list hidden"><ul class="flex flex-col gap-y-1 gap-3">${$content}</ul></div>`);
         })
     }
+ if ($(".sort-by-btn")) {
+        $(".sort-by-btn").on("click", function () {
+            $(".sort-by").slideToggle(250);
+        })
 
+    }
     // ===================================================================
 
     // Accordion Component
@@ -158,23 +183,34 @@ $(window).on("load", function () {
 
     // Trip Slider
     if ($(".trip-slider").length > 0) {
-        const sliders = document.querySelectorAll(".trip-slider");
-        sliders.forEach(function (slider) {
-            let pagination = slider.querySelector('.trip-pagination');
-            let nextButton = slider.querySelector('.trip-next');
-            let prevButton = slider.querySelector('.trip-prev');
+        $(".trip-slider").each(function () {
+            let slider = $(this);
+            let pagination = slider.find('.trip-pagination');
+            let nextButton = slider.find('.trip-next');
+            let prevButton = slider.find('.trip-prev');
+            // let sliderContainer = slider.closest('.trip-item');
 
-            new Swiper(slider, {
+            let swiper = new Swiper(slider[0], {
                 loop: true,
                 pagination: {
-                    el: pagination,
+                    el: pagination[0],
                     clickable: true
                 },
                 navigation: {
-                    nextEl: nextButton,
-                    prevEl: prevButton
+                    nextEl: nextButton[0],
+                    prevEl: prevButton[0]
                 },
             });
+
+            // console.log($(this));
+
+            // sliderContainer.on('mouseenter', function () {
+            //     swiper.autoplay.start();
+            // });
+
+            // sliderContainer.on('mouseleave', function () {
+            //     swiper.autoplay.stop();
+            // });
         });
     }
 
@@ -341,7 +377,6 @@ $(window).on("load", function () {
         });
     }
 
-
     // Guides Page
 
     // Guides Slider
@@ -438,28 +473,29 @@ $(window).on("load", function () {
             }
         })
     }
+
     if ($(".sticky-trip-content").length > 0) {
         let headHeight;
         if ($(".cat-header").length > 0) {
             headHeight = $(".cat-header").height();
         }
-        else{
+        else {
             headHeight = 80;
         }
 
         $(window).on("scroll", function () {
-            let pos = $(".trip-info").position().top ;
-            if ($(window).scrollTop() > pos ) {
+            let pos = $(".trip-info").position().top;
+            if ($(window).scrollTop() > pos) {
                 $(".sticky-trip-content").addClass("show");
-                $(".sticky-trip-content").css("top",headHeight)
+                $(".sticky-trip-content").css("top", headHeight)
 
             }
             else {
                 $(".sticky-trip-content").removeClass("show");
-                $(".sticky-trip-content").css("top","0")
+                $(".sticky-trip-content").css("top", "0")
             }
         });
-    
+
     }
 
 })

@@ -28,13 +28,14 @@
                 </a>
 
                 <div class="flex items-center gap-5">
-                    <button type="button">
+                    <button type="button" class="mobile-search-btn">
                         <img src="assets/images/icons/search.svg" width="24" height="24" alt="search">
+                        <span class="sr-only">Search Button</span>
                     </button>
                     <button type="button" class="mobile-menu-btn">
                         <img src="assets/images/icons/menu.svg" width="24" height="24" alt="menu">
+                        <span class="sr-only">Mobile Menu</span>
                     </button>
-
                 </div>
             </div>
             <div class="mobile-menu">
@@ -59,8 +60,7 @@
                         </a>
                         <div class="p-5 pb-6 xl:p-0">
                             <form>
-                                <div
-                                    class="py-3.5 px-4 pe-10 rounded-full border border-[#D9D9D9] xl:border-[#FFFFFF3D] flex items-center gap-4">
+                                <div class="header-search-box">
                                     <button type="submit">
                                         <img src="assets/images/icons/search.svg" class="hidden xl:block" width="20"
                                             height="20" alt="Search">
@@ -79,17 +79,63 @@
                         <div
                             class="flex flex-col-reverse xl:justify-end xl:flex-row xl:items-center gap-6 px-5 py-8 xl:p-0">
                             <div class="grid grid-cols-2 items-center">
-                                <div class="pe-5 flex items-center gap-2.5">
-                                    <span class="text-Black xl:text-white text-sm">
-                                        SAR
-                                    </span>
-                                    <img src="assets/images/icons/down-arrow.svg" width="7" height="7" alt="down-arrow">
+                                <div class="relative cur-lang">
+                                    <div class="pe-5 flex items-center justify-between gap-2.5 cursor-pointer">
+                                        <span class="text-Black xl:text-white text-sm">
+                                            SAR
+                                        </span>
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1640_3381)">
+                                                <path class="fill-[#121617] xl:fill-white"
+                                                    d="M6.66232 2.08215H0.337648C0.0383555 2.08215 -0.114114 2.44356 0.100473 2.65815L3.26281 5.82048C3.39269 5.95036 3.60728 5.95036 3.73721 5.82048L6.89955 2.65815C7.11408 2.44356 6.96161 2.08215 6.66232 2.08215Z"
+                                                    fill="white" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1640_3381">
+                                                    <rect width="7" height="6.99994"
+                                                        class="fill-[#121617] xl:fill-white" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="lang-curr-box">
+                                        <ul class="lang-cuur-container">
+                                            <li><a href="#">SAR</a></li>
+                                            <li><a href="#">AUD</a></li>
+                                            <li><a href="#">EGP</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="ps-5 flex items-center gap-2.5 border-s border-Black xl:border-[#ffffff33]">
-                                    <span class="text-Black xl:text-white text-sm">
-                                        English
-                                    </span>
-                                    <img src="assets/images/icons/down-arrow.svg" width="7" height="7" alt="down-arrow">
+                                <div class="relative cur-lang">
+                                    <div
+                                        class="ps-5 flex items-center justify-between gap-2.5 border-s border-Black xl:border-[#ffffff33] cursor-pointer">
+                                        <span class="text-Black xl:text-white text-sm">
+                                            English
+                                        </span>
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1640_3381)">
+                                                <path class="fill-[#121617] xl:fill-white"
+                                                    d="M6.66232 2.08215H0.337648C0.0383555 2.08215 -0.114114 2.44356 0.100473 2.65815L3.26281 5.82048C3.39269 5.95036 3.60728 5.95036 3.73721 5.82048L6.89955 2.65815C7.11408 2.44356 6.96161 2.08215 6.66232 2.08215Z"
+                                                    fill="white" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1640_3381">
+                                                    <rect width="7" height="6.99994"
+                                                        class="fill-[#121617] xl:fill-white" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="lang-curr-box">
+                                        <ul class="lang-cuur-container">
+                                            <li><a href="#">English</a></li>
+                                            <li><a href="#">AR</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
 
@@ -131,8 +177,9 @@
                                         <span class="grow shrink-0">
                                             Destinations
                                         </span>
-                                        <svg class="-rotate-90 xl:rotate-0" width="16" height="16" viewBox="0 0 16 16"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="rtl:rotate-90 rtl:xl:rotate-0 ltr:-rotate-90 xl:rotate-0" width="16"
+                                            height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path class=" stroke-Black xl:stroke-white"
                                                 d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
                                                 stroke="white" stroke-width="1.5" stroke-miterlimit="10"
@@ -142,7 +189,7 @@
                                     <div class="megamenu">
                                         <div class="flex flex-col gap-6">
                                             <div class="flex xl:hidden items-center gap-3 pt-4">
-                                                <button class="close-megamenu">
+                                                <button class="close-megamenu rtl:rotate-180">
                                                     <img src="assets/images/icons/arrow-left.svg" width="16" height="16"
                                                         alt="arrow-left">
                                                 </button>
@@ -574,8 +621,9 @@
                                         <span class="grow shrink-0">
                                             Activities
                                         </span>
-                                        <svg class="-rotate-90 xl:rotate-0" width="16" height="16" viewBox="0 0 16 16"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="rtl:rotate-90 rtl:xl:rotate-0 ltr:-rotate-90 xl:rotate-0" width="16"
+                                            height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
                                             <path class=" stroke-Black xl:stroke-white"
                                                 d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
                                                 stroke="white" stroke-width="1.5" stroke-miterlimit="10"
@@ -586,7 +634,7 @@
                                     <div class="megamenu xl:w-[480px]">
                                         <div class="flex flex-col gap-6">
                                             <div class="flex xl:hidden items-center gap-3 pt-4">
-                                                <button class="close-megamenu">
+                                                <button class="close-megamenu rtl:rotate-180">
                                                     <img src="assets/images/icons/arrow-left.svg" width="16" height="16"
                                                         alt="arrow-left">
                                                 </button>
@@ -699,8 +747,7 @@
                                 </li>
 
                             </ul>
-                            <a href="#"
-                                class="hidden shrink-0 xl:flex items-center gap-0.5 py-2.5 px-1 opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out">
+                            <a href="#" class="more-nav-items">
                                 <span class="bg-white rounded-full w-1 h-1"></span>
                                 <span class="bg-white rounded-full w-1 h-1"></span>
                                 <span class="bg-white rounded-full w-1 h-1"></span>
@@ -721,9 +768,10 @@
     <main>
 
         <!-- Start Hero Section  -->
-        <section class="hero-section ">
+        <section class="hero-section">
             <div class="lg:p-5">
-                <div class="lg:rounded-3xl bg-[url(../images/herobg.webp)] bg-cover bg-center lg:overflow-hidden relative pt-[190px] lg:pb-20 lg:min-h-[760px] flex items-center px-5 lg:px-0">
+                <div
+                    class="lg:rounded-3xl bg-[url(../images/herobg.webp)] bg-cover bg-center lg:overflow-hidden relative pt-[190px] lg:pb-20 lg:min-h-[760px] flex items-center px-5 lg:px-0">
                     <div class="overlay"></div>
                     <div class="container my-auto relative">
                         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[60px]">
@@ -752,7 +800,7 @@
                                     </p>
                                 </div>
                             </div>
-    
+
                             <div
                                 class="-mb-[72px] lg:mb-0 lg:w-[409px] bg-white p-5 lg:p-10 rounded-2xl lg:rounded-3xl shadow-hero-box flex flex-col gap-10">
                                 <div class="flex flex-col divide-y divide-Neutral-200">
@@ -787,28 +835,24 @@
 
         <!-- Start Explore Section  -->
         <section class="py-16 lg:py-24 px-5 lg:px-0 mt-[72px] lg:mt-0">
-            <div class="container flex flex-col gap-8 lg:gap-12">
-
-                <header class="flex items-center justify-between gap-3">
-                    <h2
-                        class="text-[32px] text-center lg:text-start lg:text-40 text-Black tracking-tighter font-semibold ">
-                        Explore the Treasures of
-                        <span class="inline-flex items-center gap-3 text-[#136F63] border-b-2 border-[#136F63] ps-4">
-                            Saudi
-                            <img src="assets/images/icons/tabler_chevron-down.svg" width="24" height="24"
-                                alt="chevrondown">
-                        </span>
-                    </h2>
-                    <a href="#"
-                        class="rounded-xl border border-Neutral-300 py-3.5 px-8 hidden lg:flex items-center gap-6 text-Black font-semibold">
-                        Discover more
-                        <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
-                                fill="#121617" />
-                        </svg>
-                    </a>
-                </header>
+            <div class="container flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 lg:gap-12">
+                <h2
+                    class="lg:flex-auto text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex flex-col lg:flex-row items-center gap-4">
+                    Explore the Treasures of
+                    <span class="inline-flex items-center gap-3 text-[#136F63] border-b-2 border-[#136F63] ps-4">
+                        Saudi
+                        <img src="assets/images/icons/tabler_chevron-down.svg" width="24" height="24" alt="chevrondown">
+                    </span>
+                </h2>
+                <a href="#"
+                    class="order-last lg:order-none rounded-xl border border-Neutral-300 py-3.5 px-8 flex items-center gap-6 text-Black font-semibold">
+                    Discover more
+                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                            fill="#121617" />
+                    </svg>
+                </a>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30">
                     <!-- item -->
@@ -847,7 +891,7 @@
                                 <span class="text-Neutral-200 text-sm font-semibold">
                                     AlUla, Saudi Arabia
                                 </span>
-                                <h3 class="text-Neutral-50 text-2xl font-semibold">
+                                <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
                                     <a href="#">
                                         Explore Alula
                                     </a>
@@ -871,8 +915,7 @@
                     </div>
 
                     <!-- item -->
-                    <div
-                        class="h-[557px] relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                    <div class="relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                         <div class="absolute top-0 start-0 w-full p-5 flex justify-end z-10">
                             <div class="flex items-center gap-3">
                                 <span
@@ -928,13 +971,13 @@
                                 </div>
 
                             </div>
-                            <div class="p-6 bg-white flex flex-col gap-8 shrink-0">
+                            <div class="p-6 bg-white flex flex-col gap-8 shrink-0 grow">
                                 <div class="flex flex-col gap-3">
                                     <div class="flex flex-col gap-1">
                                         <span class="text-Gray text-sm font-semibold">
                                             Asir, Saudi Arabia
                                         </span>
-                                        <h3 class="text-Black text-2xl font-semibold">
+                                        <h3 class="text-Black text-2xl font-semibold line-clamp-2">
                                             Abseiling Adventure | Pangaea Center
                                         </h3>
                                     </div>
@@ -956,7 +999,7 @@
                                     </div>
                                 </div>
 
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mt-auto">
                                     <div class="flex flex-col gap-2">
                                         <span class="text-Gray text-xs ">
                                             From
@@ -981,8 +1024,7 @@
                     </div>
 
                     <!-- item -->
-                    <div
-                        class="h-[557px] relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                    <div class="relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
                         <div class="absolute top-0 start-0 w-full p-5 flex justify-end z-10">
                             <div class="flex items-center gap-3">
                                 <span
@@ -1039,13 +1081,13 @@
                                 </div>
 
                             </div>
-                            <div class="p-6 bg-white flex flex-col gap-8 shrink-0">
+                            <div class="p-6 bg-white flex flex-col gap-8 shrink-0 grow">
                                 <div class="flex flex-col gap-3">
                                     <div class="flex flex-col gap-1">
                                         <span class="text-Gray text-sm font-semibold">
                                             Asir, Saudi Arabia
                                         </span>
-                                        <h3 class="text-Black text-2xl font-semibold">
+                                        <h3 class="text-Black text-2xl font-semibold line-clamp-2">
                                             Abseiling Adventure | Pangaea Center
                                         </h3>
                                     </div>
@@ -1067,7 +1109,7 @@
                                     </div>
                                 </div>
 
-                                <div class="flex justify-between items-center">
+                                <div class="flex justify-between items-center mt-auto">
                                     <div class="flex flex-col gap-2">
                                         <span class="text-Gray text-xs ">
                                             From
@@ -1119,8 +1161,9 @@
                                     </svg>
                                 </a>
                             </div>
-    
-                            <div class="h-[280px] lg:h-[346px] rounded-3xl overflow-hidden gallery-itemg group relative">
+
+                            <div
+                                class="h-[280px] lg:h-[346px] rounded-3xl overflow-hidden gallery-itemg group relative">
                                 <div class="gallery-overlay">
                                     <h3 class="gallery-title">
                                         Vietnam</h3>
@@ -1130,7 +1173,8 @@
                             </div>
                         </div>
                         <div class="lg:col-span-3 flex flex-col gap-30">
-                            <div class="h-[280px] lg:h-[255px] rounded-3xl overflow-hidden gallery-itemg group relative">
+                            <div
+                                class="h-[280px] lg:h-[255px] rounded-3xl overflow-hidden gallery-itemg group relative">
                                 <div class="gallery-overlay">
                                     <h3 class="gallery-title">
                                         Vietnam</h3>
@@ -1138,7 +1182,8 @@
                                 <img src="assets/images/gallery-2.webp" width="300" height="255" alt="gallery"
                                     class="w-full h-full object-cover">
                             </div>
-                            <div class="h-[280px] lg:h-[325px] rounded-3xl overflow-hidden gallery-itemg group relative">
+                            <div
+                                class="h-[280px] lg:h-[325px] rounded-3xl overflow-hidden gallery-itemg group relative">
                                 <div class="gallery-overlay">
                                     <h3 class="gallery-title">
                                         Vietnam</h3>
@@ -1164,7 +1209,8 @@
                                     of Saudi Arabia
                                 </p>
                             </div>
-                            <div class="h-[280px] lg:h-[320px] rounded-3xl overflow-hidden gallery-itemg group relative">
+                            <div
+                                class="h-[280px] lg:h-[320px] rounded-3xl overflow-hidden gallery-itemg group relative">
                                 <div class="gallery-overlay">
                                     <h3 class="gallery-title">
                                         Vietnam</h3>
@@ -1183,23 +1229,21 @@
 
         <!-- Start Hot Deals Section  -->
         <section class="py-16 lg:py-24 px-5 lg:px-0">
-            <div class="container flex flex-col gap-8 lg:gap-12">
+            <div class="container flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 lg:gap-12">
 
-                <header class="flex flex-col lg:flex-row items-center justify-between gap-3">
-                    <h2
-                        class="text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
-                        Hot Deals
-                    </h2>
-                    <a href="#"
-                        class="rounded-xl border border-Neutral-300 py-3.5 px-8 hidden lg:flex items-center gap-6 text-Black font-semibold">
-                        Discover more
-                        <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
-                                fill="#121617" />
-                        </svg>
-                    </a>
-                </header>
+                <h2
+                    class="lg:flex-auto text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
+                    Hot Deals
+                </h2>
+                <a href="#"
+                    class="order-last lg:order-none rounded-xl border border-Neutral-300 py-3.5 px-8 flex items-center gap-6 text-Black font-semibold">
+                    Discover more
+                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                            fill="#121617" />
+                    </svg>
+                </a>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30">
                     <!-- item -->
@@ -1240,7 +1284,7 @@
                                 <span class="text-Neutral-200 text-sm font-semibold">
                                     AlUla, Saudi Arabia
                                 </span>
-                                <h3 class="text-Neutral-50 text-2xl font-semibold">
+                                <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
                                     <a href="#">
                                         Explore Alula
                                     </a>
@@ -1301,7 +1345,7 @@
                                 <span class="text-Neutral-200 text-sm font-semibold">
                                     AlUla, Saudi Arabia
                                 </span>
-                                <h3 class="text-Neutral-50 text-2xl font-semibold">
+                                <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
                                     <a href="#">
                                         Explore Alula
                                     </a>
@@ -1362,7 +1406,7 @@
                                 <span class="text-Neutral-200 text-sm font-semibold">
                                     AlUla, Saudi Arabia
                                 </span>
-                                <h3 class="text-Neutral-50 text-2xl font-semibold">
+                                <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
                                     <a href="#">
                                         Explore Alula
                                     </a>
@@ -1395,24 +1439,22 @@
 
         <!-- Start Our Values Section  -->
         <section class="py-16 lg:py-24">
-            <div class="container flex flex-col gap-8 lg:gap-12">
+            <div class="container flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 lg:gap-12">
+                <h2
+                    class="lg:flex-auto text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
+                    Our Values
+                </h2>
+                <a href="#"
+                    class="order-last lg:order-none rounded-xl border border-Neutral-300 py-3.5 px-8 flex items-center gap-6 text-Black font-semibold">
+                    Who we are
+                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                            fill="#121617" />
+                    </svg>
+                </a>
 
-                <header class="flex flex-col lg:flex-row items-center justify-between gap-3">
-                    <h2
-                        class="text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
-                        Our Values
-                    </h2>
-                    <a href="#"
-                        class="rounded-xl border border-Neutral-300 py-3.5 px-8 hidden lg:flex items-center gap-6 text-Black font-semibold">
-                        Who we are
-                        <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
-                                fill="#121617" />
-                        </svg>
-                    </a>
-                </header>
-                <div>
+                <div class="w-full">
                     <div class="swiper values-slider h-full px-5 lg:px-0">
                         <div class="swiper-wrapper">
                             <!-- item  -->
@@ -1490,25 +1532,24 @@
 
         <!-- Start Latest Guides Section  -->
         <section class="py-16 lg:py-24">
-            <div class="container flex flex-col gap-8 lg:gap-12">
+            <div class="container flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 lg:gap-12">
+                <h2
+                    class="lg:flex-auto text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
+                    Latest Guides
+                </h2>
 
-                <header class="flex flex-col lg:flex-row items-center justify-between gap-3">
-                    <h2
-                        class="text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
-                        Latest Guides
-                    </h2>
-                    <a href="#"
-                        class="rounded-xl border border-Neutral-300 py-3.5 px-8 hidden lg:flex items-center gap-6 text-Black font-semibold">
-                        More Guides
-                        <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
-                                fill="#121617" />
-                        </svg>
-                    </a>
-                </header>
 
-                <div>
+                <a href="#"
+                    class="order-last lg:order-none rounded-xl border border-Neutral-300 py-3.5 px-8 flex items-center gap-6 text-Black font-semibold">
+                    More Guides
+                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                            fill="#121617" />
+                    </svg>
+                </a>
+
+                <div class="w-full">
                     <div class="swiper guides-slider h-full px-5 lg:px-0">
                         <div class="swiper-wrapper">
                             <!-- item  -->
@@ -1526,7 +1567,7 @@
                                     </div>
                                     <div
                                         class="absolute bottom-0 start-0 w-full p-6 pt-18 flex justify-center bg-hot-deal-grad">
-                                        <h3 class="text-Neutral-50 text-2xl font-semibold">
+                                        <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
                                             Magical Aurora
                                         </h3>
                                     </div>
@@ -1549,7 +1590,7 @@
                                     </div>
                                     <div
                                         class="absolute bottom-0 start-0 w-full p-6 pt-18 flex justify-center bg-hot-deal-grad">
-                                        <h3 class="text-Neutral-50 text-2xl font-semibold">
+                                        <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
                                             Magnificent Bali
                                         </h3>
                                     </div>
@@ -1572,7 +1613,7 @@
                                     </div>
                                     <div
                                         class="absolute bottom-0 start-0 w-full p-6 pt-18 flex justify-center bg-hot-deal-grad">
-                                        <h3 class="text-Neutral-50 text-2xl font-semibold">
+                                        <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
                                             Wonders of Egypt
                                         </h3>
                                     </div>
@@ -1595,7 +1636,7 @@
                                     </div>
                                     <div
                                         class="absolute bottom-0 start-0 w-full p-6 pt-18 flex justify-center bg-hot-deal-grad">
-                                        <h3 class="text-Neutral-50 text-2xl font-semibold">
+                                        <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
                                             Explore Alula
                                         </h3>
                                     </div>
@@ -1618,222 +1659,225 @@
         <section class="py-16 lg:py-0 px-5 lg:px-0">
             <div class="lg:p-5">
                 <div class="py-[60px] lg:py-[100px] bg-[#EEF6F3] rounded-3xl">
-                <div class="container flex flex-col gap-8 lg:gap-12">
-                    <header class="flex flex-col items-center gap-3 px-5 lg:px-0">
-                        <h2 class="text-40 text-Black font-semibold flex items-center gap-4 text-center">
-                            Latest update from the community
-                        </h2>
-                        <p class="text-Gray text-base text-center">
-                            Explore the natural wonders, cultural treasures, and thrilling experiences that the world
-                            has to
-                            offer
-                        </p>
-                    </header>
+                    <div class="container flex flex-col gap-8 lg:gap-12">
+                        <header class="flex flex-col items-center gap-3 px-5 lg:px-0">
+                            <h2 class="text-40 text-Black font-semibold flex items-center gap-4 text-center">
+                                Latest update from the community
+                            </h2>
+                            <p class="text-Gray text-base text-center">
+                                Explore the natural wonders, cultural treasures, and thrilling experiences that the
+                                world
+                                has to
+                                offer
+                            </p>
+                        </header>
 
-                    <div class="flex flex-col gap-16">
-                        <div>
-                            <div class="swiper community-slider h-full px-5 lg:px-0">
-                                <div class="swiper-wrapper">
-                                    <!-- item  -->
-                                    <div class="swiper-slide">
-                                        <div class="community-box">
-                                            <div class="p-5 flex flex-col gap-6">
-                                                <div class="flex items-center gap-3">
-                                                    <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
-                                                        <img src="assets/images/community.png" width="44" height="44"
-                                                            alt="person" class="w-full h-full object-cover">
+                        <div class="flex flex-col gap-16">
+                            <div>
+                                <div class="swiper community-slider h-full px-5 lg:px-0">
+                                    <div class="swiper-wrapper">
+                                        <!-- item  -->
+                                        <div class="swiper-slide">
+                                            <div class="community-box">
+                                                <div class="p-5 flex flex-col gap-6">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
+                                                            <img src="assets/images/community.png" width="44"
+                                                                height="44" alt="person"
+                                                                class="w-full h-full object-cover">
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <p class="text-Black font-semibold text-base">
+                                                                Robert Fox
+                                                            </p>
+                                                            <p class="text-Gray text-xs">
+                                                                Posted 2 hours ago
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div class="flex flex-col">
-                                                        <p class="text-Black font-semibold text-base">
-                                                            Robert Fox
-                                                        </p>
-                                                        <p class="text-Gray text-xs">
-                                                            Posted 2 hours ago
-                                                        </p>
+
+                                                    <div class="community-box-content">
+                                                        <h3>
+                                                            Things You Need to Prepare Before Going to Australia
+                                                        </h3>
+                                                        <div>
+                                                            <p>
+                                                                Planning a trip to Australia? Here are some important
+                                                                things you
+                                                                should
+                                                                prepare before you go to make your journey smoother:
+
+                                                            </p>
+                                                            <br>
+                                                            <ol>
+                                                                <li>
+                                                                    Visa: Make sure you have the appropriate visa to
+                                                                    enter
+                                                                    Australia.
+                                                                    The
+                                                                    type of visa you need may depend on your purpose of
+                                                                    visit
+                                                                    (Tripism,
+                                                                    work, study, etc.). Visit the official Australian
+                                                                    government
+                                                                    website
+                                                                    to
+                                                                    apply for the right visa.
+                                                                </li>
+                                                            </ol>
+
+                                                        </div>
+                                                        <a href="#"
+                                                            class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
+                                                            Read more...
+                                                        </a>
                                                     </div>
                                                 </div>
 
-                                                <div class="community-box-content">
-                                                    <h3>
-                                                        Things You Need to Prepare Before Going to Australia
-                                                    </h3>
-                                                    <div>
-                                                        <p>
-                                                            Planning a trip to Australia? Here are some important
-                                                            things you
-                                                            should
-                                                            prepare before you go to make your journey smoother:
-
-                                                        </p>
-                                                        <br>
-                                                        <ol>
-                                                            <li>
-                                                                Visa: Make sure you have the appropriate visa to
-                                                                enter
-                                                                Australia.
-                                                                The
-                                                                type of visa you need may depend on your purpose of
-                                                                visit
-                                                                (Tripism,
-                                                                work, study, etc.). Visit the official Australian
-                                                                government
-                                                                website
-                                                                to
-                                                                apply for the right visa.
-                                                            </li>
-                                                        </ol>
-
+                                                <div class="grid grid-cols-2 border-t border-Neutral-200">
+                                                    <div class="p-5 flex items-center justify-center gap-2">
+                                                        <img src="assets/images/icons/like.svg" width="16" height="16"
+                                                            alt="like">
+                                                        12 likes
                                                     </div>
-                                                    <a href="#"
-                                                        class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
-                                                        Read more...
-                                                    </a>
+                                                    <div class="p-5 flex items-center justify-center gap-2">
+                                                        <img src="assets/images/icons/message-text.svg" width="16"
+                                                            height="16" alt="like">
+                                                        12 replies
+                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="grid grid-cols-2 border-t border-Neutral-200">
-                                                <div class="p-5 flex items-center justify-center gap-2">
-                                                    <img src="assets/images/icons/like.svg" width="16" height="16"
-                                                        alt="like">
-                                                    12 likes
+                                        </div>
+
+                                        <!-- item -->
+                                        <div class="swiper-slide">
+                                            <div class="community-box">
+                                                <div class="p-5 flex flex-col gap-6">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
+                                                            <img src="assets/images/community.png" width="44"
+                                                                height="44" alt="person"
+                                                                class="w-full h-full object-cover">
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <p class="text-Black font-semibold text-base">
+                                                                Robert Fox
+                                                            </p>
+                                                            <p class="text-Gray text-xs">
+                                                                Posted 2 hours ago
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="community-box-content">
+                                                        <h3>
+                                                            Things You Need to Prepare Before Going to Australia
+                                                        </h3>
+                                                        <div>
+                                                            <p>
+                                                                Planning a trip to Australia? Here are some important
+                                                                things you
+                                                                should
+                                                                prepare before you go to make your journey smoother:
+
+                                                            </p>
+                                                            <br>
+                                                            <ol>
+                                                                <li>
+                                                                    Visa: Make sure you have the appropriate visa to
+                                                                    enter
+                                                                    Australia.
+                                                                    The
+                                                                    type of visa you need may depend on your purpose of
+                                                                    visit
+                                                                    (Tripism,
+                                                                    work, study, etc.). Visit the official Australian
+                                                                    government
+                                                                    website
+                                                                    to
+                                                                    apply for the right visa.
+                                                                </li>
+                                                            </ol>
+
+                                                        </div>
+                                                        <a href="#"
+                                                            class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
+                                                            Read more...
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <div class="p-5 flex items-center justify-center gap-2">
-                                                    <img src="assets/images/icons/message-text.svg" width="16"
-                                                        height="16" alt="like">
-                                                    12 replies
+
+                                                <div class="grid grid-cols-2 border-t border-Neutral-200">
+                                                    <div class="p-5 flex items-center justify-center gap-2">
+                                                        <img src="assets/images/icons/like.svg" width="16" height="16"
+                                                            alt="like">
+                                                        12 likes
+                                                    </div>
+                                                    <div class="p-5 flex items-center justify-center gap-2">
+                                                        <img src="assets/images/icons/message-text.svg" width="16"
+                                                            height="16" alt="like">
+                                                        12 replies
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
 
                                     </div>
+                                </div>
+                            </div>
 
-                                    <!-- item -->
-                                    <div class="swiper-slide">
-                                        <div class="community-box">
-                                            <div class="p-5 flex flex-col gap-6">
-                                                <div class="flex items-center gap-3">
-                                                    <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
-                                                        <img src="assets/images/community.png" width="44" height="44"
-                                                            alt="person" class="w-full h-full object-cover">
-                                                    </div>
-                                                    <div class="flex flex-col">
-                                                        <p class="text-Black font-semibold text-base">
-                                                            Robert Fox
-                                                        </p>
-                                                        <p class="text-Gray text-xs">
-                                                            Posted 2 hours ago
-                                                        </p>
-                                                    </div>
-                                                </div>
 
-                                                <div class="community-box-content">
-                                                    <h3>
-                                                        Things You Need to Prepare Before Going to Australia
-                                                    </h3>
-                                                    <div>
-                                                        <p>
-                                                            Planning a trip to Australia? Here are some important
-                                                            things you
-                                                            should
-                                                            prepare before you go to make your journey smoother:
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30 px-5 lg:px-0">
+                                <div
+                                    class="col-span-1 p-6 lg:p-10 rounded-[20px] bg-white flex flex-col items-start gap-10">
+                                    <div class="flex flex-col gap-5">
+                                        <div class="icon-container bg-[#EEF6F3]">
+                                            <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
+                                                alt="user">
+                                        </div>
+                                        <div class="flex flex-col gap-3">
+                                            <h3 class="font-Jost text-2xl font-semibold">
+                                                View all community posts
+                                            </h3>
+                                            <p class="text-Gray text-base leading-[160%]">
+                                                check out all the posts from our community members if you need more
+                                                knowledge
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="py-3.5 px-8 rounded-full bg-[#403F4C] text-white font-semibold">
+                                        View all post
+                                    </a>
+                                </div>
+                                <div
+                                    class="lg:col-span-2 p-6 lg:p-10 rounded-[20px] bg-[#403F4C] flex flex-col items-start gap-10">
 
-                                                        </p>
-                                                        <br>
-                                                        <ol>
-                                                            <li>
-                                                                Visa: Make sure you have the appropriate visa to
-                                                                enter
-                                                                Australia.
-                                                                The
-                                                                type of visa you need may depend on your purpose of
-                                                                visit
-                                                                (Tripism,
-                                                                work, study, etc.). Visit the official Australian
-                                                                government
-                                                                website
-                                                                to
-                                                                apply for the right visa.
-                                                            </li>
-                                                        </ol>
-
-                                                    </div>
-                                                    <a href="#"
-                                                        class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
-                                                        Read more...
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <div class="grid grid-cols-2 border-t border-Neutral-200">
-                                                <div class="p-5 flex items-center justify-center gap-2">
-                                                    <img src="assets/images/icons/like.svg" width="16" height="16"
-                                                        alt="like">
-                                                    12 likes
-                                                </div>
-                                                <div class="p-5 flex items-center justify-center gap-2">
-                                                    <img src="assets/images/icons/message-text.svg" width="16"
-                                                        height="16" alt="like">
-                                                    12 replies
-                                                </div>
-                                            </div>
+                                    <div class="flex flex-col gap-5">
+                                        <div class="icon-container bg-[#FFFFFF1F]">
+                                            <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
+                                                alt="user">
+                                        </div>
+                                        <div class="flex flex-col gap-3">
+                                            <h3 class="font-Jost text-2xl font-semibold text-white">
+                                                Join Our Adventure Community Today!
+                                            </h3>
+                                            <p class="text-[#FFFFFFA3] text-lg leading-[160%]">
+                                                Don't miss out on incredible experiences. Explore the world with us and
+                                                create memories that will last a lifetime
+                                            </p>
                                         </div>
                                     </div>
 
+                                    <a href="#" class="py-3.5 px-8 rounded-full bg-white text-Black font-semibold">
+                                        Join community now
+                                    </a>
+
                                 </div>
                             </div>
+
                         </div>
-
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30 px-5 lg:px-0">
-                            <div
-                                class="col-span-1 p-6 lg:p-10 rounded-[20px] bg-white flex flex-col items-start gap-10">
-                                <div class="flex flex-col gap-5">
-                                    <div class="icon-container bg-[#EEF6F3]">
-                                        <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
-                                            alt="user">
-                                    </div>
-                                    <div class="flex flex-col gap-3">
-                                        <h3 class="font-Jost text-2xl font-semibold">
-                                            View all community posts
-                                        </h3>
-                                        <p class="text-Gray text-base leading-[160%]">
-                                            check out all the posts from our community members if you need more
-                                            knowledge
-                                        </p>
-                                    </div>
-                                </div>
-                                <a href="#" class="py-3.5 px-8 rounded-full bg-[#403F4C] text-white font-semibold">
-                                    View all post
-                                </a>
-                            </div>
-                            <div
-                                class="lg:col-span-2 p-6 lg:p-10 rounded-[20px] bg-[#403F4C] flex flex-col items-start gap-10">
-
-                                <div class="flex flex-col gap-5">
-                                    <div class="icon-container bg-[#FFFFFF1F]">
-                                        <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
-                                            alt="user">
-                                    </div>
-                                    <div class="flex flex-col gap-3">
-                                        <h3 class="font-Jost text-2xl font-semibold text-white">
-                                            Join Our Adventure Community Today!
-                                        </h3>
-                                        <p class="text-[#FFFFFFA3] text-lg leading-[160%]">
-                                            Don't miss out on incredible experiences. Explore the world with us and
-                                            create memories that will last a lifetime
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <a href="#" class="py-3.5 px-8 rounded-full bg-white text-Black font-semibold">
-                                    Join community now
-                                </a>
-
-                            </div>
-                        </div>
-
                     </div>
-                </div>
                 </div>
             </div>
 
@@ -1972,25 +2016,26 @@
         <section class="px-5 lg:px-0">
             <div class="lg:p-5">
                 <div
-                class="px-5 lg:px-0 py-10 lg:py-[120px] cta-section rounded-3xl overflow-hidden bg-[url(../images/ctabg.webp)] bg-cover bg-center">
-                <div class="container grid lg:grid-cols-2">
-                    <div class="bg-white rounded-3xl p-8 flex flex-col gap-6 items-start">
-                        <div class="flex flex-col gap-4">
-                            <h2 class="text-Black text-4xl font-semibold leading-[140%]">
-                                Join Our Adventure Today!
-                            </h2>
-                            <p class="text-Gray text-lg leading-[160%]">
-                                Don't miss out on incredible experiences. Explore the world with us and create memories
-                                that
-                                will last a lifetime
-                            </p>
+                    class="px-5 lg:px-0 py-10 lg:py-[120px] cta-section rounded-3xl overflow-hidden bg-[url(../images/ctabg.webp)] bg-cover bg-center">
+                    <div class="container grid lg:grid-cols-2">
+                        <div class="bg-white rounded-3xl p-8 flex flex-col gap-6 items-start">
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-Black text-4xl font-semibold leading-[140%]">
+                                    Join Our Adventure Today!
+                                </h2>
+                                <p class="text-Gray text-lg leading-[160%]">
+                                    Don't miss out on incredible experiences. Explore the world with us and create
+                                    memories
+                                    that
+                                    will last a lifetime
+                                </p>
+                            </div>
+                            <a href="#" class="py-3.5 px-8 rounded-full bg-[#DB3B3B] text-white font-semibold">
+                                Explore Trips
+                            </a>
                         </div>
-                        <a href="#" class="py-3.5 px-8 rounded-full bg-[#DB3B3B] text-white font-semibold">
-                            Explore Trips
-                        </a>
-                    </div>
 
-                </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2007,13 +2052,13 @@
     <footer class="py-16 lg:py-24 px-5 lg:px-0">
         <div class="container flex flex-col gap-[60px] lg:gap-24">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
-                <div class="col-span-5 flex flex-col items-start gap-[28px] lg:gap-10">
+                <div class="lg:col-span-5 flex flex-col items-start gap-[28px] lg:gap-10">
                     <img src="assets/images/logo-footer.svg" width="146" height="49" alt="logo">
                     <p class="font-Eczar text-4xl leading-[120%] font-semibold tracking-[-0.72px]">
                         Explore for Your Next Remarkable Journey
                     </p>
                 </div>
-                <div class="lg:col-start-8 col-span-5 bg-[#EEF6F3] py-6 px-5 rounded-xl flex flex-col gap-6">
+                <div class="lg:col-start-8 lg:col-span-5 bg-[#EEF6F3] py-6 px-5 rounded-xl flex flex-col gap-6">
                     <div class="flex flex-col gap-3">
                         <h2 class="text-Black text-2xl font-semibold leading-[120%]">
                             Keep up with Pangaea
