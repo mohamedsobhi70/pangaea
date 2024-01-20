@@ -17,12 +17,12 @@ $(window).on("load", function () {
             }, 100);
         })
     }
-   
+
     if ($(".cur-lang")) {
         $(".cur-lang").on("mouseenter", function () {
             let th = $(this);
             th.find(".lang-curr-box").addClass("show");
-        }).on("mouseleave",function(){
+        }).on("mouseleave", function () {
             let th = $(this);
             th.find(".lang-curr-box").removeClass("show");
         })
@@ -107,14 +107,15 @@ $(window).on("load", function () {
             $th.append(`<div class="co-list hidden"><ul class="flex flex-col gap-y-1 gap-3">${$content}</ul></div>`);
         })
     }
- if ($(".sort-by-btn")) {
+    if ($(".sort-by-btn")) {
         $(".sort-by-btn").on("click", function () {
             $(".sort-by").slideToggle(250);
         })
 
     }
-    // ===================================================================
 
+
+    // ===================================================================
     // Accordion Component
     if ($(".designpeer-accordion").length > 0) {
         $(".designpeer-accordion").each(function () {
@@ -188,7 +189,6 @@ $(window).on("load", function () {
             let pagination = slider.find('.trip-pagination');
             let nextButton = slider.find('.trip-next');
             let prevButton = slider.find('.trip-prev');
-            // let sliderContainer = slider.closest('.trip-item');
 
             let swiper = new Swiper(slider[0], {
                 loop: true,
@@ -201,16 +201,6 @@ $(window).on("load", function () {
                     prevEl: prevButton[0]
                 },
             });
-
-            // console.log($(this));
-
-            // sliderContainer.on('mouseenter', function () {
-            //     swiper.autoplay.start();
-            // });
-
-            // sliderContainer.on('mouseleave', function () {
-            //     swiper.autoplay.stop();
-            // });
         });
     }
 
@@ -359,26 +349,9 @@ $(window).on("load", function () {
         });
     }
 
-    if ($(".owl-carousel").length > 0) {
-        $(".prevBtn").each(function (index) {
-            //Add one to index so it starts from 1
-            $(this).attr('aria-label', index + 1);
-        })
-        $(".nxtBtn").each(function (index) {
-            //Add one to index so it starts from 1
-            $(this).attr('aria-label', index + 1);
-        })
-        $('.owl-carousel').each(function () {
-            //Find each set of dots in this carousel
-            $(this).find('.owl-dot').each(function (index) {
-                //Add one to index so it starts from 1
-                $(this).attr('aria-label', index + 1);
-            });
-        });
-    }
 
+    // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
     // Guides Page
-
     // Guides Slider
     if ($(".all-guides-slider").length > 0) {
         const slider = document.querySelectorAll(".all-guides-slider");
@@ -424,6 +397,7 @@ $(window).on("load", function () {
         });
     }
 
+    // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
     // Category Page
     // Price Slider
     if ($(".price-slider").length > 0) {
@@ -474,6 +448,7 @@ $(window).on("load", function () {
         })
     }
 
+
     if ($(".sticky-trip-content").length > 0) {
         let headHeight;
         if ($(".cat-header").length > 0) {
@@ -496,6 +471,58 @@ $(window).on("load", function () {
             }
         });
 
+    }
+
+    // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+    // Single Trip Page
+    // Light Box Image In Single Trip  page
+
+    if ($(".single-trip-images").length > 0) {
+        const slider = document.querySelectorAll(".single-trip-images");
+        slider.forEach(function (slider) {
+            let nextButton = slider.querySelector('.single-trip-images-next');
+            let prevButton = slider.querySelector('.single-trip-images-prev');
+            new Swiper(slider, {
+                spaceBetween: 30,
+                slidesPerView: 1,
+                loop: true,
+                navigation: {
+                    nextEl: nextButton,
+                    prevEl: prevButton,
+                },
+            });
+        });
+    } 
+    
+    if ($(".gallery-item").length > 0) {
+        const galleryItm = document.querySelectorAll(".gallery-item");
+        galleryItm.forEach(function (itm) {
+            itm.addEventListener("click", function () {
+                if ($(".light-box-container").length > 0) {
+                    $(".light-box-container").addClass("show");
+                    $("body").css("overflow", "hidden")
+                }
+            })
+        });
+
+    }
+
+    if ($(".light-box-container").length > 0) {
+        let lightBoxContainer = document.querySelector('.light-box-container');
+        let closeButton = lightBoxContainer.querySelector('.light-box-close-btn');
+        let swiperContainer = lightBoxContainer.querySelector('.swiper');
+
+        lightBoxContainer.addEventListener('click', function (event) {
+            if (event.target === lightBoxContainer && !swiperContainer.contains(event.target)) {
+                lightBoxContainer.classList.remove('show');
+                $("body").css("overflow", "visible")
+            }
+        });
+
+        closeButton.addEventListener('click', function () {
+            lightBoxContainer.classList.remove('show');
+            $("body").css("overflow", "visible")
+        });
     }
 
 })

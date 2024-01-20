@@ -770,7 +770,7 @@
         <!-- ====================================================== -->
 
         <!-- Start Section  -->
-        <section class="py-12 px-5 lg:px-0">
+        <section class="py-6 lg:py-12 px-5 lg:px-0">
 
             <div class="sticky-trip-content px-5 lg:px-0">
                 <div class="container flex flex-col lg:flex-row lg:items-center justify-between gap-3">
@@ -795,7 +795,7 @@
                 </div>
             </div>
 
-            <div class="container flex flex-col gap-10">
+            <div class="container flex flex-col gap-5 lg:gap-10">
 
                 <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
                     <h2 class="text-Neutral-900 text-3xl lg:text-4xl font-semibold">
@@ -811,43 +811,44 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-16">
+                <div class="flex flex-col gap-8 lg:gap-16">
 
                     <!-- gallery Section  -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 rounded-2xl overflow-hidden">
-                        <a href="assets/images/tripg-1.webp" data-lightbox="trip-gallery" data-title="Image 1"
-                            class="lg:col-span-2 lg:row-span-2 overflow-hidden h-60 lg:h-[496px]">
+
+                        <div class="gallery-item lg:col-span-2 lg:row-span-2 overflow-hidden h-60 lg:h-[496px]">
                             <img src="assets/images/tripg-1.webp" class="w-full h-full object-cover object-center"
                                 width="522" height="496" alt="trip">
-                        </a>
-                        <a href="assets/images/tripg-2.webp" data-lightbox="trip-gallery" data-title="Image 2"
-                            class="h-60 overflow-hidden col-span-1 row-span-1">
+                        </div>
+
+                        <div class="gallery-item">
                             <img src="assets/images/tripg-2.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
-                        </a>
-                        <a href="assets/images/tripg-3.webp" data-lightbox="trip-gallery" data-title="Image 3"
-                            class="h-60 overflow-hidden col-span-1 row-span-1">
+                        </div>
+
+                        <div class="gallery-item">
                             <img src="assets/images/tripg-3.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
-                        </a>
-                        <a href="assets/images/tripg-4.webp" data-lightbox="trip-gallery" data-title="Image 4"
-                            class="h-60 overflow-hidden col-span-1 row-span-1">
+                        </div>
+
+                        <div class="gallery-item">
                             <img src="assets/images/tripg-4.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
-                        </a>
-                        <a href="assets/images/tripg-5.webp" data-lightbox="trip-gallery" data-title="Image 5"
-                            class="h-60 overflow-hidden col-span-1 row-span-1">
+                        </div>
+
+                        <div class="gallery-item">
                             <img src="assets/images/tripg-5.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
-                        </a>
-                        <a href="assets/images/tripg-4.webp" data-lightbox="trip-gallery" data-title="Image 6"
-                            class="h-60 overflow-hidden col-span-1 row-span-1">
+                        </div>
+
+                        <div class="gallery-item">
                             <img src="assets/images/tripg-4.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
-                        </a>
-                        <div class="h-60 overflow-hidden col-span-1 row-span-1 relative">
+                        </div>
+
+                        <div class="gallery-item">
                             <div class="absolute w-full h-full bg-black bg-opacity-50 top-0 start-0">
-                                <a href="assets/images/tripg-2.webp" data-lightbox="trip-gallery" data-title="Image 7"
+                                <div
                                     class=" flex flex-col items-center justify-center gap-4 text-Dark-1-Primary h-full">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -861,18 +862,87 @@
                                     <span class="">
                                         All photos
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <img src="assets/images/tripg-2.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
                         </div>
+
+                        <!-- Light Box For Tip Images  -->
+
+                        <div class="light-box-container">
+                            <div class="container max-h-[70%] h-full flex flex-col gap-8">
+                                <button class="light-box-close-btn ms-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                        fill="none">
+                                        <path d="M10 10L30 30" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M30 10L10 30" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span class="sr-only">Close LightBox</span>
+                                </button>
+                                <div class="w-full h-full">
+                                    <div class="swiper single-trip-images px-5 lg:px-0 h-full">
+                                        <div class="swiper-wrapper">
+                                            <!-- item  -->
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/tripg-1.webp" class="object-contain h-full w-full"
+                                                    width="522" height="496" alt="trip">
+                                            </div>
+    
+                                            <!-- item  -->
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/tripg-2.webp" class="object-contain h-full w-full"
+                                                    width="240" height="240" alt="trip">
+                                            </div>
+    
+                                            <!-- item  -->
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/tripg-3.webp" class="object-contain h-full w-full"
+                                                    width="240" height="240" alt="trip">
+                                            </div>
+    
+                                            <!-- item  -->
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/tripg-4.webp" class="object-contain h-full w-full"
+                                                    width="240" height="240" alt="trip">
+                                            </div>
+    
+                                            <!-- item  -->
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/tripg-5.webp" class="object-contain h-full w-full"
+                                                    width="240" height="240" alt="trip">
+                                            </div>
+                                        </div>
+    
+                                        <div class="swiper-button-prev single-trip-images-prev">
+                                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 4L6 8L10 12" stroke="#E0E1E1" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+    
+                                        <div class="swiper-button-next single-trip-images-next">
+                                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 12L10 8L6 4" stroke="#E0E1E1" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="flex flex-col gap-24">
+                    <div class="flex flex-col gap-12 lg:gap-24">
                         <!-- Overview -->
-                        <div class="trip-info grid grid-cols-1 lg:grid-cols-3 gap-12">
-                            <div class="lg:col-span-2 flex flex-col gap-12">
-                                <p class="text-Neutral-900 text-[21px] leading-[160%]">
+                        <div class="trip-info grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+                            <div class="lg:col-span-2 flex flex-col gap-8 lg:gap-12">
+                                <p class="text-Neutral-900 lg:text-[21px] leading-[160%] lg:leading-[160%]">
                                     Walking in the bosom of nature helps reduce stress, expel negative thoughts, and
                                     contribute to improving mood. Enjoy hiking in the legendary Alsoudah weather, as the
                                     trail starts and ends in Pangaea Adventure Center, where you will enjoy watching the
@@ -880,7 +950,7 @@
                                 </p>
 
                                 <!-- Tour snapshot -->
-                                <div class="flex flex-col gap-30 pb-[30px]">
+                                <div class="flex flex-col gap-5 lg:gap-30 lg:pb-[30px]">
                                     <h3 class="text-Neutral-900 text-[21px] font-Jost font-medium">
                                         Tour snapshot
                                     </h3>
@@ -1009,7 +1079,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-12">
                                         <div class="flex flex-col gap-2">
                                             <h4 class="text-Neutral-900 font-Jost font-medium">
                                                 Available languages
@@ -1187,7 +1257,8 @@
                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-30">
 
                                 <div class="flex flex-col gap-9">
-                                    <div class="flex items-start gap-5">
+                                    <div
+                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
                                         <span
                                             class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
                                             1
@@ -1205,7 +1276,8 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-5">
+                                    <div
+                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
                                         <span
                                             class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
                                             2
@@ -1262,7 +1334,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-5">
+                                    <div
+                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
                                         <span
                                             class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
                                             3
@@ -1280,7 +1353,8 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="flex items-start gap-5">
+                                    <div
+                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
                                         <span
                                             class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
                                             4
@@ -1592,8 +1666,9 @@
                                     </div>
                                 </div>
                                 <div class="lg:col-start-5 lg:col-span-8">
-                                    <div class="flex flex-col items-start gap-10">
+                                    <div class="flex flex-col lg:items-start gap-6 lg:gap-10">
                                         <div>
+
                                             <!-- review item  -->
                                             <div class="review-item">
                                                 <div class="flex items-center gap-5">
@@ -1622,7 +1697,7 @@
                                                         station is short walk, just like two grocery stores.
                                                     </p>
                                                 </div>
-                                                <div class="flex items-center gap-4">
+                                                <div class="flex items-center gap-4 flex-wrap">
                                                     <img src="assets/images/Surface.png" width="114" height="113"
                                                         alt="Surface">
                                                     <img src="assets/images/Surface.png" width="114" height="113"
@@ -1672,6 +1747,7 @@
 
                                                 </div>
                                             </div>
+
                                             <!-- review item  -->
                                             <div class="review-item">
                                                 <div class="flex items-center gap-5">
@@ -1700,7 +1776,7 @@
                                                         station is short walk, just like two grocery stores.
                                                     </p>
                                                 </div>
-                                                <div class="flex items-center gap-4">
+                                                <div class="flex items-center gap-4 flex-wrap">
                                                     <img src="assets/images/Surface.png" width="114" height="113"
                                                         alt="Surface">
                                                     <img src="assets/images/Surface.png" width="114" height="113"
@@ -1750,6 +1826,7 @@
 
                                                 </div>
                                             </div>
+
                                             <!-- review item  -->
                                             <div class="review-item">
                                                 <div class="flex items-center gap-5">
@@ -1818,6 +1895,7 @@
 
                                                 </div>
                                             </div>
+
                                             <!-- review item  -->
                                             <div class="review-item">
                                                 <div class="flex items-center gap-5">
@@ -1886,11 +1964,10 @@
 
                                                 </div>
                                             </div>
-
                                         </div>
 
                                         <a href="#"
-                                            class="px-6 py-3.5 rounded-[4px] border border-Brand-Dark flex items-center gap-3 text-Brand-Dark text-[15px] font-medium">
+                                            class="px-6 py-3.5 rounded-[4px] border border-Brand-Dark flex justify-center items-center gap-3 text-Brand-Dark text-[15px] font-medium">
                                             Show all 116 reviews
                                             <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
                                                 <path d="M16.334 2.9165L4.66732 14.5832" stroke="#309C98"
