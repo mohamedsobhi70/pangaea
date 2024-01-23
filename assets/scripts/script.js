@@ -550,8 +550,18 @@ $(window).on("load", function () {
             let slider = $(this);
 
             let swiper = new Swiper(slider[0], {
-                slidesPerView: 12,
                 spaceBetween: 8,
+                breakpoints: {
+                    0: {
+                        slidesPerView: 6.2,
+                    },
+                    768: {
+                        slidesPerView: 8.2,
+                    },
+                    1024: {
+                        slidesPerView: 12,
+                    },
+                },
             });
         });
     }
