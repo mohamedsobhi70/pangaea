@@ -121,147 +121,282 @@
                                 </h3>
 
                                 <div class="flex flex-col gap-4">
+
                                     <ul class="trip-date-years grid grid-cols-2 lg:grid-cols-3 gap-2">
-                                        <li class="trip-date-year active">
+                                        <li class="trip-date-year active" data-year="y-1">
                                             2024
                                         </li>
-                                        <li class="trip-date-year">
+                                        <li class="trip-date-year" data-year="y-2">
                                             2025
                                         </li>
-                                        <li class="trip-date-year">
+                                        <li class="trip-date-year" data-year="y-3">
                                             2026
                                         </li>
                                     </ul>
-                                    <div class="flex flex-col gap-5 lg:gap-6">
-                                        <div class="w-full">
-                                            <div class="swiper month-slider trip-date-months">
-                                                <ul class="swiper-wrapper">
-                                                    <!-- Slides -->
-                                                    <li class="swiper-slide trip-date-month active">
-                                                        Jan
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        FEB
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        MAR
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        APR
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        MAY
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        JUN
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        JUL
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        AUG
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        Jan
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        FEB
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        MAR
-                                                    </li>
-                                                    <li class="swiper-slide trip-date-month">
-                                                        APR
-                                                    </li>
-                                                </ul>
+
+                                    <div class="trip-years-cntnt-container">
+                                        <div class="trip-years-cntnt" data-year="y-1">
+                                            <div class=" flex flex-col gap-5 lg:gap-6">
+                                                <div class="w-full">
+                                                    <div class="swiper month-slider trip-date-months">
+                                                        <ul class="swiper-wrapper">
+                                                            <!-- Slides -->
+                                                            <li class="swiper-slide trip-date-month" data-month="m-1">
+                                                                Jan
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-2">
+                                                                FEB
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month active"
+                                                                data-month="m-3">
+                                                                MAR
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-4">
+                                                                APR
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-5">
+                                                                MAY
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-6">
+                                                                JUN
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-7">
+                                                                JUL
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-8">
+                                                                AUG
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-9">
+                                                                Jan
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-10">
+                                                                FEB
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-11">
+                                                                MAR
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-12">
+                                                                APR
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="trip-months-cntnt-container">
+                                                    <div class="trip-months-cntnt" data-month="m-1">
+                                                        <div class="flex flex-col gap-2 lg:gap-4">
+                                                            <label class="trip-book-lbl">
+                                                                <input type="radio" name="trip-date-1"
+                                                                    id="trip-date-jan-1" class="trip-book-radio">
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip starts on</span>
+                                                                    <span class="trip-details font-semibold">Sunday, Jan
+                                                                        3,
+                                                                        2024</span>
+                                                                </span>
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip ends on</span>
+                                                                    <span class="trip-details font-semibold">Thursday,
+                                                                        Jan 7,
+                                                                        2024</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="trip-months-cntnt" data-month="m-2">
+                                                        <div class="flex flex-col gap-2 lg:gap-4">
+                                                            <label class="trip-book-lbl">
+                                                                <input type="radio" name="trip-date-1"
+                                                                    id="trip-date-feb-1" class="trip-book-radio">
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip starts on</span>
+                                                                    <span class="trip-details font-semibold">Sunday, Feb
+                                                                        3,
+                                                                        2024</span>
+                                                                </span>
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip ends on</span>
+                                                                    <span class="trip-details font-semibold">Thursday,
+                                                                        Feb 7,
+                                                                        2024</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="trip-months-cntnt" data-month="m-3">
+                                                        <div class="flex flex-col gap-2 lg:gap-4">
+                                                            <label class="trip-book-lbl">
+                                                                <input type="radio" name="trip-date-1" id="trip-date-1"
+                                                                    class="trip-book-radio">
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip starts on</span>
+                                                                    <span class="trip-details font-semibold">Sunday, Mar
+                                                                        3,
+                                                                        2024</span>
+                                                                </span>
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip ends on</span>
+                                                                    <span class="trip-details font-semibold">Thursday,
+                                                                        Mar 7,
+                                                                        2024</span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="trip-book-lbl">
+                                                                <input type="radio" name="trip-date-1" id="trip-date-2"
+                                                                    class="trip-book-radio">
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip starts on</span>
+                                                                    <span class="trip-details font-semibold">Sunday, Mar
+                                                                        3,
+                                                                        2024</span>
+                                                                </span>
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip ends on</span>
+                                                                    <span class="trip-details font-semibold">Thursday,
+                                                                        Mar 7,
+                                                                        2024</span>
+                                                                </span>
+                                                            </label>
+                                                            <label class="trip-book-lbl">
+                                                                <input type="radio" name="trip-date-1" id="trip-date-3"
+                                                                    class="trip-book-radio">
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip starts on</span>
+                                                                    <span class="trip-details font-semibold">Sunday, Mar
+                                                                        3,
+                                                                        2024</span>
+                                                                </span>
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip ends on</span>
+                                                                    <span class="trip-details font-semibold">Thursday,
+                                                                        Mar 7,
+                                                                        2024</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="">
-                                            <div class="flex flex-col gap-2 lg:gap-4">
-                                                <label class="trip-book-lbl">
-                                                    <input type="radio" name="trip-date-1" id="trip-date-1"
-                                                        class="trip-book-radio">
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip starts on</span>
-                                                        <span class="trip-details font-semibold">Sunday, Mar 3, 2024</span>
-                                                    </span>
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip ends on</span>
-                                                        <span class="trip-details font-semibold">Thursday, Mar 7,
-                                                            2024</span>
-                                                    </span>
-                                                </label>
-                                                <label class="trip-book-lbl">
-                                                    <input type="radio" name="trip-date-1" id="trip-date-2"
-                                                        class="trip-book-radio">
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip starts on</span>
-                                                        <span class="trip-details font-semibold">Sunday, Mar 3, 2024</span>
-                                                    </span>
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip ends on</span>
-                                                        <span class="trip-details font-semibold">Thursday, Mar 7,
-                                                            2024</span>
-                                                    </span>
-                                                </label>
-                                                <label class="trip-book-lbl">
-                                                    <input type="radio" name="trip-date-1" id="trip-date-3"
-                                                        class="trip-book-radio">
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip starts on</span>
-                                                        <span class="trip-details font-semibold">Sunday, Mar 3, 2024</span>
-                                                    </span>
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip ends on</span>
-                                                        <span class="trip-details font-semibold">Thursday, Mar 7,
-                                                            2024</span>
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="flex flex-col gap-2 lg:gap-4">
-                                                <label class="trip-book-lbl">
-                                                    <input type="radio" name="trip-date-1" id="trip-date-1"
-                                                        class="trip-book-radio">
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip starts on</span>
-                                                        <span class="trip-details font-semibold">Sunday, Mar 3, 2024</span>
-                                                    </span>
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip ends on</span>
-                                                        <span class="trip-details font-semibold">Thursday, Mar 7,
-                                                            2024</span>
-                                                    </span>
-                                                </label>
-                                                <label class="trip-book-lbl">
-                                                    <input type="radio" name="trip-date-1" id="trip-date-2"
-                                                        class="trip-book-radio">
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip starts on</span>
-                                                        <span class="trip-details font-semibold">Sunday, Mar 3, 2024</span>
-                                                    </span>
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip ends on</span>
-                                                        <span class="trip-details font-semibold">Thursday, Mar 7,
-                                                            2024</span>
-                                                    </span>
-                                                </label>
-                                                <label class="trip-book-lbl">
-                                                    <input type="radio" name="trip-date-1" id="trip-date-3"
-                                                        class="trip-book-radio">
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip starts on</span>
-                                                        <span class="trip-details font-semibold">Sunday, Mar 3, 2024</span>
-                                                    </span>
-                                                    <span class="flex flex-col grow">
-                                                        <span class="trip-details">Trip ends on</span>
-                                                        <span class="trip-details font-semibold">Thursday, Mar 7,
-                                                            2024</span>
-                                                    </span>
-                                                </label>
+                                        <div class="trip-years-cntnt" data-year="y-2">
+                                            <div class=" flex flex-col gap-5 lg:gap-6">
+                                                <div class="w-full">
+                                                    <div class="swiper month-slider trip-date-months">
+                                                        <ul class="swiper-wrapper">
+                                                            <!-- Slides -->
+                                                            <li class="swiper-slide trip-date-month active" data-month="m-1">
+                                                                Jan
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-2">
+                                                                FEB
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month"
+                                                                data-month="m-3">
+                                                                MAR
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-4">
+                                                                APR
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-5">
+                                                                MAY
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-6">
+                                                                JUN
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-7">
+                                                                JUL
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-8">
+                                                                AUG
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-9">
+                                                                Jan
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-10">
+                                                                FEB
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-11">
+                                                                MAR
+                                                            </li>
+                                                            <li class="swiper-slide trip-date-month" data-month="m-12">
+                                                                APR
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="trip-months-cntnt-container">
+                                                    <div class="trip-months-cntnt" data-month="m-1">
+                                                        <div class="flex flex-col gap-2 lg:gap-4">
+                                                            <label class="trip-book-lbl">
+                                                                <input type="radio" name="trip-date-1"
+                                                                    id="trip-date-jan-2" class="trip-book-radio">
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip starts on</span>
+                                                                    <span class="trip-details font-semibold">Sunday, Jan
+                                                                        3,
+                                                                        2024</span>
+                                                                </span>
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip ends on</span>
+                                                                    <span class="trip-details font-semibold">Thursday,
+                                                                        Jan 7,
+                                                                        2024</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="trip-months-cntnt" data-month="m-2">
+                                                        <div class="flex flex-col gap-2 lg:gap-4">
+                                                            <label class="trip-book-lbl">
+                                                                <input type="radio" name="trip-date-1"
+                                                                    id="trip-date-feb-2" class="trip-book-radio">
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip starts on</span>
+                                                                    <span class="trip-details font-semibold">Sunday, Feb
+                                                                        3,
+                                                                        2024</span>
+                                                                </span>
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip ends on</span>
+                                                                    <span class="trip-details font-semibold">Thursday,
+                                                                        Feb 7,
+                                                                        2024</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="trip-months-cntnt" data-month="m-3">
+                                                        <div class="flex flex-col gap-2 lg:gap-4">
+                                                            <label class="trip-book-lbl">
+                                                                <input type="radio" name="trip-date-1" id="trip-date-mar-2"
+                                                                    class="trip-book-radio">
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip starts on</span>
+                                                                    <span class="trip-details font-semibold">Sunday, Mar
+                                                                        3,
+                                                                        2024</span>
+                                                                </span>
+                                                                <span class="flex flex-col grow">
+                                                                    <span class="trip-details">Trip ends on</span>
+                                                                    <span class="trip-details font-semibold">Thursday,
+                                                                        Mar 7,
+                                                                        2024</span>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
 
                                 <a href="#"
@@ -279,7 +414,7 @@
 
                                 <div class="flex flex-col gap-6">
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                                        <label class="guests-num">
+                                        <label class="guests-num group">
                                             <span role="button"
                                                 class="decreace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-2">
                                                 <img src="assets/images/icons/minus.svg" width="20" height="20"
@@ -287,7 +422,7 @@
                                             </span>
                                             <input type="number" name="adults-num" id="adults-num" min="0" value="0"
                                                 readonly
-                                                class="peer w-20 text-center text-Neutral-900 text-xl font-semibold focus:text-Brand-Dark bg-transparent">
+                                                class="peer group-hover:text-Brand-Dark w-20 text-center text-Neutral-900 text-xl font-semibold focus:text-Brand-Dark bg-transparent">
                                             <span role="button"
                                                 class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-2">
                                                 <img src="assets/images/icons/add.svg" width="20" height="20" alt="add">
@@ -297,7 +432,7 @@
                                                 Number of Adults
                                             </span>
                                         </label>
-                                        <label class="guests-num">
+                                        <label class="guests-num group">
                                             <span role="button"
                                                 class="decreace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-2">
                                                 <img src="assets/images/icons/minus.svg" width="20" height="20"
@@ -305,7 +440,7 @@
                                             </span>
                                             <input type="number" name="childrens-num" id="childrens-num" min="0"
                                                 value="0" readonly
-                                                class="peer w-20 text-center text-Neutral-900 text-xl font-semibold focus:text-Brand-Dark bg-transparent">
+                                                class="peer group-hover:text-Brand-Dark w-20 text-center text-Neutral-900 text-xl font-semibold focus:text-Brand-Dark bg-transparent">
                                             <span role="button"
                                                 class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-2">
                                                 <img src="assets/images/icons/add.svg" width="20" height="20" alt="add">

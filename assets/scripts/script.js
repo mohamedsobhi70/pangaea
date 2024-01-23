@@ -577,15 +577,33 @@ $(window).on("load", function () {
     // ===================================================================
 
     if ($(".trip-date-years").length > 0) {
+        let activ = $(".trip-date-year.active");
+        let activeAttr = activ.attr("data-year");
+        $(".trip-years-cntnt").css("display", "none")
+        $(`.trip-years-cntnt[data-year=${activeAttr}]`).css("display", "block")
+        
         $(".trip-date-year").on("click", function () {
-            $(this).addClass("active").siblings().removeClass("active")
+            let th = $(this);
+            let cntn = th.attr("data-year");
+            th.addClass("active").siblings().removeClass("active");
+            $(".trip-years-cntnt").css("display", "none")
+            $(`.trip-years-cntnt[data-year=${cntn}]`).css("display", "block")
         })
     }
     // ===================================================================
 
     if ($(".trip-date-months").length > 0) {
+        let activ = $(".trip-date-month.active");
+        let activeAttr = activ.attr("data-month");
+        $(".trip-months-cntnt").css("display", "none")
+        $(`.trip-months-cntnt[data-month=${activeAttr}]`).css("display", "block")
+        
         $(".trip-date-month").on("click", function () {
-            $(this).addClass("active").siblings().removeClass("active")
+            let th = $(this);
+            let cntn = th.attr("data-month");
+            th.addClass("active").siblings().removeClass("active");
+            $(".trip-months-cntnt").css("display", "none")
+            $(`.trip-months-cntnt[data-month=${cntn}]`).css("display", "block")
         })
     }
     // ===================================================================
