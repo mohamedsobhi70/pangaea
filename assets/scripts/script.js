@@ -1,4 +1,69 @@
 $(window).on("load", function () {
+    // Accordion Component
+    if ($(".designpeer-accordion").length > 0) {
+        $(".designpeer-accordion").each(function () {
+
+            let $designpeerAccordion = $(this),
+                $accordionTitle = $designpeerAccordion.find(".designpeer-tab-title"),
+                $accordionType = $designpeerAccordion.data("accordion-type"),
+                $accordionSpeed = $designpeerAccordion.data("toogle-speed");
+
+            // Open default actived tab
+            $accordionTitle.each(function () {
+                if ($(this).hasClass("active-default")) {
+                    $(this).parent().addClass("active");
+                    $(this).addClass("show active");
+                    $(this).next().slideDown($accordionSpeed);
+                }
+            });
+
+            // Remove multiple click event for nested accordion
+            $accordionTitle.unbind("click");
+
+            $accordionTitle.click(function (e) {
+                e.preventDefault();
+                let $this = $(this);
+
+                if ($accordionType === "accordion") {
+                    if ($this.hasClass("show")) {
+                        $this.removeClass("show active");
+                        $this.parent().removeClass("active");
+                        $this.next().slideUp($accordionSpeed);
+                    } else {
+                        $designpeerAccordion
+                            .find(".designpeer-accordion-item")
+                            .removeClass("active");
+                        $this.parent().addClass("active");
+                        $this
+                            .parent()
+                            .parent()
+                            .find(".designpeer-tab-title")
+                            .removeClass("show active");
+                        $this
+                            .parent()
+                            .parent()
+                            .find(".designpeer-tab-content")
+                            .slideUp($accordionSpeed);
+                        $this.toggleClass("show active");
+                        $this.next().slideToggle($accordionSpeed);
+                    }
+                } else {
+                    // For acccordion type 'toggle'
+                    if ($this.hasClass("show")) {
+                        $this.removeClass("show active");
+                        $this.parent().removeClass("active");
+                        $this.next().slideUp($accordionSpeed);
+                    } else {
+                        $this.addClass("show active");
+                        $this.parent().addClass("active");
+                        $this.next().slideDown($accordionSpeed);
+                    }
+                }
+            });
+        });
+    }
+
+    // ===================================================================
 
     if ($(".mobile-menu-btn")) {
         $(".mobile-menu-btn").on("click", function () {
@@ -8,6 +73,8 @@ $(window).on("load", function () {
             $(".mobile-menu").removeClass("show");
         });
     }
+    // ===================================================================
+
     if ($(".mobile-search-btn")) {
 
         $(".mobile-search-btn").on("click", function () {
@@ -17,6 +84,7 @@ $(window).on("load", function () {
             }, 100);
         })
     }
+    // ===================================================================
 
     if ($(".cur-lang")) {
         $(".cur-lang").on("mouseenter", function () {
@@ -28,6 +96,8 @@ $(window).on("load", function () {
         })
 
     }
+    // ===================================================================
+
 
     if ($(".megamenu")) {
         function mobileMenu() {
@@ -114,73 +184,7 @@ $(window).on("load", function () {
 
     }
 
-
     // ===================================================================
-    // Accordion Component
-    if ($(".designpeer-accordion").length > 0) {
-        $(".designpeer-accordion").each(function () {
-
-            let $designpeerAccordion = $(this),
-                $accordionTitle = $designpeerAccordion.find(".designpeer-tab-title"),
-                $accordionType = $designpeerAccordion.data("accordion-type"),
-                $accordionSpeed = $designpeerAccordion.data("toogle-speed");
-
-            // Open default actived tab
-            $accordionTitle.each(function () {
-                if ($(this).hasClass("active-default")) {
-                    $(this).parent().addClass("active");
-                    $(this).addClass("show active");
-                    $(this).next().slideDown($accordionSpeed);
-                }
-            });
-
-            // Remove multiple click event for nested accordion
-            $accordionTitle.unbind("click");
-
-            $accordionTitle.click(function (e) {
-                e.preventDefault();
-                let $this = $(this);
-
-                if ($accordionType === "accordion") {
-                    if ($this.hasClass("show")) {
-                        $this.removeClass("show active");
-                        $this.parent().removeClass("active");
-                        $this.next().slideUp($accordionSpeed);
-                    } else {
-                        $designpeerAccordion
-                            .find(".designpeer-accordion-item")
-                            .removeClass("active");
-                        $this.parent().addClass("active");
-                        $this
-                            .parent()
-                            .parent()
-                            .find(".designpeer-tab-title")
-                            .removeClass("show active");
-                        $this
-                            .parent()
-                            .parent()
-                            .find(".designpeer-tab-content")
-                            .slideUp($accordionSpeed);
-                        $this.toggleClass("show active");
-                        $this.next().slideToggle($accordionSpeed);
-                    }
-                } else {
-                    // For acccordion type 'toggle'
-                    if ($this.hasClass("show")) {
-                        $this.removeClass("show active");
-                        $this.parent().removeClass("active");
-                        $this.next().slideUp($accordionSpeed);
-                    } else {
-                        $this.addClass("show active");
-                        $this.parent().addClass("active");
-                        $this.next().slideDown($accordionSpeed);
-                    }
-                }
-            });
-        });
-    }
-    // ===================================================================
-
 
     // Trip Slider
     if ($(".trip-slider").length > 0) {
@@ -203,6 +207,7 @@ $(window).on("load", function () {
             });
         });
     }
+    // ===================================================================
 
     // Values Slider
     if ($(".values-slider").length > 0) {
@@ -224,6 +229,7 @@ $(window).on("load", function () {
             });
         });
     }
+    // ===================================================================
 
     // Guides Slider
     if ($(".guides-slider").length > 0) {
@@ -245,6 +251,7 @@ $(window).on("load", function () {
             });
         });
     }
+    // ===================================================================
 
     // Community Slider
     if ($(".community-slider").length > 0) {
@@ -266,6 +273,7 @@ $(window).on("load", function () {
             });
         });
     }
+    // ===================================================================
 
     // Partner Slider
     if ($(".partner-slider").length > 0) {
@@ -292,6 +300,7 @@ $(window).on("load", function () {
             });
         });
     }
+    // ===================================================================
 
     // Testimonials Slider
     if ($(".testimonials-slider").length > 0) {
@@ -303,6 +312,7 @@ $(window).on("load", function () {
             });
         });
     }
+    // ===================================================================
 
     // check in check out Home Page
     if ($("#check").length > 0) {
@@ -315,6 +325,7 @@ $(window).on("load", function () {
             disallowLockDaysInRange: true,
         });
     }
+    // ===================================================================
 
     // Hot Deal
     if ($(".hot-deal-box").length > 0) {
@@ -348,9 +359,8 @@ $(window).on("load", function () {
             });
         });
     }
+    // ===================================================================
 
-
-    // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
     // Guides Page
     // Guides Slider
     if ($(".all-guides-slider").length > 0) {
@@ -396,8 +406,9 @@ $(window).on("load", function () {
             });
         });
     }
+    // ===================================================================
 
-    // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
     // Category Page
     // Price Slider
     if ($(".price-slider").length > 0) {
@@ -428,6 +439,7 @@ $(window).on("load", function () {
         });
 
     }
+    // ===================================================================
 
     // Filter 
     if ($(".filter-box").length > 0) {
@@ -447,6 +459,7 @@ $(window).on("load", function () {
             }
         })
     }
+    // ===================================================================
 
 
     if ($(".sticky-trip-content").length > 0) {
@@ -472,8 +485,9 @@ $(window).on("load", function () {
         });
 
     }
+    // ===================================================================
 
-    // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
     // Single Trip Page
     // Light Box Image In Single Trip  page
 
@@ -492,8 +506,9 @@ $(window).on("load", function () {
                 },
             });
         });
-    } 
-    
+    }
+    // ===================================================================
+
     if ($(".gallery-item").length > 0) {
         const galleryItm = document.querySelectorAll(".gallery-item");
         galleryItm.forEach(function (itm) {
@@ -506,6 +521,7 @@ $(window).on("load", function () {
         });
 
     }
+    // ===================================================================
 
     if ($(".light-box-container").length > 0) {
         let lightBoxContainer = document.querySelector('.light-box-container');
@@ -524,5 +540,54 @@ $(window).on("load", function () {
             $("body").css("overflow", "visible")
         });
     }
+    // ===================================================================
+
+
+    // Single Trip Page
+    // Month Slider
+    if ($(".month-slider").length > 0) {
+        $(".month-slider").each(function () {
+            let slider = $(this);
+
+            let swiper = new Swiper(slider[0], {
+                slidesPerView: 12,
+                spaceBetween: 8,
+            });
+        });
+    }
+    // ===================================================================
+
+    if ($(".guests-num").length > 0) {
+        $(".guests-num").each(function () {
+            let incBtn = $(this).find(".increace-btn");
+            let decBtn = $(this).find(".decreace-btn");
+            let inpt = $(this).find("input");
+            incBtn.click(function () {
+                let currentValue = parseInt(inpt.val());
+                let newValue = currentValue + 1;
+                inpt.val(newValue);
+            });
+            decBtn.click(function () {
+                let currentValue = parseInt(inpt.val());
+                let newValue = Math.max(currentValue - 1, 0);
+                inpt.val(newValue);
+            });
+        })
+    }
+    // ===================================================================
+
+    if ($(".trip-date-years").length > 0) {
+        $(".trip-date-year").on("click", function () {
+            $(this).addClass("active").siblings().removeClass("active")
+        })
+    }
+    // ===================================================================
+
+    if ($(".trip-date-months").length > 0) {
+        $(".trip-date-month").on("click", function () {
+            $(this).addClass("active").siblings().removeClass("active")
+        })
+    }
+    // ===================================================================
 
 })

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="--">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/swiper.css">
+    <link rel="stylesheet" href="assets/styles/lightbox.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Pangaea - Trip Booking</title>
+</head>
+
+<body>
+    <!-- Start Header  -->
+    <header class="px-5 xl:px-0 border-b border-Neutral-200">
+        <div class="container py-5 flex items-center justify-between gap-3 lg:gap-4 flex-wrap">
+            <a href="index.html" class="shrink-0">
+                <img src="assets/images/logo-footer.svg" class="w-[100px] xl:w-auto" width="146" height="49" alt="logo">
+                <span class="sr-only">
+                    Home Page
+                </span>
+            </a>
+
+            <ul
+                class="flex sm:justify-center items-center gap-3 w-full lg:w-auto grow order-last lg:order-none truncate">
+                <li class="booking-navitm text-[#22C55E]">
+                    <span class="booking-step bg-[#22C55E]">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6.24952 11.8751C6.07885 11.8751 5.90818 11.8098 5.77818 11.6798L2.86152 8.7632C2.60085 8.50253 2.60085 8.08113 2.86152 7.82053C3.12218 7.55987 3.54352 7.55987 3.80418 7.82053L6.24952 10.2659L12.1948 4.3205C12.4555 4.05983 12.8768 4.05983 13.1375 4.3205C13.3982 4.58117 13.3982 5.0025 13.1375 5.26317L6.72084 11.6798C6.59085 11.8098 6.42018 11.8751 6.24952 11.8751Z"
+                                fill="white" />
+                        </svg>
+                    </span>
+                    Trip Booking
+                </li>
+                <li>
+                    <img src="assets/images/icons/chevron-right.svg" width="16" height="16" alt="chevron">
+                </li>
+                <li class="booking-navitm active">
+                    <span class="booking-step">
+                        2
+                    </span>
+                    Guests
+                </li>
+                <li>
+                    <img src="assets/images/icons/chevron-right.svg" width="16" height="16" alt="chevron">
+                </li>
+                <li class="booking-navitm">
+                    <span class="booking-step">
+                        3
+                    </span>
+                    Payment
+                </li>
+            </ul>
+
+            <div class="relative cur-lang">
+                <div class="ps-5 flex items-center justify-between gap-2.5 cursor-pointer">
+                    <span class="text-Neutral-600 text-sm grow">
+                        English
+                    </span>
+                    <img src="assets/images/icons/downarrow-1.svg" width="7" height="7" alt="down-arrow">
+                </div>
+                <div class="lang-curr-box">
+                    <ul class="lang-cuur-container">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">AR</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- ============================================================================== -->
+
+    <!-- Start Main Page Content  -->
+    <main>
+        <!-- Start Section  -->
+        <section class="py-8 lg:py-12 px-5 lg:px-0">
+            <form>
+                <div class="container grid grid-cols-1 lg:grid-cols-3 gap-30">
+                    <div class="flex flex-col gap-6 lg:gap-10 lg:col-span-2">
+                        <div
+                            class="p-5 lg:p-6 rounded-2xl border border-Monte-Carlo-200 bg-Monte-Carlo-50 flex flex-col gap-4">
+                            <h2 class="text-Neutral-900 text-2xl -tracking-[0.48px] font-semibold font-Jost">
+                                Hiking Towards Sunset | Pangaea Center
+                            </h2>
+                            <div class="flex flex-col lg:flex-row lg:items-center gap-3">
+                                <ul class="flex items-center gap-6 grow">
+                                    <li class="flex items-center gap-2 text-Neutral-700 leading-[160%]">
+                                        <img src="assets/images/icons/calendar-1.svg" width="20" height="20"
+                                            alt="calendar">
+                                        4 Days
+                                    </li>
+                                    <li class="flex items-center gap-2 text-Neutral-700 leading-[160%]">
+                                        <img src="assets/images/icons/global-1.svg" width="20" height="20" alt="global">
+                                        Asir
+                                    </li>
+                                    <li class="flex items-center gap-2 text-Neutral-700 leading-[160%]">
+                                        <img src="assets/images/icons/book-1.svg" width="20" height="20" alt="book">
+                                        Adventure
+                                    </li>
+                                </ul>
+
+                                <span class="flex items-center gap-2">
+                                    <img src="assets/images/icons/map.svg" width="20" height="20" alt="map">
+                                    <a href="#" class="text-Neutral-900 leading-[160%] font-semibold underline">
+                                        View Itinerary and Map
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-6">
+                            <!-- Guest 1 (Lead/Adult)-->
+                            <div
+                                class="p-5 lg:p-6 rounded-2xl border border-Neutral-200 bg-Neutral-25 flex flex-col gap-5 lg:gap-6">
+                                <div class="flex flex-col gap-3">
+                                    <h3 class="text-Neutral-900 text-[28px] -tracking-[0.56px] font-semibold font-Jost">
+                                        Guest 1 (Lead/Adult)
+                                    </h3>
+                                    <p class="text-Neutral-600 leading-[160%]">
+                                        Ensure that the name and date of birth match the details on your passport
+                                        precisely, including any middle names and/or initials. Airlines reserve the
+                                        right to refuse boarding in case of missing or inaccurate information.
+                                    </p>
+                                </div>
+                                <div
+                                    class="grid grid-cols-1 lg:grid-cols-2 gap-4 pb-5 lg:pb-6 border-b border-Neutral-200">
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="tilte">Title</label>
+                                        <select name="tilte" id="tilte"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark">
+                                            <option value="1">Mr</option>
+                                            <option value="2">Mrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="fname">First name</label>
+                                        <input type="text" name="fname" id="fname"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="First name">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="mname">Middle name</label>
+                                        <input type="text" name="mname" id="mname"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="Middle name">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="Surname">Surname</label>
+                                        <input type="text" name="Surname" id="Surname"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="Surname">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="bdate">Date of birth</label>
+                                        <input type="date" name="bdate" id="bdate"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark">
+                                    </div>
+                                </div>
+                                <h3 class="text-Neutral-900 text-[28px] -tracking-[0.56px] font-semibold font-Jost">
+                                    Contact Details
+                                </h3>
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="phone">Phone Number</label>
+                                        <div
+                                            class="flex items-center rounded-xl overflow-hidden border border-Neutral-200 focus:border-Brand-Dark">
+                                            <select name="co-key" id="co-key"
+                                                class=" py-3 px-4 min-w-24 border-e rounded-s-xl border-e-Neutral-200 focus:border-Brand-Dark">
+                                                <option value="1">+01</option>
+                                                <option value="20">+20</option>
+                                            </select>
+                                            <input type="tel" name="phone" id="phone"
+                                                class="grow py-3 px-4  rounded-e-xl focus:border-Brand-Dark"
+                                                placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="emailaddress">
+                                            Email Address
+                                        </label>
+                                        <input type="email" name="emailaddress" id="emailaddress"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="Email Address">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Billing Details-->
+                            <div
+                                class="p-5 lg:p-6 rounded-2xl border border-Neutral-200 bg-Neutral-25 flex flex-col gap-5 lg:gap-6">
+                                <h3 class="text-Neutral-900 text-[28px] -tracking-[0.56px] font-semibold font-Jost">
+                                    Billing Details
+                                </h3>
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="country">Country</label>
+                                        <select name="country" id="country"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark">
+                                            <option value="1">Singapore</option>
+                                            <option value="2">Egypt</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="City">City</label>
+                                        <input type="text" name="City" id="City"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="City">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="addreesline1">Address Line
+                                            1</label>
+                                        <input type="text" name="addreesline1" id="addreesline1"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="Address Line">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="addreesline2">Address Line
+                                            2</label>
+                                        <input type="text" name="addreesline2" id="addreesline2"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="Address Line ">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="Region">Region</label>
+                                        <select name="Region" id="Region"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark">
+                                            <option value="1">Central Singapore</option>
+                                            <option value="2">Cairo</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="zip">Zip/Postal Code</label>
+                                        <input type="text" name="zip" id="zip"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="Zip/Postal Code">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Guest 2 (Adult)-->
+                            <div
+                                class="p-5 lg:p-6 rounded-2xl border border-Neutral-200 bg-Neutral-25 flex flex-col gap-5 lg:gap-6">
+                                <h3 class="text-Neutral-900 text-[28px] -tracking-[0.56px] font-semibold font-Jost">
+                                    Guest 2 (Adult)
+                                </h3>
+                                <div
+                                    class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="tilte-2">Title</label>
+                                        <select name="tilte-2" id="tilte-2"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark">
+                                            <option value="1">Mr</option>
+                                            <option value="2">Mrs</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="fname-2">First name</label>
+                                        <input type="text" name="fname-2" id="fname-2"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="First name">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="mname-2">Middle name</label>
+                                        <input type="text" name="mname-2" id="mname-2"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="Middle name">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="Surname-2">Surname</label>
+                                        <input type="text" name="Surname-2" id="Surname-2"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                            placeholder="Surname">
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label class="font-semibold leading-[160%]" for="bdate-2">Date of birth</label>
+                                        <input type="date" name="bdate-2" id="bdate-2"
+                                            class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark">
+                                    </div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex flex-col gap-6">
+                        <h3 class="text-Neutral-900 text-[28px] -tracking-[0.56px] font-semibold font-Jost">
+                            Booking summary
+                        </h3>
+
+                        <div class="p-8 rounded-2xl shadow-trip-book bg-trip-book-grad">
+
+                            <div class="flex flex-col gap-4">
+                                <h4
+                                    class="text-Neutral-900 text-xl leading-[140%] font-semibold font-Jost -tracking-[0.4px]">
+                                    Trip Dates
+                                </h4>
+
+                                <div class="grid grid-cols-2 gap-4 border-b border-Neutral-200 pb-5 lg:pb-8">
+                                    <div class="flex items-start gap-2">
+                                        <img src="assets/images/icons/calendar-1.svg" width="20" height="20"
+                                            alt="calendar">
+                                        <div class="flex flex-col">
+                                            <span class="text-Neutral-900 text-xs leading-[160%]">
+                                                Trip starts on
+                                            </span>
+                                            <p
+                                                class="text-Neutral-900 text-xs leading-[160%] font-semibold -tracking-[-0.24px]">
+                                                Sun, Mar 3, 2024
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2">
+                                        <img src="assets/images/icons/calendar-1.svg" width="20" height="20"
+                                            alt="calendar">
+                                        <div class="flex flex-col">
+                                            <span class="text-Neutral-900 text-xs leading-[160%]">
+                                                Trip ends on
+                                            </span>
+                                            <p
+                                                class="text-Neutral-900 text-xs leading-[160%] font-semibold -tracking-[-0.24px]">
+                                                Thursday, Mar 7, 2024
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-5 lg:py-8 border-b border-Neutral-200">
+                                <div class="relative">
+                                    <svg class="absolute top-1/2 -translate-y-1/2 start-4" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.3 10.84C21.69 10.84 22 10.53 22 10.14V9.20999C22 5.10999 20.75 3.85999 16.65 3.85999H7.35C3.25 3.85999 2 5.10999 2 9.20999V9.67999C2 10.07 2.31 10.38 2.7 10.38C3.6 10.38 4.33 11.11 4.33 12.01C4.33 12.91 3.6 13.63 2.7 13.63C2.31 13.63 2 13.94 2 14.33V14.8C2 18.9 3.25 20.15 7.35 20.15H16.65C20.75 20.15 22 18.9 22 14.8C22 14.41 21.69 14.1 21.3 14.1C20.4 14.1 19.67 13.37 19.67 12.47C19.67 11.57 20.4 10.84 21.3 10.84ZM9 8.87999C9.55 8.87999 10 9.32999 10 9.87999C10 10.43 9.56 10.88 9 10.88C8.45 10.88 8 10.43 8 9.87999C8 9.32999 8.44 8.87999 9 8.87999ZM15 15.88C14.44 15.88 13.99 15.43 13.99 14.88C13.99 14.33 14.44 13.88 14.99 13.88C15.54 13.88 15.99 14.33 15.99 14.88C15.99 15.43 15.56 15.88 15 15.88ZM15.9 9.47999L9.17 16.21C9.02 16.36 8.83 16.43 8.64 16.43C8.45 16.43 8.26 16.36 8.11 16.21C7.82 15.92 7.82 15.44 8.11 15.15L14.84 8.41999C15.13 8.12999 15.61 8.12999 15.9 8.41999C16.19 8.70999 16.19 9.18999 15.9 9.47999Z"
+                                            fill="#979A9B" />
+                                    </svg>
+                                    <input type="text" placeholder="Promo code"
+                                        class="peer w-full border rounded-full focus:border-Brand-Dark border-Neutral-200 px-12 py-3 text-Neutral-700 placeholder:font-normal font-semibold leading-[160%] transition-colors duration-300">
+                                    <span role="button"
+                                        class="py-2 px-4 lg:px-8 text-Neutral-50 font-semibold bg-Neutral-700 rounded-full absolute top-0.5 bottom-0.5 end-0.5 flex items-center">
+                                        Claim It
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="pt-5 lg:pt-8">
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex flex-col gap-4">
+                                        <h4
+                                            class="text-Neutral-900 text-xl leading-[140%] font-semibold font-Jost -tracking-[0.4px]">
+                                            Total Payment
+                                        </h4>
+                                        <div class="flex flex-col gap-3">
+
+                                            <ul class="flex flex-col gap-3 pb-3 border-b border-Neutral-200">
+                                                <li class="flex justify-between items-center gap-2">
+                                                    <span class="text-Neutral-900 leading-[160%]">
+                                                        Guests
+                                                    </span>
+                                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                                        4 Adults
+                                                    </span>
+                                                </li>
+                                                <li class="flex justify-between items-center gap-2">
+                                                    <span class="text-Neutral-900 leading-[160%]">
+                                                        Single Room
+                                                    </span>
+                                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                                        1 x 1000 SAR
+                                                    </span>
+                                                </li>
+                                                <li class="flex justify-between items-center gap-2">
+                                                    <span class="text-Neutral-900 leading-[160%]">
+                                                        Triple Room
+                                                    </span>
+                                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                                        3 x 700 SAR
+                                                    </span>
+                                                </li>
+                                                <li class="flex justify-between items-center gap-2">
+                                                    <span class="text-Neutral-900 leading-[160%]">
+                                                        Pickup service
+                                                    </span>
+                                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                                        60 SAR
+                                                    </span>
+                                                </li>
+                                                <li class="flex justify-between items-center gap-2">
+                                                    <span class="text-Neutral-900 leading-[160%]">
+                                                        Discount
+                                                    </span>
+                                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                                        - 0 SAR
+                                                    </span>
+                                                </li>
+                                                <li class="flex justify-between items-center gap-2">
+                                                    <span class="text-Neutral-900 leading-[160%]">
+                                                        Discount
+                                                    </span>
+                                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                                        - 100 SAR
+                                                    </span>
+                                                </li>
+                                            </ul>
+
+                                            <div class="flex items-center justify-between gap-2">
+                                                <span
+                                                    class="text-Neutral-900 text-xl leading-[140%] font-semibold -tracking-[0.4px]">
+                                                    Total
+                                                </span>
+                                                <span
+                                                    class="text-Brand-Dark text-xl leading-[140%] font-semibold font-Jost -tracking-[0.4px]">
+                                                    3,160 SAR
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Proceed to Payment"
+                                        class="rounded-full py-4 px-8 bg-[#DB3B3B] disabled:opacity-[0.24] text-Neutral-50 text-xl leading-[140%] font-semibold -tracking-[0.4px]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#"
+                            class="rounded-full border border-Neutral-300 py-3.5 px-8 text-Neutral-700 font-semibold flex items-center justify-center">
+                            FAQs
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- End Section  -->
+        <!-- ====================================================== -->
+    </main>
+    <!-- End Main Page Content  -->
+
+    <!-- ============================================================================== -->
+
+    <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/lightbox.js"></script>
+    <script src="assets/scripts/moment.js"></script>
+    <script src="assets/scripts/litepicker.js"></script>
+    <script src="assets/scripts/swiper.js"></script>
+    <script src="assets/scripts/script.js"></script>
+
+</body>
+
+</html>
