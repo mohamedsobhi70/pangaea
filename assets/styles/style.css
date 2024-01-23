@@ -3665,6 +3665,13 @@ input[type="number"]::-webkit-outer-spin-button {
   opacity: 1;
 }
 
+.lang-curr-box.checkout-page {
+  bottom: auto;
+  top: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
 .placeholder\:font-normal::-moz-placeholder {
   font-weight: 400;
 }
