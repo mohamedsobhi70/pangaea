@@ -18,7 +18,7 @@
 
 <body>
     <!-- Start Header  -->
-    <header class="px-5 xl:px-0 border-b border-Neutral-200">
+    <header class="px-5 xl:px-0 border-b border-Neutral-200 sticky top-0 z-50 bg-white">
         <div class="container py-5 flex items-center justify-between gap-3 lg:gap-4 flex-wrap">
             <a href="index.html" class="shrink-0">
                 <img src="assets/images/logo-footer.svg" class="w-[100px] xl:w-auto" width="146" height="49" alt="logo">
@@ -87,7 +87,7 @@
                             <h2 class="text-Neutral-900 text-2xl -tracking-[0.48px] font-semibold font-Jost">
                                 Hiking Towards Sunset | Pangaea Center
                             </h2>
-                            <div class="flex flex-col lg:flex-row lg:items-center gap-3">
+                            <div class="flex flex-col lg:flex-row lg:items-center gap-4">
                                 <ul class="flex items-center gap-6 grow">
                                     <li class="flex items-center gap-2 text-Neutral-700 leading-[160%]">
                                         <img src="assets/images/icons/calendar-1.svg" width="20" height="20"
@@ -104,12 +104,173 @@
                                     </li>
                                 </ul>
 
-                                <span class="flex items-center gap-2">
+                                <span class="itinary-map-btn flex items-center gap-2" role="button">
                                     <img src="assets/images/icons/map.svg" width="20" height="20" alt="map">
-                                    <a href="#" class="text-Neutral-900 leading-[160%] font-semibold underline">
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold underline">
                                         View Itinerary and Map
-                                    </a>
+                                    </span>
                                 </span>
+                                <div class="itinary-map-container">
+                                    <div class="itn-map container">
+                                        <div class="flex items-center justify-between">
+                                            <h3
+                                                class="text-Neutral-900 text-2xl lg:text-[28px] -tracking-[0.48px] lg:-tracking-[0.48px] font-bold font-Jost">
+                                                Trip Itinerary and Map
+                                            </h3>
+                                            <span class="close-itn-map shrink-0" role="button">
+                                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 10L30 30" stroke="#121617" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M30 10L10 30" stroke="#121617" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <span class="sr-only">Close Itinerary and Map</span>
+                                            </span>
+                                        </div>
+                                        <div class="flex flex-col gap-30  overflow-y-auto pe-5">
+                                            <h4 class="text-Neutral-900 text-[21px] lg:text-2xl font-Jost font-bold">
+                                                Itinerary
+                                            </h4>
+
+                                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-30">
+
+                                                <div class="flex flex-col gap-9">
+                                                    <div
+                                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
+                                                        <span
+                                                            class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
+                                                            1
+                                                        </span>
+                                                        <div class="flex flex-col gap-1">
+                                                            <h4 class="Neutral-900 font-medium font-Jost">
+                                                                Windsor Castle
+                                                            </h4>
+                                                            <p class="text-Neutral-700 text-sm">
+                                                                Stop: 60 minutes - Admission included
+                                                            </p>
+                                                            <a href="#"
+                                                                class="text-Brand-Dark text-sm underline font-medium tracking-[0.28px]">
+                                                                See details & photo
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
+                                                        <span
+                                                            class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
+                                                            2
+                                                        </span>
+                                                        <div class="flex flex-col gap-6">
+                                                            <div class="flex flex-col gap-1">
+                                                                <h4 class="Neutral-900 font-medium font-Jost">
+                                                                    St. George's Chapel
+                                                                </h4>
+                                                                <p class="text-Neutral-700 text-sm">
+                                                                    Stop: 15 minutes - Admission included
+                                                                </p>
+                                                            </div>
+                                                            <div class="flex flex-col gap-4">
+                                                                <div class="flex gap-4 flex-wrap">
+                                                                    <div
+                                                                        class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                        <img src="assets/images/Surface.png"
+                                                                            class="w-full h-full object-cover"
+                                                                            width="114" height="113" alt="Surface">
+                                                                    </div>
+                                                                    <div
+                                                                        class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                        <img src="assets/images/Surface.png"
+                                                                            class="w-full h-full object-cover"
+                                                                            width="114" height="113" alt="Surface">
+                                                                    </div>
+                                                                    <div
+                                                                        class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                        <img src="assets/images/Surface.png"
+                                                                            class="w-full h-full object-cover"
+                                                                            width="114" height="113" alt="Surface">
+                                                                    </div>
+                                                                    <div
+                                                                        class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                        <img src="assets/images/Surface.png"
+                                                                            class="w-full h-full object-cover"
+                                                                            width="114" height="113" alt="Surface">
+                                                                    </div>
+                                                                </div>
+                                                                <p class="text-neutral-900 text-sm leading-6">
+                                                                    Our first stop is Windsor Castle, the ancestral home
+                                                                    of the British
+                                                                    Royal
+                                                                    family for more than 900 years and the largest,
+                                                                    continuously
+                                                                    occupied
+                                                                    castle
+                                                                    in Europe. Our first stop is Windsor Castle, the
+                                                                    ancestral home of
+                                                                    the
+                                                                    British Royal family for more than 900 years and the
+                                                                    largest,
+                                                                    continuously
+                                                                    occupied castle in Europe.
+                                                                </p>
+                                                                <a href="#"
+                                                                    class="text-Brand-Dark text-sm underline font-medium tracking-[0.28px]">
+                                                                    See less
+                                                                </a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
+                                                        <span
+                                                            class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
+                                                            3
+                                                        </span>
+                                                        <div class="flex flex-col gap-1">
+                                                            <h4 class="Neutral-900 font-medium font-Jost">
+                                                                The Roman Baths
+                                                            </h4>
+                                                            <p class="text-Neutral-700 text-sm">
+                                                                Stop: 60 minutes - Admission included
+                                                            </p>
+                                                            <a href="#"
+                                                                class="text-Brand-Dark text-sm underline font-medium tracking-[0.28px]">
+                                                                See details & photo
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
+                                                        <span
+                                                            class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
+                                                            4
+                                                        </span>
+                                                        <div class="flex flex-col gap-1">
+                                                            <h4 class="Neutral-900 font-medium font-Jost">
+                                                                Stonehenge
+                                                            </h4>
+                                                            <p class="text-Neutral-700 text-sm">
+                                                                Stop: 60 minutes - Admission included
+                                                            </p>
+                                                            <a href="#"
+                                                                class="text-Brand-Dark text-sm underline font-medium tracking-[0.28px]">
+                                                                See details & photo
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="h-96 lg:h-[733px] overflow-hidden rounded-2xl">
+                                                    <iframe
+                                                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1702.1800872223266!2d37.91102006188144!3d26.880023420525507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sar!2seg!4v1705019775653!5m2!1sar!2seg"
+                                                        width="1000" height="733" style="border:0;" allowfullscreen=""
+                                                        loading="lazy"
+                                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="flex flex-col gap-6">
@@ -141,41 +302,41 @@
                                                     <div class="swiper month-slider trip-date-months">
                                                         <ul class="swiper-wrapper">
                                                             <!-- Slides -->
-                                                            <li class="swiper-slide trip-date-month" data-month="m-1">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-1">
                                                                 Jan
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-2">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-2">
                                                                 FEB
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month active"
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px] active"
                                                                 data-month="m-3">
                                                                 MAR
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-4">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-4">
                                                                 APR
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-5">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-5">
                                                                 MAY
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-6">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-6">
                                                                 JUN
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-7">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-7">
                                                                 JUL
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-8">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-8">
                                                                 AUG
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-9">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-9">
                                                                 SEP
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-10">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-10">
                                                                 OCT
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-11">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-11">
                                                                 NOV
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-12">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-12">
                                                                 DEC
                                                             </li>
                                                         </ul>
@@ -287,41 +448,41 @@
                                                     <div class="swiper month-slider trip-date-months">
                                                         <ul class="swiper-wrapper">
                                                             <!-- Slides -->
-                                                            <li class="swiper-slide trip-date-month active"
+                                                            <li class="swiper-slide trip-date-month  text-Neutral-900 text-xs font-semibold -tracking-[0.24px] active"
                                                                 data-month="m-1">
                                                                 Jan
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-2">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-2">
                                                                 FEB
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-3">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-3">
                                                                 MAR
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-4">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-4">
                                                                 APR
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-5">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-5">
                                                                 MAY
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-6">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-6">
                                                                 JUN
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-7">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-7">
                                                                 JUL
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-8">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-8">
                                                                 AUG
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-9">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-9">
                                                                 SEP
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-10">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-10">
                                                                 OCT
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-11">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-11">
                                                                 NOV
                                                             </li>
-                                                            <li class="swiper-slide trip-date-month" data-month="m-12">
+                                                            <li class="swiper-slide trip-date-month text-Neutral-900 text-xs font-semibold -tracking-[0.24px]" data-month="m-12">
                                                                 DEC
                                                             </li>
                                                         </ul>
@@ -554,7 +715,7 @@
                             Booking summary
                         </h3>
 
-                        <div class="p-8 rounded-2xl shadow-trip-book bg-trip-book-grad">
+                        <div class="p-6 lg:p-8 rounded-2xl shadow-trip-book bg-trip-book-grad" id="booking-summary">
 
                             <div class="flex flex-col gap-4">
                                 <h4
@@ -663,7 +824,7 @@
                                                     <span class="text-Neutral-900 leading-[160%]">
                                                         Discount
                                                     </span>
-                                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                                    <span class="text-[#22C55E] leading-[160%] font-semibold">
                                                         - 100 SAR
                                                     </span>
                                                 </li>
@@ -683,6 +844,22 @@
                                     </div>
                                     <input type="submit" value="Confirm & Continue"
                                         class="cursor-pointer rounded-full py-4 px-8 bg-[#DB3B3B] disabled:opacity-[0.24] text-Neutral-50 text-xl leading-[140%] font-semibold -tracking-[0.4px]">
+                                </div>
+                                <div class="px-5 py-6 flex items-center gap-4 fixed w-full start-0 bottom-0 lg:hidden bg-white z-10">
+                                    <div class="flex flex-col gap-2">
+                                        <span
+                                            class="text-Neutral-900 text-xl leading-[140%] font-semibold -tracking-[0.4px]">
+                                            Total
+                                        </span>
+                                        <span
+                                            class="text-Brand-Dark text-xl leading-[140%] font-semibold font-Jost -tracking-[0.4px]">
+                                            3,160 SAR
+                                        </span>
+                                    </div>
+                                    <a href="#booking-summary"
+                                        class="grow cursor-pointer rounded-full py-4 px-8 bg-[#DB3B3B] disabled:opacity-[0.24] text-Neutral-50 text-xl leading-[140%] font-semibold -tracking-[0.4px] text-center">
+                                        Proceed to Payment
+                                    </a>
                                 </div>
                             </div>
                         </div>

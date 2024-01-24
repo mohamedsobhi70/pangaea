@@ -543,7 +543,7 @@ $(window).on("load", function () {
     // ===================================================================
 
 
-    // Single Trip Page
+    // Checkout Page
     // Month Slider
     if ($(".month-slider").length > 0) {
         $(".month-slider").each(function () {
@@ -591,7 +591,7 @@ $(window).on("load", function () {
         let activeAttr = activ.attr("data-year");
         $(".trip-years-cntnt").css("display", "none")
         $(`.trip-years-cntnt[data-year=${activeAttr}]`).css("display", "block")
-        
+
         $(".trip-date-year").on("click", function () {
             let th = $(this);
             let cntn = th.attr("data-year");
@@ -607,7 +607,7 @@ $(window).on("load", function () {
         let activeAttr = activ.attr("data-month");
         $(".trip-months-cntnt").css("display", "none")
         $(`.trip-months-cntnt[data-month=${activeAttr}]`).css("display", "block")
-        
+
         $(".trip-date-month").on("click", function () {
             let th = $(this);
             let cntn = th.attr("data-month");
@@ -616,6 +616,93 @@ $(window).on("load", function () {
             $(`.trip-months-cntnt[data-month=${cntn}]`).css("display", "block")
         })
     }
-    // ===================================================================
+    if ($(".itinary-map-btn").length > 0) {
 
+        let itineraryMapContainer = $('.itinary-map-container');
+        let itnMap = $('.itn-map');
+
+        $(document).on('click', function (event) {
+            if ($(event.target).hasClass('itinary-map-container')) {
+                itineraryMapContainer.removeClass('show');
+            }
+        });
+
+        itnMap.on('click', function (event) {
+            event.stopPropagation();
+        });
+
+
+        $(".itinary-map-btn").on("click", function () {
+            itineraryMapContainer.addClass("show");
+            $("body").css("overflow", "hidden");
+
+        })
+        $(".close-itn-map").on("click", function () {
+            itineraryMapContainer.removeClass("show");
+            $("body").css("overflow", "visible");
+
+        })
+    }
+    // ===================================================================
+    // payment accordion
+    if ($(".payment-item").length > 0) {
+        $('.payment-item input[type="radio"]').change(function () {
+            $('.payment-item .payment-content').slideUp(400);
+            $(".payment-item").removeClass("border-Brand-Dark").removeClass("bg-Monte-Carlo-50").addClass("border-Neutral-200 bg-Neutral-25")
+            $(this).closest(".payment-item").find(".payment-content").slideDown(400);
+            $(this).closest(".payment-item").addClass("border-Brand-Dark bg-Monte-Carlo-50").removeClass("border-Neutral-200").removeClass("bg-Neutral-25")
+        });
+    }
+    function validateName() {
+        var nameInput = document.getElementById('card-name');
+        var nameError = document.getElementById('name-error');
+
+        if (nameInput.value.trim() === '') {
+            nameError.textContent = 'Name on card is required';
+        } else {
+            nameError.textContent = '';
+        }
+    }
+
+    function validateCardNumber() {
+        let cardNumInput = document.getElementById('card-num');
+        let cardNumError = document.getElementById('card-num-error');
+
+        // Implement card number validation logic here
+
+        // Example: Check if the length is 16
+        if (cardNumInput.value.trim().length !== 16) {
+            cardNumError.textContent = 'Card number must be 16 digits';
+        } else {
+            cardNumError.textContent = '';
+        }
+    }
+
+    function validateExpireDate() {
+        let expDateInput = document.getElementById('ex-date');
+        let expDateError = document.getElementById('ex-date-error');
+
+        // Implement expiration date validation logic here
+
+        // Example: Check if the length is 5 (MM/YY format)
+        if (expDateInput.value.trim().length !== 5) {
+            expDateError.textContent = 'Invalid expiration date';
+        } else {
+            expDateError.textContent = '';
+        }
+    }
+
+    function validateCVV() {
+        let cvvInput = document.getElementById('cvv');
+        let cvvError = document.getElementById('cvv-error');
+        if (cvvInput.value.trim().length !== 3) {
+            cvvError.textContent = 'CVV must be 3 digits';
+        } else {
+            cvvError.textContent = '';
+        }
+    }
+    validateName()
+    validateCardNumber() 
+    validateExpireDate()
+    validateCVV()
 })
