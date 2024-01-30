@@ -653,4 +653,37 @@ $(window).on("load", function () {
             $(this).closest(".payment-item").addClass("border-Brand-Dark bg-Monte-Carlo-50").removeClass("border-Neutral-200").removeClass("bg-Neutral-25")
         });
     }
+
+
+    // back to top 
+    if ($("#back-top").length > 0) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 300) {
+                $('.back-top').fadeIn();
+            }
+            else {
+                $('.back-top').fadeOut();
+            }
+        })
+        $('.back-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 250);
+            return false;
+        })
+    }
+    // Seemore and see less for truncatesd-text
+    if ($(".truncatesd-text").length > 0) {
+        $(".truncatesd-text").each(function () {
+            let th = $(this);
+            let btn = th.siblings(".see-more-btn");
+            
+            btn.on("click", function () {
+                th.toggleClass("line-clamp-2");
+                if (th.hasClass("line-clamp-2")) {
+                    btn.text("See more");
+                } else {
+                    btn.text("See less");
+                }
+            });
+        });
+    }
 })

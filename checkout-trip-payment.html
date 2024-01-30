@@ -328,29 +328,37 @@
                                     <div class="payment-content">
                                         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                                             <div class="flex flex-col gap-2 col-span-2 lg:col-span-4">
-                                                <label for="card-name" class="text-Neutral-900 leading-[160%] font-semibold">
+                                                <label for="card-name"
+                                                    class="text-Neutral-900 leading-[160%] font-semibold">
                                                     Name on card
                                                 </label>
-                                                <input type="text" name="card-name" id="card-name" placeholder="Name on card"
-                                                       class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark" oninput="validateName()">
+                                                <input type="text" name="card-name" id="card-name"
+                                                    placeholder="Name on card"
+                                                    class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark" ">
                                             </div>
-                                            <div class="flex flex-col gap-2 col-span-2">
-                                                <label for="card-num" class="text-Neutral-900 leading-[160%] font-semibold">
+                                            <div class=" flex flex-col gap-2 col-span-2">
+                                                <label for="card-num"
+                                                    class="text-Neutral-900 leading-[160%] font-semibold">
                                                     Card number
                                                 </label>
-                                                <input type="text" name="card-num" id="card-num" placeholder="Card number"
-                                                       class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark" oninput="validateCardNumber()">
-                                                <p id="card-num-error" class="text-xs text-[#FF3131] leading-[160%]">
+                                                <input type="text" name="card-num" id="card-num"
+                                                    placeholder="Card number"
+                                                    class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark">
+                                                <p id="card-num-error"
+                                                    class="text-xs text-[#FF3131] leading-[160%] hidden">
                                                     Card number is invalid
                                                 </p>
                                             </div>
                                             <div class="flex flex-col gap-2">
-                                                <label for="ex-date" class="text-Neutral-900 leading-[160%] font-semibold">
+                                                <label for="ex-date"
+                                                    class="text-Neutral-900 leading-[160%] font-semibold">
                                                     Expire date
                                                 </label>
                                                 <input type="text" name="ex-date" id="ex-date"
-                                                       class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark" placeholder="Expire date" oninput="validateExpireDate()">
-                                                <p id="ex-date-error" class="text-xs text-[#FF3131] leading-[160%]">
+                                                    class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                                    placeholder="Expire date">
+                                                <p id="ex-date-error"
+                                                    class="text-xs text-[#FF3131] leading-[160%] hidden">
                                                     expiration date is correct and that your card hasn't expired.
                                                 </p>
                                             </div>
@@ -359,9 +367,10 @@
                                                     CVV
                                                 </label>
                                                 <input type="text" name="cvv" id="cvv"
-                                                       class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark" placeholder="CVV" oninput="validateCVV()">
-                                                <p id="cvv-error" class="text-xs text-[#FF3131] leading-[160%]">
-                                                    Make sure you've entered it correctly.                                                  
+                                                    class="py-3 px-4 rounded-xl border-Neutral-200 focus:border-Brand-Dark"
+                                                    placeholder="CVV">
+                                                <p id="cvv-error" class="text-xs text-[#FF3131] leading-[160%] hidden">
+                                                    Make sure you've entered it correctly.
                                                 </p>
                                             </div>
                                         </div>
