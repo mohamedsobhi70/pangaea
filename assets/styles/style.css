@@ -1941,7 +1941,8 @@ select:focus {
   display: none;
 }
 
-.itinary-map-container {
+.itinary-map-container,
+  .faq-container {
   visibility: hidden;
   position: fixed;
   top: 0px;
@@ -1959,12 +1960,14 @@ select:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.itinary-map-container.show {
+.itinary-map-container.show,
+  .faq-container.show {
   visibility: visible;
   opacity: 1;
 }
 
-.itinary-map-container .itn-map {
+.itinary-map-container .itn-map,
+  .faq-container .faq {
   display: flex;
   height: 100%;
   --tw-scale-x: .75;
@@ -1982,13 +1985,15 @@ select:focus {
 }
 
 @media (min-width: 1024px) {
-  .itinary-map-container .itn-map {
+  .itinary-map-container .itn-map,
+  .faq-container .faq {
     max-height: 80%;
     padding: 2rem;
   }
 }
 
-.itinary-map-container.show .itn-map {
+.itinary-map-container.show .itn-map,
+  .faq-container.show .faq {
   --tw-scale-x: 1;
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2659,6 +2664,18 @@ select:focus {
 
 .min-w-24 {
   min-width: 6rem;
+}
+
+.max-w-\[1\] {
+  max-width: 1;
+}
+
+.max-w-\[100px\] {
+  max-width: 100px;
+}
+
+.max-w-\[1000px\] {
+  max-width: 1000px;
 }
 
 .flex-1 {

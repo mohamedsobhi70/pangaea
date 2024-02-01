@@ -707,6 +707,35 @@ $(window).on("load", function () {
             $("body").css("overflow", "visible");
         })
     }
+
+    // FAQ 
+    if ($(".faq-btn").length > 0) {
+
+        let itineraryMapContainer = $('.faq-container');
+        let itnMap = $('.itn-map');
+
+        $(document).on('click', function (event) {
+            if ($(event.target).hasClass('faq-container')) {
+                itineraryMapContainer.removeClass('show');
+                $("body").css("overflow", "visible");
+            }
+        });
+
+        itnMap.on('click', function (event) {
+            event.stopPropagation();
+        });
+
+
+        $(".faq-btn").on("click", function () {
+            itineraryMapContainer.addClass("show");
+            $("body").css("overflow", "hidden");
+
+        })
+        $(".close-faq").on("click", function () {
+            itineraryMapContainer.removeClass("show");
+            $("body").css("overflow", "visible");
+        })
+    }
     // ===================================================================
     // payment accordion
     if ($(".payment-item").length > 0) {
