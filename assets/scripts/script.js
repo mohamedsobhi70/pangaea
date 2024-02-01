@@ -411,33 +411,63 @@ $(window).on("load", function () {
 
     // Category Page
     // Price Slider
+    // if ($(".price-slider").length > 0) {
+
+    //     const range = document.querySelectorAll(".range-slider span input");
+    //     progress = document.querySelector(".range-slider .progress");
+    //     let gap = 3;
+    //     const inputValue = document.querySelectorAll(".numberVal input");
+
+    //     range.forEach((input) => {
+    //         input.addEventListener("input", (e) => {
+    //             let minRange = parseInt(range[0].value);
+    //             let maxRange = parseInt(range[1].value);
+
+    //             if (maxRange - minRange < gap) {
+    //                 if (e.target.className === "range-min") {
+    //                     range[0].value = maxRange - gap;
+    //                 } else {
+    //                     range[1].value = minRange + gap;
+    //                 }
+    //             } else {
+    //                 progress.style.insetInlineStart = (minRange / range[0].max) * 100 + "%";
+    //                 progress.style.insetInlineEnd = 100 - (maxRange / range[1].max) * 100 + "%";
+    //                 inputValue[0].value = minRange;
+    //                 inputValue[1].value = maxRange;
+    //             }
+    //         });
+    //     });
+
+    // }
+
+
     if ($(".price-slider").length > 0) {
-
-        const range = document.querySelectorAll(".range-slider span input");
-        progress = document.querySelector(".range-slider .progress");
-        let gap = 3;
-        const inputValue = document.querySelectorAll(".numberVal input");
-
-        range.forEach((input) => {
-            input.addEventListener("input", (e) => {
-                let minRange = parseInt(range[0].value);
-                let maxRange = parseInt(range[1].value);
-
-                if (maxRange - minRange < gap) {
-                    if (e.target.className === "range-min") {
-                        range[0].value = maxRange - gap;
+        let priceSlider = document.querySelectorAll(".price-slider");
+        priceSlider.forEach(slider => {
+            let gap = 3,
+                progress = slider.querySelector(".progress");
+            const range = slider.querySelectorAll("span input"),
+                minValue = slider.querySelector(".numberVal.min-value input"),
+                maxValue = slider.querySelector(".numberVal.max-value input");
+            range.forEach((input) => {
+                input.addEventListener("input", (e) => {
+                    let minRange = parseInt(range[0].value);
+                    let maxRange = parseInt(range[1].value);
+                    if (maxRange - minRange < gap) {
+                        if (e.target.className === "range-min") {
+                            range[0].value = maxRange - gap;
+                        } else {
+                            range[1].value = minRange + gap;
+                        }
                     } else {
-                        range[1].value = minRange + gap;
+                        progress.style.insetInlineStart = (minRange / range[0].max) * 100 + "%";
+                        progress.style.insetInlineEnd = 100 - (maxRange / range[1].max) * 100 + "%";
+                        minValue.value = minRange;
+                        maxValue.value = maxRange;
                     }
-                } else {
-                    progress.style.insetInlineStart = (minRange / range[0].max) * 100 + "%";
-                    progress.style.insetInlineEnd = 100 - (maxRange / range[1].max) * 100 + "%";
-                    inputValue[0].value = minRange;
-                    inputValue[1].value = maxRange;
-                }
+                });
             });
-        });
-
+        })
     }
     // ===================================================================
 
@@ -624,6 +654,7 @@ $(window).on("load", function () {
         $(document).on('click', function (event) {
             if ($(event.target).hasClass('itinary-map-container')) {
                 itineraryMapContainer.removeClass('show');
+                $("body").css("overflow", "visible");
             }
         });
 
@@ -640,7 +671,6 @@ $(window).on("load", function () {
         $(".close-itn-map").on("click", function () {
             itineraryMapContainer.removeClass("show");
             $("body").css("overflow", "visible");
-
         })
     }
     // ===================================================================
@@ -675,7 +705,7 @@ $(window).on("load", function () {
         $(".truncatesd-text").each(function () {
             let th = $(this);
             let btn = th.siblings(".see-more-btn");
-            
+
             btn.on("click", function () {
                 th.toggleClass("line-clamp-2");
                 if (th.hasClass("line-clamp-2")) {

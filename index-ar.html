@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="--">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@200;300;400;500;600;700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/swiper.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Pangaea - Home Page</title>
+</head>
+
+<body>
+    <!-- Start Header  -->
+    <header class="pan-header">
+        <div class="container">
+            <div class="flex xl:hidden items-center justify-between">
+                <a href="#">
+                    <img src="assets/images/logo.svg" width="82" height="28" alt="Logo">
+                    <span class="sr-only">
+                        الرئيسية
+                    </span>
+                </a>
+
+                <div class="flex items-center gap-5">
+                    <button type="button" class="mobile-search-btn">
+                        <img src="assets/images/icons/search.svg" width="24" height="24" alt="search">
+                        <span class="sr-only">Search Button</span>
+                    </button>
+                    <button type="button" class="mobile-menu-btn">
+                        <img src="assets/images/icons/menu.svg" width="24" height="24" alt="menu">
+                        <span class="sr-only">Mobile Menu</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <div class="flex flex-col h-full xl:grid xl:grid-cols-2 xl:gap-y-8">
+                    <div class="flex xl:hidden justify-end p-5">
+                        <button type="button" class="mobile-menu-close">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                fill="none">
+                                <path d="M10 10L30 30" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M30 10L10 30" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span class="sr-only">Close Menu</span>
+                        </button>
+                    </div>
+                    <div class="col-span-1 xl:flex xl:items-center gap-6">
+                        <a href="index.html" class="hidden xl:block">
+                            <img src="assets/images/logo.svg" class="w-20 xl:w-[122px]" width="122" height="40"
+                                alt="Logo">
+                            <span class="sr-only">Pangaea Logo</span>
+                        </a>
+                        <div class="p-5 pb-6 xl:p-0">
+                            <form>
+                                <div class="header-search-box">
+                                    <button type="submit">
+                                        <img src="assets/images/icons/search.svg" class="hidden xl:block" width="20"
+                                            height="20" alt="Search">
+                                        <img src="assets/images/icons/search-mobile.svg" class="xl:hidden" width="20"
+                                            height="20" alt="Search">
+                                        <span class="sr-only">icon</span>
+                                    </button>
+                                    <input type="text" name="header-search" id="header-search"
+                                        placeholder="الوجهة، الجذب، النشاط، الخ"
+                                        class="text-Neutral-900 xl:text-white text-sm bg-transparent xl:w-[200px] focus:outline-none flex-1">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-span-1 order-last xl:order-none">
+                        <div
+                            class="flex flex-col-reverse xl:justify-end xl:flex-row xl:items-center gap-6 px-5 py-8 xl:p-0">
+                            <div class="grid grid-cols-2 items-center">
+                                <div class="relative cur-lang">
+                                    <div class="pe-5 flex items-center justify-between gap-2.5 cursor-pointer">
+                                        <span class="text-Black xl:text-white text-sm">
+                                            ريال
+                                        </span>
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1640_3381)">
+                                                <path class="fill-[#121617] xl:fill-white"
+                                                    d="M6.66232 2.08215H0.337648C0.0383555 2.08215 -0.114114 2.44356 0.100473 2.65815L3.26281 5.82048C3.39269 5.95036 3.60728 5.95036 3.73721 5.82048L6.89955 2.65815C7.11408 2.44356 6.96161 2.08215 6.66232 2.08215Z"
+                                                    fill="white" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1640_3381">
+                                                    <rect width="7" height="6.99994"
+                                                        class="fill-[#121617] xl:fill-white" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="lang-curr-box">
+                                        <ul class="lang-cuur-container">
+                                            <li><a href="#">ريال</a></li>
+                                            <li><a href="#">دينار</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="relative cur-lang">
+                                    <div
+                                        class="ps-5 flex items-center justify-between gap-2.5 border-s border-Black xl:border-[#ffffff33] cursor-pointer">
+                                        <span class="text-Black xl:text-white text-sm">
+                                            العربية
+                                        </span>
+                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1640_3381)">
+                                                <path class="fill-[#121617] xl:fill-white"
+                                                    d="M6.66232 2.08215H0.337648C0.0383555 2.08215 -0.114114 2.44356 0.100473 2.65815L3.26281 5.82048C3.39269 5.95036 3.60728 5.95036 3.73721 5.82048L6.89955 2.65815C7.11408 2.44356 6.96161 2.08215 6.66232 2.08215Z"
+                                                    fill="white" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1640_3381">
+                                                    <rect width="7" height="6.99994"
+                                                        class="fill-[#121617] xl:fill-white" fill="white"
+                                                        transform="translate(0 0.5)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="lang-curr-box">
+                                        <ul class="lang-cuur-container">
+                                            <li><a href="#">English</a></li>
+                                            <li><a href="#">العربية</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col xl:flex-row xl:items-center gap-4">
+
+                                <a href="#"
+                                    class="py-[15px] px-[30px] rounded-full bg-Neutral-900 xl:bg-white text-white xl:text-Head text-sm font-medium flex justify-center">
+                                    للأعمال التجارية
+                                </a>
+                                <a href="#"
+                                    class="py-[15px] px-[30px] rounded-full border border-Neutral-200 xl:border-[#ffffff3d] text-Black xl:text-white text-sm flex justify-center">
+                                    التسجيل / الدخول
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:col-span-2 flex-1 overflow-auto xl:overflow-visible">
+                        <nav class="xl:flex items-center gap-3 justify-between relative">
+                            <ul class="flex flex-col xl:flex-row xl:items-center xl:gap-3 xl:justify-between xl:grow">
+
+                                <li class="nav-item active">
+                                    <a href="index.html" class="nav-link">
+                                        <img src="assets/images/icons/Home.svg" class="hidden xl:block" width="24"
+                                            height="24" alt="icons">
+                                        <img src="assets/images/icons/Home-mobile.svg" class="xl:hidden" width="24"
+                                            height="24" alt="icons">
+                                        <span class="grow shrink-0">
+                                            الرئيسية
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <img src="assets/images/icons/Earth.svg" class="hidden xl:block" width="24"
+                                            height="24" alt="Earth">
+                                        <img src="assets/images/icons/Earth-mobile.svg" class="xl:hidden" width="24"
+                                            height="24" alt="Earth">
+                                        <span class="grow shrink-0">
+                                            الأماكن
+                                        </span>
+                                        <svg class="rtl:rotate-90 rtl:xl:rotate-0 ltr:-rotate-90 xl:rotate-0" width="16"
+                                            height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class=" stroke-Black xl:stroke-white"
+                                                d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <div class="megamenu">
+                                        <div class="flex flex-col gap-6">
+                                            <div class="flex xl:hidden items-center gap-3 pt-4">
+                                                <button class="close-megamenu rtl:rotate-180">
+                                                    <img src="assets/images/icons/arrow-left.svg" width="16" height="16"
+                                                        alt="arrow-left">
+                                                </button>
+                                                <span class="font-semibold text-xl leading-normal">Destination</span>
+                                            </div>
+                                            <div
+                                                class="bg-white xl:shadow-sub-menu rounded-xl xl:p-4 grid grid-cols-1 xl:grid-cols-4 gap-5 megamenu-tabs">
+
+                                                <div class="megamenu-tabs-nav">
+
+                                                    <ul class=" flex flex-col gap-1">
+                                                        <li class="megamenu-tab-item" id="europe">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Europe
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="asia">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Asia
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="africa">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Africa and The Middle East
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="namerica">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    North America
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="lamerica">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Latin America
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="australia">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Australia
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="newzealand">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    New Zealand
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="xl:col-span-3 megamenu-tabs-content hidden xl:block">
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Europe
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3" id="europe-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore Europe
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Albania
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Austria
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Bosnia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Bulgaria
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Croatia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Czech Republic
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Denmark
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    England
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Estonia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Hungary
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Iceland
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Ireland
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Italy
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Latvia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Lithuania
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Montenegro
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Netherlands
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Norway
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Romania
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Scotland
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Serbia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Slovakia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Serbia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Slovenia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Spain
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Sweden
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Turkey
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    United Kingdom
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Asia
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3" id="asia-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Spain
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Sweden
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Turkey
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    United Kingdom
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Africa and The Middle East
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3" id="africa-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore Africa and The Middle East
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Sweden
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Turkey
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in North America
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3"
+                                                            id="namerica-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore North America
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    United Kingdom
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Latin America
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3"
+                                                            id="lamerica-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Ireland
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Italy
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Australia
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3"
+                                                            id="australia-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore Australia
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Spain
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in New Zealand
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3"
+                                                            id="newzealand-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore New Zealand
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Spain
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Sweden
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item relative">
+                                    <a href="#" class="nav-link">
+                                        <img src="assets/images/icons/firewood.svg" class="hidden xl:block" width="24"
+                                            height="24" alt="firewood">
+                                        <img src="assets/images/icons/firewood-mobile.svg" class="xl:hidden" width="24"
+                                            height="24" alt="firewood">
+                                        <span class="grow shrink-0">
+                                            الأنشطة
+                                        </span>
+                                        <svg class="rtl:rotate-90 rtl:xl:rotate-0 ltr:-rotate-90 xl:rotate-0" width="16"
+                                            height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path class=" stroke-Black xl:stroke-white"
+                                                d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+
+                                    <div class="megamenu xl:w-[480px]">
+                                        <div class="flex flex-col gap-6">
+                                            <div class="flex xl:hidden items-center gap-3 pt-4">
+                                                <button class="close-megamenu rtl:rotate-180">
+                                                    <img src="assets/images/icons/arrow-left.svg" width="16" height="16"
+                                                        alt="arrow-left">
+                                                </button>
+                                                <span class="font-semibold text-xl leading-normal">Activities</span>
+                                            </div>
+                                            <div class="bg-white xl:shadow-sub-menu xl:rounded-xl xl:p-4">
+                                                <ul class="grid xl:grid-cols-2 gap-y-1 gap-3">
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Active
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Beach Trips
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            African
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Small Groups
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            مغامرة
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Island Hopping
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Ski & Snowboard
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Short Breaks
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Solo Travel
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Winter Breaks
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <img src="assets/images/icons/fire.svg" class="hidden xl:block" width="24"
+                                            height="24" alt="fire">
+                                        <img src="assets/images/icons/fire-mobile.svg" class="xl:hidden" width="24"
+                                            height="24" alt="fire">
+                                        <span class="grow shrink-0">
+                                            افضل العروض
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="guides.html" class="nav-link">
+                                        <img src="assets/images/icons/Notebook.svg" class="hidden xl:block" width="24"
+                                            height="24" alt="Notebook">
+                                        <img src="assets/images/icons/Notebook-mobile.svg" class="xl:hidden" width="24"
+                                            height="24" alt="Notebook">
+                                        <span class="grow shrink-0">
+                                            دليلك
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <img src="assets/images/icons/Bag.svg" class="hidden xl:block" width="24"
+                                            height="24" alt="Bag">
+                                        <img src="assets/images/icons/Bag-mobile.svg" class="xl:hidden" width="24"
+                                            height="24" alt="Bag">
+                                        <span class="grow shrink-0">
+                                            المتجر
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <img src="assets/images/icons/messages.svg" class="hidden xl:block" width="24"
+                                            height="24" alt="messages">
+                                        <img src="assets/images/icons/messages-mobile.svg" class="xl:hidden" width="24"
+                                            height="24" alt="messages">
+                                        <span class="grow shrink-0">
+                                            المجتمع
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <a href="#" class="more-nav-items">
+                                <span class="bg-white rounded-full w-1 h-1"></span>
+                                <span class="bg-white rounded-full w-1 h-1"></span>
+                                <span class="bg-white rounded-full w-1 h-1"></span>
+                                <span class="sr-only">More</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- End Header  -->
+
+    <!-- ============================================================================== -->
+
+    <!-- Start Main Page Content  -->
+    <main>
+
+        <!-- Start Hero Section  -->
+        <section class="hero-section">
+            <div class="lg:p-5">
+                <div
+                    class="lg:rounded-3xl bg-[url(../images/herobg.webp)] bg-cover bg-center lg:overflow-hidden relative pt-[190px] lg:pb-20 lg:min-h-[760px] flex items-center px-5 lg:px-0">
+                    <div class="overlay"></div>
+                    <div class="container my-auto relative">
+                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[60px]">
+                            <div class="flex flex-col gap-9 lg:gap-10 lg:w-[560px]">
+                                <div class="flex flex-col gap-4">
+                                    <h1
+                                        class="text-white font-semibold text-[40px] leading-[110%] lg:text-7xl lg:leading-none">
+                                        جاهز للمغامرة!
+                                    </h1>
+                                    <p class="text-white lg:text-[21px]">
+                                        اكتشف الأماكن الساحرة حول العالم.
+                                    </p>
+                                </div>
+                                <div class="flex flex-col lg:flex-row gap-3 lg:gap-4">
+                                    <div class="flex items-center gap-0.5">
+                                        <img src="assets/images/icons/Star.svg" width="24" height="24" alt="star">
+                                        <img src="assets/images/icons/Star.svg" width="24" height="24" alt="star">
+                                        <img src="assets/images/icons/Star.svg" width="24" height="24" alt="star">
+                                        <img src="assets/images/icons/Star.svg" width="24" height="24" alt="star">
+                                        <img src="assets/images/icons/Star.svg" width="24" height="24" alt="star">
+                                    </div>
+                                    <p
+                                        class="lg:ps-4 py-1 lg:border-s-2 border-[#e0e1e180] text-Neutral-200 text-sm font-medium">
+                                        تم تقييمه بـ 5 نجوم من قبل أكثر من +1000 مسافر
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="-mb-[72px] lg:mb-0 lg:w-[409px] bg-white p-5 lg:p-10 rounded-2xl lg:rounded-3xl shadow-hero-box flex flex-col gap-10">
+                                <div class="flex flex-col divide-y divide-Neutral-200">
+                                    <div class="flex flex-col gap-2 pb-6">
+                                        <label for="location" class="text-Neutral-900 font-medium tracking-wide">
+                                            أين وجهتك
+                                        </label>
+                                        <input type="text" class="focus:outline-none text-Neutral-500" name="location"
+                                            id="location" placeholder="ابحث عن مكان أو نشاط">
+                                    </div>
+                                    <div class="flex flex-col gap-2 pt-6">
+                                        <label for="check" class="text-Neutral-900 font-medium tracking-wide">
+                                            التاريخ
+                                        </label>
+                                        <input type="text" class="focus:outline-none text-Neutral-500" name="check"
+                                            id="check" placeholder="حدد التاريخ">
+                                    </div>
+                                </div>
+                                <a href="#"
+                                    class="rounded-full bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center">
+                                    ابحث
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Hero Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start Explore Section  -->
+        <section class="py-16 lg:py-24 px-5 lg:px-0 mt-[72px] lg:mt-0">
+            <div class="container flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 lg:gap-12">
+                <h2
+                    class="lg:flex-auto text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex flex-col lg:flex-row items-center gap-4">
+                    إكتشف كنوز
+                    <span class="inline-flex items-center gap-3 text-[#136F63] border-b-2 border-[#136F63] ps-4">
+                        السعودية
+                        <img src="assets/images/icons/tabler_chevron-down.svg" width="24" height="24" alt="chevrondown">
+                    </span>
+                </h2>
+                <a href="#"
+                    class="order-last lg:order-none rounded-xl border border-Neutral-300 py-3.5 px-8 flex items-center gap-6 text-Black font-semibold">
+                    إكتشف أكثر
+                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                            fill="#121617" />
+                    </svg>
+                </a>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30">
+                    <!-- item -->
+                    <div class="hot-deal-box">
+                        <img src="assets/images/trip-1.webp" width="410" height="558" alt="trip"
+                            class="h-full w-full object-cover">
+                        <button
+                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-16 h-16 flex items-center justify-center bg-[#403F4CB8] rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"
+                                fill="none">
+                                <path
+                                    d="M16.2054 9.31268C17.4404 10.0986 17.4404 11.9014 16.2054 12.6873L3.07354 21.044C1.74209 21.8913 -0.000210767 20.9348 -0.000210698 19.3567L-0.000209968 2.64335C-0.000209899 1.06517 1.74209 0.108736 3.07354 0.956023L16.2054 9.31268Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="sr-only">Play Video</span>
+                        </button>
+                        <div class="absolute top-0 start-0 w-full p-5 flex justify-between">
+                            <span
+                                class="flex items-center gap-2 rounded-full bg-[#db5461e6] py-2 px-4 text-white text-sm backdrop-blur-[35px]">
+                                <img src="assets/images/icons/magic-star.svg" width="14" height="14" alt="magic-star">
+                                افضل عرض
+                            </span>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                    مغامرة
+                                </span>
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#12161733] p-3 text-white text-sm backdrop-blur-[6px]">
+                                    16+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 start-0 w-full p-6 pt-18 flex flex-col gap-3 bg-hot-deal-grad">
+                            <div class="flex flex-col gap-1">
+                                <span class="text-Neutral-200 text-sm font-semibold">
+                                    اكتشف العلا
+                                </span>
+                                <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
+                                    <a href="#">
+                                        اكتشف العلا
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/Run.svg" width="18" height="18" alt="run">
+                                    يوم واحد
+                                </div>
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/Calendar.svg" width="18" height="18" alt="run">
+                                    كل يوم
+                                </div>
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/BankCarrd.svg" width="18" height="18" alt="run">
+                                    متوسط
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div class="absolute top-0 start-0 w-full p-5 flex justify-end z-10">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                    مغامرة
+                                </span>
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#12161733] p-3 text-white text-sm backdrop-blur-[6px]">
+                                    16+
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col h-full">
+                            <div class="h-[300px] overflow-hidden">
+                                <div class="swiper trip-slider h-full">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/trip-2.webp" width="410" height="300"
+                                                class="w-full h-full object-cover" alt="trip2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/trip-1.webp" width="410" height="300"
+                                                class="w-full h-full object-cover" alt="trip2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/trip-3.webp" width="410" height="300"
+                                                class="w-full h-full object-cover" alt="trip2">
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-center gap-2 absolute left-1/2 bottom-5 -translate-x-1/2 z-[1]">
+                                        <div class="swiper-button-prev trip-prev static mt-0 h-auto grow-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path d="M10 4L6 8L10 12" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="swiper-pagination trip-pagination static flex items-center gap-1 w-auto">
+                                        </div>
+                                        <div class="swiper-button-next trip-next static mt-0 h-auto grow-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path d="M6 12L10 8L6 4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="p-6 bg-white flex flex-col gap-8 shrink-0 grow">
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-Gray text-sm font-semibold">
+                                            العلا، المملكة العربية السعودية
+                                        </span>
+                                        <h3 class="text-Black text-2xl font-semibold line-clamp-2">
+                                            العلا | البحث عن الكنز مع ديكاتلون
+                                        </h3>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="flex items-center gap-2 text-Gray text-sm font-medium">
+                                            <img src="assets/images/icons/Run2.svg" width="18" height="18" alt="run">
+                                            يوم واحد
+                                        </div>
+                                        <div class="flex items-center gap-2 text-Gray text-sm font-medium">
+                                            <img src="assets/images/icons/Calendar2.svg" width="18" height="18"
+                                                alt="run">
+                                            كل يوم
+                                        </div>
+                                        <div class="flex items-center gap-2 text-Gray text-sm font-medium">
+                                            <img src="assets/images/icons/BankCarrd2.svg" width="18" height="18"
+                                                alt="run">
+                                            متوسط
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between items-center mt-auto">
+                                    <div class="flex flex-col gap-2">
+                                        <span class="text-Gray text-xs ">
+                                            تبدأ من
+                                        </span>
+                                        <p class="text-Black text-xl tracking-tight	font-bold">
+                                            2,300 ريال
+                                        </p>
+                                    </div>
+                                    <a href="#"
+                                        class="py-3 px-8 rounded-full flex items-center gap-4 text-Brand-Dark font-semibold text-sm bg-[#22AAA11F]">
+                                        اعرض الرحلة
+                                        <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.418 4.06C7.51133 3.81733 7.614 3.59333 7.726 3.388C7.838 3.17333 7.964 2.97267 8.104 2.786H0.6V1.638H8.104C7.97333 1.45133 7.852 1.25533 7.74 1.05C7.628 0.835333 7.52533 0.606666 7.432 0.363999H8.496C9.07467 1.04533 9.70933 1.56333 10.4 1.918V2.52C9.70933 2.856 9.07467 3.36933 8.496 4.06H7.418Z"
+                                                fill="#309C98" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-trip-box border border-Neutral-100">
+                        <div class="absolute top-0 start-0 w-full p-5 flex justify-end z-10">
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                    مغامرة
+                                </span>
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#12161733] p-3 text-white text-sm backdrop-blur-[6px]">
+                                    16+
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col h-full">
+                            <div class="h-[300px] overflow-hidden">
+                                <div class="swiper trip-slider h-full">
+
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/trip-1.webp" width="410" height="300"
+                                                class="w-full h-full object-cover" alt="trip2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/trip-2.webp" width="410" height="300"
+                                                class="w-full h-full object-cover" alt="trip2">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="assets/images/trip-3.webp" width="410" height="300"
+                                                class="w-full h-full object-cover" alt="trip2">
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="flex items-center gap-2 absolute left-1/2 bottom-5 -translate-x-1/2 z-[1]">
+                                        <div class="swiper-button-prev trip-prev static mt-0 h-auto grow-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path d="M10 4L6 8L10 12" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="swiper-pagination trip-pagination static flex items-center gap-1 w-auto">
+                                        </div>
+                                        <div class="swiper-button-next trip-next static mt-0 h-auto grow-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path d="M6 12L10 8L6 4" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="p-6 bg-white flex flex-col gap-8 shrink-0 grow">
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex flex-col gap-1">
+                                        <span class="text-Gray text-sm font-semibold">
+                                            عسير، المملكة العربية السعودية
+                                        </span>
+                                        <h3 class="text-Black text-2xl font-semibold line-clamp-2">
+                                            مغامرة الهبوط من قمم الجبال | مركز بانجيا
+                                        </h3>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="flex items-center gap-2 text-Gray text-sm font-medium">
+                                            <img src="assets/images/icons/Run2.svg" width="18" height="18" alt="run">
+                                            يوم واحد
+                                        </div>
+                                        <div class="flex items-center gap-2 text-Gray text-sm font-medium">
+                                            <img src="assets/images/icons/Calendar2.svg" width="18" height="18"
+                                                alt="run">
+                                            كل يوم
+                                        </div>
+                                        <div class="flex items-center gap-2 text-Gray text-sm font-medium">
+                                            <img src="assets/images/icons/BankCarrd2.svg" width="18" height="18"
+                                                alt="run">
+                                            متوسط
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between items-center mt-auto">
+                                    <div class="flex flex-col gap-2">
+                                        <span class="text-Gray text-xs ">
+                                            تبدأ من
+                                        </span>
+                                        <p class="text-Black text-xl tracking-tight	font-bold">
+                                            2,300 ريال
+                                        </p>
+                                    </div>
+                                    <a href="#"
+                                        class="py-3 px-8 rounded-full flex items-center gap-4 text-Brand-Dark font-semibold text-sm bg-[#22AAA11F]">
+                                        اعرض الرحلة
+                                        <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M7.418 4.06C7.51133 3.81733 7.614 3.59333 7.726 3.388C7.838 3.17333 7.964 2.97267 8.104 2.786H0.6V1.638H8.104C7.97333 1.45133 7.852 1.25533 7.74 1.05C7.628 0.835333 7.52533 0.606666 7.432 0.363999H8.496C9.07467 1.04533 9.70933 1.56333 10.4 1.918V2.52C9.70933 2.856 9.07467 3.36933 8.496 4.06H7.418Z"
+                                                fill="#309C98" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Explore Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start Galery Section  -->
+        <section class="py-16 lg:py-0 px-5 lg:px-0">
+            <div class="lg:p-5">
+                <div class="py-[60px] lg:py-[100px] bg-[#EEF6F3] rounded-3xl px-5 lg:px-0">
+                    <div class="container grid lg:grid-cols-12 gap-30">
+                        <div class="lg:col-span-4 flex flex-col justify-between gap-30">
+                            <div class="flex flex-col items-center lg:items-start gap-6 lg:py-[30px]">
+                                <h2 class="text-[#111] text-[32px] text-center lg:text-start lg:text-4xl font-bold">
+                                    السفر في جميع أنحاء العالم على استعداد تام!
+                                </h2>
+                                <a href="#"
+                                    class=" rounded-full py-3.5 px-8 flex items-center gap-4 text-white font-semibold bg-Black">
+                                    جميع الوجهات
+                                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div
+                                class="h-[280px] lg:h-[346px] rounded-3xl overflow-hidden gallery-itemg group relative">
+                                <div class="gallery-overlay">
+                                    <h3 class="gallery-title">
+                                        فيتنام
+                                    </h3>
+                                </div>
+                                <img src="assets/images/gallery-1.webp" width="410" height="346" alt="gallery"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3 flex flex-col gap-30">
+                            <div
+                                class="h-[280px] lg:h-[255px] rounded-3xl overflow-hidden gallery-itemg group relative">
+                                <div class="gallery-overlay">
+                                    <h3 class="gallery-title">
+                                        فيتنام
+                                    </h3>
+                                </div>
+                                <img src="assets/images/gallery-2.webp" width="300" height="255" alt="gallery"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <div
+                                class="h-[280px] lg:h-[325px] rounded-3xl overflow-hidden gallery-itemg group relative">
+                                <div class="gallery-overlay">
+                                    <h3 class="gallery-title">
+                                        فيتنام
+                                    </h3>
+                                </div>
+                                <img src="assets/images/gallery-3.webp" width="300" height="325" alt="gallery"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 flex flex-col gap-30">
+                            <div class="flex flex-col lg:flex-row lg:items-center gap-30">
+                                <div
+                                    class="h-[280px] lg:h-[260px] lg:w-[190px] rounded-3xl overflow-hidden shrink-0 gallery-itemg group relative">
+                                    <div class="gallery-overlay">
+                                        <h3 class="gallery-title">
+                                            فيتنام
+                                        </h3>
+                                    </div>
+                                    <img src="assets/images/gallery-4.webp" width="300" height="325" alt="gallery"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <p class="text-Black text-2xl">
+                                    انطلق في رحلة آسرة عبر المناظر الطبيعية الساحرة والتراث الثقافي الغني للمملكة
+                                    العربية السعودية
+                                </p>
+                            </div>
+                            <div
+                                class="h-[280px] lg:h-[320px] rounded-3xl overflow-hidden gallery-itemg group relative">
+                                <div class="gallery-overlay">
+                                    <h3 class="gallery-title">
+                                        فيتنام</h3>
+                                </div>
+                                <img src="assets/images/gallery-5.webp" width="300" height="325" alt="gallery"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Galery Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start Hot Deals Section  -->
+        <section class="py-16 lg:py-24 px-5 lg:px-0">
+            <div class="container flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 lg:gap-12">
+
+                <h2
+                    class="lg:flex-auto text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
+                    افضل العروض
+                </h2>
+                <a href="#"
+                    class="order-last lg:order-none rounded-xl border border-Neutral-300 py-3.5 px-8 flex items-center gap-6 text-Black font-semibold">
+                    إكتشف أكثر
+                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                            fill="#121617" />
+                    </svg>
+                </a>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30">
+                    <!-- item -->
+                    <div class="hot-deal-box">
+                        <video loop muted class="w-full h-full object-cover object-center">
+                            <source src="assets/images/hot-deal.mp4">
+                        </video>
+
+                        <button
+                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-16 h-16 flex items-center justify-center bg-[#403F4CB8] rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"
+                                fill="none">
+                                <path
+                                    d="M16.2054 9.31268C17.4404 10.0986 17.4404 11.9014 16.2054 12.6873L3.07354 21.044C1.74209 21.8913 -0.000210767 20.9348 -0.000210698 19.3567L-0.000209968 2.64335C-0.000209899 1.06517 1.74209 0.108736 3.07354 0.956023L16.2054 9.31268Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="sr-only">Play Video</span>
+                        </button>
+                        <div class="absolute top-0 start-0 w-full p-5 flex justify-between">
+                            <span
+                                class="flex items-center gap-2 rounded-full bg-[#db5461e6] py-2 px-4 text-white text-sm backdrop-blur-[35px]">
+                                <img src="assets/images/icons/magic-star.svg" width="14" height="14" alt="magic-star">
+                                افضل عرض
+                            </span>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                    مغامرة
+                                </span>
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#12161733] p-3 text-white text-sm backdrop-blur-[6px]">
+                                    16+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 start-0 w-full p-6 pt-18 flex flex-col gap-3 bg-hot-deal-grad">
+                            <div class="flex flex-col gap-1">
+                                <span class="text-Neutral-200 text-sm font-semibold">
+                                    العلا، المملكة العربية السعودية
+                                </span>
+                                <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
+                                    <a href="#">
+                                        مغامرة الهبوط من قمم الجبال
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/Run.svg" width="18" height="18" alt="run">
+                                    يوم واحد
+                                </div>
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/Calendar.svg" width="18" height="18" alt="run">
+                                    كل يوم
+                                </div>
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/BankCarrd.svg" width="18" height="18" alt="run">
+                                    متوسط
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="hot-deal-box">
+                        <video loop muted class="w-full h-full object-cover object-center">
+                            <source src="assets/images/hot-deal.mp4">
+                        </video>
+
+                        <button
+                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-16 h-16 flex items-center justify-center bg-[#403F4CB8] rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"
+                                fill="none">
+                                <path
+                                    d="M16.2054 9.31268C17.4404 10.0986 17.4404 11.9014 16.2054 12.6873L3.07354 21.044C1.74209 21.8913 -0.000210767 20.9348 -0.000210698 19.3567L-0.000209968 2.64335C-0.000209899 1.06517 1.74209 0.108736 3.07354 0.956023L16.2054 9.31268Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="sr-only">Play Video</span>
+                        </button>
+                        <div class="absolute top-0 start-0 w-full p-5 flex justify-between">
+                            <span
+                                class="flex items-center gap-2 rounded-full bg-[#db5461e6] py-2 px-4 text-white text-sm backdrop-blur-[35px]">
+                                <img src="assets/images/icons/magic-star.svg" width="14" height="14" alt="magic-star">
+                                افضل عرض
+                            </span>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                    مغامرة
+                                </span>
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#12161733] p-3 text-white text-sm backdrop-blur-[6px]">
+                                    16+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 start-0 w-full p-6 pt-18 flex flex-col gap-3 bg-hot-deal-grad">
+                            <div class="flex flex-col gap-1">
+                                <span class="text-Neutral-200 text-sm font-semibold">
+                                    العلا، المملكة العربية السعودية
+                                </span>
+                                <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
+                                    <a href="#">
+                                        اكتشف العلا
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/Run.svg" width="18" height="18" alt="run">
+                                    يوم واحد
+                                </div>
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/Calendar.svg" width="18" height="18" alt="run">
+                                    كل يوم
+                                </div>
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/BankCarrd.svg" width="18" height="18" alt="run">
+                                    متوسط
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- item -->
+                    <div class="hot-deal-box">
+                        <video loop muted class="w-full h-full object-cover object-center">
+                            <source src="assets/images/hot-deal.mp4">
+                        </video>
+
+                        <button
+                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  w-16 h-16 flex items-center justify-center bg-[#403F4CB8] rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22"
+                                fill="none">
+                                <path
+                                    d="M16.2054 9.31268C17.4404 10.0986 17.4404 11.9014 16.2054 12.6873L3.07354 21.044C1.74209 21.8913 -0.000210767 20.9348 -0.000210698 19.3567L-0.000209968 2.64335C-0.000209899 1.06517 1.74209 0.108736 3.07354 0.956023L16.2054 9.31268Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="sr-only">Play Video</span>
+                        </button>
+                        <div class="absolute top-0 start-0 w-full p-5 flex justify-between">
+                            <span
+                                class="flex items-center gap-2 rounded-full bg-[#db5461e6] py-2 px-4 text-white text-sm backdrop-blur-[35px]">
+                                <img src="assets/images/icons/magic-star.svg" width="14" height="14" alt="magic-star">
+                                افضل عرض
+                            </span>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                    مغامرة
+                                </span>
+                                <span
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-[#12161733] p-3 text-white text-sm backdrop-blur-[6px]">
+                                    16+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 start-0 w-full p-6 pt-18 flex flex-col gap-3 bg-hot-deal-grad">
+                            <div class="flex flex-col gap-1">
+                                <span class="text-Neutral-200 text-sm font-semibold">
+                                    العلا، المملكة العربية السعودية
+                                </span>
+                                <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
+                                    <a href="#">
+                                        تعلم القفز بالمظلة مع ابن حطوتة | البقاء في الفندق
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/Run.svg" width="18" height="18" alt="run">
+                                    يوم واحد
+                                </div>
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/Calendar.svg" width="18" height="18" alt="run">
+                                    كل يوم
+                                </div>
+                                <div class="flex items-center gap-2 text-Neutral-200 text-sm font-medium">
+                                    <img src="assets/images/icons/BankCarrd.svg" width="18" height="18" alt="run">
+                                    متوسط
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- End افضل عرضs Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start Our Values Section  -->
+        <section class="py-16 lg:py-24">
+            <div class="container flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 lg:gap-12">
+                <h2
+                    class="lg:flex-auto text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
+                    القيم الخاصة بنا
+                </h2>
+                <a href="#"
+                    class="order-last lg:order-none rounded-xl border border-Neutral-300 py-3.5 px-8 flex items-center gap-6 text-Black font-semibold">
+                    من نحن
+                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                            fill="#121617" />
+                    </svg>
+                </a>
+
+                <div class="w-full">
+                    <div class="swiper values-slider h-full px-5 lg:px-0">
+                        <div class="swiper-wrapper">
+                            <!-- item  -->
+                            <div class="swiper-slide">
+                                <!-- item -->
+                                <div class="value-box">
+                                    <div class="icon-container">
+                                        <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
+                                            alt="user">
+                                    </div>
+                                    <div class="flex flex-col gap-3">
+                                        <h3>
+                                            التواصل
+                                        </h3>
+                                        <p>
+                                            تعزيز التواصل الفعال بين الموظفين والعملاء، وبين الناس والطبيعة المحيطة بهم.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item  -->
+                            <div class="swiper-slide">
+                                <!-- item -->
+                                <div class="value-box">
+                                    <div class="icon-container">
+                                        <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
+                                            alt="user">
+                                    </div>
+                                    <div class="flex flex-col gap-3">
+                                        <h3>
+                                            روح المغامرة
+                                        </h3>
+                                        <p>
+                                            تشجيع ثقافة المغامرة من خلال تخطيط وتنفيذ وتطوير تجارب المغامرة بأعلى
+                                            مستويات الجودة.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- item  -->
+                            <div class="swiper-slide">
+                                <!-- item -->
+                                <div class="value-box">
+                                    <div class="icon-container">
+                                        <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
+                                            alt="user">
+                                    </div>
+                                    <div class="flex flex-col gap-3">
+                                        <h3>
+                                            الاحترام
+                                        </h3>
+                                        <p>
+                                            الالتزام بالاحترام المتبادل بين الموظفين والعمل الجماعي التعاوني واحترام
+                                            العميل والبيئة التي نعيش فيها.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Our Values Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start Latest Guides Section  -->
+        <section class="py-16 lg:py-24">
+            <div class="container flex flex-col lg:flex-row lg:flex-wrap items-center justify-between gap-8 lg:gap-12">
+                <h2
+                    class="lg:flex-auto text-center lg:text-start text-[32px] lg:text-40 text-Black tracking-tighter font-semibold flex items-center gap-4">
+                    أحدث دليل
+                </h2>
+
+
+                <a href="#"
+                    class="order-last lg:order-none rounded-xl border border-Neutral-300 py-3.5 px-8 flex items-center gap-6 text-Black font-semibold">
+                    إكتشف أكثر
+                    <svg width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.192 4.64C8.29867 4.36267 8.416 4.10667 8.544 3.872C8.672 3.62667 8.816 3.39733 8.976 3.184H0.4V1.872H8.976C8.82667 1.65867 8.688 1.43467 8.56 1.2C8.432 0.954666 8.31467 0.693333 8.208 0.415999H9.424C10.0853 1.19467 10.8107 1.78667 11.6 2.192V2.88C10.8107 3.264 10.0853 3.85067 9.424 4.64H8.192Z"
+                            fill="#121617" />
+                    </svg>
+                </a>
+
+                <div class="w-full">
+                    <div class="swiper guides-slider h-full px-5 lg:px-0">
+                        <div class="swiper-wrapper">
+                            <!-- item  -->
+                            <div class="swiper-slide">
+                                <div class="guide-box">
+                                    <img src="assets/images/guides-1.webp" class="w-full h-full object-cover"
+                                        width="300" height="400" alt="guides">
+                                    <div class="absolute top-0 start-0 w-full p-5 flex justify-center">
+                                        <a href="#"
+                                            class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                            <img src="assets/images/icons/Notebook-w.svg" width="18" height="18"
+                                                alt="Notebook">
+                                            دليلك
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-0 start-0 w-full p-6 pt-18 flex justify-center bg-hot-deal-grad">
+                                        <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
+                                            اكتشف العلا
+                                        </h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- item  -->
+                            <div class="swiper-slide">
+
+                                <div class="guide-box">
+                                    <img src="assets/images/guides-2.webp" class="w-full h-full object-cover"
+                                        width="300" height="400" alt="guides">
+                                    <div class="absolute top-0 start-0 w-full p-5 flex justify-center">
+                                        <a href="#"
+                                            class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                            <img src="assets/images/icons/Notebook-w.svg" width="18" height="18"
+                                                alt="Notebook">
+                                            دليلك
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-0 start-0 w-full p-6 pt-18 flex justify-center bg-hot-deal-grad">
+                                        <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
+                                            عجائب مصر
+                                        </h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- item  -->
+                            <div class="swiper-slide">
+
+                                <div class="guide-box">
+                                    <img src="assets/images/guides-3.webp" class="w-full h-full object-cover"
+                                        width="300" height="400" alt="guides">
+                                    <div class="absolute top-0 start-0 w-full p-5 flex justify-center">
+                                        <a href="#"
+                                            class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                            <img src="assets/images/icons/Notebook-w.svg" width="18" height="18"
+                                                alt="Notebook">
+                                            دليلك
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-0 start-0 w-full p-6 pt-18 flex justify-center bg-hot-deal-grad">
+                                        <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
+                                            بالي الرائعة
+                                        </h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- item  -->
+                            <div class="swiper-slide">
+
+                                <div class="guide-box">
+                                    <img src="assets/images/guides-4.webp" class="w-full h-full object-cover"
+                                        width="300" height="400" alt="guides">
+                                    <div class="absolute top-0 start-0 w-full p-5 flex justify-center">
+                                        <a href="#"
+                                            class="flex items-center gap-2 rounded-full bg-[#12161733] py-3 px-4 text-white text-sm backdrop-blur-[6px]">
+                                            <img src="assets/images/icons/Notebook-w.svg" width="18" height="18"
+                                                alt="Notebook">
+                                            دليلك
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-0 start-0 w-full p-6 pt-18 flex justify-center bg-hot-deal-grad">
+                                        <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
+                                            أورورا السحرية
+                                        </h3>
+                                    </div>
+                                    <div class="item">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Latest Guides Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start Latest Community Section  -->
+        <section class="py-16 lg:py-0 px-5 lg:px-0">
+            <div class="lg:p-5">
+                <div class="py-[60px] lg:py-[100px] bg-[#EEF6F3] rounded-3xl">
+                    <div class="container flex flex-col gap-8 lg:gap-12">
+                        <header class="flex flex-col items-center gap-3 px-5 lg:px-0">
+                            <h2 class="text-40 text-Black font-semibold flex items-center gap-4 text-center">
+                                آخر تحديث من المجتمع
+                            </h2>
+                            <p class="text-Gray text-base text-center">
+                                استكشف العجائب الطبيعية والكنوز الثقافية والتجارب المثيرة التي يقدمها العالم
+                            </p>
+                        </header>
+
+                        <div class="flex flex-col gap-16">
+                            <div>
+                                <div class="swiper community-slider h-full px-5 lg:px-0">
+                                    <div class="swiper-wrapper">
+                                        <!-- item  -->
+                                        <div class="swiper-slide">
+                                            <div class="community-box">
+                                                <div class="p-5 flex flex-col gap-6">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
+                                                            <img src="assets/images/community.png" width="44"
+                                                                height="44" alt="person"
+                                                                class="w-full h-full object-cover">
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <p class="text-Black font-semibold text-base">
+                                                                محمد عبد الرازق
+                                                            </p>
+                                                            <p class="text-Gray text-xs">
+                                                                تم النشر منذ ساعتين
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="community-box-content">
+                                                        <h3>
+                                                            الأشياء التي تحتاج إلى إعدادها قبل الذهاب إلى أستراليا
+                                                        </h3>
+                                                        <div>
+                                                            <p>
+                                                                هل تخطط لرحلة إلى أستراليا؟ فيما يلي بعض الأشياء المهمة
+                                                                التي يجب عليك تحضيرها قبل الذهاب لتجعل رحلتك أكثر
+                                                                سلاسة:
+                                                            </p>
+                                                            <br>
+                                                            <ol>
+                                                                <li>
+                                                                    1- التأشيرة: تأكد من حصولك على التأشيرة المناسبة
+                                                                    لدخول
+                                                                    أستراليا. قد يعتمد نوع التأشيرة التي تحتاجها على غرض
+                                                                    زيارتك (الرحلة، العمل، الدراسة، وما إلى ذلك). قم
+                                                                    بزيارة
+                                                                    الموقع الرسمي للحكومة الأسترالية للتقدم بطلب للحصول
+                                                                    على
+                                                                    التأشيرة المناسبة.
+                                                                </li>
+                                                            </ol>
+
+                                                        </div>
+                                                        <a href="#"
+                                                            class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
+                                                            اقرأ أكثر...
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid grid-cols-2 border-t border-Neutral-200">
+                                                    <div class="p-5 flex items-center justify-center gap-2">
+                                                        <img src="assets/images/icons/like.svg" width="16" height="16"
+                                                            alt="like">
+                                                        12 إعجاب
+                                                    </div>
+                                                    <div class="p-5 flex items-center justify-center gap-2">
+                                                        <img src="assets/images/icons/message-text.svg" width="16"
+                                                            height="16" alt="like">
+                                                        12 من التعليقات
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- item  -->
+                                        <div class="swiper-slide">
+                                            <div class="community-box">
+                                                <div class="p-5 flex flex-col gap-6">
+                                                    <div class="flex items-center gap-3">
+                                                        <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
+                                                            <img src="assets/images/community.png" width="44"
+                                                                height="44" alt="person"
+                                                                class="w-full h-full object-cover">
+                                                        </div>
+                                                        <div class="flex flex-col">
+                                                            <p class="text-Black font-semibold text-base">
+                                                                محمد عبد الرازق
+                                                            </p>
+                                                            <p class="text-Gray text-xs">
+                                                                تم النشر منذ ساعتين
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="community-box-content">
+                                                        <h3>
+                                                            الأشياء التي تحتاج إلى إعدادها قبل الذهاب إلى أستراليا
+                                                        </h3>
+                                                        <div>
+                                                            <p>
+                                                                هل تخطط لرحلة إلى أستراليا؟ فيما يلي بعض الأشياء المهمة
+                                                                التي يجب عليك تحضيرها قبل الذهاب لتجعل رحلتك أكثر
+                                                                سلاسة:
+                                                            </p>
+                                                            <br>
+                                                            <ol>
+                                                                <li>
+                                                                    1- التأشيرة: تأكد من حصولك على التأشيرة المناسبة
+                                                                    لدخول
+                                                                    أستراليا. قد يعتمد نوع التأشيرة التي تحتاجها على غرض
+                                                                    زيارتك (الرحلة، العمل، الدراسة، وما إلى ذلك). قم
+                                                                    بزيارة
+                                                                    الموقع الرسمي للحكومة الأسترالية للتقدم بطلب للحصول
+                                                                    على
+                                                                    التأشيرة المناسبة.
+                                                                </li>
+                                                            </ol>
+
+                                                        </div>
+                                                        <a href="#"
+                                                            class="text-Brand-Dark text-xs leading-[160%] tracking-[-0.24px] font-bold">
+                                                            اقرأ أكثر...
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid grid-cols-2 border-t border-Neutral-200">
+                                                    <div class="p-5 flex items-center justify-center gap-2">
+                                                        <img src="assets/images/icons/like.svg" width="16" height="16"
+                                                            alt="like">
+                                                        12 إعجاب
+                                                    </div>
+                                                    <div class="p-5 flex items-center justify-center gap-2">
+                                                        <img src="assets/images/icons/message-text.svg" width="16"
+                                                            height="16" alt="like">
+                                                        12 من التعليقات
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-30 px-5 lg:px-0">
+                                <div
+                                    class="col-span-1 p-6 lg:p-10 rounded-[20px] bg-white flex flex-col items-start gap-10">
+                                    <div class="flex flex-col gap-5">
+                                        <div class="icon-container bg-[#EEF6F3]">
+                                            <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
+                                                alt="user">
+                                        </div>
+                                        <div class="flex flex-col gap-3">
+                                            <h3 class="font-Jost text-2xl font-semibold">
+                                                عرض جميع مشاركات المجتمع
+                                            </h3>
+                                            <p class="text-Gray text-base leading-[160%]">
+                                                تحقق من جميع المشاركات من أعضاء مجتمعنا إذا كنت بحاجة إلى مزيد من
+                                                المعرفة
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="py-3.5 px-8 rounded-full bg-[#403F4C] text-white font-semibold">
+                                        عرض جميع المشاركات
+                                    </a>
+                                </div>
+                                <div
+                                    class="lg:col-span-2 p-6 lg:p-10 rounded-[20px] bg-[#403F4C] flex flex-col items-start gap-10">
+
+                                    <div class="flex flex-col gap-5">
+                                        <div class="icon-container bg-[#FFFFFF1F]">
+                                            <img src="assets/images/icons/user-octagon.svg" width="32" height="32"
+                                                alt="user">
+                                        </div>
+                                        <div class="flex flex-col gap-3">
+                                            <h3 class="font-Jost text-2xl font-semibold text-white">
+                                                انضم إلى مجتمع المغامرات الخاص بنا اليوم!
+                                            </h3>
+                                            <p class="text-[#FFFFFFA3] text-lg leading-[160%]">
+                                                لا تفوت التجارب المذهلة. اكتشف العالم معنا واصنع ذكريات تدوم مدى الحياة
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="py-3.5 px-8 rounded-full bg-white text-Black font-semibold">
+                                        انضم إلى المجتمع الآن
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- End Latest Community Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start  & Testimonials Section  -->
+        <section class="px-5 lg:px-0 py-16 lg:py-24 overflow-x-hidden">
+            <div class="container flex flex-col gap-20 lg:gap-24">
+                <!-- Partners  -->
+                <div class="flex flex-col gap-12">
+                    <header class="flex flex-col items-center gap-3">
+                        <h2 class="text-3xl text-Black font-semibold text-center">
+                            شركاؤنا وعملاؤنا
+                        </h2>
+                    </header>
+                    <div>
+                        <div class="swiper partner-slider h-full px-5 lg:px-0 flex flex-col gap-12">
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="flex items-center justify-center">
+                                        <img src="assets/images/partner-1.webp" width="80" height="80" alt="partner">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex items-center justify-center">
+                                        <img src="assets/images/partner-2.webp" width="80" height="80" alt="partner">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex items-center justify-center">
+                                        <img src="assets/images/partner-3.webp" width="80" height="80" alt="partner">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex items-center justify-center">
+                                        <img src="assets/images/partner-4.webp" width="80" height="80" alt="partner">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex items-center justify-center">
+                                        <img src="assets/images/partner-5.webp" width="80" height="80" alt="partner">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex items-center justify-center">
+                                        <img src="assets/images/partner-6.webp" width="80" height="80" alt="partner">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex items-center justify-center">
+                                        <img src="assets/images/partner-7.webp" width="80" height="80" alt="partner">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="flex items-center justify-center">
+                                        <img src="assets/images/partner-8.webp" width="80" height="80" alt="partner">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div
+                                class="swiper-pagination partner-pagination static flex justify-center items-center gap-4 w-auto">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="swiper testimonials-slider h-full px-5 lg:px-0">
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class=" flex flex-col items-center gap-10">
+                                    <p class="lg:w-10/12 text-Black text-center text-3xl leading-[140%] font-Eczar">
+                                        "قدوس لـ Pangea لتجربة سفر استثنائية! بدءًا من الحجز السلس وحتى التوصيات
+                                        الشخصية، كانت كل التفاصيل مثالية. لقد جعلوني مستجيبين ومنتبهين أشعر وكأنني من
+                                        كبار الشخصيات. أوصي بشدة برحلة لا تُنسى!"
+                                    </p>
+                                    <div class="flex flex-col items-center gap-3">
+                                        <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
+                                            <img src="assets/images/community.png" width="44" height="44" alt="person">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <p class="text-Black text-base leading-[160%] font-semibold text-center">
+                                                Jonia Silalahi
+                                            </p>
+                                            <p
+                                                class="text-[10px] text-Gray leading-[170%] tracking-[-0.2px] text-center">
+                                                Alula مغامرة - 24 August 2023
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class=" flex flex-col items-center gap-10">
+                                    <p class="lg:w-10/12 text-Black text-center text-3xl leading-[140%] font-Eczar">
+                                        "قدوس لـ Pangea لتجربة سفر استثنائية! بدءًا من الحجز السلس وحتى التوصيات
+                                        الشخصية، كانت كل التفاصيل مثالية. لقد جعلوني مستجيبين ومنتبهين أشعر وكأنني من
+                                        كبار الشخصيات. أوصي بشدة برحلة لا تُنسى!"
+                                    </p>
+                                    <div class="flex flex-col items-center gap-3">
+                                        <div class="w-[44px] h-[44px] rounded-full overflow-hidden">
+                                            <img src="assets/images/community.png" width="44" height="44" alt="person">
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <p class="text-Black text-base leading-[160%] font-semibold text-center">
+                                                Jonia Silalahi
+                                            </p>
+                                            <p
+                                                class="text-[10px] text-Gray leading-[170%] tracking-[-0.2px] text-center">
+                                                Alula مغامرة - 24 August 2023
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Partners & Testimonials Section  -->
+
+        <!-- ====================================================== -->
+
+        <!-- Start CTA Section  -->
+        <section class="px-5 lg:px-0">
+            <div class="lg:p-5">
+                <div class="cta-section">
+                    <div class="container grid lg:grid-cols-2">
+                        <div class="bg-white rounded-3xl p-8 flex flex-col gap-6 items-start">
+
+                            <div class="flex flex-col gap-4">
+                                <h2 class="text-Black text-4xl font-semibold leading-[140%]">
+                                    انضم إلى مغامرتنا اليوم!
+                                </h2>
+
+                                <p class="text-Gray text-lg leading-[160%]">
+                                    لا تفوت التجارب المذهلة. اكتشف العالم معنا واصنع ذكريات تدوم مدى الحياة
+                                </p>
+                            </div>
+
+                            <a href="#" class="py-3.5 px-8 rounded-full bg-[#DB3B3B] text-white font-semibold">
+                                اكتشف الرحلات
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End CTA Section  -->
+
+        <!-- ====================================================== -->
+
+    </main>
+    <!-- End Main Page Content  -->
+
+    <!-- ============================================================================== -->
+
+    <!-- Start Footer  -->
+    <footer class="py-16 lg:py-24 px-5 lg:px-0">
+        <div id="back-top" class="back-top" role="button">
+            <div class="btt-btn">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M4 15L16 3L28 15H22V23H10V15H4Z" stroke="#309C98" stroke-width="2" stroke-linecap="round"
+                       stroke-linejoin="round" />
+                   <path d="M22 27H10" stroke="#309C98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+            </div>
+        </div>
+           <div class="container flex flex-col gap-[60px] lg:gap-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+
+                <div class="lg:col-span-5 flex flex-col items-start gap-[28px] lg:gap-10">
+                    <img src="assets/images/logo-footer.svg" width="146" height="49" alt="logo">
+                    <p class="font-Eczar text-4xl leading-[120%] font-semibold tracking-[-0.72px]">
+                        استكشف رحلتك الرائعة التالية
+                    </p>
+                </div>
+
+                <div class="lg:col-start-8 lg:col-span-5 bg-[#EEF6F3] py-6 px-5 rounded-xl flex flex-col gap-6">
+                    <div class="flex flex-col gap-3">
+                        <h2 class="text-Black text-2xl font-semibold leading-[120%]">
+                            ابق علي تواصل مع بانجيا
+                        </h2>
+                        <p class="text-Gray text-sm leading-[140%]">
+                            كن أول من يعرف عن رحلاتنا وعروضنا الجديدة. نحن لا نرسب البريد المزعج. نعدك بذلك.
+                        </p>
+                    </div>
+                    <form>
+                        <div class="bg-white rounded-full p-4 flex items-center gap-2.5">
+                            <input type="email" placeholder="أدخل عنوان البريد الالكتروني"
+                                class="flex-1 focus:outline-none">
+                            <button type="submit">
+                                <img src="assets/images/icons/send.svg" width="16" height="16" alt="Send">
+                                <span class="sr-only">Emails</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-6 gap-5">
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        الدول المفضلة
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                السعودية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                اليابان
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                تايلاند
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                إندونيسيا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                أستراليا
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        العروض والخصومات
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                العروض الخاصة
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                كوبونات خصم
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                أحداث خاصة
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        فئة الرحلات
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                ركوب الدراجات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                تسلق الجبال
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                التخييم
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                رياضة مائية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                التخييم في مكان مجهز
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        المجتمع
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                العروض الخاصة
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                المنشورات
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                ورش عمل
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                الاسئلة الشائعة
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        معلومات عنا
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                معلومات عنا
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                وظائف
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                شراكات العلامة التجارية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                تواصل معنا
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        القوانين
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                شروط الاستخدام
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                سياسة الخصوصية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                الإجراءات القانونية
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                النشرة الإخبارية
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+
+    <!-- ============================================================================== -->
+
+    <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/moment.js"></script>
+    <script src="assets/scripts/litepicker.js"></script>
+    <script src="assets/scripts/swiper.js"></script>
+    <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
