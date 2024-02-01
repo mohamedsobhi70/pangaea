@@ -204,6 +204,20 @@ $(window).on("load", function () {
                     nextEl: nextButton[0],
                     prevEl: prevButton[0]
                 },
+                autoplay: {
+                    delay: 800,
+                    disableOnInteraction: false
+                }
+            });
+            swiper.autoplay.stop();
+            // Pause autoplay on hover
+            slider.on('mouseenter', function () {
+                swiper.autoplay.start();
+            });
+
+            // Resume autoplay on mouse leave
+            slider.on('mouseleave', function () {
+                swiper.autoplay.stop();
             });
         });
     }
@@ -519,6 +533,26 @@ $(window).on("load", function () {
 
 
     // Single Trip Page
+    // steps
+    if ($(".steps-item").length > 0) {
+        $(".steps-item").each(function () {
+            let th = $(this),
+                stepIcn = th.find(".steps-icon"),
+                stepCntnt = th.find(".steps-content"),
+                stepShowMoreBtn = th.find(".steps-show-more-btn");
+            stepShowMoreBtn.on("click", function () {
+                stepIcn.toggleClass("open");
+                stepCntnt.slideToggle(300)
+                stepShowMoreBtn.toggleClass("seeless")
+                if (stepShowMoreBtn.hasClass("seeless")) {
+                    stepShowMoreBtn.text("See details & photo");
+                } else {
+                    stepShowMoreBtn.text("See less");
+                }
+            })
+        })
+    }
+
     // Light Box Image In Single Trip  page
 
     if ($(".single-trip-images").length > 0) {
