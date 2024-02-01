@@ -2666,14 +2666,6 @@ select:focus {
   min-width: 6rem;
 }
 
-.max-w-\[1\] {
-  max-width: 1;
-}
-
-.max-w-\[100px\] {
-  max-width: 100px;
-}
-
 .max-w-\[1000px\] {
   max-width: 1000px;
 }
@@ -3355,6 +3347,11 @@ select:focus {
   padding-bottom: 60px;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -3758,6 +3755,11 @@ select:focus {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#2A7677\] {
+  --tw-text-opacity: 1;
+  color: rgb(42 118 119 / var(--tw-text-opacity));
 }
 
 .underline {
