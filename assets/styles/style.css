@@ -1802,8 +1802,8 @@ select:focus {
 }
 
 .trip-book-radio {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
   flex-shrink: 0;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -1818,8 +1818,8 @@ select:focus {
 }
 
 [type="radio"] {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(100 103 104 / var(--tw-border-opacity));
@@ -1834,8 +1834,8 @@ select:focus {
 }
 
 [type="checkbox"] {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
   border-radius: 0.5rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -4259,12 +4259,19 @@ a.ui-button:active,
 }
 
 .ui-datepicker .ui-widget-header .ui-corner-all {
+  top: 0.75rem !important;
   border-color: transparent !important;
   background-color: transparent !important;
 }
 
 .ui-datepicker .ui-datepicker-title {
-  padding-bottom: 1.5rem !important;
+  padding-bottom: 1rem !important;
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+.ui-datepicker .ui-datepicker-calendar td a {
+  border: 1px solid rgb(203, 204, 205) !important;
 }
 
 .placeholder\:font-normal::-moz-placeholder {
@@ -4659,6 +4666,10 @@ a.ui-button:active,
   .lg\:border-y {
     border-top-width: 1px;
     border-bottom-width: 1px;
+  }
+
+  .lg\:border-s {
+    border-inline-start-width: 1px;
   }
 
   .lg\:border-s-2 {
