@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/swiper.css">
+    <link rel="stylesheet" href="assets/styles/jqueryui.css">
     <link rel="stylesheet" href="assets/styles/lightbox.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <title>Pangaea - Trip Booking</title>
@@ -136,129 +137,268 @@
                                             <div class="grid grid-cols-1 lg:grid-cols-2 gap-30">
 
                                                 <div class="flex flex-col gap-9">
-                                                    <div
-                                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
-                                                        <span
-                                                            class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
+
+                                                    <div class="steps-item">
+                                                        <span class="steps-icon">
                                                             1
                                                         </span>
-                                                        <div class="flex flex-col gap-1">
-                                                            <h4 class="Neutral-900 font-medium font-Jost">
-                                                                Windsor Castle
-                                                            </h4>
-                                                            <p class="text-Neutral-700 text-sm">
-                                                                Stop: 60 minutes - Admission included
-                                                            </p>
-                                                            <a href="#"
-                                                                class="text-Brand-Dark text-sm underline font-medium tracking-[0.28px]">
-                                                                See details & photo
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
-                                                        <span
-                                                            class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
-                                                            2
-                                                        </span>
-                                                        <div class="flex flex-col gap-6">
+                                                        <div class="flex flex-col gap-4">
                                                             <div class="flex flex-col gap-1">
                                                                 <h4 class="Neutral-900 font-medium font-Jost">
                                                                     St. George's Chapel
                                                                 </h4>
                                                                 <p class="text-Neutral-700 text-sm">
+                                                                    Stop: 60 minutes - Admission included
+                                                                </p>
+                                                            </div>
+                                                            <div class="steps-content">
+                                                                <div class="flex flex-col gap-4">
+                                                                    <div class="flex gap-4 flex-wrap">
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-neutral-900 text-sm leading-6">
+                                                                        Our first stop is Windsor Castle, the ancestral
+                                                                        home of the
+                                                                        British Royal family for more than 900 years and
+                                                                        the largest,
+                                                                        continuously
+                                                                        occupied
+                                                                        castle
+                                                                        in Europe. Our first stop is Windsor Castle, the
+                                                                        ancestral home
+                                                                        of
+                                                                        the
+                                                                        British Royal family for more than 900 years and
+                                                                        the largest,
+                                                                        continuously
+                                                                        occupied castle in Europe.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <span role="button" class="steps-show-more-btn">
+                                                                See details & photo
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="steps-item">
+                                                        <span class="steps-icon">
+                                                            2
+                                                        </span>
+                                                        <div class="flex flex-col gap-4">
+                                                            <div class="flex flex-col gap-1">
+                                                                <h4 class="Neutral-900 font-medium font-Jost">
+                                                                    Windsor Castle
+                                                                </h4>
+                                                                <p class="text-Neutral-700 text-sm">
+                                                                    Stop: 60 minutes - Admission included
+                                                                </p>
+                                                            </div>
+                                                            <div class="steps-content">
+                                                                <div class="flex flex-col gap-4">
+                                                                    <div class="flex gap-4 flex-wrap">
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-neutral-900 text-sm leading-6">
+                                                                        Our first stop is Windsor Castle, the ancestral
+                                                                        home of the
+                                                                        British Royal family for more than 900 years and
+                                                                        the largest,
+                                                                        continuously
+                                                                        occupied
+                                                                        castle
+                                                                        in Europe. Our first stop is Windsor Castle, the
+                                                                        ancestral home
+                                                                        of
+                                                                        the
+                                                                        British Royal family for more than 900 years and
+                                                                        the largest,
+                                                                        continuously
+                                                                        occupied castle in Europe.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <span role="button" class="steps-show-more-btn">
+                                                                See details & photo
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="steps-item">
+                                                        <span class="steps-icon">
+                                                            3
+                                                        </span>
+                                                        <div class="flex flex-col gap-4">
+                                                            <div class="flex flex-col gap-1">
+                                                                <h4 class="Neutral-900 font-medium font-Jost">
+                                                                    The Roman Baths
+                                                                </h4>
+                                                                <p class="text-Neutral-700 text-sm">
                                                                     Stop: 15 minutes - Admission included
                                                                 </p>
                                                             </div>
-                                                            <div class="flex flex-col gap-4">
-                                                                <div class="flex gap-4 flex-wrap">
-                                                                    <div
-                                                                        class="w-[114px] h-[114px] rounded-lg overflow-hidden">
-                                                                        <img src="assets/images/Surface.png"
-                                                                            class="w-full h-full object-cover"
-                                                                            width="114" height="113" alt="Surface">
+                                                            <div class="steps-content">
+                                                                <div class="flex flex-col gap-4">
+                                                                    <div class="flex gap-4 flex-wrap">
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
                                                                     </div>
-                                                                    <div
-                                                                        class="w-[114px] h-[114px] rounded-lg overflow-hidden">
-                                                                        <img src="assets/images/Surface.png"
-                                                                            class="w-full h-full object-cover"
-                                                                            width="114" height="113" alt="Surface">
-                                                                    </div>
-                                                                    <div
-                                                                        class="w-[114px] h-[114px] rounded-lg overflow-hidden">
-                                                                        <img src="assets/images/Surface.png"
-                                                                            class="w-full h-full object-cover"
-                                                                            width="114" height="113" alt="Surface">
-                                                                    </div>
-                                                                    <div
-                                                                        class="w-[114px] h-[114px] rounded-lg overflow-hidden">
-                                                                        <img src="assets/images/Surface.png"
-                                                                            class="w-full h-full object-cover"
-                                                                            width="114" height="113" alt="Surface">
-                                                                    </div>
+                                                                    <p class="text-neutral-900 text-sm leading-6">
+                                                                        Our first stop is Windsor Castle, the ancestral
+                                                                        home of the
+                                                                        British Royal family for more than 900 years and
+                                                                        the largest,
+                                                                        continuously
+                                                                        occupied
+                                                                        castle
+                                                                        in Europe. Our first stop is Windsor Castle, the
+                                                                        ancestral home
+                                                                        of
+                                                                        the
+                                                                        British Royal family for more than 900 years and
+                                                                        the largest,
+                                                                        continuously
+                                                                        occupied castle in Europe.
+                                                                    </p>
                                                                 </div>
-                                                                <p class="text-neutral-900 text-sm leading-6">
-                                                                    Our first stop is Windsor Castle, the ancestral home
-                                                                    of the British
-                                                                    Royal
-                                                                    family for more than 900 years and the largest,
-                                                                    continuously
-                                                                    occupied
-                                                                    castle
-                                                                    in Europe. Our first stop is Windsor Castle, the
-                                                                    ancestral home of
-                                                                    the
-                                                                    British Royal family for more than 900 years and the
-                                                                    largest,
-                                                                    continuously
-                                                                    occupied castle in Europe.
-                                                                </p>
-                                                                <a href="#"
-                                                                    class="text-Brand-Dark text-sm underline font-medium tracking-[0.28px]">
-                                                                    See less
-                                                                </a>
-
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
-                                                        <span
-                                                            class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
-                                                            3
-                                                        </span>
-                                                        <div class="flex flex-col gap-1">
-                                                            <h4 class="Neutral-900 font-medium font-Jost">
-                                                                The Roman Baths
-                                                            </h4>
-                                                            <p class="text-Neutral-700 text-sm">
-                                                                Stop: 60 minutes - Admission included
-                                                            </p>
-                                                            <a href="#"
-                                                                class="text-Brand-Dark text-sm underline font-medium tracking-[0.28px]">
+                                                            <span role="button" class="steps-show-more-btn">
                                                                 See details & photo
-                                                            </a>
+                                                            </span>
                                                         </div>
                                                     </div>
-                                                    <div
-                                                        class="flex items-start gap-5 relative before:content-[''] before:absolute before:h-full before:top-10 before:start-5 before:border before:border-Monte-Carlo-100 before:border-dashed">
-                                                        <span
-                                                            class="shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-Monte-Carlo-100 text-Brand-Dark text-sm font-medium">
+
+                                                    <div class="steps-item">
+                                                        <span class="steps-icon">
                                                             4
                                                         </span>
-                                                        <div class="flex flex-col gap-1">
-                                                            <h4 class="Neutral-900 font-medium font-Jost">
-                                                                Stonehenge
-                                                            </h4>
-                                                            <p class="text-Neutral-700 text-sm">
-                                                                Stop: 60 minutes - Admission included
-                                                            </p>
-                                                            <a href="#"
-                                                                class="text-Brand-Dark text-sm underline font-medium tracking-[0.28px]">
+                                                        <div class="flex flex-col gap-4">
+                                                            <div class="flex flex-col gap-1">
+                                                                <h4 class="Neutral-900 font-medium font-Jost">
+                                                                    Stonehenge
+                                                                </h4>
+                                                                <p class="text-Neutral-700 text-sm">
+                                                                    Stop: 15 minutes - Admission included
+                                                                </p>
+                                                            </div>
+                                                            <div class="steps-content">
+                                                                <div class="flex flex-col gap-4">
+                                                                    <div class="flex gap-4 flex-wrap">
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                        <div
+                                                                            class="w-[114px] h-[114px] rounded-lg overflow-hidden">
+                                                                            <img src="assets/images/Surface.png"
+                                                                                class="w-full h-full object-cover"
+                                                                                width="114" height="113" alt="Surface">
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="text-neutral-900 text-sm leading-6">
+                                                                        Our first stop is Windsor Castle, the ancestral
+                                                                        home of the
+                                                                        British Royal family for more than 900 years and
+                                                                        the largest,
+                                                                        continuously occupied castle in Europe. Our
+                                                                        first stop is
+                                                                        Windsor Castle, the ancestral home of the
+                                                                        British Royal family
+                                                                        for more than 900 years and the largest,
+                                                                        continuously occupied
+                                                                        castle in Europe.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <span role="button" class="steps-show-more-btn">
                                                                 See details & photo
-                                                            </a>
+                                                            </span>
                                                         </div>
                                                     </div>
+
+
                                                 </div>
                                                 <div class="h-96 lg:h-[733px] overflow-hidden rounded-2xl">
                                                     <iframe
@@ -274,6 +414,40 @@
                             </div>
                         </div>
                         <div class="flex flex-col gap-6">
+                            <!-- Trip Dates Calender-->
+                            <div
+                                class="p-5 lg:p-6 rounded-2xl border border-Neutral-200 bg-Neutral-25 flex flex-col gap-5 lg:gap-6">
+                                <h3 class="text-Neutral-900 text-[28px] -tracking-[0.56px] font-semibold font-Jost">
+                                    Trip Dates
+                                </h3>
+
+                                <div class="flex flex-col gap-4">
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 ">
+                                        <div id="datepicker" class="flex justify-center"></div>
+                                        <div id="timesList" class="flex flex-col gap-8">
+                                            <div class="flex flex-col gap-6">
+                                                <h4 class="font-Jost text-xl font-semibold">
+                                                    Morning Time
+                                                </h4>
+                                                <div id="morning-list" class="flex flex-col gap-4">
+
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col gap-6">
+                                                <h4 class="font-Jost text-xl font-semibold">
+                                                    Evening Time
+                                                </h4>
+                                                <div id="evening-list" class="flex flex-col gap-4">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
                             <!-- Trip Dates -->
                             <div
                                 class="p-5 lg:p-6 rounded-2xl border border-Neutral-200 bg-Neutral-25 flex flex-col gap-5 lg:gap-6">
@@ -664,6 +838,9 @@
                                 </a>
                             </div>
 
+
+
+
                             <!-- Guests -->
                             <div
                                 class="p-5 lg:p-6 rounded-2xl border border-Neutral-200 bg-Neutral-25 flex flex-col gap-5 lg:gap-6">
@@ -815,6 +992,7 @@
 
                         <div class="p-6 lg:p-8 rounded-2xl shadow-trip-book bg-trip-book-grad" id="booking-summary">
 
+
                             <div class="flex flex-col gap-4">
                                 <h4
                                     class="text-Neutral-900 text-xl leading-[140%] font-semibold font-Jost -tracking-[0.4px]">
@@ -867,6 +1045,7 @@
                                     </span>
                                 </div>
                             </div>
+
                             <div class="py-5 lg:py-8 border-b border-Neutral-200">
                                 <div class="relative">
                                     <svg class="absolute top-1/2 -translate-y-1/2 start-4" width="24" height="24"
@@ -883,6 +1062,7 @@
                                     </span>
                                 </div>
                             </div>
+
                             <div class="py-5 lg:py-8 border-b border-Neutral-200 flex flex-col gap-2">
                                 <div class="relative">
                                     <svg class="absolute top-1/2 -translate-y-1/2 start-4" width="24" height="24"
@@ -902,7 +1082,6 @@
                                     This promo code in invalid, please enter a valid code
                                 </p>
                             </div>
-
 
                             <div class="pt-5 lg:pt-8">
                                 <div class="flex flex-col gap-8">
@@ -1360,6 +1539,7 @@
 
     <script src="assets/scripts/jquiry.js"></script>
     <script src="assets/scripts/lightbox.js"></script>
+    <script src="assets/scripts/jqueryui.js"></script>
     <script src="assets/scripts/moment.js"></script>
     <script src="assets/scripts/litepicker.js"></script>
     <script src="assets/scripts/swiper.js"></script>

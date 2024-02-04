@@ -545,9 +545,9 @@ $(window).on("load", function () {
                 stepCntnt.slideToggle(300)
                 stepShowMoreBtn.toggleClass("seeless")
                 if (stepShowMoreBtn.hasClass("seeless")) {
-                    stepShowMoreBtn.text("See details & photo");
-                } else {
                     stepShowMoreBtn.text("See less");
+                } else {
+                    stepShowMoreBtn.text("See details & photo");
                 }
             })
         })
@@ -779,4 +779,75 @@ $(window).on("load", function () {
             });
         });
     }
+
+    $(document).ready(function () {
+        const morningList = $('#morning-list');
+        const eveningList = $('#evening-list');
+    
+        // Example data - replace with your actual data from the backend
+        const availableDates = ['02/10/2024', '02/10/2024', '02/10/2024'];
+        const disabledDates = ['02/15/2024', '02/20/2024'];
+    
+        // Initialize the datepicker
+        $('#datepicker').datepicker({
+            minDate: 0, // Set the minimum selectable date to today
+          beforeShowDay: disableSpecificDates,
+          onSelect: handleDateSelect
+        });
+    
+        function disableSpecificDates(date) {
+          const formattedDate = $.datepicker.formatDate('mm/dd/yy', date);
+          // Check if the date is in the disabledDates array
+          if (disabledDates.includes(formattedDate)) {
+            return [false, '', 'Disabled'];
+          }
+          return [true, ''];
+        }
+    
+        function handleDateSelect(selectedDate) {
+          // Check if the selected date is available
+          if (availableDates.includes(selectedDate)) {
+            // Display available times for the selected date
+            showAvailableTimes(selectedDate);
+          } else {
+            // Reset the available times section if the date is not available
+            resetAvailableTimes();
+          }
+        }
+    
+        function showAvailableTimes(selectedDate) {
+          // Example available times (replace with your actual data from the backend)
+          let timesForDatemor = ['10:00 AM', '02:00 AM'];
+          let timesForDateeve = ['11:00 PM'];
+    
+          // Display available times in the UI
+          morningList.html(
+            timesForDatemor.map(time => `
+              <label class="trip-book-lbl">
+                <input type="radio" name="availableTime" class="morning-time" value="${time}">
+                <span class="">${time}</span>
+              </label>
+            `).join('')
+          );
+    
+          eveningList.html(
+            timesForDateeve.map(time => `
+              <label class="trip-book-lbl">
+                <input type="radio" name="availableTime" class="evening-time" value="${time}">
+                <span class="">${time}</span>
+              </label>
+            `).join('')
+          );
+    
+          // Show the available times section
+          $('#availableTimes').removeClass('hidden');
+        }
+    
+        function resetAvailableTimes() {
+          // Reset the available times section
+          $('#availableTimes').addClass('hidden');
+          morningList.empty();
+          eveningList.empty();
+        }
+      });
 })
