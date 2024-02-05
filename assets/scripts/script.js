@@ -191,8 +191,6 @@ $(window).on("load", function () {
         $(".trip-slider").each(function () {
             let slider = $(this);
             let pagination = slider.find('.trip-pagination');
-            let nextButton = slider.find('.trip-next');
-            let prevButton = slider.find('.trip-prev');
 
             let swiper = new Swiper(slider[0], {
                 loop: true,
@@ -200,12 +198,9 @@ $(window).on("load", function () {
                     el: pagination[0],
                     clickable: true
                 },
-                navigation: {
-                    nextEl: nextButton[0],
-                    prevEl: prevButton[0]
-                },
+                speed: 1500,
                 autoplay: {
-                    delay: 800,
+                    delay: 1000,
                     disableOnInteraction: false
                 }
             });
