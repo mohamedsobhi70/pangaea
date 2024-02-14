@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="--">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/swiper.css">
+    <link rel="stylesheet" href="assets/styles/lightbox.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Pangaea - Trip Booking</title>
+</head>
+
+<body>
+
+
+    <!-- Start Main Page Content  -->
+    <div class="flex flex-col min-h-screen">
+
+        <header class="px-5 xl:px-0 border-b border-Neutral-200 sticky top-0 z-50 bg-white">
+            <div class="container py-5 flex items-center justify-between gap-3 lg:gap-4 flex-wrap">
+                <a href="index.html" class="shrink-0">
+                    <img src="assets/images/icons/back.svg" class="rtl:rotate-180" width="40" height="40" alt="back">
+                    <span class="sr-only">
+                        Home Page
+                    </span>
+                </a>
+
+                <a href="index.html" class="shrink-0">
+                    <img src="assets/images/logo-footer.svg" class="w-[100px] xl:w-auto" width="146" height="49"
+                        alt="logo">
+                    <span class="sr-only">
+                        Home Page
+                    </span>
+                </a>
+
+
+                <div class="relative cur-lang">
+                    <div class="ps-5 flex items-center justify-between gap-2.5 cursor-pointer">
+                        <span class="text-Neutral-600 text-sm grow">
+                            English
+                        </span>
+                        <img src="assets/images/icons/downarrow-1.svg" width="7" height="7" alt="down-arrow">
+                    </div>
+                    <div class="lang-curr-box checkout-page">
+                        <ul class="lang-cuur-container">
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">AR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Start Section  -->
+        <section class="py-8 lg:py-24 px-5 lg:px-0 grow flex items-center bg-Neutral-50 login-sec">
+            <div class="container flex flex-col items-center justify-center gap-8">
+                <div class="flex flex-col items-center gap-3 max-w-[410px]">
+                    <h2 class="text-center text-Neutral-900 text-3xl font-semibold">
+                        Log in to your account
+                    </h2>
+                    <p class="text-center text-Neutral-700 leading-[160%]">
+                        Welcome back! Please enter your details.
+                    </p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-Neutral-200 w-full max-w-[410px]">
+                    <form>
+                        <div class=" flex flex-col gap-6">
+                            <div class="flex flex-col gap-5">
+                                <div class="flex flex-col gap-2">
+                                    <label for="login-email" class="font-semibold text-Neutral-900">
+                                        Email
+                                    </label>
+                                    <input type="email" name="login-email" id="login-email" placeholder="Your Email"
+                                        class="py-3 px-4 rounded-xl border border-Neutral-200 font-semibold text-Neutral-900 focus:border-Brand-Dark">
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label for="login-password" class="font-semibold text-Neutral-900">
+                                        Password
+                                    </label>
+                                    <div class="relative">
+                                        <input type="password" name="login-password" id="login-password"
+                                            placeholder="Your Password"
+                                            class="w-full py-3 px-4 rounded-xl border border-Neutral-200 font-semibold text-Neutral-900 focus:border-Brand-Dark">
+                                        <span role="button"
+                                            class="show-password-btn absolute end-5 top-1/2 -translate-y-1/2">
+                                            <img src="assets/images/icons/showpass.svg" width="20" height="20"
+                                                alt="showpass">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" flex items-center justify-between gap-2">
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" name="remember-pass" id="remember-pass"
+                                        class="!w-4 !h-4 rounded-[4px] border-[#D0D5DD]">
+                                    <label for="remember-pass" class="text-[#344054] text-xs cursor-pointer">
+                                        Remember for 30 days
+                                    </label>
+                                </div>
+                                <a href="#" class="text-Brand-Dark text-xs font-semibold">
+                                    Forgot password
+                                </a>
+                            </div>
+                            <input type="submit" value="Sign In"
+                                class="rounded-full bg-Brand-Dark py-3 px-8 text-Neutral-50 font-semibold cursor-pointer">
+                        </div>
+                    </form>
+                </div>
+                <div class="flex justify-between max-w-[410px]">
+                    Don’t have an account?
+                    <a href="register.html" class="text-Brand-Dark font-semibold">
+                        Sign up
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- End Section  -->
+        <!-- ====================================================== -->
+    </div>
+    <!-- End Main Page Content  -->
+
+    <!-- ============================================================================== -->
+
+    <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/lightbox.js"></script>
+    <script src="assets/scripts/moment.js"></script>
+    <script src="assets/scripts/litepicker.js"></script>
+    <script src="assets/scripts/swiper.js"></script>
+    <script src="assets/scripts/script.js"></script>
+
+</body>
+
+</html>
