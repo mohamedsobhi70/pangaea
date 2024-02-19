@@ -194,17 +194,22 @@ $(window).on("load", function () {
 
             let swiper = new Swiper(slider[0], {
                 loop: true,
+                effect: 'fade', // Set the fade effect
+                fadeEffect: {
+                    crossFade: true
+                },
                 pagination: {
                     el: pagination[0],
                     clickable: true
                 },
                 speed: 1500,
                 autoplay: {
-                    delay: 1000,
+                    delay: 60,
                     disableOnInteraction: false
                 }
             });
             swiper.autoplay.stop();
+
             // Pause autoplay on hover
             slider.on('mouseenter', function () {
                 swiper.autoplay.start();
@@ -530,22 +535,30 @@ $(window).on("load", function () {
     // Single Trip Page
     // steps
     if ($(".steps-item").length > 0) {
-        $(".steps-item").each(function () {
+        $(".steps-item").each(function (index) {
             let th = $(this),
                 stepIcn = th.find(".steps-icon"),
                 stepCntnt = th.find(".steps-content"),
                 stepShowMoreBtn = th.find(".steps-show-more-btn");
+        
+            // Define the event handler for the show more button
             stepShowMoreBtn.on("click", function () {
                 stepIcn.toggleClass("open");
-                stepCntnt.slideToggle(300)
-                stepShowMoreBtn.toggleClass("seeless")
+                stepCntnt.slideToggle(300);
+                stepShowMoreBtn.toggleClass("seeless");
                 if (stepShowMoreBtn.hasClass("seeless")) {
                     stepShowMoreBtn.text("See less");
                 } else {
                     stepShowMoreBtn.text("See details & photo");
                 }
-            })
-        })
+            });
+        
+            // Open the first steps-item
+            if (index === 0) {
+                // Trigger click event on the first steps-show-more-btn
+                stepShowMoreBtn.trigger('click');
+            }
+        });
     }
 
     // Light Box Image In Single Trip  page
