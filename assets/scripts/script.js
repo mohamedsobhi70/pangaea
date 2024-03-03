@@ -128,6 +128,46 @@ $(window).on("load", function () {
             $(this).closest(".megamenu").removeClass("show")
         })
     }
+    if ($(".submenu")) {
+        function mobileMenu() {
+            if (window.innerWidth > 1280) {
+                $(".nav-item")
+                    .on("mouseenter", function () {
+                        if (window.innerWidth > 1280) {
+                            $(this).find(".submenu").addClass("show");
+                        }
+                    })
+                    .on("mouseleave", function () {
+                        $(this).find(".submenu").removeClass("show");
+                    });
+            } else {
+                $(".nav-item .nav-link").on("click", function () {
+                    $(this).siblings(".submenu").addClass("show");
+                })
+
+            }
+        }
+
+        mobileMenu();
+        $(window).resize(function () {
+            mobileMenu();
+        });
+
+        $(".close-submenu").on("click", function () {
+            $(this).closest(".submenu").removeClass("show")
+        })
+
+        if ($(".submenu-nav-item-has-menu")) {
+            $(".submenu-nav-item-has-menu").on("mouseenter", function () {
+                $(this).find(".second-submenu").addClass("show");
+            }).on("mouseleave", function () {
+                $(this).find(".second-submenu").removeClass("show");
+            });
+            $(".close-second-submenu").on("click", function () {
+                $(this).closest(".second-submenu").removeClass("show")
+            })
+        }
+    }
 
     // ===================================================================
 
@@ -540,7 +580,7 @@ $(window).on("load", function () {
                 stepIcn = th.find(".steps-icon"),
                 stepCntnt = th.find(".steps-content"),
                 stepShowMoreBtn = th.find(".steps-show-more-btn");
-        
+
             // Define the event handler for the show more button
             stepShowMoreBtn.on("click", function () {
                 stepIcn.toggleClass("open");
@@ -552,7 +592,7 @@ $(window).on("load", function () {
                     stepShowMoreBtn.text("See details & photo");
                 }
             });
-        
+
             // Open the first steps-item
             if (index === 0) {
                 // Trigger click event on the first steps-show-more-btn
@@ -803,5 +843,28 @@ $(window).on("load", function () {
             });
         });
     }
+
+
+    if ($(".drop-down-menu").length > 0) {
+        $('.drop-down-menu').on('click', function (event) {
+            const target = event.target;
+            const dropDownMenu = $(this);
+            const triggerDropdown = dropDownMenu.find('.drop-down-list');
+            const dropDownListSelected = dropDownMenu.find('span');
+
+            if ($(target).is('li')) {
+                $(target).addClass("active").siblings().removeClass("active")
+                // Update the content of the span with the content of the clicked list item
+                dropDownListSelected.text($(target).text().trim());
+                console.log(dropDownListSelected.text());
+                // Close the dropdown after selection
+                triggerDropdown.removeClass('open');
+            } else {
+                // Toggle the dropdown if the click is not on a list item
+                triggerDropdown.toggleClass('open');
+            }
+        });
+    }
+
 
 })
