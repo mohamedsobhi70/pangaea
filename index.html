@@ -929,7 +929,7 @@
         <section class="hero-section">
             <div class="lg:p-5">
                 <div
-                    class="lg:rounded-3xl bg-[url(../images/herobg.webp)] bg-cover bg-center lg:overflow-hidden relative pt-[190px] lg:pb-20 lg:min-h-[760px] flex items-center px-5 lg:px-0">
+                    class="lg:rounded-3xl bg-[url(../images/herobg.webp)] bg-cover bg-center relative pt-[190px] lg:pb-20 lg:min-h-[760px] flex items-center px-5 lg:px-0">
                     <div class="overlay"></div>
                     <div class="container my-auto relative">
                         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-[60px]">
@@ -962,12 +962,14 @@
                             <div
                                 class="-mb-[72px] lg:mb-0 lg:w-[409px] bg-white p-5 lg:p-10 rounded-2xl lg:rounded-3xl shadow-hero-box flex flex-col gap-10">
                                 <div class="flex flex-col divide-y divide-Neutral-200">
-                                    <div class="flex flex-col gap-2 pb-6">
+                                    <div class="flex flex-col gap-2 pb-6 relative">
                                         <label for="location" class="text-Neutral-900 font-medium tracking-wide">
                                             Where to
                                         </label>
-                                        <input type="text" class="focus:outline-none text-Neutral-500" name="location"
-                                            id="location" placeholder="Search for a place or activity">
+
+                                        <input name="location" id="location" type="search"
+                                            placeholder="Search for a place or activity"
+                                            class="w-full focus:outline-none placeholder:text-Neutral-500 text-neutral-800 grow">
                                     </div>
                                     <div class="flex flex-col gap-2 pt-6">
                                         <label for="check-in-month" class="text-Neutral-900 font-medium tracking-wide">
@@ -1357,7 +1359,7 @@
                         <div class="lg:col-span-5 flex flex-col gap-30">
                             <div class="flex flex-col lg:flex-row lg:items-center gap-30">
                                 <div
-                                    class="h-[280px] lg:h-[260px] lg:w-[190px] rounded-3xl overflow-hidden shrink-0 gallery-itemg group relative">
+                                    class="h-[280px] grow lg:h-[260px] lg:w-[190px] rounded-3xl overflow-hidden shrink-0 gallery-itemg group relative">
                                     <div class="gallery-overlay">
                                         <h3 class="gallery-title">
                                             Vietnam</h3>
@@ -2435,10 +2437,12 @@
     <!-- ============================================================================== -->
 
     <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/jqueryui.js"></script>
     <script src="assets/scripts/moment.js"></script>
     <script src="assets/scripts/litepicker.js"></script>
     <script src="assets/scripts/swiper.js"></script>
     <script src="assets/scripts/script.js"></script>
+
 </body>
 
 </html>

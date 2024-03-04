@@ -855,8 +855,7 @@ $(window).on("load", function () {
             if ($(target).is('li')) {
                 $(target).addClass("active").siblings().removeClass("active")
                 // Update the content of the span with the content of the clicked list item
-                dropDownListSelected.text($(target).text().trim());
-                console.log(dropDownListSelected.text());
+                dropDownListSelected.html($(target).text().trim() + `<img src="assets/images/icons/tabler_chevron-down.svg" width="24" height="24" alt="chevrondown">`);
                 // Close the dropdown after selection
                 triggerDropdown.removeClass('open');
             } else {
@@ -865,6 +864,48 @@ $(window).on("load", function () {
             }
         });
     }
-
-
+    if ($("#location").length > 0) {
+        let availableTags = [
+            "Albania",
+            "Austria",
+            "Bosnia",
+            "Bulgaria",
+            "Croatia",
+            "Czech Republic",
+            "England",
+            "Denmark",
+            "Estonia",
+            "Hungary",
+            "Iceland",
+            "Ireland",
+            "Italy",
+            "Latvia",
+            "Lithuania",
+            "Montenegro",
+            "Netherlands",
+            "Norway",
+            "Romania",
+            "Scotland",
+            "Serbia",
+            "Slovakia",
+            "Slovenia",
+            "Spain",
+            "Sweden",
+            "Turkey",
+            "United Kingdom",
+        ];
+        $("#location").autocomplete({
+            source: availableTags,
+            position: { my: "left top+16", at: "left bottom" },
+            open: function (event, ui) {
+                $(this).autocomplete("widget").css({
+                    "width": $(this).outerWidth(),
+                    "max-height": "500px",
+                    "overflow-y": "auto"
+                });
+            }
+        });
+    }
 })
+
+

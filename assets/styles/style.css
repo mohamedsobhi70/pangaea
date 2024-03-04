@@ -2245,6 +2245,20 @@ select:focus {
   color: rgb(18 22 23 / var(--tw-text-opacity));
 }
 
+/* .autocomplete-results {
+    @apply absolute top-[130%] w-full flex flex-col gap-4 bg-white rounded-xl shadow-2xl p-4 border border-[#E6E6E6] opacity-0 invisible;
+  }
+  .autocomplete-results-list {
+    @apply invisible opacity-0 h-0;
+  }
+  .autocomplete-results.show,
+  .autocomplete-results-list.show {
+    @apply opacity-100 visible h-auto;
+  }
+  .autocomplete-results .autocomplete-item {
+    @apply hover:bg-Neutral-100 rounded-lg;
+  } */
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -3952,6 +3966,11 @@ select:focus {
   color: rgb(64 64 64 / var(--tw-text-opacity));
 }
 
+.text-neutral-800 {
+  --tw-text-opacity: 1;
+  color: rgb(38 38 38 / var(--tw-text-opacity));
+}
+
 .text-neutral-900 {
   --tw-text-opacity: 1;
   color: rgb(23 23 23 / var(--tw-text-opacity));
@@ -4740,6 +4759,41 @@ a.ui-button:active,
   color: rgb(48 156 152 / var(--tw-text-opacity));
 }
 
+.ui-widget.ui-widget-content.ui-autocomplete {
+  z-index: 10;
+  margin-top: 10rem !important;
+  border-radius: 0.75rem !important;
+  border-width: 1px !important;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(230 230 230 / var(--tw-border-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+  padding: 1rem !important;
+}
+
+/* .ui-menu-item .ui-menu-item-wrapper {
+  @apply !bg-transparent !text-Neutral-800 !text-base hover:!bg-[#F5F5F5] !p-3 !rounded-lg;
+} */
+
+.ui-menu-item .ui-menu-item-wrapper {
+  cursor: pointer;
+  border-radius: 0.5rem !important;
+  background-color: transparent !important;
+  padding: 0.75rem !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  --tw-text-opacity: 1 !important;
+  color: rgb(38 38 38 / var(--tw-text-opacity)) !important;
+}
+
+.ui-menu-item .ui-menu-item-wrapper:hover {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity)) !important;
+  font-weight: 600;
+  --tw-text-opacity: 1 !important;
+  color: rgb(18 22 23 / var(--tw-text-opacity)) !important;
+}
+
 .placeholder\:font-normal::-moz-placeholder {
   font-weight: 400;
 }
@@ -4756,6 +4810,16 @@ a.ui-button:active,
 .placeholder\:text-Head::placeholder {
   --tw-text-opacity: 1;
   color: rgb(5 16 54 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-Neutral-500::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(151 154 155 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-Neutral-500::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(151 154 155 / var(--tw-text-opacity));
 }
 
 .before\:absolute::before {
