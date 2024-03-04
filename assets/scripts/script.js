@@ -159,7 +159,7 @@ $(window).on("load", function () {
 
         if ($(".submenu-nav-item-has-menu")) {
             $(".submenu-nav-item-has-menu").on("mouseenter", function () {
-                $(this).find(".second-submenu").addClass("show");
+                    $(this).find(".second-submenu").addClass("show");
             }).on("mouseleave", function () {
                 $(this).find(".second-submenu").removeClass("show");
             });
