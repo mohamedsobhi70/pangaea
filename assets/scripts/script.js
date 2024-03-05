@@ -159,7 +159,7 @@ $(window).on("load", function () {
 
         if ($(".submenu-nav-item-has-menu")) {
             $(".submenu-nav-item-has-menu").on("mouseenter", function () {
-                    $(this).find(".second-submenu").addClass("show");
+                $(this).find(".second-submenu").addClass("show");
             }).on("mouseleave", function () {
                 $(this).find(".second-submenu").removeClass("show");
             });
@@ -864,6 +864,7 @@ $(window).on("load", function () {
             }
         });
     }
+
     if ($("#location").length > 0) {
         let availableTags = [
             "Albania",
@@ -903,6 +904,22 @@ $(window).on("load", function () {
                     "max-height": "500px",
                     "overflow-y": "auto"
                 });
+            }
+        });
+    }
+    if ($(".about-video-container").length > 0) {
+        // Add click event to play button
+        $('.about-play-video').on('click', function () {
+            $('.about-video-container').addClass('show');
+            $('.about-video-container video').get(0).currentTime = 0;
+        });
+
+        // Add click event to video container
+        $('.about-video-container').on('click', function (event) {
+            // Check if clicked element is the video
+            if (!$(event.target).closest('video').length) {
+                $('.about-video-container').removeClass('show');
+                $('.about-video-container video').get(0).pause();
             }
         });
     }
