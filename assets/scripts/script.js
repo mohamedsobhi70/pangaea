@@ -923,6 +923,8 @@ $(window).on("load", function () {
             }
         });
     }
+
+    
     if ($(".guide-tab").length > 0) {
         $(".guide-tab").on("click", function () {
             $(this).addClass("active").siblings().removeClass("active");
