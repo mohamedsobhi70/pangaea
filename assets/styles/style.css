@@ -5266,6 +5266,10 @@ a.ui-button:active,
   fill: #646768;
 }
 
+.group:hover .group-hover\:fill-Neutral-900 {
+  fill: #121617;
+}
+
 .group:hover .group-hover\:ps-1 {
   padding-inline-start: 0.25rem;
 }
