@@ -924,10 +924,23 @@ $(window).on("load", function () {
         });
     }
 
-    
+
     if ($(".guide-tab").length > 0) {
         $(".guide-tab").on("click", function () {
             $(this).addClass("active").siblings().removeClass("active");
+
+
+            let selectedGuide = $(this).data('guide');
+            if (selectedGuide === "all") {
+                $('.all-guides .our-team-item').show();
+            }
+            else {
+                // Hide all items first
+                $('.all-guides .our-team-item').hide();
+
+                // Show only the items matching the selected guide
+                $('.all-guides .our-team-item[data-guide="' + selectedGuide + '"]').show();
+            }
         })
     }
 })

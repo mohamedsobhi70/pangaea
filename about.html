@@ -903,66 +903,27 @@
                         </h2>
                     </div>
                     <ul class="flex items-center justify-center gap-2 flex-wrap">
-                        <li class="guide-tab active">
+                        <li class="guide-tab active" data-guide="all">
                             All category
                         </li>
-                        <li class="guide-tab">
+                        <li class="guide-tab" data-guide="mountain">
                             Mountain Guide
                         </li>
-                        <li class="guide-tab">
+                        <li class="guide-tab" data-guide="tour">
                             Tour Guide
                         </li>
-                        <li class="guide-tab">
+                        <li class="guide-tab" data-guide="yoga">
                             Yoga instructor
                         </li>
                     </ul>
                 </header>
 
                 <div class="flex flex-col gap-10">
-                    <div class="our-team-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+                    <div
+                        class="our-team-container all-guides grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
 
                         <!-- Guide member  -->
-                        <div class="our-team-item group">
-                            <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
-                                class="absolute top-0 left-0 w-full h-full object-cover -z-10">
-                            <div class="flex flex-col justify-end gap-4 grow relative">
-                                <div class="grow flex flex-col justify-between">
-                                    <div class="flex justify-end">
-                                        <a href="#" class="flex gap-2 items-center">
-                                            <span class="text-white text-sm font-medium">
-                                                View Profile
-                                            </span>
-                                            <img src="assets/images/icons/profile-view.svg" width="24" height="24"
-                                                alt="view Profile">
-                                        </a>
-                                    </div>
-                                    <div class="flex gap-4 items-center">
-                                        <a href="#">
-                                            <img src="assets/images/icons/twitter.svg" width="24" height="24"
-                                                alt="twitter">
-                                            <span class="sr-only">Twitte Link</span>
-                                        </a>
-                                        <a href="#">
-                                            <img src="assets/images/icons/insta.svg" width="24" height="24"
-                                                alt="istagram">
-                                            <span class="sr-only">Istagram Link</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col gap-2">
-                                    <p
-                                        class="text-white  text-base lg:text-xl leading-[140%] lg:leading-[140%] font-semibold -tracking-[0.4px]">
-                                        Saud Aleidi
-                                    </p>
-                                    <span class="team-badge">
-                                        Founder & CEO
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Guide member  -->
-                        <div class="our-team-item group">
+                        <div class="our-team-item group" data-guide="mountain">
                             <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
                                 class="absolute top-0 left-0 w-full h-full object-cover -z-10">
                             <div class="flex flex-col justify-end gap-4 grow relative">
@@ -1003,7 +964,7 @@
                         </div>
 
                         <!-- Guide member  -->
-                        <div class="our-team-item group">
+                        <div class="our-team-item group" data-guide="yoga">
                             <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
                                 class="absolute top-0 left-0 w-full h-full object-cover -z-10">
                             <div class="flex flex-col justify-end gap-4 grow relative">
@@ -1044,7 +1005,7 @@
                         </div>
 
                         <!-- Guide member  -->
-                        <div class="our-team-item group">
+                        <div class="our-team-item group" data-guide="tour">
                             <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
                                 class="absolute top-0 left-0 w-full h-full object-cover -z-10">
                             <div class="flex flex-col justify-end gap-4 grow relative">
@@ -1085,7 +1046,7 @@
                         </div>
 
                         <!-- Guide member  -->
-                        <div class="our-team-item group">
+                        <div class="our-team-item group" data-guide="yoga">
                             <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
                                 class="absolute top-0 left-0 w-full h-full object-cover -z-10">
                             <div class="flex flex-col justify-end gap-4 grow relative">
@@ -1126,7 +1087,7 @@
                         </div>
 
                         <!-- Guide member  -->
-                        <div class="our-team-item group">
+                        <div class="our-team-item group" data-guide="tour">
                             <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
                                 class="absolute top-0 left-0 w-full h-full object-cover -z-10">
                             <div class="flex flex-col justify-end gap-4 grow relative">
@@ -1167,7 +1128,7 @@
                         </div>
 
                         <!-- Guide member  -->
-                        <div class="our-team-item group">
+                        <div class="our-team-item group" data-guide="mountain">
                             <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
                                 class="absolute top-0 left-0 w-full h-full object-cover -z-10">
                             <div class="flex flex-col justify-end gap-4 grow relative">
@@ -1208,7 +1169,48 @@
                         </div>
 
                         <!-- Guide member  -->
-                        <div class="our-team-item group">
+                        <div class="our-team-item group" data-guide="yoga">
+                            <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
+                                class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+                            <div class="flex flex-col justify-end gap-4 grow relative">
+                                <div
+                                    class="grow flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                    <div class="flex justify-end">
+                                        <a href="#" class="flex gap-2 items-center">
+                                            <span class="text-white text-sm font-medium">
+                                                View Profile
+                                            </span>
+                                            <img src="assets/images/icons/profile-view.svg" width="24" height="24"
+                                                alt="view Profile">
+                                        </a>
+                                    </div>
+                                    <div class="flex gap-4 items-center">
+                                        <a href="#">
+                                            <img src="assets/images/icons/twitter.svg" width="24" height="24"
+                                                alt="twitter">
+                                            <span class="sr-only">Twitte Link</span>
+                                        </a>
+                                        <a href="#">
+                                            <img src="assets/images/icons/insta.svg" width="24" height="24"
+                                                alt="istagram">
+                                            <span class="sr-only">Istagram Link</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <p
+                                        class="text-white  text-base lg:text-xl leading-[140%] lg:leading-[140%] font-semibold -tracking-[0.4px]">
+                                        Saud Aleidi
+                                    </p>
+                                    <span class="team-badge">
+                                        Founder & CEO
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Guide member  -->
+                        <div class="our-team-item group" data-guide="mountain">
                             <img src="assets/images/team-3.jpg" width="576" height="360" alt="team member"
                                 class="absolute top-0 left-0 w-full h-full object-cover -z-10">
                             <div class="flex flex-col justify-end gap-4 grow relative">
