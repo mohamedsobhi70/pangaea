@@ -2327,18 +2327,16 @@ select:focus {
 
 .our-team-item {
   position: relative;
-  display: flex;
   height: 360px;
-  flex-direction: column;
   overflow: hidden;
   border-radius: 20px;
-  padding: 1.5rem;
 }
 
 .our-team-item::before {
   position: absolute;
   top: 0px;
   left: 0px;
+  z-index: 0;
   height: 100%;
   width: 100%;
   --tw-content: '';
@@ -2743,6 +2741,10 @@ select:focus {
 
 .z-\[2\] {
   z-index: 2;
+}
+
+.z-\[3\] {
+  z-index: 3;
 }
 
 .order-first {
@@ -5260,10 +5262,6 @@ a.ui-button:active,
   opacity: 0.24;
 }
 
-.group:hover .group-hover\:fill-Neutral-600 {
-  fill: #7D8082;
-}
-
 .group:hover .group-hover\:fill-Neutral-700 {
   fill: #646768;
 }
@@ -5279,11 +5277,6 @@ a.ui-button:active,
 .group:hover .group-hover\:text-Brand-Dark {
   --tw-text-opacity: 1;
   color: rgb(48 156 152 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:text-neutral-600 {
-  --tw-text-opacity: 1;
-  color: rgb(82 82 82 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-neutral-700 {
