@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="--">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/swiper.css">
+    <link rel="stylesheet" href="assets/styles/lightbox.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Pangaea - Single Trip Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.min.css">
+
+</head>
+
+<body>
+    <!-- Start Header  -->
+    <header class="cat-header px-5 xl:px-0">
+        <div class="container py-5 xl:pt-2">
+            <div class="flex items-center xl:items-end justify-between xl:justify-normal gap-6 relative">
+
+                <a href="index.html" class="shrink-0">
+                    <img src="assets/images/logo-footer.svg" class="w-[100px] xl:w-auto" width="146" height="49"
+                        alt="logo">
+                    <span class="sr-only">
+                        Home Page
+                    </span>
+                </a>
+
+                <button type="button" class="mobile-menu-btn xl:hidden">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 9.33331H28" stroke="#121617" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M4 16H28" stroke="#121617" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M4 22.6667H28" stroke="#121617" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <div class="mobile-menu xl:w-full">
+                    <div class="flex flex-col xl:flex-row xl:items-end xl:gap-2 grow h-full ">
+
+                        <div class="flex xl:hidden justify-end p-5 order-first">
+                            <button type="button" class="mobile-menu-close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                    fill="none">
+                                    <path d="M10 10L30 30" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M30 10L10 30" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                                <span class="sr-only">Close Menu</span>
+                            </button>
+                        </div>
+
+                        <nav class="xl:flex items-center gap-3 justify-between grow xl:grow-0">
+                            <ul class="flex flex-col xl:flex-row xl:items-center xl:gap-1 xl:justify-between xl:grow">
+                                <li class="nav-item group">
+                                    <a href="#" class="nav-link">
+                                        <span class="grow shrink-0">
+                                            Destinations
+                                        </span>
+                                        <svg class="-rotate-90 xl:rotate-0" width="16" height="16" viewBox="0 0 16 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="xl:group-hover:stroke-Brand-Dark"
+                                                d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                stroke="#646768" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <div class="megamenu">
+                                        <div class="flex flex-col gap-6">
+                                            <div class="flex xl:hidden items-center gap-3 pt-4">
+                                                <button class="close-megamenu">
+                                                    <img src="assets/images/icons/arrow-left.svg" width="16" height="16"
+                                                        alt="arrow-left">
+                                                </button>
+                                                <span class="font-semibold text-xl leading-normal">Destination</span>
+                                            </div>
+                                            <div
+                                                class="bg-white xl:shadow-sub-menu rounded-xl xl:p-4 grid grid-cols-1 xl:grid-cols-4 gap-5 megamenu-tabs">
+
+                                                <div class="megamenu-tabs-nav">
+
+                                                    <ul class=" flex flex-col gap-1">
+                                                        <li class="megamenu-tab-item" id="europe">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Europe
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="asia">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Asia
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="africa">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Africa and The Middle East
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="namerica">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    North America
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="lamerica">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Latin America
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="australia">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    Australia
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                        <li class="megamenu-tab-item" id="newzealand">
+                                                            <div
+                                                                class="flex items-center justify-between font-semibold xl:font-normal">
+                                                                <span class="grow">
+                                                                    New Zealand
+                                                                </span>
+                                                                <svg width="16" height="16" viewBox="0 0 16 16"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path
+                                                                        d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                                        stroke="#121617" stroke-width="1.5"
+                                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+
+                                                </div>
+
+                                                <div class="xl:col-span-3 megamenu-tabs-content hidden xl:block">
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Europe
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3" id="europe-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore Europe
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Albania
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Austria
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Bosnia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Bulgaria
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Croatia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Czech Republic
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Denmark
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    England
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Estonia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Hungary
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Iceland
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Ireland
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Italy
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Latvia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Lithuania
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Montenegro
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Netherlands
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Norway
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Romania
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Scotland
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Serbia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Slovakia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Serbia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Slovenia
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Spain
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Sweden
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Turkey
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    United Kingdom
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Asia
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3" id="asia-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Spain
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Sweden
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Turkey
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    United Kingdom
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Africa and The Middle East
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3" id="africa-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore Africa and The Middle East
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Sweden
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Turkey
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in North America
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3"
+                                                            id="namerica-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore North America
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    United Kingdom
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Latin America
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3"
+                                                            id="lamerica-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Ireland
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Italy
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in Australia
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3"
+                                                            id="australia-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore Australia
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Spain
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="megamenu-tab-content-item flex flex-col gap-4">
+                                                        <p class="text-xl text-[#121617] font-semibold">
+                                                            20 destinations in New Zealand
+                                                        </p>
+                                                        <ul class="grid xl:grid-cols-3 gap-y-1 gap-3"
+                                                            id="newzealand-list">
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Explore New Zealand
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Spain
+                                                                </a>
+                                                            </li>
+                                                            <li class="hover:bg-Neutral-100 rounded-lg">
+                                                                <a href="#" class="p-2.5 text-[#121617] block">
+                                                                    Sweden
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item relative group">
+                                    <a href="#" class="nav-link">
+                                        <span class="grow shrink-0">
+                                            Activities
+                                        </span>
+                                        <svg class="-rotate-90 xl:rotate-0" width="16" height="16" viewBox="0 0 16 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="xl:group-hover:stroke-Brand-Dark"
+                                                d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                stroke="#646768" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+
+                                    <div class="megamenu xl:w-[480px]">
+                                        <div class="flex flex-col gap-6">
+                                            <div class="flex xl:hidden items-center gap-3 pt-4">
+                                                <button class="close-megamenu">
+                                                    <img src="assets/images/icons/arrow-left.svg" width="16" height="16"
+                                                        alt="arrow-left">
+                                                </button>
+                                                <span class="font-semibold text-xl leading-normal">Activities</span>
+                                            </div>
+                                            <div class="bg-white xl:shadow-sub-menu xl:rounded-xl xl:p-4">
+                                                <ul class="grid xl:grid-cols-2 gap-y-1 gap-3">
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Active
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Beach Trips
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            African
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Small Groups
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Adventure
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Island Hopping
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Ski & Snowboard
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Short Breaks
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Solo Travel
+                                                        </a>
+                                                    </li>
+                                                    <li class="hover:bg-Neutral-100 rounded-lg">
+                                                        <a href="#" class="p-2.5 text-[#121617] block">
+                                                            Winter Breaks
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a href="#" class="nav-link">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1366_57396)">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M19.0095 8.84937C21.435 13.5691 19.4843 19.8923 13.9122 20.8108C6.61604 22.4094 1.74838 13.501 7.22997 8.27825C7.52283 7.98928 8.32941 7.24109 8.66605 7.00077C8.66605 7.50086 9.10776 11.3742 9.79856 11.0813C12.6406 11.0813 13.4034 6.00058 13.0113 3C15.5691 4.33683 17.7359 6.19906 19.0095 8.84937Z"
+                                                    stroke="#309C98" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <circle cx="18.4551" cy="18" r="6" fill="#EB4335" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1366_57396">
+                                                    <rect width="24" height="24" fill="white"
+                                                        transform="translate(0.455078)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="grow shrink-0">
+                                            Hot Deals
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="guides.html" class="nav-link">
+                                        <span class="grow shrink-0">
+                                            Guides
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <span class="grow shrink-0">
+                                            Store
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <span class="grow shrink-0">
+                                            Community
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <a href="#"
+                                class="hidden shrink-0 xl:flex items-center gap-0.5 py-2.5 px-1 opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out">
+                                <span class="bg-Neutral-700 rounded-full w-1 h-1"></span>
+                                <span class="bg-Neutral-700 rounded-full w-1 h-1"></span>
+                                <span class="bg-Neutral-700 rounded-full w-1 h-1"></span>
+                                <span class="sr-only">More</span>
+                            </a>
+                        </nav>
+
+                        <div class="p-5 pb-6 xl:p-0 xl:ms-auto order-first xl:order-none">
+                            <form>
+                                <div
+                                    class="py-3.5 px-4 pe-10 rounded-full border border-Neutral-200 flex items-center gap-4 xl:w-[228px]">
+                                    <button type="submit">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <g opacity="0.72">
+                                                <path
+                                                    d="M9.11664 1.60944C4.98432 1.60944 1.61816 4.97554 1.61816 9.10782C1.61816 13.2401 4.98432 16.6127 9.11664 16.6127C10.8817 16.6127 12.505 15.9942 13.7879 14.9672L16.9113 18.0889C17.069 18.24 17.2795 18.3234 17.4978 18.3211C17.7162 18.3189 17.9249 18.2313 18.0794 18.077C18.2339 17.9227 18.3219 17.7141 18.3244 17.4958C18.3269 17.2775 18.2439 17.0668 18.093 16.909L14.9696 13.7856C15.9974 12.5007 16.6167 10.8749 16.6167 9.10782C16.6167 4.97554 13.249 1.60944 9.11664 1.60944ZM9.11664 3.27613C12.3482 3.27613 14.9484 5.87629 14.9484 9.10782C14.9484 12.3393 12.3482 14.946 9.11664 14.946C5.88506 14.946 3.28485 12.3393 3.28485 9.10782C3.28485 5.87629 5.88506 3.27613 9.11664 3.27613Z"
+                                                    fill="#646768" />
+                                            </g>
+                                        </svg>
+                                        <span class="sr-only">icon</span>
+                                    </button>
+                                    <input type="text" name="header-search" id="header-search"
+                                        placeholder="Destination, attraction, activity, etc"
+                                        class="text-Neutral-900 text-sm  focus:outline-none flex-1">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="flex flex-col xl:items-end gap-6 xl:gap-1 px-5 py-8 xl:p-0">
+                            <div class="grid grid-cols-2 items-center">
+                                <div class="relative cur-lang">
+                                    <div class="pe-5 flex items-center justify-between gap-2.5 cursor-pointer">
+                                        <span class="text-Black xl:text-Neutral-700 text-sm grow">
+                                            SAR
+                                        </span>
+                                        <img src="assets/images/icons/downarrow-1.svg" width="7" height="7"
+                                            alt="down-arrow">
+                                    </div>
+                                    <div class="lang-curr-box">
+                                        <ul class="lang-cuur-container">
+                                            <li><a href="#">SAR</a></li>
+                                            <li><a href="#">AUD</a></li>
+                                            <li><a href="#">EGP</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="relative cur-lang">
+                                    <div
+                                        class="ps-5 flex items-center justify-between gap-2.5 border-s border-Black xl:border-[#ffffff33] cursor-pointer">
+                                        <span class="text-Black xl:text-Neutral-700 text-sm grow">
+                                            English
+                                        </span>
+                                        <img src="assets/images/icons/downarrow-1.svg" width="7" height="7"
+                                            alt="down-arrow">
+                                    </div>
+                                    <div class="lang-curr-box">
+                                        <ul class="lang-cuur-container">
+                                            <li><a href="#">English</a></li>
+                                            <li><a href="#">AR</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col xl:flex-row xl:items-center gap-2  order-first xl:order-none">
+
+                                <a href="#"
+                                    class="p-3 rounded-full bg-Neutral-900 xl:bg-white text-white xl:text-Neutral-700 text-sm font-medium flex justify-center">
+                                    For Business
+                                </a>
+                                <a href="#"
+                                    class="p-3 rounded-full border border-Neutral-200 xl:border-[#ffffff3d] text-Black xl:text-Neutral-700 text-sm flex justify-center gap-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.1509 12.5164C14.7589 12.5164 16.8809 10.3964 16.8809 7.79141C16.8809 5.18641 14.7589 3.06641 12.1509 3.06641C9.5429 3.06641 7.4209 5.18641 7.4209 7.79141C7.4209 10.3964 9.5429 12.5164 12.1509 12.5164Z"
+                                            fill="#646768" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M12.1507 14.4961C9.10566 14.4961 5.05566 14.8291 5.05566 17.7051C5.05566 20.9331 10.3957 20.9331 12.1507 20.9331C15.1957 20.9331 19.2447 20.6001 19.2447 17.7241C19.2447 14.4961 13.9057 14.4961 12.1507 14.4961Z"
+                                            fill="#646768" />
+                                    </svg>
+                                    Sign In
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <!-- End Header  -->
+
+    <!-- ============================================================================== -->
+
+    <!-- Start Main Page Content  -->
+    <main>
+        <div class="container mx-auto mt-5 px-4">
+            <!-- Filter buttons -->
+            <div class="mb-4">
+                <button data-filter="*" class="filter-btn border border-gray-300 rounded-md py-2 px-4 mr-2">All</button>
+                <button data-filter=".nature"
+                    class="filter-btn border border-gray-300 rounded-md py-2 px-4 mr-2">Nature</button>
+                <button data-filter=".architecture"
+                    class="filter-btn border border-gray-300 rounded-md py-2 px-4 mr-2">Architecture</button>
+                <button data-filter=".people"
+                    class="filter-btn border border-gray-300 rounded-md py-2 px-4">People</button>
+            </div>
+            <!-- Search input -->
+            <div class="mb-4">
+                <input type="text" id="search" class="border border-gray-300 focus:border-Brand-Dark rounded-md py-2 px-4 w-full"
+                    placeholder="Search...">
+            </div>
+            <!-- Items container -->
+            <div id="isotope-list">
+                <!-- Example items -->
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 architecture">
+                    <p class="">
+                        architecture
+                    </p>
+                    <p class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit qui suscipit nesciunt
+                        nam! Velit, fuga facere vel ratione illum ullam.
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 people">
+
+                    <h2 class="">
+                        people tag
+                    </h2>
+                    <p class="">
+                        nature
+                    </p>
+                    <p class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit qui suscipit nesciunt
+                        nam! Velit, fuga facere vel ratione illum ullam.
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 nature">
+
+                    <p class="">
+                        nature tag
+                    </p>
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 architecture">
+                    <h2 class="">
+                        architecture tag
+                    </h2>
+                    <p class="">
+                        architecture
+                    </p>
+                   
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 people">
+
+                    <p class="">
+                        people
+                    </p>
+
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 nature">
+ <p class="">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit qui suscipit nesciunt
+                        nam! Velit, fuga facere vel ratione illum ullam.
+                    </p>
+                    <p class="">
+                        nature tag
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 architecture">
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 people">
+
+                    <h2 class="">
+                        people tag
+                    </h2>
+                    <p class="">
+                        nature
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 nature">
+
+                    <p class="">
+                        nature tag
+                    </p>
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 architecture">
+                    <h2 class="">
+                        architecture tag
+                    </h2>
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 people">
+
+                    <p class="">
+                        people
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 nature">
+
+                    <p class="">
+                        nature
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 architecture">
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 people">
+
+                    <h2 class="">
+                        people tag
+                    </h2>
+                    <p class="">
+                        nature
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 nature">
+
+                    <p class="">
+                        nature tag
+                    </p>
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 architecture">
+                    <h2 class="">
+                        architecture tag
+                    </h2>
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 people">
+
+                    <p class="">
+                        people
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 nature">
+
+                    <p class="">
+                        nature
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 architecture">
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 people">
+
+                    <h2 class="">
+                        people tag
+                    </h2>
+                    <p class="">
+                        nature
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 nature">
+
+                    <p class="">
+                        nature tag
+                    </p>
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 architecture">
+                    <h2 class="">
+                        architecture tag
+                    </h2>
+                    <p class="">
+                        architecture
+                    </p>
+                </div>
+                <div class="item flex flex-col gap-3 w-full py-5 border-b border-neutral-900 people">
+
+                    <p class="">
+                        people
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- End Main Page Content  -->
+
+    <!-- ============================================================================== -->
+
+    <!-- Start Footer  -->
+    <footer class="py-16 lg:py-24 px-5 lg:px-0">
+        <div id="back-top" class="back-top" role="button">
+            <div class="btt-btn">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 15L16 3L28 15H22V23H10V15H4Z" stroke="#309C98" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M22 27H10" stroke="#309C98" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="container flex flex-col gap-[60px] lg:gap-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+                <div class="lg:col-span-5 flex flex-col items-start gap-[28px] lg:gap-10">
+                    <img src="assets/images/logo-footer.svg" width="146" height="49" alt="logo">
+                    <p class="font-Eczar text-4xl leading-[120%] font-semibold tracking-[-0.72px]">
+                        Explore for Your Next Remarkable Journey
+                    </p>
+                </div>
+                <div class="lg:col-start-8 lg:col-span-5 bg-[#EEF6F3] py-6 px-5 rounded-xl flex flex-col gap-6">
+                    <div class="flex flex-col gap-3">
+                        <h2 class="text-Black text-2xl font-semibold leading-[120%]">
+                            Keep up with Pangaea
+                        </h2>
+                        <p class="text-Gray text-sm leading-[140%]">
+                            Be the first to know about our new trips and offers. We don't spam. Promise.
+                        </p>
+                    </div>
+                    <form>
+                        <div class="bg-white rounded-full p-4 flex items-center gap-2.5">
+                            <input type="email" placeholder="Enter email address" class="flex-1 focus:outline-none">
+                            <button type="submit">
+                                <img src="assets/images/icons/send.svg" width="16" height="16" alt="Send">
+                                <span class="sr-only">Emails</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-6 gap-5">
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        Popular country
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Saudi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Japan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Thailand
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Indonesia
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Australia
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        Offers & Discounts
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Specials offer
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Discount coupons
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Special events
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        Trips category
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Cycling
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Hiking
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Camping
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Water sport
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Glamping
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        Community
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Events
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Posts
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Workshops
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Faq
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        About us
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Brand partnerships
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Contact us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <p class="footer-head">
+                        Legals
+                    </p>
+                    <ul class="flex flex-col gap-2">
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Terms of use
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Legal
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-nav-link">
+                                Newsletter
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+
+    <!-- ============================================================================== -->
+
+    <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/lightbox.js"></script>
+    <script src="assets/scripts/moment.js"></script>
+    <script src="assets/scripts/litepicker.js"></script>
+    <script src="assets/scripts/swiper.js"></script>
+    <script src="assets/scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+
+    <script>
+        // Initialize Isotope
+        let $grid = $('#isotope-list').isotope({
+            // options...
+            itemSelector: '.item',
+            layoutMode: 'masonry'
+        });
+
+        // Variable to store the current filter value
+        let currentFilter = '*';
+
+        // Filter buttons
+        $('.filter-btn').on('click', function () {
+            $(this).addClass("active").siblings().removeClass("active")
+            let filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+
+            // Update current filter value
+            currentFilter = filterValue;
+
+            // Trigger search only if search input is not empty
+            if ($('#search').val().trim() !== '') {
+                $('#search').trigger('keyup');
+            }
+        });
+
+        // Trigger search on every keyup event in the search input
+        $('#search').on('keyup', function () {
+            let searchText = $(this).val().toLowerCase();
+            $grid.isotope({
+                filter: function () {
+                    // Check if item matches current filter value
+                    return $(this).is(':visible') && $(this).filter(currentFilter).text().toLowerCase().match(searchText);
+                }
+            });
+
+            // If search input is empty, reset filter to current filter value
+            if (searchText === '') {
+                $grid.isotope({ filter: currentFilter });
+            }
+        });
+
+    </script>
+</body>
+
+</html>
