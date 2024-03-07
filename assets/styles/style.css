@@ -2421,6 +2421,28 @@ select:focus {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.guide-profile-social {
+  display: flex;
+  height: 52px;
+  width: 52px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.1;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.guide-profile-social:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(214 241 238 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 241 238 / var(--tw-bg-opacity));
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -2719,10 +2741,6 @@ select:focus {
   top: 73px;
 }
 
-.-z-10 {
-  z-index: -10;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -2969,6 +2987,10 @@ select:focus {
   height: 100%;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .max-h-\[230px\] {
   max-height: 230px;
 }
@@ -3072,6 +3094,10 @@ select:focus {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[\] {
+  width: ;
 }
 
 .min-w-24 {
@@ -3487,6 +3513,10 @@ select:focus {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-\[\] {
+  border-color: ;
+}
+
 .border-e-Neutral-200 {
   --tw-border-opacity: 1;
   border-inline-end-color: rgb(224 225 225 / var(--tw-border-opacity));
@@ -3712,6 +3742,10 @@ select:focus {
   padding: 2rem;
 }
 
+.p-12 {
+  padding: 3rem;
+}
+
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -3924,6 +3958,14 @@ select:focus {
 
 .pt-\[190px\] {
   padding-top: 190px;
+}
+
+.ps-0 {
+  padding-inline-start: 0px;
+}
+
+.pe-0 {
+  padding-inline-end: 0px;
 }
 
 .text-center {
@@ -5262,8 +5304,8 @@ a.ui-button:active,
   opacity: 0.24;
 }
 
-.group:hover .group-hover\:fill-Neutral-700 {
-  fill: #646768;
+.group:hover .group-hover\:fill-Brand-Dark {
+  fill: #309C98;
 }
 
 .group:hover .group-hover\:fill-Neutral-900 {
@@ -5469,6 +5511,10 @@ a.ui-button:active,
     height: 496px;
   }
 
+  .lg\:h-\[568px\] {
+    height: 568px;
+  }
+
   .lg\:h-\[690px\] {
     height: 690px;
   }
@@ -5626,6 +5672,10 @@ a.ui-button:active,
     border-radius: 1.5rem;
   }
 
+  .lg\:border {
+    border-width: 1px;
+  }
+
   .lg\:border-y {
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -5637,6 +5687,10 @@ a.ui-button:active,
 
   .lg\:border-s-2 {
     border-inline-start-width: 2px;
+  }
+
+  .lg\:border-e {
+    border-inline-end-width: 1px;
   }
 
   .lg\:p-0 {
