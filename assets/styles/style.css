@@ -5523,6 +5523,26 @@ a.ui-button:active,
     height: 733px;
   }
 
+  .lg\:h-\[630px\] {
+    height: 630px;
+  }
+
+  .lg\:h-\[367px\] {
+    height: 367px;
+  }
+
+  .lg\:h-\[243px\] {
+    height: 243px;
+  }
+
+  .lg\:h-\[217px\] {
+    height: 217px;
+  }
+
+  .lg\:h-\[393px\] {
+    height: 393px;
+  }
+
   .lg\:min-h-\[760px\] {
     min-height: 760px;
   }
