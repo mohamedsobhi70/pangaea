@@ -5713,6 +5713,10 @@ a.ui-button:active,
     padding: 2rem;
   }
 
+  .lg\:p-12 {
+    padding: 3rem;
+  }
+
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -5802,6 +5806,14 @@ a.ui-button:active,
 
   .lg\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .lg\:pe-0 {
+    padding-inline-end: 0px;
+  }
+
+  .lg\:ps-0 {
+    padding-inline-start: 0px;
   }
 
   .lg\:text-start {
