@@ -895,6 +895,7 @@ $(window).on("load", function () {
             "Turkey",
             "United Kingdom",
         ];
+
         $("#location").autocomplete({
             source: availableTags,
             position: { my: "left top+16", at: "left bottom" },
@@ -905,8 +906,13 @@ $(window).on("load", function () {
                     "overflow-y": "auto"
                 });
             }
+        }).focus(function () {
+            $(this).autocomplete("search", $(this).val() ? $(this).val() : 'a');
         });
+
     }
+
+
     if ($(".about-video-container").length > 0) {
         // Add click event to play button
         $('.about-play-video').on('click', function () {

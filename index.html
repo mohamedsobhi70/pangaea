@@ -958,35 +958,36 @@
                                     </p>
                                 </div>
                             </div>
-
-                            <div
-                                class="-mb-[72px] lg:mb-0 lg:w-[409px] bg-white p-5 lg:p-10 rounded-2xl lg:rounded-3xl shadow-hero-box flex flex-col gap-10">
-                                <div class="flex flex-col divide-y divide-Neutral-200">
-                                    <div class="flex flex-col gap-2 pb-6 relative">
-                                        <label for="location" class="text-Neutral-900 font-medium tracking-wide">
-                                            Where to
-                                        </label>
-
-                                        <input name="location" id="location" type="search"
-                                            placeholder="Search for a place or activity"
-                                            class="w-full focus:outline-none placeholder:text-Neutral-500 text-neutral-800 grow">
+                            <form>
+                                <div
+                                    class="-mb-[72px] lg:mb-0 lg:w-[409px] bg-white p-5 lg:p-10 rounded-2xl lg:rounded-3xl shadow-hero-box flex flex-col gap-10">
+                                    <div class="flex flex-col divide-y divide-Neutral-200">
+                                        <div class="flex flex-col gap-2 pb-6 relative">
+                                            <label for="location" class="text-Neutral-900 font-medium tracking-wide">
+                                                Where to
+                                            </label>
+    
+                                            <input name="location" id="location" type="search"
+                                                placeholder="Search for a place or activity"
+                                                class="w-full focus:outline-none placeholder:text-Neutral-500 text-neutral-800 grow">
+                                        </div>
+                                        <div class="flex flex-col gap-2 pt-6">
+                                            <label for="check-in-month" class="text-Neutral-900 font-medium tracking-wide">
+                                                When
+                                            </label>
+                                            <select name="check-in-month" id="check-in-month" class="py-2 px-3">
+                                                <option disabled selected>Select travel month</option>
+                                                <option value="1">October</option>
+                                                <option value="2">Januray</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                    <div class="flex flex-col gap-2 pt-6">
-                                        <label for="check-in-month" class="text-Neutral-900 font-medium tracking-wide">
-                                            When
-                                        </label>
-                                        <select name="check-in-month" id="check-in-month">
-                                            <option disabled selected>Select travel month</option>
-                                            <option value="1">October</option>
-                                            <option value="2">Januray</option>
-                                        </select>
-                                    </div>
+                                    <button
+                                        class="rounded-full bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center">
+                                        Search
+                                    </button>
                                 </div>
-                                <a href="#"
-                                    class="rounded-full bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center">
-                                    Search
-                                </a>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
