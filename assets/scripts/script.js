@@ -128,6 +128,8 @@ $(window).on("load", function () {
             $(this).closest(".megamenu").removeClass("show")
         })
     }
+
+
     if ($(".submenu")) {
         function mobileMenu() {
             if (window.innerWidth > 1280) {
@@ -217,6 +219,8 @@ $(window).on("load", function () {
             $th.append(`<div class="co-list hidden"><ul class="flex flex-col gap-y-1 gap-3">${$content}</ul></div>`);
         })
     }
+
+
     if ($(".sort-by-btn")) {
         $(".sort-by-btn").on("click", function () {
             $(".sort-by").slideToggle(250);
@@ -855,7 +859,12 @@ $(window).on("load", function () {
             if ($(target).is('li')) {
                 $(target).addClass("active").siblings().removeClass("active")
                 // Update the content of the span with the content of the clicked list item
-                dropDownListSelected.html($(target).text().trim() + `<img src="assets/images/icons/tabler_chevron-down.svg" width="24" height="24" alt="chevrondown">`);
+                dropDownListSelected.html($(target).text().trim() + `
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 9L12 15L18 9" stroke="#121617" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                `);
                 // Close the dropdown after selection
                 triggerDropdown.removeClass('open');
             } else {
@@ -866,35 +875,7 @@ $(window).on("load", function () {
     }
 
     if ($("#location").length > 0) {
-        let availableTags = [
-            "Albania",
-            "Austria",
-            "Bosnia",
-            "Bulgaria",
-            "Croatia",
-            "Czech Republic",
-            "England",
-            "Denmark",
-            "Estonia",
-            "Hungary",
-            "Iceland",
-            "Ireland",
-            "Italy",
-            "Latvia",
-            "Lithuania",
-            "Montenegro",
-            "Netherlands",
-            "Norway",
-            "Romania",
-            "Scotland",
-            "Serbia",
-            "Slovakia",
-            "Slovenia",
-            "Spain",
-            "Sweden",
-            "Turkey",
-            "United Kingdom",
-        ];
+        let availableTags = [];
 
         $("#location").autocomplete({
             source: availableTags,
@@ -949,6 +930,143 @@ $(window).on("load", function () {
             }
         })
     }
+
+    if ($("#seachdestination").length > 0) {
+
+        let allCountries = $("#seachdestination").closest(".designpeer-tab-content").find(".bordered-lbl");
+        let allDest = $("#seachdestination").closest(".designpeer-tab-content").find(".dest-lbl");
+
+        $("#seachdestination").on("keyup", function () {
+            let countryName = $(this).val().toLowerCase(); // Convert to lowercase for case-insensitive comparison
+
+            allCountries.addClass("hidden");
+            allDest.addClass("hidden");
+
+            allCountries.each(function () {
+                if ($(this).text().toLowerCase().includes(countryName)) {
+                    $(this).removeClass("hidden");
+                }
+            });
+
+            allDest.each(function () {
+                if ($(this).text().toLowerCase().includes(countryName)) {
+                    $(this).removeClass("hidden");
+                }
+            });
+        });
+
+    }
+
+
+    if ($(".multi-select-list").length > 0) {
+        const multiSelectedAreas = document.querySelectorAll('.multi-selected-area');
+
+        multiSelectedAreas.forEach(multiSelectedArea => {
+            let isDragging = false;
+            let startX;
+            let scrollLeft;
+        
+            // Add mousedown event listener
+            multiSelectedArea.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.pageX - multiSelectedArea.offsetLeft;
+                scrollLeft = multiSelectedArea.scrollLeft;
+            });
+        
+            // Add mouseup event listener
+            multiSelectedArea.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        
+            // Add mousemove event listener
+            multiSelectedArea.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - multiSelectedArea.offsetLeft;
+                const walk = (x - startX) * 2; // Adjust scroll speed
+                multiSelectedArea.scrollLeft = scrollLeft - walk;
+            });
+        });
+        
+
+
+        $(".multi-select-list").each(function () {
+            let th = $(this);
+            th.on("click", function () {
+                th.find(".multi-select-items").addClass("show")
+            })
+        })
+
+
+        // close Items When Click on body
+        $(document).on("click", function (event) {
+            $(".multi-select-list").each(function () {
+                let th = $(this);
+                // Check if the clicked element is not within th
+                if (!th.is(event.target) && th.has(event.target).length === 0) {
+                    th.find(".multi-select-items").removeClass("show");
+                }
+            });
+        });
+
+        $(".multi-select-items").each(function () {
+            let th = $(this);
+            let items = th.find("label.multi-select-lbl input");
+
+            let selectedArea = th.siblings(".multi-selected-area");
+            let selectedAreaLbl = selectedArea.find(".multi-selected-area-lbl");
+            let selectedAreacntnt = selectedAreaLbl.html();
+            items.on("change", function () {
+
+                let selected = $(this).siblings("span").html();
+
+                if ($(this).is(":checked")) {
+
+                    // If checkbox is checked, add the item
+                    selectedArea.append(`<span class="multi-select-item">
+                ${selected}
+                <span role="button" class="shrink-0 delete-item">
+                    <img src="assets/images/icons/close-brand-circle.svg"
+                        width="16" height="16" alt="close">
+                    <span class="sr-only">Delete Item</span>
+                </span>
+            </span>`);
+                } else {
+                    // If checkbox is not checked, remove the item
+                    selectedArea.find('span:contains("' + selected + '")').remove();
+                }
+                if (selectedArea.find('.multi-select-item').length === 0) {
+                    selectedAreaLbl.html(selectedAreacntnt)
+                }
+                else {
+                    selectedAreaLbl.html("")
+                }
+            });
+
+            // Add event listener to delete button
+            th.siblings(".multi-selected-area").on("click", ".delete-item", function () {
+                let itemText = $(this).parent().text().trim();
+                // Remove the item from selected area
+                $(this).parent().remove();
+                // Find corresponding input and uncheck it
+                items.filter(function () {
+                    return $(this).siblings("span").text().trim() === itemText;
+                }).prop("checked", false);
+                if (selectedArea.find('.multi-select-item').length === 0) {
+                    selectedAreaLbl.html(selectedAreacntnt)
+                }
+                else {
+                    selectedAreaLbl.html("")
+                }
+            });
+
+
+        });
+
+
+
+    }
+
 })
 
 

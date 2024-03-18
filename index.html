@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/swiper.css">
     <link rel="stylesheet" href="assets/styles/style.css">
+
     <title>Pangaea - Home Page</title>
 </head>
 
@@ -963,23 +964,112 @@
                                     class="-mb-[72px] lg:mb-0 lg:w-[409px] bg-white p-5 lg:p-10 rounded-2xl lg:rounded-3xl shadow-hero-box flex flex-col gap-10">
                                     <div class="flex flex-col divide-y divide-Neutral-200">
                                         <div class="flex flex-col gap-2 pb-6 relative">
-                                            <label for="location" class="text-Neutral-900 font-medium tracking-wide">
+                                            <span class="text-Neutral-900 tracking-[0.6px] font-medium">
                                                 Where to
-                                            </label>
-    
-                                            <input name="location" id="location" type="search"
-                                                placeholder="Search for a place or activity"
-                                                class="w-full focus:outline-none placeholder:text-Neutral-500 text-neutral-800 grow">
+                                            </span>
+                                            <div class="relative multi-select-list">
+                                                <div
+                                                    class="text-Neutral-500 tracking-[0.6px] leading-6 flex gap-1.5 items-center overflow-x-hidden whitespace-no-wrap multi-selected-area">
+                                                    <span class="multi-selected-area-lbl leading-[30px]">
+                                                        Select travel
+                                                    </span>
+                                                </div>
+
+                                                <div class="multi-select-items">
+                                                    <div class="flex flex-col gap-1">
+                                                        <label class="multi-select-lbl p-3">
+                                                            <input type="checkbox" name="Saudi" id="Saudi"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                Saudi Arabia
+                                                            </span>
+                                                        </label>
+                                                        <div class="flex flex-col gap-1 ps-10">
+                                                            <label class="multi-select-lbl px-3  py-1.5">
+                                                                <input type="checkbox" name="AlUla" id="AlUla"
+                                                                    class="peer form-input">
+                                                                <span
+                                                                    class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                    AlUla
+                                                                </span>
+                                                            </label>
+                                                            <label class="multi-select-lbl px-3  py-1.5">
+                                                                <input type="checkbox" name="Asir" id="Asir"
+                                                                    class="peer form-input">
+                                                                <span
+                                                                    class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                    Asir
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <label class="multi-select-lbl p-3">
+                                                            <input type="checkbox" name="Egypt" id="Egypt"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                Egypt
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                         <div class="flex flex-col gap-2 pt-6">
-                                            <label for="check-in-month" class="text-Neutral-900 font-medium tracking-wide">
+                                            <span class="text-Neutral-900 tracking-[0.6px] font-medium">
                                                 When
-                                            </label>
-                                            <select name="check-in-month" id="check-in-month" class="py-2 px-3">
-                                                <option disabled selected>Select travel month</option>
-                                                <option value="1">October</option>
-                                                <option value="2">Januray</option>
-                                            </select>
+                                            </span>
+                                            <div class="relative multi-select-list">
+                                                <div
+                                                    class="text-Neutral-500 tracking-[0.6px] leading-6 flex gap-1.5 items-center overflow-x-hidden whitespace-no-wrap multi-selected-area">
+                                                    <span class="multi-selected-area-lbl leading-[30px]">
+                                                        Select dates
+                                                    </span>
+                                                </div>
+
+                                                <div class="multi-select-items">
+                                                    <div class="flex flex-col gap-1">
+                                                        <label class="multi-select-lbl p-3">
+                                                            <input type="checkbox" name="August" id="August"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                August 2024
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="multi-select-lbl p-3">
+                                                            <input type="checkbox" name="October" id="October"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                October 2024
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="multi-select-lbl p-3">
+                                                            <input type="checkbox" name="November" id="November"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                November 2024
+                                                            </span>
+                                                        </label>
+
+                                                        <label class="multi-select-lbl p-3">
+                                                            <input type="checkbox" name="December" id="December"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                December 2024
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
                                         </div>
                                     </div>
                                     <button
