@@ -997,12 +997,11 @@ $(window).on("load", function () {
             })
         })
 
-        // close Items When Click on body
         $(document).on("click", function (event) {
             $(".multi-select-list").each(function () {
                 let th = $(this);
-                // Check if the clicked element is not within th
-                if (!th.is(event.target) && th.has(event.target).length === 0) {
+                // Check if the clicked element or any of its parents is not within th and not the delete-item span
+                if (!th.is(event.target) && th.has(event.target).length === 0 && !$(event.target).closest(".delete-item").length) {
                     th.find(".multi-select-items").removeClass("show");
                 }
             });

@@ -1199,10 +1199,12 @@ select:focus {
 .multi-select-items {
   visibility: hidden;
   position: absolute;
-  top: 110%;
+  top: 140%;
   inset-inline-start: 0px;
-  z-index: 1;
+  z-index: 10;
+  max-height: 300px;
   width: 100%;
+  overflow-y: auto;
   border-radius: 0.75rem;
   border-width: 1px;
   --tw-border-opacity: 1;
