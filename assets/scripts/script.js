@@ -965,19 +965,19 @@ $(window).on("load", function () {
             let isDragging = false;
             let startX;
             let scrollLeft;
-        
+
             // Add mousedown event listener
             multiSelectedArea.addEventListener('mousedown', (e) => {
                 isDragging = true;
                 startX = e.pageX - multiSelectedArea.offsetLeft;
                 scrollLeft = multiSelectedArea.scrollLeft;
             });
-        
+
             // Add mouseup event listener
             multiSelectedArea.addEventListener('mouseup', () => {
                 isDragging = false;
             });
-        
+
             // Add mousemove event listener
             multiSelectedArea.addEventListener('mousemove', (e) => {
                 if (!isDragging) return;
@@ -987,7 +987,7 @@ $(window).on("load", function () {
                 multiSelectedArea.scrollLeft = scrollLeft - walk;
             });
         });
-        
+
 
 
         $(".multi-select-list").each(function () {
@@ -996,7 +996,6 @@ $(window).on("load", function () {
                 th.find(".multi-select-items").addClass("show")
             })
         })
-
 
         // close Items When Click on body
         $(document).on("click", function (event) {
@@ -1011,6 +1010,7 @@ $(window).on("load", function () {
 
         $(".multi-select-items").each(function () {
             let th = $(this);
+
             let items = th.find("label.multi-select-lbl input");
 
             let selectedArea = th.siblings(".multi-selected-area");
@@ -1021,20 +1021,21 @@ $(window).on("load", function () {
                 let selected = $(this).siblings("span").html();
 
                 if ($(this).is(":checked")) {
-
                     // If checkbox is checked, add the item
-                    selectedArea.append(`<span class="multi-select-item">
-                ${selected}
-                <span role="button" class="shrink-0 delete-item">
-                    <img src="assets/images/icons/close-brand-circle.svg"
-                        width="16" height="16" alt="close">
-                    <span class="sr-only">Delete Item</span>
-                </span>
-            </span>`);
+                    selectedArea.append(`
+                    <span class="multi-select-item">
+                        ${selected}
+                        <span role="button" class="shrink-0 delete-item">
+                            <img src="assets/images/icons/close-brand-circle.svg"
+                                width="16" height="16" alt="close">
+                            <span class="sr-only">Delete Item</span>
+                        </span>
+                    </span>`);
                 } else {
                     // If checkbox is not checked, remove the item
                     selectedArea.find('span:contains("' + selected + '")').remove();
                 }
+
                 if (selectedArea.find('.multi-select-item').length === 0) {
                     selectedAreaLbl.html(selectedAreacntnt)
                 }
@@ -1045,13 +1046,19 @@ $(window).on("load", function () {
 
             // Add event listener to delete button
             th.siblings(".multi-selected-area").on("click", ".delete-item", function () {
+
                 let itemText = $(this).parent().text().trim();
                 // Remove the item from selected area
                 $(this).parent().remove();
-                // Find corresponding input and uncheck it
-                items.filter(function () {
-                    return $(this).siblings("span").text().trim() === itemText;
-                }).prop("checked", false);
+
+                // Uncheck the corresponding checkbox
+                items.each(function () {
+                    if (itemText.includes($(this).siblings("span").text().trim())) {
+                        $(this).prop('checked', false);
+                    }
+                });
+
+
                 if (selectedArea.find('.multi-select-item').length === 0) {
                     selectedAreaLbl.html(selectedAreacntnt)
                 }
@@ -1062,8 +1069,6 @@ $(window).on("load", function () {
 
 
         });
-
-
 
     }
 
