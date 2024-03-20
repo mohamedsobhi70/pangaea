@@ -959,34 +959,50 @@ $(window).on("load", function () {
 
 
     if ($(".multi-select-list").length > 0) {
-        const multiSelectedAreas = document.querySelectorAll('.multi-selected-area');
-
-        multiSelectedAreas.forEach(multiSelectedArea => {
-            let isDragging = false;
-            let startX;
-            let scrollLeft;
-
-            // Add mousedown event listener
-            multiSelectedArea.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                startX = e.pageX - multiSelectedArea.offsetLeft;
-                scrollLeft = multiSelectedArea.scrollLeft;
+      
+        function handleMultiSelectedAreas() {
+            const multiSelectedAreas = document.querySelectorAll('.multi-selected-area');
+        
+            multiSelectedAreas.forEach(multiSelectedArea => {
+                let isDragging = false;
+                let startX;
+                let scrollLeft;
+        
+                // Add mousedown event listener
+                multiSelectedArea.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    startX = e.pageX - multiSelectedArea.offsetLeft;
+                    scrollLeft = multiSelectedArea.scrollLeft;
+                });
+        
+                // Add mouseup event listener
+                multiSelectedArea.addEventListener('mouseup', () => {
+                    isDragging = false;
+                });
+        
+                // Add mousemove event listener
+                multiSelectedArea.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    e.preventDefault();
+                    const x = e.pageX - multiSelectedArea.offsetLeft;
+                    const walk = (x - startX) * 2; // Adjust scroll speed
+                    multiSelectedArea.scrollLeft = scrollLeft - walk;
+                });
             });
-
-            // Add mouseup event listener
-            multiSelectedArea.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
-
-            // Add mousemove event listener
-            multiSelectedArea.addEventListener('mousemove', (e) => {
-                if (!isDragging) return;
-                e.preventDefault();
-                const x = e.pageX - multiSelectedArea.offsetLeft;
-                const walk = (x - startX) * 2; // Adjust scroll speed
-                multiSelectedArea.scrollLeft = scrollLeft - walk;
-            });
-        });
+        }
+        
+        function handleResize() {
+            const windowWidth = window.innerWidth;
+            if (windowWidth > 1024) {
+                handleMultiSelectedAreas();
+            }
+        }
+        
+        // Initial check
+        handleResize();
+        
+        // Add event listener for window resize
+        window.addEventListener('resize', handleResize);
 
 
 

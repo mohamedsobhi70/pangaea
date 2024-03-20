@@ -1199,10 +1199,11 @@ select:focus {
 .multi-select-items {
   visibility: hidden;
   position: absolute;
-  top: 140%;
+  top: 100%;
   inset-inline-start: 0px;
   z-index: 10;
-  max-height: 300px;
+  margin-top: 1rem;
+  max-height: 380px;
   width: 100%;
   overflow-y: auto;
   border-radius: 0.75rem;
@@ -3424,6 +3425,10 @@ select:focus {
   overflow: scroll;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -4004,6 +4009,10 @@ select:focus {
 
 .ps-5 {
   padding-inline-start: 1.25rem;
+}
+
+.ps-7 {
+  padding-inline-start: 1.75rem;
 }
 
 .pt-0 {
