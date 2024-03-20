@@ -931,34 +931,34 @@ $(window).on("load", function () {
         })
     }
 
-    if ($("#seachdestination").length > 0) {
+    // if ($("#seachdestination").length > 0) {
 
-        let allCountries = $("#seachdestination").closest(".designpeer-tab-content").find(".bordered-lbl");
-        let allDest = $("#seachdestination").closest(".designpeer-tab-content").find(".dest-lbl");
+    //     let allCountries = $("#seachdestination").closest(".designpeer-tab-content").find(".bordered-lbl");
+    //     let allDest = $("#seachdestination").closest(".designpeer-tab-content").find(".dest-lbl");
 
-        $("#seachdestination").on("keyup", function () {
-            let countryName = $(this).val().toLowerCase(); // Convert to lowercase for case-insensitive comparison
+    //     $("#seachdestination").on("keyup", function () {
+    //         let countryName = $(this).val().toLowerCase(); // Convert to lowercase for case-insensitive comparison
 
-            allCountries.addClass("hidden");
-            allDest.addClass("hidden");
+    //         allCountries.addClass("hidden");
+    //         allDest.addClass("hidden");
 
-            allCountries.each(function () {
-                if ($(this).text().toLowerCase().includes(countryName)) {
-                    $(this).removeClass("hidden");
-                }
-            });
+    //         allCountries.each(function () {
+    //             if ($(this).text().toLowerCase().includes(countryName)) {
+    //                 $(this).removeClass("hidden");
+    //             }
+    //         });
 
-            allDest.each(function () {
-                if ($(this).text().toLowerCase().includes(countryName)) {
-                    $(this).removeClass("hidden");
-                }
-            });
-        });
+    //         allDest.each(function () {
+    //             if ($(this).text().toLowerCase().includes(countryName)) {
+    //                 $(this).removeClass("hidden");
+    //             }
+    //         });
+    //     });
 
-    }
+    // }
 
 
-    if ($(".multi-select-list").length > 0) {
+    if ($(".multi-select-container").length > 0) {
       
         function handleMultiSelectedAreas() {
             const multiSelectedAreas = document.querySelectorAll('.multi-selected-area');
@@ -1023,66 +1023,200 @@ $(window).on("load", function () {
             });
         });
 
-        $(".multi-select-items").each(function () {
-            let th = $(this);
+        // $(".multi-select-items").each(function () {
+        //     // let th = $(this);
 
-            let items = th.find("label.multi-select-lbl input");
+        //     // let items = th.find("label.multi-select-lbl input");
 
-            let selectedArea = th.siblings(".multi-selected-area");
-            let selectedAreaLbl = selectedArea.find(".multi-selected-area-lbl");
-            let selectedAreacntnt = selectedAreaLbl.html();
-            items.on("change", function () {
+        //     // let selectedArea = th.siblings(".multi-selected-area");
+        //     // let selectedAreaLbl = selectedArea.find(".multi-selected-area-lbl");
+        //     // let selectedAreacntnt = selectedAreaLbl.html();
+        //     // items.on("change", function () {
 
-                let selected = $(this).siblings("span").html();
+        //     //     let selected = $(this).siblings("span").html();
 
-                if ($(this).is(":checked")) {
-                    // If checkbox is checked, add the item
-                    selectedArea.append(`
-                    <span class="multi-select-item">
-                        ${selected}
-                        <span role="button" class="shrink-0 delete-item">
-                            <img src="assets/images/icons/close-brand-circle.svg"
-                                width="16" height="16" alt="close">
-                            <span class="sr-only">Delete Item</span>
-                        </span>
-                    </span>`);
-                } else {
-                    // If checkbox is not checked, remove the item
-                    selectedArea.find('span:contains("' + selected + '")').remove();
+        //     //     if ($(this).is(":checked")) {
+        //     //         // If checkbox is checked, add the item
+        //     //         selectedArea.append(`
+        //     //         <span class="multi-select-item">
+        //     //             ${selected}
+        //     //             <span role="button" class="shrink-0 delete-item">
+        //     //                 <img src="assets/images/icons/close-brand-circle.svg"
+        //     //                     width="16" height="16" alt="close">
+        //     //                 <span class="sr-only">Delete Item</span>
+        //     //             </span>
+        //     //         </span>`);
+        //     //     } else {
+        //     //         // If checkbox is not checked, remove the item
+        //     //         selectedArea.find('span:contains("' + selected + '")').remove();
+        //     //     }
+
+        //     //     if (selectedArea.find('.multi-select-item').length === 0) {
+        //     //         selectedAreaLbl.html(selectedAreacntnt)
+        //     //     }
+        //     //     else {
+        //     //         selectedAreaLbl.html("")
+        //     //     }
+        //     // });
+
+        //     // // Add event listener to delete button
+        //     // th.siblings(".multi-selected-area").on("click", ".delete-item", function () {
+
+        //     //     let itemText = $(this).parent().text().trim();
+        //     //     // Remove the item from selected area
+        //     //     $(this).parent().remove();
+
+        //     //     // Uncheck the corresponding checkbox
+        //     //     items.each(function () {
+        //     //         if (itemText.includes($(this).siblings("span").text().trim())) {
+        //     //             $(this).prop('checked', false);
+        //     //         }
+        //     //     });
+
+
+        //     //     if (selectedArea.find('.multi-select-item').length === 0) {
+        //     //         selectedAreaLbl.html(selectedAreacntnt)
+        //     //     }
+        //     //     else {
+        //     //         selectedAreaLbl.html("")
+        //     //     }
+        //     // });
+
+
+        // });
+
+        const $multiselectContainer = $('.multi-select-container');
+
+        $multiselectContainer.each(function () {
+
+            let th = $(this)
+            const $searchInput = th.find('.search-input');
+            const $multiSelectItems = th.find('.multi-select-items');
+            const $selectedItemsDiv = th.find('.selected-items');
+            const $listItems = th.find('.multi-select-items li');
+
+            th.on('click', function () {
+                $('.multi-select-items').removeClass('show')
+                $multiSelectItems.addClass('show');
+            });
+
+            // Event listener to close multi-select-items when clicking outside multi-select-container
+            $(document).on('click', function (event) {
+                if (!$(event.target).closest('.multi-select-container').length && !$(event.target).closest(".delete-multiselected").length) {
+                   
+                    $multiSelectItems.removeClass('show');
                 }
+            });
+            // Function to perform search
+            function performSearch(query) {
+                $listItems.each(function () {
+                    const $label = $(this).find('.multi-select-lbl');
+                    const text = $label.text().toLowerCase();
+                    const isVisible = text.includes(query.toLowerCase());
+                    isVisible ? $(this).removeClass("hidden") : $(this).addClass("hidden")
+                });
+            }
 
-                if (selectedArea.find('.multi-select-item').length === 0) {
-                    selectedAreaLbl.html(selectedAreacntnt)
+            // Event listener for input changes
+            $searchInput.on('input', function () {
+                const query = $(this).val().trim(); // Get input value and trim whitespace
+                performSearch(query); // Perform search
+            });
+
+            // Add event listener to checkboxes
+            $multiSelectItems.find('input[type="checkbox"]').on('change', function () {
+                if ($(this).prop('checked')) {
+                    const spanCntn = $(this).closest('label').find('span').text();
+                    $selectedItemsDiv.append(`
+                        <span class="multi-select-item">
+                            <span class="slcted-itm" >
+                                ${spanCntn}
+                            </span>
+                            <span role="button" class="delete-multiselected" >
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.00065 14.6654C11.6673 14.6654 14.6673 11.6654 14.6673 7.9987C14.6673 4.33203 11.6673 1.33203 8.00065 1.33203C4.33398 1.33203 1.33398 4.33203 1.33398 7.9987C1.33398 11.6654 4.33398 14.6654 8.00065 14.6654Z" stroke="#309C98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.11328 9.88661L9.88661 6.11328" stroke="#309C98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.88661 9.88661L6.11328 6.11328" stroke="#309C98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </span>
+                    `);
                 }
                 else {
-                    selectedAreaLbl.html("")
+                    const labelText = $(this).closest('label').find('span').text();
+                    $selectedItemsDiv.find('span:contains("' + labelText + '")').remove();
                 }
             });
 
             // Add event listener to delete button
-            th.siblings(".multi-selected-area").on("click", ".delete-item", function () {
-
-                let itemText = $(this).parent().text().trim();
-                // Remove the item from selected area
-                $(this).parent().remove();
+            $selectedItemsDiv.on('click', '.delete-multiselected', function () {
+                const labelText = $(this).closest('.multi-select-item').text().trim();
+                const itemText = $(this).siblings(".slcted-itm").text().trim();
+                $(this).closest('.multi-select-item').remove(); // Remove the item from selected items
 
                 // Uncheck the corresponding checkbox
-                items.each(function () {
-                    if (itemText.includes($(this).siblings("span").text().trim())) {
+                $multiSelectItems.find('input[type="checkbox"]').each(function () {
+                    if ($(this).siblings().text().trim().includes(itemText)) {
                         $(this).prop('checked', false);
                     }
                 });
-
-
-                if (selectedArea.find('.multi-select-item').length === 0) {
-                    selectedAreaLbl.html(selectedAreacntnt)
-                }
-                else {
-                    selectedAreaLbl.html("")
-                }
             });
 
 
+
+            // Event listener to show multi-select-items when clicking inside .multi-select-container
+
+
+        })
+
+        const multiSelectedAreas = document.querySelectorAll('.selected-items');
+
+        multiSelectedAreas.forEach(multiSelectedArea => {
+            let isDragging = false;
+            let startX;
+            let scrollLeft;
+
+            // Add mousedown event listener for desktop
+            multiSelectedArea.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                startX = e.pageX - multiSelectedArea.offsetLeft;
+                scrollLeft = multiSelectedArea.scrollLeft;
+            });
+
+            // Add mouseup event listener for desktop
+            multiSelectedArea.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            // Add mousemove event listener for desktop
+            multiSelectedArea.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - multiSelectedArea.offsetLeft;
+                const walk = (x - startX) * 2; // Adjust scroll speed
+                multiSelectedArea.scrollLeft = scrollLeft - walk;
+            });
+
+            // Add touchstart event listener for mobile and tablet
+            multiSelectedArea.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                startX = e.touches[0].pageX - multiSelectedArea.offsetLeft;
+                scrollLeft = multiSelectedArea.scrollLeft;
+            });
+
+            // Add touchend event listener for mobile and tablet
+            multiSelectedArea.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            // Add touchmove event listener for mobile and tablet
+            multiSelectedArea.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.touches[0].pageX - multiSelectedArea.offsetLeft;
+                const walk = (x - startX) * 2; // Adjust scroll speed
+                multiSelectedArea.scrollLeft = scrollLeft - walk;
+            });
         });
 
     }

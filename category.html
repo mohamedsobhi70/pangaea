@@ -618,25 +618,23 @@
                         </nav>
 
                         <div class="p-5 pb-6 xl:p-0 xl:ms-auto order-first xl:order-none">
-                            <form>
-                                <div
-                                    class="py-3.5 px-4 pe-10 rounded-full border border-Neutral-200 flex items-center gap-4 xl:w-[228px]">
-                                    <button type="submit">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                            viewBox="0 0 20 20" fill="none">
-                                            <g opacity="0.72">
-                                                <path
-                                                    d="M9.11664 1.60944C4.98432 1.60944 1.61816 4.97554 1.61816 9.10782C1.61816 13.2401 4.98432 16.6127 9.11664 16.6127C10.8817 16.6127 12.505 15.9942 13.7879 14.9672L16.9113 18.0889C17.069 18.24 17.2795 18.3234 17.4978 18.3211C17.7162 18.3189 17.9249 18.2313 18.0794 18.077C18.2339 17.9227 18.3219 17.7141 18.3244 17.4958C18.3269 17.2775 18.2439 17.0668 18.093 16.909L14.9696 13.7856C15.9974 12.5007 16.6167 10.8749 16.6167 9.10782C16.6167 4.97554 13.249 1.60944 9.11664 1.60944ZM9.11664 3.27613C12.3482 3.27613 14.9484 5.87629 14.9484 9.10782C14.9484 12.3393 12.3482 14.946 9.11664 14.946C5.88506 14.946 3.28485 12.3393 3.28485 9.10782C3.28485 5.87629 5.88506 3.27613 9.11664 3.27613Z"
-                                                    fill="#646768" />
-                                            </g>
-                                        </svg>
-                                        <span class="sr-only">icon</span>
-                                    </button>
-                                    <input type="text" name="header-search" id="header-search"
-                                        placeholder="Destination, attraction, activity, etc"
-                                        class="text-Neutral-900 text-sm  focus:outline-none flex-1">
-                                </div>
-                            </form>
+                            <div
+                                class="py-3.5 px-4 pe-10 rounded-full border border-Neutral-200 flex items-center gap-4 xl:w-[228px]">
+                                <button type="submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <g opacity="0.72">
+                                            <path
+                                                d="M9.11664 1.60944C4.98432 1.60944 1.61816 4.97554 1.61816 9.10782C1.61816 13.2401 4.98432 16.6127 9.11664 16.6127C10.8817 16.6127 12.505 15.9942 13.7879 14.9672L16.9113 18.0889C17.069 18.24 17.2795 18.3234 17.4978 18.3211C17.7162 18.3189 17.9249 18.2313 18.0794 18.077C18.2339 17.9227 18.3219 17.7141 18.3244 17.4958C18.3269 17.2775 18.2439 17.0668 18.093 16.909L14.9696 13.7856C15.9974 12.5007 16.6167 10.8749 16.6167 9.10782C16.6167 4.97554 13.249 1.60944 9.11664 1.60944ZM9.11664 3.27613C12.3482 3.27613 14.9484 5.87629 14.9484 9.10782C14.9484 12.3393 12.3482 14.946 9.11664 14.946C5.88506 14.946 3.28485 12.3393 3.28485 9.10782C3.28485 5.87629 5.88506 3.27613 9.11664 3.27613Z"
+                                                fill="#646768" />
+                                        </g>
+                                    </svg>
+                                    <span class="sr-only">icon</span>
+                                </button>
+                                <input type="text" name="header-search" id="header-search"
+                                    placeholder="Destination, attraction, activity, etc"
+                                    class="text-Neutral-900 text-sm  focus:outline-none flex-1">
+                            </div>
                         </div>
 
                         <div class="flex flex-col xl:items-end gap-6 xl:gap-1 px-5 py-8 xl:p-0">
@@ -898,153 +896,100 @@
 
                                         <!-- accordion Content  -->
                                         <div class="designpeer-tab-content pt-3">
-                                            <div class="flex flex-col gap-3">
-                                                <form>
-                                                    <div class="bg-Neutral-50 rounded-lg flex items-center gap-3 p-3">
-                                                        <button type="submit">
-                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M7.66634 14.0001C11.1641 14.0001 13.9997 11.1646 13.9997 7.66675C13.9997 4.16895 11.1641 1.33342 7.66634 1.33342C4.16854 1.33342 1.33301 4.16895 1.33301 7.66675C1.33301 11.1646 4.16854 14.0001 7.66634 14.0001Z"
-                                                                    stroke="#646768" stroke-width="1.71429"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                                <path d="M14.6663 14.6668L13.333 13.3334"
-                                                                    stroke="#646768" stroke-width="1.71429"
-                                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                            </svg>
-                                                            <span class="sr-only">
-                                                                Search Icon
-                                                            </span>
-                                                        </button>
-                                                        <input type="search" name="seachdestination"
-                                                            id="seachdestination" placeholder="Search country here"
-                                                            class="bg-transparent grow text-sm">
+                                            <div
+                                                class="bg-[#F5F5F5] flex flex-col rounded-xl overflow-hidden multi-select-container">
+
+                                                <div
+                                                    class="flex items-center gap-3 flex-wrap py-2.5 px-3 border-b border-Neutral-200">
+                                                    <div class="flex items-center gap-3">
+                                                        <svg class="shrink-0" width="16" height="16" viewBox="0 0 16 16"
+                                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M7.66536 14.0026C11.1632 14.0026 13.9987 11.1671 13.9987 7.66927C13.9987 4.17147 11.1632 1.33594 7.66536 1.33594C4.16756 1.33594 1.33203 4.17147 1.33203 7.66927C1.33203 11.1671 4.16756 14.0026 7.66536 14.0026Z"
+                                                                stroke="#121617" stroke-width="1.71429"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M14.6654 14.6693L13.332 13.3359" stroke="#121617"
+                                                                stroke-width="1.71429" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                        <input type="text" id="where" placeholder="Search Destination"
+                                                            class="flex-1 bg-transparent text-Neutral-900 placeholder:text-Neutral-500 tracking-[0.6px] leading-6 search-input grow">
                                                     </div>
-                                                </form>
-
-                                                <div class="flex flex-col gap-2">
-                                                    <div class="designpeer-accordion bg-Neutral-50 rounded-lg"
-                                                        data-toogle-speed="250">
-                                                        <div class="designpeer-accordion-item">
-                                                            <!-- accordion title  -->
-                                                            <div class="designpeer-tab-title flex items-center p-3">
-                                                                <span
-                                                                    class="designpeer-accordion-title flex-1 text-xs text-Gray leading-[160%]">
-                                                                    Africa & the Middle East
-                                                                </span>
-                                                                <span class="designpeer-toggle-icons">
-                                                                    <img src="assets/images/icons/acc-down.svg"
-                                                                        class="designpeer-toggle-icon" width="16"
-                                                                        height="16" alt="plus">
-                                                                    <img src="assets/images/icons/acc-up.svg"
-                                                                        class="designpeer-alt-toggle-icon" width="16"
-                                                                        height="16" alt="minus">
-                                                                </span>
-                                                            </div>
-
-                                                            <!-- accordion Content  -->
-                                                            <div
-                                                                class="designpeer-tab-content p-3 max-h-[230px] overflow-y-auto">
-                                                                <div class="flex flex-col gap-2">
-                                                                    <label class="dest-lbl">
-                                                                        <input type="checkbox" name="Ethiopia"
-                                                                            id="Ethiopia" class="peer form-input">
-                                                                        <span
-                                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
-                                                                            Ethiopia
-                                                                        </span>
-                                                                        <span
-                                                                            class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
-                                                                    </label>
-                                                                    <label class="dest-lbl">
-                                                                        <input type="checkbox" name="Iran" id="Iran"
-                                                                            class="peer form-input">
-                                                                        <span
-                                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
-                                                                            Iran
-                                                                        </span>
-                                                                        <span
-                                                                            class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
-                                                                    </label>
-                                                                    <label class="dest-lbl">
-                                                                        <input type="checkbox" name="Kenya" id="Kenya"
-                                                                            class="peer form-input">
-                                                                        <span
-                                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
-                                                                            Kenya
-                                                                        </span>
-                                                                        <span
-                                                                            class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
-                                                                    </label>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    <div
+                                                        class="selected-items flex gap-1.5 items-center overflow-hidden">
                                                     </div>
-
-                                                    <div class="designpeer-accordion bg-Neutral-50 rounded-lg"
-                                                        data-toogle-speed="250">
-                                                        <div class="designpeer-accordion-item">
-                                                            <!-- accordion title  -->
-                                                            <div class="designpeer-tab-title flex items-center p-3">
-                                                                <span
-                                                                    class="designpeer-accordion-title flex-1 text-xs text-Gray leading-[160%]">
-                                                                    Asia
-                                                                </span>
-                                                                <span class="designpeer-toggle-icons">
-                                                                    <img src="assets/images/icons/acc-down.svg"
-                                                                        class="designpeer-toggle-icon" width="16"
-                                                                        height="16" alt="plus">
-                                                                    <img src="assets/images/icons/acc-up.svg"
-                                                                        class="designpeer-alt-toggle-icon" width="16"
-                                                                        height="16" alt="minus">
-                                                                </span>
-                                                            </div>
-
-                                                            <!-- accordion Content  -->
-                                                            <div
-                                                                class="designpeer-tab-content p-3 max-h-[230px] overflow-y-auto">
-                                                                <div class="flex flex-col gap-2">
-                                                                    <label class="dest-lbl">
-                                                                        <input type="checkbox" name="Turkey" id="Turkey"
-                                                                            class="peer form-input">
-                                                                        <span
-                                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
-                                                                            Turkey
-                                                                        </span>
-                                                                        <span
-                                                                            class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
-                                                                    </label>
-                                                                    <label class="dest-lbl">
-                                                                        <input type="checkbox" name="Saudi-arabia"
-                                                                            id="Saudi-arabia" class="peer form-input">
-                                                                        <span
-                                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
-                                                                            Saudi Arabia
-                                                                        </span>
-                                                                        <span
-                                                                            class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
-                                                                    </label>
-                                                                    <label class="dest-lbl">
-                                                                        <input type="checkbox" name="kuwait" id="kuwait"
-                                                                            class="peer form-input">
-                                                                        <span
-                                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 text-[13px] transition-colors duration-300 ease-in-out">
-                                                                            kuwait
-                                                                        </span>
-                                                                        <span
-                                                                            class="text-Neutral-500 peer-checked:text-Neutral-700 text-[11px] transition-colors duration-300 ease-in-out">24</span>
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
+
+                                                <ul
+                                                    class="multi-select-items static opacity-100 visible border-none bg-transparent mt-0 flex flex-col gap-1.5">
+                                                    <li>
+                                                        <label class="multi-select-lbl">
+                                                            <input type="checkbox" name="Saudi" id="Saudi"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                Saudi Arabia
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <ul class="ps-7 flex flex-col gap-1.5">
+                                                        <li>
+                                                            <label class="multi-select-lbl">
+                                                                <input type="checkbox" name="Alula" id="Alula"
+                                                                    class="peer form-input">
+                                                                <span
+                                                                    class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                    Alula
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                        <li>
+                                                            <label class="multi-select-lbl">
+                                                                <input type="checkbox" name="Asir" id="Asir"
+                                                                    class="peer form-input">
+                                                                <span
+                                                                    class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                    Asir
+                                                                </span>
+                                                            </label>
+                                                        </li>
+                                                    </ul>
+                                                    <li>
+                                                        <label class="multi-select-lbl">
+                                                            <input type="checkbox" name="Egypt" id="Egypt"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                Egypt
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="multi-select-lbl">
+                                                            <input type="checkbox" name="USA" id="USA"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                USA
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="multi-select-lbl">
+                                                            <input type="checkbox" name="France" id="France"
+                                                                class="peer form-input">
+                                                            <span
+                                                                class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                                France
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
 
 
                                 <!-- PRICE RANGE Filter  -->
