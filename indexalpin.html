@@ -532,7 +532,8 @@
                                                     <div
                                                         class="selected-items flex gap-1.5 items-center overflow-hidden">
                                                     </div>
-                                                    <input type="text" id="where" placeholder="Search for a place or activity"
+                                                    <input type="text" id="where"
+                                                        placeholder="Search for a place or activity"
                                                         class="text-Neutral-900 placeholder:text-Neutral-500 tracking-[0.6px] leading-6 search-input grow">
                                                 </div>
 
@@ -601,7 +602,6 @@
                                                     </li>
                                                 </ul>
                                             </div>
-
                                         </div>
                                         <div class="flex flex-col gap-2 pt-6">
                                             <span class="text-Neutral-900 tracking-[0.6px] font-medium">
@@ -649,7 +649,6 @@
                                                     </li>
                                                 </ul>
                                             </div>
-
                                         </div>
                                     </div>
                                     <button
@@ -2119,13 +2118,24 @@
         const $multiselectContainer = $('.multi-select-container');
 
         $multiselectContainer.each(function () {
+
             let th = $(this)
             const $searchInput = th.find('.search-input');
             const $multiSelectItems = th.find('.multi-select-items');
             const $selectedItemsDiv = th.find('.selected-items');
             const $listItems = th.find('.multi-select-items li');
+
             th.on('click', function () {
+                $('.multi-select-items').removeClass('show')
                 $multiSelectItems.addClass('show');
+            });
+
+            // Event listener to close multi-select-items when clicking outside multi-select-container
+            $(document).on('click', function (event) {
+                if (!$(event.target).closest('.multi-select-container').length && !$(event.target).closest(".delete-multiselected").length) {
+                   
+                    $multiSelectItems.removeClass('show');
+                }
             });
             // Function to perform search
             function performSearch(query) {
@@ -2133,7 +2143,7 @@
                     const $label = $(this).find('.multi-select-lbl');
                     const text = $label.text().toLowerCase();
                     const isVisible = text.includes(query.toLowerCase());
-                    $(this).css('display', isVisible ? 'block' : 'none');
+                    isVisible ? $(this).removeClass("hidden") : $(this).addClass("hidden")
                 });
             }
 
@@ -2182,12 +2192,7 @@
                 });
             });
 
-            // Event listener to close multi-select-items when clicking outside .multi-select-container
-            $(document).on('click', function (event) {
-                if (!$(event.target).closest('.multi-select-container').length && !$(event.target).closest(".delete-multiselected").length) {
-                    $multiSelectItems.removeClass('show');
-                }
-            });
+
 
             // Event listener to show multi-select-items when clicking inside .multi-select-container
 
