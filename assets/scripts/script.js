@@ -916,7 +916,7 @@ $(window).on("load", function () {
     // popups 
     if ($(".popup").length > 0) {
         $('.close-popup-btn').on('click', function () {
-            $('.popup').removeClass('show');
+            $(this).closest('.popup').removeClass('show');
         });
 
         $(".show-popup-btn").on("click", function () {

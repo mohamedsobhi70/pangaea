@@ -3108,6 +3108,10 @@ select:focus {
   height: 100%;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .max-h-\[70\%\] {
   max-height: 70%;
 }
@@ -3211,6 +3215,10 @@ select:focus {
 
 .w-full {
   width: 100%;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .min-w-24 {
@@ -3511,6 +3519,10 @@ select:focus {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .rounded-e-xl {
@@ -3870,6 +3882,10 @@ select:focus {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-1 {
@@ -4252,6 +4268,10 @@ select:focus {
 
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
 }
 
 .-tracking-\[-0\.24px\] {
@@ -5524,6 +5544,11 @@ a.ui-button:active,
   opacity: 1;
 }
 
+.peer:checked ~ .peer-checked\:bg-Brand-Dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(48 156 152 / var(--tw-bg-opacity));
+}
+
 .peer:checked ~ .peer-checked\:fill-Brand-Dark {
   fill: #309C98;
 }
@@ -5545,6 +5570,11 @@ a.ui-button:active,
 .peer:checked ~ .peer-checked\:text-Neutral-900 {
   --tw-text-opacity: 1;
   color: rgb(18 22 23 / var(--tw-text-opacity));
+}
+
+.peer:checked ~ .peer-checked\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .peer:focus ~ .peer-focus\:text-Neutral-900 {
