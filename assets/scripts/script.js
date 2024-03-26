@@ -683,25 +683,6 @@ $(window).on("load", function () {
     }
     // ===================================================================
 
-    if ($(".guests-num").length > 0) {
-        $(".guests-num").each(function () {
-            let incBtn = $(this).find(".increace-btn");
-            let decBtn = $(this).find(".decreace-btn");
-            let inpt = $(this).find("input");
-            incBtn.click(function () {
-                let currentValue = parseInt(inpt.val());
-                let newValue = currentValue + 1;
-                inpt.val(newValue);
-            });
-            decBtn.click(function () {
-                let currentValue = parseInt(inpt.val());
-                let newValue = Math.max(currentValue - 1, 0);
-                inpt.val(newValue);
-            });
-        })
-    }
-    // ===================================================================
-
     if ($(".trip-date-years").length > 0) {
         let activ = $(".trip-date-year.active");
         let activeAttr = activ.attr("data-year");
@@ -732,6 +713,7 @@ $(window).on("load", function () {
             $(`.trip-months-cntnt[data-month=${cntn}]`).css("display", "block")
         })
     }
+
     if ($(".itinary-map-btn").length > 0) {
 
         let itineraryMapContainer = $('.itinary-map-container');
@@ -931,55 +913,42 @@ $(window).on("load", function () {
         })
     }
 
-    // if ($("#seachdestination").length > 0) {
+    // popups 
+    if ($(".popup").length > 0) {
+        $('.close-popup-btn').on('click', function () {
+            $('.popup').removeClass('show');
+        });
 
-    //     let allCountries = $("#seachdestination").closest(".designpeer-tab-content").find(".bordered-lbl");
-    //     let allDest = $("#seachdestination").closest(".designpeer-tab-content").find(".dest-lbl");
-
-    //     $("#seachdestination").on("keyup", function () {
-    //         let countryName = $(this).val().toLowerCase(); // Convert to lowercase for case-insensitive comparison
-
-    //         allCountries.addClass("hidden");
-    //         allDest.addClass("hidden");
-
-    //         allCountries.each(function () {
-    //             if ($(this).text().toLowerCase().includes(countryName)) {
-    //                 $(this).removeClass("hidden");
-    //             }
-    //         });
-
-    //         allDest.each(function () {
-    //             if ($(this).text().toLowerCase().includes(countryName)) {
-    //                 $(this).removeClass("hidden");
-    //             }
-    //         });
-    //     });
-
-    // }
+        $(".show-popup-btn").on("click", function () {
+            let $th = $(this);
+            let $thPop = $th.data("popup");
+            $(`.popup.${$thPop}`).addClass("show");
+        })
+    }
 
 
     if ($(".multi-select-container").length > 0) {
-      
+
         function handleMultiSelectedAreas() {
             const multiSelectedAreas = document.querySelectorAll('.multi-selected-area');
-        
+
             multiSelectedAreas.forEach(multiSelectedArea => {
                 let isDragging = false;
                 let startX;
                 let scrollLeft;
-        
+
                 // Add mousedown event listener
                 multiSelectedArea.addEventListener('mousedown', (e) => {
                     isDragging = true;
                     startX = e.pageX - multiSelectedArea.offsetLeft;
                     scrollLeft = multiSelectedArea.scrollLeft;
                 });
-        
+
                 // Add mouseup event listener
                 multiSelectedArea.addEventListener('mouseup', () => {
                     isDragging = false;
                 });
-        
+
                 // Add mousemove event listener
                 multiSelectedArea.addEventListener('mousemove', (e) => {
                     if (!isDragging) return;
@@ -990,21 +959,19 @@ $(window).on("load", function () {
                 });
             });
         }
-        
+
         function handleResize() {
             const windowWidth = window.innerWidth;
             if (windowWidth > 1024) {
                 handleMultiSelectedAreas();
             }
         }
-        
+
         // Initial check
         handleResize();
-        
+
         // Add event listener for window resize
         window.addEventListener('resize', handleResize);
-
-
 
         $(".multi-select-list").each(function () {
             let th = $(this);
@@ -1016,74 +983,13 @@ $(window).on("load", function () {
         $(document).on("click", function (event) {
             $(".multi-select-list").each(function () {
                 let th = $(this);
+                console.log(th);
                 // Check if the clicked element or any of its parents is not within th and not the delete-item span
                 if (!th.is(event.target) && th.has(event.target).length === 0 && !$(event.target).closest(".delete-item").length) {
                     th.find(".multi-select-items").removeClass("show");
                 }
             });
         });
-
-        // $(".multi-select-items").each(function () {
-        //     // let th = $(this);
-
-        //     // let items = th.find("label.multi-select-lbl input");
-
-        //     // let selectedArea = th.siblings(".multi-selected-area");
-        //     // let selectedAreaLbl = selectedArea.find(".multi-selected-area-lbl");
-        //     // let selectedAreacntnt = selectedAreaLbl.html();
-        //     // items.on("change", function () {
-
-        //     //     let selected = $(this).siblings("span").html();
-
-        //     //     if ($(this).is(":checked")) {
-        //     //         // If checkbox is checked, add the item
-        //     //         selectedArea.append(`
-        //     //         <span class="multi-select-item">
-        //     //             ${selected}
-        //     //             <span role="button" class="shrink-0 delete-item">
-        //     //                 <img src="assets/images/icons/close-brand-circle.svg"
-        //     //                     width="16" height="16" alt="close">
-        //     //                 <span class="sr-only">Delete Item</span>
-        //     //             </span>
-        //     //         </span>`);
-        //     //     } else {
-        //     //         // If checkbox is not checked, remove the item
-        //     //         selectedArea.find('span:contains("' + selected + '")').remove();
-        //     //     }
-
-        //     //     if (selectedArea.find('.multi-select-item').length === 0) {
-        //     //         selectedAreaLbl.html(selectedAreacntnt)
-        //     //     }
-        //     //     else {
-        //     //         selectedAreaLbl.html("")
-        //     //     }
-        //     // });
-
-        //     // // Add event listener to delete button
-        //     // th.siblings(".multi-selected-area").on("click", ".delete-item", function () {
-
-        //     //     let itemText = $(this).parent().text().trim();
-        //     //     // Remove the item from selected area
-        //     //     $(this).parent().remove();
-
-        //     //     // Uncheck the corresponding checkbox
-        //     //     items.each(function () {
-        //     //         if (itemText.includes($(this).siblings("span").text().trim())) {
-        //     //             $(this).prop('checked', false);
-        //     //         }
-        //     //     });
-
-
-        //     //     if (selectedArea.find('.multi-select-item').length === 0) {
-        //     //         selectedAreaLbl.html(selectedAreacntnt)
-        //     //     }
-        //     //     else {
-        //     //         selectedAreaLbl.html("")
-        //     //     }
-        //     // });
-
-
-        // });
 
         const $multiselectContainer = $('.multi-select-container');
 
@@ -1103,7 +1009,6 @@ $(window).on("load", function () {
             // Event listener to close multi-select-items when clicking outside multi-select-container
             $(document).on('click', function (event) {
                 if (!$(event.target).closest('.multi-select-container').length && !$(event.target).closest(".delete-multiselected").length) {
-                   
                     $multiSelectItems.removeClass('show');
                 }
             });
@@ -1162,11 +1067,6 @@ $(window).on("load", function () {
                 });
             });
 
-
-
-            // Event listener to show multi-select-items when clicking inside .multi-select-container
-
-
         })
 
         const multiSelectedAreas = document.querySelectorAll('.selected-items');
@@ -1220,6 +1120,7 @@ $(window).on("load", function () {
         });
 
     }
+
 
 })
 
