@@ -925,22 +925,17 @@ $(window).on("load", function () {
             }
         });
 
-        // Close popup when clicking outside of container or its children
+        // Close popup when clicking outside popup content
         $(".popup").on('click', function (event) {
-            // if (!$(event.target).closest('.delete-multiselected').length
-          
-
-
-            console.log(!$(event.target).closest('.inner-popup').length);
-            // !$(event.target).closest('.container').length &&
-            if ( !$(event.target).closest('.inner-popup').length&&!$(event.target).closest('.delete-multiselected').length && $('.popup').hasClass('show')) {
+            if (!$(event.target).closest('.inner-popup').length && !$(event.target).closest('.delete-multiselected').length && $('.popup').hasClass('show')) {
                 $('.popup').removeClass('show');
                 if ($('.popup').hasClass("show")) {
                     $("body").addClass("overflow-hidden")
                 }
                 else {
                     $("body").removeClass("overflow-hidden")
-                }            }
+                }
+            }
         });
 
         $(".show-popup-btn").on("click", function () {
@@ -1044,21 +1039,53 @@ $(window).on("load", function () {
                 }
             });
             // Function to perform search
+            // function performSearch(query) {
+            //     $listItems.each(function () {
+            //         const $label = $(this).find('.multi-select-lbl');
+            //         const text = $label.text().toLowerCase();
+            //         const isVisible = text.includes(query.toLowerCase());
+            //         // isVisible ? $(this).removeClass("hidden") : $(this).addClass("hidden");
+            //         if (isVisible) {
+            //             $(this).removeClass("hidden");
+            //         } else {
+            //             $(this).addClass("hidden");
+            //         }
+
+            //     });
+            // }
+
+            // Event listener for input changes
+            // $searchInput.on('keyup', function () {
+            //     const query = $(this).val().trim(); // Get input value and trim whitespace
+            //     performSearch(query); // Perform search
+            // });
             function performSearch(query) {
+                let visibleItemsCount = 0; // Initialize count of visible items
                 $listItems.each(function () {
                     const $label = $(this).find('.multi-select-lbl');
                     const text = $label.text().toLowerCase();
                     const isVisible = text.includes(query.toLowerCase());
-                    isVisible ? $(this).removeClass("hidden") : $(this).addClass("hidden")
+                    if (isVisible) {
+                        $(this).removeClass("hidden");
+                        visibleItemsCount++; // Increment count of visible items
+                    } else {
+                        $(this).addClass("hidden");
+                    }
                 });
+
+                // If no visible items found, log a message to the console
+                if (visibleItemsCount === 0) {
+                     th.find(".multi-select-items").find(".no-items").removeClass("hidden")
+                } else {
+                     th.find(".multi-select-items").find(".no-items").addClass("hidden")
+                }
             }
 
             // Event listener for input changes
-            $searchInput.on('input', function () {
+            $searchInput.on('keyup', function () {
                 const query = $(this).val().trim(); // Get input value and trim whitespace
                 performSearch(query); // Perform search
             });
-
             // Add event listener to checkboxes
             $multiSelectItems.find('input[type="checkbox"]').on('change', function () {
                 if ($(this).prop('checked')) {
