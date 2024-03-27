@@ -917,14 +917,45 @@ $(window).on("load", function () {
     if ($(".popup").length > 0) {
         $('.close-popup-btn').on('click', function () {
             $(this).closest('.popup').removeClass('show');
+            if ($('.popup').hasClass("show")) {
+                $("body").addClass("overflow-hidden")
+            }
+            else {
+                $("body").removeClass("overflow-hidden")
+            }
+        });
+
+        // Close popup when clicking outside of container or its children
+        $(".popup").on('click', function (event) {
+            // if (!$(event.target).closest('.delete-multiselected').length
+          
+
+
+            console.log(!$(event.target).closest('.inner-popup').length);
+            // !$(event.target).closest('.container').length &&
+            if ( !$(event.target).closest('.inner-popup').length&&!$(event.target).closest('.delete-multiselected').length && $('.popup').hasClass('show')) {
+                $('.popup').removeClass('show');
+                if ($('.popup').hasClass("show")) {
+                    $("body").addClass("overflow-hidden")
+                }
+                else {
+                    $("body").removeClass("overflow-hidden")
+                }            }
         });
 
         $(".show-popup-btn").on("click", function () {
             let $th = $(this);
             let $thPop = $th.data("popup");
             $(`.popup.${$thPop}`).addClass("show");
+            if ($('.popup').hasClass("show")) {
+                $("body").addClass("overflow-hidden")
+            }
+            else {
+                $("body").removeClass("overflow-hidden")
+            }
         })
     }
+
 
 
     if ($(".multi-select-container").length > 0) {

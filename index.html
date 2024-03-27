@@ -85,13 +85,13 @@
                                         </span>
                                         <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1640_3381)">
+                                            <g clip-path="url(#clip0_1640_33811)">
                                                 <path class="fill-[#121617] xl:fill-white"
                                                     d="M6.66232 2.08215H0.337648C0.0383555 2.08215 -0.114114 2.44356 0.100473 2.65815L3.26281 5.82048C3.39269 5.95036 3.60728 5.95036 3.73721 5.82048L6.89955 2.65815C7.11408 2.44356 6.96161 2.08215 6.66232 2.08215Z"
                                                     fill="white" />
                                             </g>
                                             <defs>
-                                                <clipPath id="clip0_1640_3381">
+                                                <clipPath id="clip0_1640_33811">
                                                     <rect width="7" height="6.99994"
                                                         class="fill-[#121617] xl:fill-white" fill="white"
                                                         transform="translate(0 0.5)" />
@@ -540,7 +540,7 @@
                                                 <ul class="multi-select-items flex flex-col gap-1.5">
                                                     <li>
                                                         <label class="multi-select-lbl px-2 py-1.5">
-                                                            <input type="checkbox" name="Saudi" id="Saudi"
+                                                            <input type="checkbox" name="Saudi1" id="Saudi1"
                                                                 class="peer form-input">
                                                             <span
                                                                 class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
@@ -548,31 +548,31 @@
                                                             </span>
                                                         </label>
                                                     </li>
-                                                    <ul class="ps-7 flex flex-col gap-1.5">
-                                                        <li>
+                                                    <li class="ps-7 flex flex-col gap-1.5">
+                                                        <span>
                                                             <label class="multi-select-lbl px-2 py-1.5">
-                                                                <input type="checkbox" name="Alula" id="Alula"
+                                                                <input type="checkbox" name="Alula1" id="Alula1"
                                                                     class="peer form-input">
                                                                 <span
                                                                     class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
                                                                     Alula
                                                                 </span>
                                                             </label>
-                                                        </li>
-                                                        <li>
+                                                        </span>
+                                                        <span>
                                                             <label class="multi-select-lbl px-2 py-1.5">
-                                                                <input type="checkbox" name="Asir" id="Asir"
+                                                                <input type="checkbox" name="Asir1" id="Asir1"
                                                                     class="peer form-input">
                                                                 <span
                                                                     class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
                                                                     Asir
                                                                 </span>
                                                             </label>
-                                                        </li>
-                                                    </ul>
+                                                        </span>
+                                                    </li>
                                                     <li>
                                                         <label class="multi-select-lbl px-2 py-1.5">
-                                                            <input type="checkbox" name="Egypt" id="Egypt"
+                                                            <input type="checkbox" name="Egypt1" id="Egypt1"
                                                                 class="peer form-input">
                                                             <span
                                                                 class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
@@ -582,7 +582,7 @@
                                                     </li>
                                                     <li>
                                                         <label class="multi-select-lbl px-2 py-1.5">
-                                                            <input type="checkbox" name="USA" id="USA"
+                                                            <input type="checkbox" name="USA1" id="USA1"
                                                                 class="peer form-input">
                                                             <span
                                                                 class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
@@ -592,7 +592,7 @@
                                                     </li>
                                                     <li>
                                                         <label class="multi-select-lbl px-2 py-1.5">
-                                                            <input type="checkbox" name="France" id="France"
+                                                            <input type="checkbox" name="France1" id="France1"
                                                                 class="peer form-input">
                                                             <span
                                                                 class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
@@ -1902,8 +1902,8 @@
             </div>
 
             <div class="popup private-tour-popup">
-                <div class="container">
-                    <div class="flex flex-col gap-6 grow-0 h-full max-h-[900px] bg-white rounded-3xl shadow">
+                <div class="container flex justify-center">
+                    <div class="inner-popup">
                         <div class="flex items-start gap-5 shrink-0 p-6 lg:p-10 pb-0 lg:pb-0">
 
                             <div class="flex-1">
@@ -2003,12 +2003,12 @@
                                         Complete the form and we'll take it from here.
                                     </h3>
 
-                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-5">
+                                    <div class="flex lg:grid flex-col lg:grid-cols-2 gap-x-4 gap-y-5">
                                         <fieldset class="flex flex-col gap-2">
-                                            <label class="text-Neutral-900 font-semibold" for="firstName">
+                                            <label class="text-Neutral-900 font-semibold" for="firstNamePrivate">
                                                 First name
                                             </label>
-                                            <input type="text" name="firstName" id="firstName"
+                                            <input type="text" name="firstNamePrivate" id="firstNamePrivate"
                                                 class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
                                                 placeholder="Enter your first name">
                                         </fieldset>
@@ -2028,7 +2028,7 @@
                                             </label>
                                             <div class="flex rounded-xl overflow-hidden">
                                                 <select name="counkey" id="counkey"
-                                                    class="min-w-28 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 font-semibold bg-[#F5F5F5]">
+                                                    class="min-w-24 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 font-semibold bg-[#F5F5F5]">
                                                     <option value="1">+966</option>
                                                     <option value="2">+20</option>
                                                 </select>
@@ -2039,10 +2039,10 @@
                                         </fieldset>
 
                                         <fieldset class="flex flex-col gap-2">
-                                            <label class="text-Neutral-900 font-semibold" for="Email">
+                                            <label class="text-Neutral-900 font-semibold" for="Email1">
                                                 Email
                                             </label>
-                                            <input type="email" name="Email" id="Email"
+                                            <input type="email" name="Email1" id="Email1"
                                                 class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
                                                 placeholder="Enter your Email">
                                         </fieldset>
@@ -2052,18 +2052,30 @@
                                                 Tour Destination
                                             </label>
 
-                                            <div class="relative multi-select-container">
-                                                <div
-                                                    class="flex gap-1.5 items-center flex-wrap py-3 px-4 rounded-xl bg-[#F5F5F5]">
+                                            <div class="relative multi-select-container bg-[#F5F5F5] rounded-xl">
+                                                <div class="flex gap-1.5 items-center flex-wrap py-3 px-4 ">
                                                     <div
                                                         class="selected-items flex-wrap flex gap-1.5 items-center overflow-hidden">
                                                     </div>
-                                                    <input type="text" name="firstName" id="firstName"
-                                                        class="grow search-input placeholder:text-[#515456] text-Neutral-900 text-sm bg-transparent"
-                                                        placeholder="Search and select your desired destination(s)">
+                                                    <div class=" flex items-center gap-3">
+                                                        <svg class="shrink-0" width="16" height="16" viewBox="0 0 16 16"
+                                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M7.66536 14.0026C11.1632 14.0026 13.9987 11.1671 13.9987 7.66927C13.9987 4.17147 11.1632 1.33594 7.66536 1.33594C4.16756 1.33594 1.33203 4.17147 1.33203 7.66927C1.33203 11.1671 4.16756 14.0026 7.66536 14.0026Z"
+                                                                stroke="#121617" stroke-width="1.71429"
+                                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                                            <path d="M14.6654 14.6693L13.332 13.3359" stroke="#121617"
+                                                                stroke-width="1.71429" stroke-linecap="round"
+                                                                stroke-linejoin="round"></path>
+                                                        </svg>
+                                                        <input type="text" name="firstName" id="firstName"
+                                                            class="grow search-input placeholder:text-[#515456] text-Neutral-900 text-sm bg-transparent"
+                                                            placeholder="Search and select your desired destination(s)">
+                                                    </div>
                                                 </div>
 
-                                                <ul class="multi-select-items flex flex-col gap-1.5">
+                                                <ul
+                                                    class="multi-select-items flex flex-col gap-1.5 mt-0  bg-[#F5F5F5] roundedtn">
                                                     <li>
                                                         <label class="multi-select-lbl px-2 py-1.5">
                                                             <input type="checkbox" name="Saudi" id="Saudi"
@@ -2074,8 +2086,8 @@
                                                             </span>
                                                         </label>
                                                     </li>
-                                                    <ul class="ps-7 flex flex-col gap-1.5">
-                                                        <li>
+                                                    <li class="ps-7 flex flex-col gap-1.5">
+                                                        <span>
                                                             <label class="multi-select-lbl px-2 py-1.5">
                                                                 <input type="checkbox" name="Alula" id="Alula"
                                                                     class="peer form-input">
@@ -2084,8 +2096,8 @@
                                                                     Alula
                                                                 </span>
                                                             </label>
-                                                        </li>
-                                                        <li>
+                                                        </span>
+                                                        <span>
                                                             <label class="multi-select-lbl px-2 py-1.5">
                                                                 <input type="checkbox" name="Asir" id="Asir"
                                                                     class="peer form-input">
@@ -2094,8 +2106,8 @@
                                                                     Asir
                                                                 </span>
                                                             </label>
-                                                        </li>
-                                                    </ul>
+                                                        </span>
+                                                    </li>
                                                     <li>
                                                         <label class="multi-select-lbl px-2 py-1.5">
                                                             <input type="checkbox" name="Egypt" id="Egypt"
@@ -2153,8 +2165,7 @@
                                                 Desired departure date
                                             </label>
                                             <input type="date" name="depdate" id="depdate"
-                                                class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
-                                                placeholder="Enter your desired departure date.">
+                                                class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]">
                                         </fieldset>
 
                                         <fieldset class="flex flex-col gap-2">
@@ -2162,8 +2173,7 @@
                                                 Desired return date
                                             </label>
                                             <input type="date" name="returnDate" id="returnDate"
-                                                class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
-                                                placeholder="Enter your desired return date">
+                                                class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]">
                                         </fieldset>
 
                                         <fieldset class="flex flex-col gap-2">
@@ -2205,8 +2215,8 @@
             </div>
 
             <div class="popup private-tour-popup">
-                <div class="container">
-                    <div class="flex flex-col gap-6 grow-0 h-full max-h-[900px] bg-white rounded-3xl shadow">
+                <div class="container flex justify-center">
+                    <div class="inner-popup">
                         <div class="flex items-start gap-5 shrink-0 p-6 lg:p-10 pb-0 lg:pb-0">
 
                             <div class="flex-1">
@@ -2243,19 +2253,19 @@
 
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-5">
                                         <fieldset class="flex flex-col gap-2">
-                                            <label class="text-Neutral-900 font-semibold" for="firstName">
+                                            <label class="text-Neutral-900 font-semibold" for="firstName2">
                                                 First name
                                             </label>
-                                            <input type="text" name="firstName" id="firstName"
+                                            <input type="text" name="firstName2" id="firstName2"
                                                 class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
                                                 placeholder="Enter your first name">
                                         </fieldset>
 
                                         <fieldset class="flex flex-col gap-2">
-                                            <label class="text-Neutral-900 font-semibold" for="lastName">
+                                            <label class="text-Neutral-900 font-semibold" for="lastName1">
                                                 Last name
                                             </label>
-                                            <input type="text" name="lastName" id="lastName"
+                                            <input type="text" name="lastName1" id="lastName1"
                                                 class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
                                                 placeholder="Enter your Last name">
                                         </fieldset>
@@ -2266,21 +2276,21 @@
                                             </label>
                                             <div class="flex rounded-xl overflow-hidden">
                                                 <select name="counkey-whatsapp" id="counkey-whatsapp"
-                                                    class="min-w-28 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 font-semibold bg-[#F5F5F5]">
+                                                    class="min-w-24 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 font-semibold bg-[#F5F5F5]">
                                                     <option value="1">+966</option>
                                                     <option value="2">+20</option>
                                                 </select>
                                                 <input type="tel" name="whatsAppNum" id="whatsAppNum"
                                                     class="flex-1 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
-                                                    placeholder="Enter your Phone number">
+                                                    placeholder="Enter your Whatsapp number">
                                             </div>
                                         </fieldset>
 
                                         <fieldset class="flex flex-col gap-2">
-                                            <label class="text-Neutral-900 font-semibold" for="Email">
+                                            <label class="text-Neutral-900 font-semibold" for="Email2">
                                                 Email
                                             </label>
-                                            <input type="email" name="Email" id="Email"
+                                            <input type="email" name="Email2" id="Email2"
                                                 class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
                                                 placeholder="Enter your Email">
                                         </fieldset>
@@ -2378,7 +2388,7 @@
                                             <select name="fitnessLevel" id="fitnessLevel"
                                                 class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]">
                                                 <option selected disabled>
-                                                    Select an option, e.g., beginner, intermediate, advanced
+                                                    Select an option
                                                 </option>
                                                 <option value="1">Beginner</option>
                                                 <option value="2">Intermediate</option>
@@ -2396,13 +2406,13 @@
                                         </fieldset>
 
                                         <fieldset class="flex flex-col gap-2 lg:col-span-2">
-                                            <label class="text-Neutral-900 font-semibold" for="injuries">
+                                            <span class="text-Neutral-900 font-semibold">
                                                 Do you have any injuries or chronic diseases, or have you had an
                                                 operation recently?
-                                            </label>
+                                            </span>
                                             <div class="flex rounded-full bg-[#F5F5F5] p-0.5 w-fit">
                                                 <div>
-                                                    <input type="radio" name="injuries" id="injuriesNo"
+                                                    <input type="radio" checked name="injuries" id="injuriesNo"
                                                         class="hidden peer">
                                                     <label
                                                         class="w-12 h-7 flex items-center justify-center p-1 leading-5 rounded-full peer-checked:bg-Brand-Dark peer-checked:text-white peer-checked:font-semibold text-Black text-xs cursor-pointer"
@@ -2422,7 +2432,8 @@
                                             </div>
                                         </fieldset>
 
-                                        <fieldset class="flex flex-col gap-2 lg:col-span-2 bg-Neutral-100 p-5 rounded-xl">
+                                        <fieldset
+                                            class="flex flex-col gap-2 lg:col-span-2 bg-Neutral-100 p-5 rounded-xl">
                                             <label class="text-Neutral-900 font-semibold" for="cityResidence">
                                                 Terms and conditions
                                             </label>
@@ -2438,13 +2449,16 @@
                                                 before finalizing your bookings with us
                                             </p>
                                             <div class="flex items-center gap-3">
-                                                <input type="checkbox" name="terms-conditions-agree" id="terms-conditions-agree" class="!w-4 !h-4 rounded-md">
-                                                <label for="terms-conditions-agree" class="text-Gray text-xs cursor-pointer">
+                                                <input type="checkbox" name="terms-conditions-agree"
+                                                    id="terms-conditions-agree" class="!w-4 !h-4 rounded-md">
+                                                <label for="terms-conditions-agree"
+                                                    class="text-Gray text-xs cursor-pointer">
                                                     Before proceeding, tick to indicate that you have read and agree to
                                                     the privacy policy and terms & conditions.
                                                 </label>
                                             </div>
                                         </fieldset>
+
                                     </div>
 
                                     <input type="submit" value="Submit Request"
@@ -2498,7 +2512,8 @@
                     </div>
                     <form>
                         <div class="bg-white rounded-full p-4 flex items-center gap-2.5">
-                            <input type="email" placeholder="Enter email address" class="flex-1 focus:outline-none">
+                            <input type="email" id="email-1" name="email-1" placeholder="Enter email address"
+                                class="flex-1 focus:outline-none">
                             <button type="submit">
                                 <img src="assets/images/icons/send.svg" width="16" height="16" alt="Send">
                                 <span class="sr-only">Emails</span>
