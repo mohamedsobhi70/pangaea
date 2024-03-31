@@ -1126,7 +1126,7 @@ select:focus {
   inset-inline-start: 0px;
   height: 100%;
   width: 100%;
-  min-width: 280px;
+  min-width: 320px;
   overflow-y: auto;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1140,12 +1140,11 @@ select:focus {
 @media (min-width: 1280px) {
   .second-submenu {
     position: absolute;
-    inset-inline-start: 100%;
-    height: auto;
+    inset-inline-start: 95%;
     width: auto;
     background-color: transparent;
     padding: 0px;
-    padding-inline-start: 0.75rem;
+    padding-inline-start: 1.5rem;
   }
 }
 
