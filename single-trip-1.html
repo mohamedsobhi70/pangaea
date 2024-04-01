@@ -813,95 +813,58 @@
 
                 <div class="flex flex-col gap-8 lg:gap-16">
 
-                    <!-- gallery Section  -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 rounded-2xl overflow-hidden">
-
-                        <div class="gallery-item lg:col-span-2 lg:row-span-2 overflow-hidden h-60 lg:h-[496px]">
-                            <img src="assets/images/tripg-1.webp" class="w-full h-full object-cover object-center"
-                                width="522" height="496" alt="trip">
-                        </div>
-
-                        <div class="gallery-item">
+                    <!-- Gallery Section -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 grid-rows-2 gap-4 lg:max-h-[500px]">
+                        <div class="gallery-item h-auto lg:col-span-4 row-span-2 rounded-3xl overflow-hidden">
                             <img src="assets/images/tripg-2.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
                         </div>
-
-                        <div class="gallery-item">
-                            <img src="assets/images/tripg-3.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
-                        </div>
-
-                        <div class="gallery-item">
-                            <img src="assets/images/tripg-4.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
-                        </div>
-
-                        <div class="gallery-item">
+                        <div class="gallery-item h-auto rounded-3xl overflow-hidden lg:col-span-3">
                             <img src="assets/images/tripg-5.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
                         </div>
-
-                        <div class="gallery-item">
-                            <img src="assets/images/tripg-4.webp" class="w-full h-full object-cover object-center"
+                        <div class="gallery-item h-auto rounded-3xl overflow-hidden lg:col-span-5 row-span-2">
+                            <img src="assets/images/tripg-1.webp" class="w-full h-full object-cover object-center"
+                                width="522" height="496" alt="trip">
+                        </div>
+                        <div class="gallery-item h-auto rounded-3xl overflow-hidden lg:col-span-3">
+                            <img src="assets/images/tripg-3.webp" class="w-full h-full object-cover object-center"
                                 width="240" height="240" alt="trip">
                         </div>
+                    </div>
 
-                        <div class="gallery-item">
-                            <div class="absolute w-full h-full bg-black bg-opacity-50 top-0 start-0">
+                    <!-- Lightbox Overlay -->
+                    <div id="gallery-lightbox" class="hidden">
+                        <div
+                            class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50 px-10">
+                            <div class="lightbox-content relative max-w-[800px] w-full">
+                                <span id="lightbox-close-btn"
+                                    class="absolute -top-5 -right-5 text-white cursor-pointer bg-Brand-Dark p-3 rounded-lg w-10 h-10 flex items-center justify-center">
+                                    &times;
+                                </span>
+                                <img id="lightbox-img" src="" alt="lightbox image"
+                                    class="w-full h-full object-contain rounded-xl">
                                 <div
-                                    class=" flex flex-col items-center justify-center gap-4 text-Dark-1-Primary h-full">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.4"
-                                            d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
-                                            fill="#F5F5F5" />
-                                        <path
-                                            d="M10.7397 16.28C10.5497 16.28 10.3597 16.21 10.2097 16.06C9.91969 15.77 9.91969 15.29 10.2097 15L13.2097 12L10.2097 9C9.91969 8.71 9.91969 8.23 10.2097 7.94C10.4997 7.65 10.9797 7.65 11.2697 7.94L14.7997 11.47C15.0897 11.76 15.0897 12.24 14.7997 12.53L11.2697 16.06C11.1197 16.21 10.9297 16.28 10.7397 16.28Z"
-                                            fill="#F5F5F5" />
-                                    </svg>
-                                    <span class="">
-                                        All photos
-                                    </span>
-                                </div>
-                            </div>
-                            <img src="assets/images/tripg-2.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
-                        </div>
-
-                        <!-- Lightbox Overlay -->
-                        <div id="gallery-lightbox" class="hidden">
-                            <div
-                                class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex justify-center items-center z-50 px-10">
-                                <div class="lightbox-content relative max-w-[800px] w-full">
-                                    <span id="lightbox-close-btn"
-                                        class="absolute -top-5 -right-5 text-white cursor-pointer bg-Brand-Dark p-3 rounded-lg w-10 h-10 flex items-center justify-center">
-                                        &times;
-                                    </span>
-                                    <img id="lightbox-img" src="" alt="lightbox image"
-                                        class="w-full h-full object-contain rounded-xl">
-                                    <div
-                                        class="flex justify-center gap-10 lg:justify-between absolute top-full w-full lg:w-[120%] lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2">
-                                        <button id="lightbox-prev-btn"
-                                            class=" bg-Brand-Dark text-white rounded-full w-12 h-12 flex items-center justify-center cursor-pointer ">
-                                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10 4L6 8L10 12" stroke="#E0E1E1" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
-                                        <button id="lightbox-next-btn"
-                                            class=" bg-Brand-Dark text-white rounded-full w-12 h-12 flex items-center justify-center cursor-pointer ">
-                                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M6 12L10 8L6 4" stroke="#E0E1E1" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
-                                    </div>
+                                    class="flex justify-center gap-10 lg:justify-between absolute top-full w-full lg:w-[120%] lg:top-1/2 lg:left-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2">
+                                    <button id="lightbox-prev-btn"
+                                        class=" bg-Brand-Dark text-white rounded-full w-12 h-12 flex items-center justify-center cursor-pointer ">
+                                        <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 4L6 8L10 12" stroke="#E0E1E1" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
+                                    <button id="lightbox-next-btn"
+                                        class=" bg-Brand-Dark text-white rounded-full w-12 h-12 flex items-center justify-center cursor-pointer ">
+                                        <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 12L10 8L6 4" stroke="#E0E1E1" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="flex flex-col gap-12 lg:gap-24">
@@ -1137,7 +1100,7 @@
                                         </h3>
                                         <div class="flex flex-col">
                                             <div
-                                                class="py-6 border-b border-[#E0E1E1] flex flex-row lg:flex-col items-center xl:flex-row lg:items-stretch xl:items-center gap-2 justify-between">
+                                                class="py-6 border-b border-[#E0E1E1] flex items-center justify-between">
                                                 <div class="flex flex-col gap-1">
                                                     <p class="text-black text-[13px] font-semibold leading-[160%]">
                                                         Wed, Jan 10 to Sat, Mar 13
@@ -1147,12 +1110,12 @@
                                                     </span>
                                                 </div>
                                                 <a href="#"
-                                                    class="text-center bg-[#DB3B3B] rounded-full py-2 px-6 text-white font-medium text-xs">
+                                                    class="bg-[#DB3B3B] rounded-full py-2 px-6 text-white font-medium text-xs">
                                                     Book Now
                                                 </a>
                                             </div>
                                             <div
-                                                class="py-6 border-b border-[#E0E1E1] flex flex-row lg:flex-col items-center xl:flex-row lg:items-stretch xl:items-center gap-2 justify-between">
+                                                class="py-6 border-b border-[#E0E1E1] flex items-center justify-between">
                                                 <div class="flex flex-col gap-1">
                                                     <p class="text-black text-[13px] font-semibold leading-[160%]">
                                                         Wed, Jan 10 to Sat, Mar 13
@@ -1162,12 +1125,12 @@
                                                     </span>
                                                 </div>
                                                 <a href="#"
-                                                    class="text-center bg-[#DB3B3B] rounded-full py-2 px-6 text-white font-medium text-xs">
+                                                    class="bg-[#DB3B3B] rounded-full py-2 px-6 text-white font-medium text-xs">
                                                     Book Now
                                                 </a>
                                             </div>
                                             <div
-                                                class="py-6 border-b border-[#E0E1E1] flex flex-row lg:flex-col items-center xl:flex-row lg:items-stretch xl:items-center gap-2 justify-between">
+                                                class="py-6 border-b border-[#E0E1E1] flex items-center justify-between">
                                                 <div class="flex flex-col gap-1">
                                                     <p class="text-black text-[13px] font-semibold leading-[160%]">
                                                         Wed, Jan 10 to Sat, Mar 13
@@ -1177,7 +1140,7 @@
                                                     </span>
                                                 </div>
                                                 <a href="#"
-                                                    class="text-center bg-[#DB3B3B] rounded-full py-2 px-6 text-white font-medium text-xs">
+                                                    class="bg-[#DB3B3B] rounded-full py-2 px-6 text-white font-medium text-xs">
                                                     Book Now
                                                 </a>
                                             </div>
