@@ -896,34 +896,34 @@
 
                                         <!-- accordion Content  -->
                                         <div class="designpeer-tab-content pt-3">
-                                            <div
-                                                class="bg-[#F5F5F5] flex flex-col rounded-xl overflow-hidden multi-select-container">
-
-                                                <div
-                                                    class="flex items-center gap-3 flex-wrap py-2.5 px-3 border-b border-Neutral-200">
-                                                    <div class="flex items-center gap-3">
+                                            <div class="relative multi-select-container bg-[#F5F5F5] rounded-xl">
+                                                <div class="flex gap-1.5 items-center flex-wrap p-4">
+                                                    <div
+                                                        class="selected-items flex-wrap flex gap-1.5 items-center overflow-hidden">
+                                                    </div>
+                                                    <div class=" flex items-center gap-3">
                                                         <svg class="shrink-0" width="16" height="16" viewBox="0 0 16 16"
                                                             fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path
                                                                 d="M7.66536 14.0026C11.1632 14.0026 13.9987 11.1671 13.9987 7.66927C13.9987 4.17147 11.1632 1.33594 7.66536 1.33594C4.16756 1.33594 1.33203 4.17147 1.33203 7.66927C1.33203 11.1671 4.16756 14.0026 7.66536 14.0026Z"
                                                                 stroke="#121617" stroke-width="1.71429"
-                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                                stroke-linecap="round" stroke-linejoin="round"></path>
                                                             <path d="M14.6654 14.6693L13.332 13.3359" stroke="#121617"
                                                                 stroke-width="1.71429" stroke-linecap="round"
-                                                                stroke-linejoin="round" />
+                                                                stroke-linejoin="round"></path>
                                                         </svg>
-                                                        <input type="text" id="where" placeholder="Search Destination"
-                                                            class="flex-1 bg-transparent text-Neutral-900 placeholder:text-Neutral-500 tracking-[0.6px] leading-6 search-input grow">
-                                                    </div>
-                                                    <div
-                                                        class="selected-items flex gap-1.5 items-center overflow-hidden">
+                                                        <input type="text" name="firstName" id="firstName"
+                                                            class="grow search-input placeholder:text-[#515456] text-Neutral-900 text-sm bg-transparent"
+                                                            placeholder="Search & select destinations">
                                                     </div>
                                                 </div>
 
                                                 <ul
-                                                    class="multi-select-items static opacity-100 visible border-none bg-transparent mt-0 flex flex-col gap-1.5">
+                                                    class="multi-select-items -mt-2 flex flex-col gap-1.5 bg-[#F5F5F5] rounded-t-none border-transparent border-t-Neutral-200 shadow-sm">
+                                                    <li class="no-items hidden">No Result Found</li>
+
                                                     <li>
-                                                        <label class="multi-select-lbl">
+                                                        <label class="multi-select-lbl px-2 py-1.5">
                                                             <input type="checkbox" name="Saudi" id="Saudi"
                                                                 class="peer form-input">
                                                             <span
@@ -932,9 +932,9 @@
                                                             </span>
                                                         </label>
                                                     </li>
-                                                    <ul class="ps-7 flex flex-col gap-1.5">
-                                                        <li>
-                                                            <label class="multi-select-lbl">
+                                                    <li class="ps-7 flex flex-col gap-1.5">
+                                                        <span>
+                                                            <label class="multi-select-lbl px-2 py-1.5">
                                                                 <input type="checkbox" name="Alula" id="Alula"
                                                                     class="peer form-input">
                                                                 <span
@@ -942,9 +942,9 @@
                                                                     Alula
                                                                 </span>
                                                             </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="multi-select-lbl">
+                                                        </span>
+                                                        <span>
+                                                            <label class="multi-select-lbl px-2 py-1.5">
                                                                 <input type="checkbox" name="Asir" id="Asir"
                                                                     class="peer form-input">
                                                                 <span
@@ -952,10 +952,10 @@
                                                                     Asir
                                                                 </span>
                                                             </label>
-                                                        </li>
-                                                    </ul>
+                                                        </span>
+                                                    </li>
                                                     <li>
-                                                        <label class="multi-select-lbl">
+                                                        <label class="multi-select-lbl px-2 py-1.5">
                                                             <input type="checkbox" name="Egypt" id="Egypt"
                                                                 class="peer form-input">
                                                             <span
@@ -965,7 +965,7 @@
                                                         </label>
                                                     </li>
                                                     <li>
-                                                        <label class="multi-select-lbl">
+                                                        <label class="multi-select-lbl px-2 py-1.5">
                                                             <input type="checkbox" name="USA" id="USA"
                                                                 class="peer form-input">
                                                             <span
@@ -975,7 +975,7 @@
                                                         </label>
                                                     </li>
                                                     <li>
-                                                        <label class="multi-select-lbl">
+                                                        <label class="multi-select-lbl px-2 py-1.5">
                                                             <input type="checkbox" name="France" id="France"
                                                                 class="peer form-input">
                                                             <span
@@ -986,6 +986,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1363,7 +1364,7 @@
                                                 AlUla, Saudi Arabia
                                             </span>
                                             <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
-                                                <a href="#">
+                                                <a href="single-trip.html">
                                                     Explore Alula
                                                 </a>
                                             </h3>
@@ -1438,10 +1439,8 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
-                                                            <a href="#">
-                                                                Abseiling Adventure in Pangaea Center
-                                                            </a>
+                                                        <a href="single-trip.html">
+                                                            Abseiling Adventure in Pangaea Center
                                                         </a>
 
                                                     </h3>
@@ -1469,7 +1468,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -1534,12 +1533,9 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
-                                                            <a href="#">
-                                                                Abseiling Adventure in Pangaea Center
-                                                            </a>
+                                                        <a href="single-trip.html">
+                                                            Abseiling Adventure in Pangaea Center
                                                         </a>
-
                                                     </h3>
                                                 </div>
                                                 <div class="flex items-center gap-4">
@@ -1565,7 +1561,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -1636,7 +1632,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -1664,7 +1660,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -1729,7 +1725,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -1757,7 +1753,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -1828,7 +1824,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -1856,7 +1852,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -1921,7 +1917,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -1949,7 +1945,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2020,7 +2016,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2048,7 +2044,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2119,7 +2115,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2147,7 +2143,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2212,7 +2208,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2240,7 +2236,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2311,7 +2307,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2339,7 +2335,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2404,7 +2400,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2432,7 +2428,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2503,7 +2499,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2531,7 +2527,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2578,7 +2574,7 @@
                                                 AlUla, Saudi Arabia
                                             </span>
                                             <h3 class="text-Neutral-50 text-2xl font-semibold line-clamp-2">
-                                                <a href="#">
+                                                <a href="single-trip.html">
                                                     Explore Alula
                                                 </a>
                                             </h3>
@@ -2647,7 +2643,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2675,7 +2671,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2746,7 +2742,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2774,7 +2770,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2839,7 +2835,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2867,7 +2863,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
@@ -2932,7 +2928,7 @@
                                                     </span>
                                                     <h3
                                                         class="text-Black text-[21px] font-semibold leading-[140%] line-clamp-2">
-                                                        <a href="#">
+                                                        <a href="single-trip.html">
                                                             Abseiling Adventure in Pangaea Center
                                                         </a>
                                                     </h3>
@@ -2960,7 +2956,7 @@
                                                         SAR 200
                                                     </p>
                                                 </div>
-                                                <a href="#"
+                                                <a href="single-trip.html"
                                                     class="flex items-center gap-3 text-Brand-Dark font-semibold text-sm">
                                                     View Trip
                                                     <svg width="11" height="5" viewBox="0 0 11 5" fill="none"
