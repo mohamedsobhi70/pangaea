@@ -3149,6 +3149,10 @@ select:focus {
   height: 100%;
 }
 
+.h-\[360px\] {
+  height: 360px;
+}
+
 .max-h-\[70\%\] {
   max-height: 70%;
 }
@@ -3159,6 +3163,10 @@ select:focus {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[360px\] {
+  min-height: 360px;
 }
 
 .\!w-4 {
@@ -4160,6 +4168,10 @@ select:focus {
 
 .pt-\[190px\] {
   padding-top: 190px;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -5681,6 +5693,10 @@ a.ui-button:active,
     top: 15rem;
   }
 
+  .lg\:top-36 {
+    top: 9rem;
+  }
+
   .lg\:order-none {
     order: 0;
   }
@@ -5819,6 +5835,10 @@ a.ui-button:active,
 
   .lg\:h-\[733px\] {
     height: 733px;
+  }
+
+  .lg\:h-\[360px\] {
+    height: 360px;
   }
 
   .lg\:max-h-\[500px\] {
@@ -6137,6 +6157,14 @@ a.ui-button:active,
 
   .lg\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .lg\:ps-10 {
+    padding-inline-start: 2.5rem;
+  }
+
+  .lg\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .lg\:text-start {
