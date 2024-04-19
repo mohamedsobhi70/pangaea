@@ -952,7 +952,7 @@ $(window).on("load", function () {
     }
 
 
-
+    // multi select
     if ($(".multi-select-container").length > 0) {
 
         function handleMultiSelectedAreas() {
@@ -1180,13 +1180,19 @@ $(window).on("load", function () {
     }
 
     // itinerary tabs 
-    if ($(".itinerary-tabs-container").length > 0) {
-        $(".itinerary-tabs-container .itinerary-tab-itm").on("click", function () {
-            let th = $(this),
-                itineraryContent = $(".itinerary-tabs-content-container");
-            th.addClass("active").siblings().removeClass("active");
-            itineraryContent.find(".itinerary-tabs-content").css("display", "none");
-            itineraryContent.find(`.itinerary-tabs-content[data-tab=${th.data("tab")}]`).css("display", "block");
-        })
+    if ($(".itinerary-tabs").length > 0) {
+        $(".itinerary-tabs").each(function() {
+            let container = $(this);
+            container.find(".itinerary-tab-itm").on("click", function () {
+                let th = $(this),
+                itineraryContent = container.find(".itinerary-tabs-content-container");
+                console.log(container);
+                th.addClass("active").siblings().removeClass("active");
+                itineraryContent.find(".itinerary-tabs-content").css("display", "none");
+                itineraryContent.find(`.itinerary-tabs-content[data-tab=${th.data("tab")}]`).css("display", "block");
+            });
+        });
     }
+
+
 })

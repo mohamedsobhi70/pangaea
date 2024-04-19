@@ -3312,6 +3312,14 @@ select:focus {
   height: 100%;
 }
 
+.h-1\/4 {
+  height: 25%;
+}
+
+.h-14 {
+  height: 3.5rem;
+}
+
 .max-h-\[70\%\] {
   max-height: 70%;
 }
@@ -3419,6 +3427,10 @@ select:focus {
 
 .w-full {
   width: 100%;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .min-w-24 {
@@ -3885,6 +3897,10 @@ select:focus {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-\[\] {
+  border-color: ;
+}
+
 .border-e-Neutral-200 {
   --tw-border-opacity: 1;
   border-inline-end-color: rgb(224 225 225 / var(--tw-border-opacity));
@@ -4047,6 +4063,10 @@ select:focus {
 
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
 }
 
 .bg-\[url\(\.\.\/images\/herobg\.webp\)\] {
