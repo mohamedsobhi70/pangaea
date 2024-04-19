@@ -2674,11 +2674,19 @@ select:focus {
   color: rgb(48 156 152 / var(--tw-text-opacity));
 }
 
+.itinerary-tabs-content-container .itinerary-tabs-content {
+  display: none;
+}
+
+.itinerary-tabs-content-container .itinerary-tabs-content:first-child {
+  display: block;
+}
+
 .itinerary-steps-itm {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -3492,6 +3500,10 @@ select:focus {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.scroll-m-40 {
+  scroll-margin: 10rem;
 }
 
 .scroll-m-80 {

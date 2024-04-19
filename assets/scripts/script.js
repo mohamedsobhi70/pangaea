@@ -1075,9 +1075,9 @@ $(window).on("load", function () {
 
                 // If no visible items found, log a message to the console
                 if (visibleItemsCount === 0) {
-                     th.find(".multi-select-items").find(".no-items").removeClass("hidden")
+                    th.find(".multi-select-items").find(".no-items").removeClass("hidden")
                 } else {
-                     th.find(".multi-select-items").find(".no-items").addClass("hidden")
+                    th.find(".multi-select-items").find(".no-items").addClass("hidden")
                 }
             }
 
@@ -1179,7 +1179,14 @@ $(window).on("load", function () {
 
     }
 
-
+    // itinerary tabs 
+    if ($(".itinerary-tabs-container").length > 0) {
+        $(".itinerary-tabs-container .itinerary-tab-itm").on("click", function () {
+            let th = $(this),
+                itineraryContent = $(".itinerary-tabs-content-container");
+            th.addClass("active").siblings().removeClass("active");
+            itineraryContent.find(".itinerary-tabs-content").css("display", "none");
+            itineraryContent.find(`.itinerary-tabs-content[data-tab=${th.data("tab")}]`).css("display", "block");
+        })
+    }
 })
-
-
