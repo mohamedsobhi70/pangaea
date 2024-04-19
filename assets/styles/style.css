@@ -2732,6 +2732,16 @@ select:focus {
   display: none;
 }
 
+.itinerary-days-slider .swiper-button-next.swiper-button-disabled,
+  .itinerary-days-slider .swiper-button-prev.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+.itinerary-days-slider .swiper-button-next,
+  .itinerary-days-slider .swiper-button-prev{
+  box-shadow: 0px 2px 48px 0px rgba(0, 0, 0, 0.16);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -3312,14 +3322,6 @@ select:focus {
   height: 100%;
 }
 
-.h-1\/4 {
-  height: 25%;
-}
-
-.h-14 {
-  height: 3.5rem;
-}
-
 .max-h-\[70\%\] {
   max-height: 70%;
 }
@@ -3429,10 +3431,6 @@ select:focus {
   width: 100%;
 }
 
-.w-14 {
-  width: 3.5rem;
-}
-
 .min-w-24 {
   min-width: 6rem;
 }
@@ -3503,6 +3501,11 @@ select:focus {
 
 .-rotate-90 {
   --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3897,10 +3900,6 @@ select:focus {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.border-\[\] {
-  border-color: ;
-}
-
 .border-e-Neutral-200 {
   --tw-border-opacity: 1;
   border-inline-end-color: rgb(224 225 225 / var(--tw-border-opacity));
@@ -4057,16 +4056,16 @@ select:focus {
   --tw-bg-opacity: 0.25;
 }
 
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
 
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
-}
-
-.bg-opacity-40 {
-  --tw-bg-opacity: 0.4;
 }
 
 .bg-\[url\(\.\.\/images\/herobg\.webp\)\] {
@@ -4803,6 +4802,12 @@ select:focus {
 .shadow-hero-box {
   --tw-shadow: 0px -1.463px 10.64px 0px rgba(0, 0, 0, 0.05), 0px -4.914px 35.738px 0px rgba(0, 0, 0, 0.07), 0px -22px 160px 0px rgba(0, 0, 0, 0.12);
   --tw-shadow-colored: 0px -1.463px 10.64px 0px var(--tw-shadow-color), 0px -4.914px 35.738px 0px var(--tw-shadow-color), 0px -22px 160px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -6048,10 +6053,6 @@ a.ui-button:active,
 
   .lg\:col-span-5 {
     grid-column: span 5 / span 5;
-  }
-
-  .lg\:col-span-7 {
-    grid-column: span 7 / span 7;
   }
 
   .lg\:col-span-8 {

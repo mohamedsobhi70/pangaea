@@ -1181,11 +1181,11 @@ $(window).on("load", function () {
 
     // itinerary tabs 
     if ($(".itinerary-tabs").length > 0) {
-        $(".itinerary-tabs").each(function() {
+        $(".itinerary-tabs").each(function () {
             let container = $(this);
             container.find(".itinerary-tab-itm").on("click", function () {
                 let th = $(this),
-                itineraryContent = container.find(".itinerary-tabs-content-container");
+                    itineraryContent = container.find(".itinerary-tabs-content-container");
                 console.log(container);
                 th.addClass("active").siblings().removeClass("active");
                 itineraryContent.find(".itinerary-tabs-content").css("display", "none");
@@ -1193,6 +1193,35 @@ $(window).on("load", function () {
             });
         });
     }
+    if ($(".itinerary-days-slider").length > 0) {
+        const sliders = document.querySelectorAll(".itinerary-days-slider");
 
+        sliders.forEach(function (slider) {
+            let nxt = slider.querySelector(".swiper-button-next"),
+                prv = slider.querySelector(".swiper-button-prev");
+
+            new Swiper(slider, {
+
+                navigation: {
+                    nextEl: nxt,
+                    prevEl: prv,
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+
+                    },
+                    768: {
+                        slidesPerView: 2,
+
+                    },
+                    1024: {
+                        slidesPerView: 3,
+
+                    },
+                },
+            });
+        });
+    }
 
 })
