@@ -2662,13 +2662,13 @@ select:focus {
   }
 }
 
-.itinerary-tab-itm.active,
+.itinerary-tab-itm.swiper-slide-active,
   .itinerary-tab-itm:hover {
   --tw-border-opacity: 1;
   border-color: rgb(48 156 152 / var(--tw-border-opacity));
 }
 
-.itinerary-tab-itm.active *,
+.itinerary-tab-itm.swiper-slide-active *,
   .itinerary-tab-itm:hover * {
   --tw-text-opacity: 1;
   color: rgb(48 156 152 / var(--tw-text-opacity));

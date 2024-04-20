@@ -1186,27 +1186,27 @@ $(window).on("load", function () {
             container.find(".itinerary-tab-itm").on("click", function () {
                 let th = $(this),
                     itineraryContent = container.find(".itinerary-tabs-content-container");
-                th.addClass("active").siblings().removeClass("active");
+                th.addClass("swiper-slide-active").siblings().removeClass("swiper-slide-active");
+              
                 itineraryContent.find(".itinerary-tabs-content").css("display", "none");
                 itineraryContent.find(`.itinerary-tabs-content[data-tab=${th.data("tab")}]`).css("display", "block");
             });
         });
+        
     }
 
 
     if ($(".itinerary-days-slider").length > 0) {
         const sliders = document.querySelectorAll(".itinerary-days-slider");
-
+       
         sliders.forEach(function (slider) {
-            let nxt = slider.querySelector(".swiper-button-next"),
-                prv = slider.querySelector(".swiper-button-prev");
+            let nxt = slider.querySelector(".swiper-button-next");
 
             let swiper = new Swiper(slider, {
                 slidesPerView: 1,
                 loop: true,
                 navigation: {
                     nextEl: nxt,
-                    prevEl: prv,
                 },
                 breakpoints: {
                     0: {
@@ -1223,23 +1223,17 @@ $(window).on("load", function () {
                     },
                 },
             });
-            // Add click event listener to each swiper-slide
-            let slides = slider.querySelectorAll(".swiper-slide");
-            slides.forEach(function (slide, index) {
-                slide.addEventListener('click', function () {
-                    swiper.slideTo(index); // Move to the clicked slide
-                });
-            });
+           
             // Event listener for next button
             nxt.addEventListener('click', function () {
+                swiper.slideNext(); // Move to the next slide
                 updateActiveSlide(swiper);
             });
 
-            // Event listener for previous button
-            prv.addEventListener('click', function () {
+            // Update active slide on slide change
+            swiper.on('slideChange', function () {
                 updateActiveSlide(swiper);
             });
-
             function updateActiveSlide(swiper) {
                 // Remove active class from all slides
                 swiper.slides.forEach(function (slide) {
@@ -1249,8 +1243,6 @@ $(window).on("load", function () {
                 $(swiper.slides[swiper.activeIndex]).trigger('click')
             }
         });
-
-
     }
 
 })
