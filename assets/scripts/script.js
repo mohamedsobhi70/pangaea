@@ -1192,6 +1192,8 @@ $(window).on("load", function () {
             });
         });
     }
+
+
     if ($(".itinerary-days-slider").length > 0) {
         const sliders = document.querySelectorAll(".itinerary-days-slider");
 
@@ -1199,8 +1201,9 @@ $(window).on("load", function () {
             let nxt = slider.querySelector(".swiper-button-next"),
                 prv = slider.querySelector(".swiper-button-prev");
 
-            new Swiper(slider, {
-
+            let swiper = new Swiper(slider, {
+                slidesPerView: 1,
+                loop: true,
                 navigation: {
                     nextEl: nxt,
                     prevEl: prv,
@@ -1220,7 +1223,34 @@ $(window).on("load", function () {
                     },
                 },
             });
+            // Add click event listener to each swiper-slide
+            let slides = slider.querySelectorAll(".swiper-slide");
+            slides.forEach(function (slide, index) {
+                slide.addEventListener('click', function () {
+                    swiper.slideTo(index); // Move to the clicked slide
+                });
+            });
+            // Event listener for next button
+            nxt.addEventListener('click', function () {
+                updateActiveSlide(swiper);
+            });
+
+            // Event listener for previous button
+            prv.addEventListener('click', function () {
+                updateActiveSlide(swiper);
+            });
+
+            function updateActiveSlide(swiper) {
+                // Remove active class from all slides
+                swiper.slides.forEach(function (slide) {
+                    slide.classList.remove('active');
+                });
+                // Add active class to the currently active slide
+                $(swiper.slides[swiper.activeIndex]).trigger('click')
+            }
         });
+
+
     }
 
 })
