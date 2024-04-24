@@ -1187,43 +1187,49 @@ $(window).on("load", function () {
                 let th = $(this),
                     itineraryContent = container.find(".itinerary-tabs-content-container");
                 th.addClass("swiper-slide-active").siblings().removeClass("swiper-slide-active");
-              
+
                 itineraryContent.find(".itinerary-tabs-content").css("display", "none");
                 itineraryContent.find(`.itinerary-tabs-content[data-tab=${th.data("tab")}]`).css("display", "block");
             });
         });
-        
+
     }
 
 
     if ($(".itinerary-days-slider").length > 0) {
         const sliders = document.querySelectorAll(".itinerary-days-slider");
-       
+
         sliders.forEach(function (slider) {
             let nxt = slider.querySelector(".swiper-button-next");
 
             let swiper = new Swiper(slider, {
-                slidesPerView: 1,
-                loop: true,
                 navigation: {
                     nextEl: nxt,
                 },
+                
                 breakpoints: {
                     0: {
                         slidesPerView: 1,
-
                     },
                     768: {
                         slidesPerView: 2,
-
                     },
                     1024: {
                         slidesPerView: 3,
-
+                    },
+                },
+                // Enable/disable next button based on slide change
+                on: {
+                    slideChange: function () {
+                        if (this.isEnd) {
+                            nxt.disabled = true;
+                        } else {
+                            nxt.disabled = false;
+                        }
                     },
                 },
             });
-           
+
             // Event listener for next button
             nxt.addEventListener('click', function () {
                 swiper.slideNext(); // Move to the next slide

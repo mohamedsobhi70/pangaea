@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="--">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/swiper.css">
+    <link rel="stylesheet" href="assets/styles/lightbox.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Pangaea - B2B </title>
+</head>
+
+<body>
+    <!-- Start Header  -->
+
+    <header class="b2b-header">
+        <div class="container flex flex-col relative">
+            <div class="flex justify-center py-6 lg:py-5 relative">
+                <a href="index.html" class="shrink-0">
+                    <img src="assets/images/logo-footer.svg" class="w-[100px] xl:w-auto" width="146" height="49"
+                        alt="logo">
+                    <span class="sr-only">
+                        Home Page
+                    </span>
+                </a>
+                <a href="#" class="absolute top-1/2 -translate-y-1/2 end-5 lg:end-0 text-Black text-sm font-medium">
+                    العربية
+                </a>
+            </div>
+            <div
+                class="flex justify-between items-center gap-2 py-2 lg:p-0 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:start-0">
+                <span class="text-[10px] lg:text-sm font-bold tracking-[1.68px] text-Brand-Dark">
+                    Step
+                    <span class="step-num">
+                        1
+                    </span>
+                </span>
+                <span class="text-[10px] lg:text-sm font-bold tracking-[1.68px] text-Black">
+                    out of 6
+                </span>
+            </div>
+        </div>
+        <div class="step-progress absolute bottom-0 h-0.5 bg-Brand-Dark start-0 w-1/6">
+
+        </div>
+    </header>
+
+    <!-- End Header  -->
+
+    <!-- ============================================================================== -->
+
+    <!-- Start Main Page Content  -->
+    <main>
+        <form id="b2b-form">
+            <section class="b2b-content-sec">
+                <div class="container lg:h-full grid grid-cols-1 lg:grid-cols-2 lg:gap-30">
+                    <div class="p-2 pb-0 lg:p-0">
+                        <div class="rounded-2xl lg:rounded-3xl overflow-hidden relative min-h-[360px] h-full">
+                            <img src="assets/images/herobg.webp" width="1452" height="816"
+                                class="w-full h-full object-cover" alt="herobg">
+                            <div class="overlay p-8">
+                                <h2
+                                    class="text-white text-[32px] font-semibold leading-[160%] text-center lg:text-start">
+                                    Your trip starts now.
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center py-10 px-5 lg:px-0">
+                        <div class="flex flex-col gap-10 lg:px-16 w-full">
+
+                            <div class="b2b-steps-container">
+                                <div class="flex flex-col gap-5 b2b-step-itm" id="step-1">
+                                    <!-- Who will be traveling on this trip? -->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <h3
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            Who will be traveling on this trip?
+                                        </h3>
+
+                                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4">
+                                            <label
+                                                class="flex items-center gap-3 text-[#515456] text-sm transition-all duration-300 border border-Neutral-300 has-[:checked]:bg-Monte-Carlo-50 has-[:checked]:border-Brand-Dark rounded-xl p-3 cursor-pointer">
+                                                <input type="radio" name="whoTravel" id="Individuals"
+                                                    class="peer inpt-field" value="Individuals">
+                                                <span
+                                                    class="peer-checked:font-bold peer-checked:text-Brand-Dark transition-all duration-300">
+                                                    Individuals / Groups
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="flex items-center gap-3 text-[#515456] text-sm transition-all duration-300 border border-Neutral-300 has-[:checked]:bg-Monte-Carlo-50 has-[:checked]:border-Brand-Dark rounded-xl p-3 cursor-pointer">
+                                                <input type="radio" name="whoTravel" id="Corporate"
+                                                    class="peer inpt-field" value="Corporate">
+                                                <span
+                                                    class="peer-checked:font-bold peer-checked:text-Brand-Dark transition-all duration-300">
+                                                    Corporate / Education
+                                                </span>
+                                            </label>
+
+                                        </div>
+                                    </fieldset>
+
+                                    <!-- Trip Destination, Where do you want to travel? -->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <h3
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            Trip Destination, Where do you want to travel?
+                                        </h3>
+
+                                        <div class="relative multi-select-container bg-[#F5F5F5] rounded-xl">
+                                            <div class="flex gap-1.5 items-center flex-wrap py-3 px-4 ">
+                                                <div
+                                                    class="selected-items flex-wrap flex gap-1.5 items-center overflow-hidden">
+                                                </div>
+                                                <div class=" flex items-center gap-3 flex-1">
+                                                    <svg class="shrink-0" width="16" height="16" viewBox="0 0 16 16"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.66536 14.0026C11.1632 14.0026 13.9987 11.1671 13.9987 7.66927C13.9987 4.17147 11.1632 1.33594 7.66536 1.33594C4.16756 1.33594 1.33203 4.17147 1.33203 7.66927C1.33203 11.1671 4.16756 14.0026 7.66536 14.0026Z"
+                                                            stroke="#121617" stroke-width="1.71429"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M14.6654 14.6693L13.332 13.3359" stroke="#121617"
+                                                            stroke-width="1.71429" stroke-linecap="round"
+                                                            stroke-linejoin="round"></path>
+                                                    </svg>
+                                                    <input type="text" name="destination" id="destination"
+                                                        class="grow search-input placeholder:text-[#515456] text-Neutral-900 text-sm bg-transparent"
+                                                        placeholder="Search and select your desired destination(s)">
+                                                </div>
+                                            </div>
+
+                                            <ul
+                                                class="multi-select-items flex flex-col gap-1.5 -mt-2 bg-[#F5F5F5] rounded-t-none border-transparent">
+                                                <li class="no-items hidden">No Result Found</li>
+
+                                                <li>
+                                                    <label class="multi-select-lbl px-2 py-1.5">
+                                                        <input type="checkbox" name="Saudi" id="Saudi"
+                                                            class="peer form-input">
+                                                        <span
+                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                            Saudi Arabia
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="multi-select-lbl px-2 py-1.5">
+                                                        <input type="checkbox" name="Alula" id="Alula"
+                                                            class="peer form-input">
+                                                        <span
+                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                            Alula
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="multi-select-lbl px-2 py-1.5">
+                                                        <input type="checkbox" name="Asir" id="Asir"
+                                                            class="peer form-input">
+                                                        <span
+                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                            Asir
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="multi-select-lbl px-2 py-1.5">
+                                                        <input type="checkbox" name="Egypt" id="Egypt"
+                                                            class="peer form-input">
+                                                        <span
+                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                            Egypt
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="multi-select-lbl px-2 py-1.5">
+                                                        <input type="checkbox" name="USA" id="USA"
+                                                            class="peer form-input">
+                                                        <span
+                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                            USA
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="multi-select-lbl px-2 py-1.5">
+                                                        <input type="checkbox" name="France" id="France"
+                                                            class="peer form-input">
+                                                        <span
+                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
+                                                            France
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </fieldset>
+
+                                    <!-- How big is your group? -->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <h3
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            How big is your group?
+                                        </h3>
+
+                                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4">
+                                            <div class="bg-[#F5F5F5] p-3 rounded-xl flex items-center justify-between">
+                                                <span
+                                                    class="text-Neutral-900 text-sm font-semibold leading-[160%] grow">
+                                                    Adult
+                                                </span>
+                                                <div class="flex items-center">
+                                                    <span role="button"
+                                                        class="decreace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
+                                                        <img src="assets/images/icons/minus.svg" width="13" height="13"
+                                                            alt="minus">
+                                                    </span>
+                                                    <input type="number" name="adults-num" id="adults-num" min="0"
+                                                        value="0" readonly=""
+                                                        class="text-Brand-Dark w-12 text-center font-semibold bg-transparent inpt-field">
+                                                    <span role="button"
+                                                        class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
+                                                        <img src="assets/images/icons/add.svg" width="13" height="13"
+                                                            alt="add">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="bg-[#F5F5F5] p-3 rounded-xl flex items-center justify-between">
+                                                <span
+                                                    class="text-Neutral-900 text-sm font-semibold leading-[160%] grow">
+                                                    Children
+                                                </span>
+                                                <div class="flex items-center">
+                                                    <span role="button"
+                                                        class="decreace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
+                                                        <img src="assets/images/icons/minus.svg" width="13" height="13"
+                                                            alt="minus">
+                                                    </span>
+                                                    <input type="number" name="children-num" id="children-num" min="0"
+                                                        value="0" readonly=""
+                                                        class="text-Brand-Dark w-12 text-center font-semibold bg-transparent inpt-field">
+                                                    <span role="button"
+                                                        class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
+                                                        <img src="assets/images/icons/add.svg" width="13" height="13"
+                                                            alt="add">
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="flex flex-col gap-5 b2b-step-itm" id="step-2">
+                                    <!--Choosing Trip Themes -->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <div class="flex items-center">
+                                            <h3
+                                                class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost grow">
+                                                <span class="text-[#D92D20] font-semibold">
+                                                    *
+                                                </span>
+                                                Choosing Trip Themes
+
+                                            </h3>
+                                            <span class="text-Neutral-700 text-xs">
+                                                2 themes selected
+                                            </span>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
+                                            <label
+                                                class="flex flex-col text-Black text-xs transition-all duration-300 border border-Neutral-300 has-[:checked]:border-Brand-Dark rounded-xl cursor-pointer overflow-hidden">
+                                                <span class="h-32">
+                                                    <img src="assets/images/trip-1.webp" width="410" height="558"
+                                                        alt="trip" class="w-full h-full object-cover">
+                                                </span>
+                                                <span class="p-3 flex items-center gap-3">
+                                                    <input type="checkbox" name="themes" id="Historical"
+                                                        class="peer !w-5 !h-5 rounded-md" value="Historical">
+                                                    <span
+                                                        class="peer-checked:font-semibold transition-all duration-300 line-clamp-2 text-xs">
+                                                        Historical / Cultural
+                                                    </span>
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="flex flex-col text-Black text-xs transition-all duration-300 border border-Neutral-300 has-[:checked]:border-Brand-Dark rounded-xl cursor-pointer overflow-hidden">
+                                                <span class="h-32">
+                                                    <img src="assets/images/trip-1.webp" width="410" height="558"
+                                                        alt="trip" class="w-full h-full object-cover">
+                                                </span>
+                                                <span class="p-3 flex items-center gap-3">
+                                                    <input type="checkbox" name="themes" id="Adventure"
+                                                        class="peer !w-5 !h-5 rounded-md" value="Adventure">
+                                                    <span
+                                                        class="peer-checked:font-semibold transition-all duration-300 line-clamp-2 text-xs">
+                                                        Adventure
+                                                    </span>
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="flex flex-col text-Black text-xs transition-all duration-300 border border-Neutral-300 has-[:checked]:border-Brand-Dark rounded-xl cursor-pointer overflow-hidden">
+                                                <span class="h-32">
+                                                    <img src="assets/images/trip-1.webp" width="410" height="558"
+                                                        alt="trip" class="w-full h-full object-cover">
+                                                </span>
+                                                <span class="p-3 flex items-center gap-3">
+                                                    <input type="checkbox" name="themes" id="City"
+                                                        class="peer !w-5 !h-5 rounded-md" value="City">
+                                                    <span
+                                                        class="peer-checked:font-semibold transition-all duration-300 line-clamp-2 text-xs">
+                                                        City Tour
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+                                    <!-- Do you have any special request for your trip? -->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <h3
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            Do you have any special request for your trip?
+                                        </h3>
+
+                                        <textarea rows="5" name="special-request" id="special-request"
+                                            class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
+                                            placeholder="Specific needs to ensure a smooth experience"></textarea>
+                                    </fieldset>
+
+
+                                </div>
+
+                                <div class="flex flex-col gap-5 b2b-step-itm" id="step-3">
+
+                                    <!-- How long would you like your trip to be?-->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <h3
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            How long would you like your trip to be?
+                                        </h3>
+
+                                        <div class="bg-[#F5F5F5] p-3 rounded-xl flex items-center justify-between">
+                                            <span class="text-Neutral-900 text-sm font-semibold leading-[160%] grow">
+                                                Trip Duration
+                                            </span>
+                                            <div class="flex items-center gap-3">
+                                                <span role="button"
+                                                    class="decreace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
+                                                    <img src="assets/images/icons/minus.svg" width="13" height="13"
+                                                        alt="minus">
+                                                </span>
+                                                <span class="text-[#515456] text-sm">
+                                                    1 day / 0 Night
+                                                </span>
+
+                                                <span role="button"
+                                                    class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
+                                                    <img src="assets/images/icons/add.svg" width="13" height="13"
+                                                        alt="add">
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+
+                                    <!-- When would you like your trip to depart?-->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <h3
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            When would you like your trip to depart?
+                                        </h3>
+
+                                        <input type="date" name="tripdate" id="tripdate" required
+                                            class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-[#515456] text-sm bg-[#F5F5F5]">
+
+                                    </fieldset>
+
+                                    <!-- Are you flexible with the trip date?-->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <h3
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            Are you flexible with the trip date?
+                                        </h3>
+
+                                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4">
+                                            <label
+                                                class="flex items-center gap-3 text-[#515456] text-sm transition-all duration-300 border border-Neutral-300 has-[:checked]:bg-Monte-Carlo-50 has-[:checked]:border-Brand-Dark rounded-xl p-3 cursor-pointer">
+                                                <input type="radio" name="Flexiblty" id="Flexible" class="peer" required
+                                                    value="Flexible">
+                                                <span
+                                                    class="peer-checked:font-bold peer-checked:text-Brand-Dark transition-all duration-300">
+                                                    Flexible
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="flex items-center gap-3 text-[#515456] text-sm transition-all duration-300 border border-Neutral-300 has-[:checked]:bg-Monte-Carlo-50 has-[:checked]:border-Brand-Dark rounded-xl p-3 cursor-pointer">
+                                                <input type="radio" name="Flexiblty" id="notFlexible" class="peer"
+                                                    required value="notFlexible">
+                                                <span
+                                                    class="peer-checked:font-bold peer-checked:text-Brand-Dark transition-all duration-300">
+                                                    Not Flexible
+                                                </span>
+                                            </label>
+
+                                        </div>
+                                    </fieldset>
+
+                                </div>
+
+                                <div class="flex flex-col gap-5 b2b-step-itm" id="step-4">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="font-Jost text-Neutral-900 text-xl font-semibold -tracking-[0.4px]">
+                                            Budget Preferences
+                                        </h3>
+                                        <p class="text-[#646768] leading-[160%]">
+                                            Tailor your budget to your group's needs.
+                                        </p>
+                                    </div>
+                                    <fieldset class="flex flex-col gap-2">
+                                        <label for="budget"
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            How would you like to proceed with the budget?
+                                        </label>
+                                        <div class="grid grid-cols-1 gap-2">
+                                            <label
+                                                class="flex items-center gap-3 text-[#515456] text-sm transition-all duration-300 border border-Neutral-300 has-[:checked]:bg-Monte-Carlo-50 has-[:checked]:border-Brand-Dark rounded-xl p-3 cursor-pointer">
+                                                <input type="radio" name="budget" id="later" class="peer" required
+                                                    value="later">
+                                                <span
+                                                    class="peer-checked:font-bold peer-checked:text-Brand-Dark transition-all duration-300">
+                                                    Decide on the budget later
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="flex items-center gap-3 text-[#515456] text-sm transition-all duration-300 border border-Neutral-300 has-[:checked]:bg-Monte-Carlo-50 has-[:checked]:border-Brand-Dark rounded-xl p-3 cursor-pointer">
+                                                <input type="radio" name="budget" id="exact" class="peer" required
+                                                    value="exact">
+                                                <span
+                                                    class="peer-checked:font-bold peer-checked:text-Brand-Dark transition-all duration-300">
+                                                    Specify an exact budget now
+                                                </span>
+                                            </label>
+                                            <label
+                                                class="flex items-center gap-3 text-[#515456] text-sm transition-all duration-300 border border-Neutral-300 has-[:checked]:bg-Monte-Carlo-50 has-[:checked]:border-Brand-Dark rounded-xl p-3 cursor-pointer">
+                                                <input type="radio" name="budget" id="range" class="peer" required
+                                                    value="range">
+                                                <span
+                                                    class="peer-checked:font-bold peer-checked:text-Brand-Dark transition-all duration-300">
+                                                    Provide a budget range
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+
+                                    <!-- Fieldset for Exact Budget Amount -->
+                                    <fieldset class="flex flex-col gap-2 budget-amount" style="display: none;">
+                                        <label for="BudgetAmount"
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            Exact Budget Amount
+                                        </label>
+                                        <input type="number" name="BudgetAmount" id="BudgetAmount"
+                                            class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
+                                            placeholder="Enter your exact budget (e.g., 100,000)">
+                                    </fieldset>
+
+                                    <!-- Fieldset for Budget Range -->
+                                    <fieldset class="flex flex-col gap-2 budget-range" style="display: none;">
+                                        <label for="MinimumBudget"
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            Minimum Budget
+                                        </label>
+                                        <input type="number" name="MinimumBudget" id="MinimumBudget"
+                                            class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
+                                            placeholder="Enter the minimum amount (e.g., 10,000)">
+                                    </fieldset>
+                                    <fieldset class="flex flex-col gap-2 budget-range" style="display: none;">
+                                        <label for="MaximumBudget"
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            Maximum Budget
+                                        </label>
+                                        <input type="number" name="MaximumBudget" id="MaximumBudget"
+                                            class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
+                                            placeholder="Enter the maximum amount (e.g., 100,000)">
+                                    </fieldset>
+                                </div>
+
+                                <div class="flex flex-col gap-5 b2b-step-itm" id="step-5">
+                                    <div class="flex flex-col gap-1">
+                                        <h3 class="font-Jost text-Neutral-900 text-xl font-semibold -tracking-[0.4px]">
+                                            Contact Details
+                                        </h3>
+                                        <p class="text-[#646768] leading-[160%]">
+                                            We’ll reach out to discuss your group’s travel plans.
+                                        </p>
+                                    </div>
+
+                                    <!-- Name-->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <label for="name"
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            Name
+                                        </label>
+                                        <input type="text" name="Name" id="Name" required
+                                            class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
+                                            placeholder="Enter your Name">
+                                    </fieldset>
+
+                                    <!-- Phone Number-->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <label for="name"
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            Phone Number
+                                        </label>
+                                        <div class="flex rounded-xl overflow-hidden">
+                                            <select name="counkey-phone" id="counkey-phone" required
+                                                class="min-w-24 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 font-semibold bg-[#F5F5F5]">
+                                                <option value="1">+966</option>
+                                                <option value="2">+20</option>
+                                            </select>
+                                            <input type="tel" name="phoneNum" id="phoneNum" required
+                                                class="flex-1 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
+                                                placeholder="Enter your Whatsapp number">
+                                        </div>
+                                    </fieldset>
+
+                                    <!-- Email-->
+                                    <fieldset class="flex flex-col gap-2">
+                                        <label for="name"
+                                            class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
+                                            <span class="text-[#D92D20] font-semibold">
+                                                *
+                                            </span>
+                                            Email
+                                        </label>
+                                        <input type="email" name="Email" id="Email" required
+                                            class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
+                                            placeholder="Enter your Email">
+                                    </fieldset>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="z-10 lg:z-auto border-t border-Neutral-100 shadow-b2bcta py-4 px-5 lg:p-0 fixed lg:static bottom-0 left-0 w-full bg-white lg:bg-transparent lg:shadow-none lg:border-t-0 flex items-center gap-5">
+                                <span onclick="nextPrev(-1)" role="button" id="step-prevBtn"
+                                    class="w-14 h-14 border border-neutral-300 rounded-full flex items-center justify-center shrink-0">
+                                    <img src="assets/images/icons/chevron-left.svg" width="24" height="24"
+                                        alt="backIcon">
+                                </span>
+                                <span onclick="nextPrev(1)" role="button" id="step-nextBtn"
+                                    class="b2b-nxt-btn rounded-full !bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center w-full cursor-pointer">
+                                    Continue
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </form>
+    </main>
+    <!-- End Main Page Content  -->
+
+    <script src="assets/scripts/jquiry.js"></script>
+    <script src="assets/scripts/lightbox.js"></script>
+    <script src="assets/scripts/moment.js"></script>
+    <script src="assets/scripts/litepicker.js"></script>
+    <script src="assets/scripts/swiper.js"></script>
+    <script src="assets/scripts/script.js"></script>
+
+    <script>
+
+
+        // Display the First Step
+        var currentTab = 0;
+        showTab(currentTab);
+
+        function showTab(n) {
+
+            // This function will display the specified Step of the form
+            var stepitm = document.querySelectorAll(".b2b-step-itm");
+            stepitm[n].style.display = "flex";
+
+            if (n == 0) {
+                document.getElementById("step-prevBtn").style.display = "none";
+            }
+            else {
+                document.getElementById("step-prevBtn").style.display = "flex";
+            }
+
+            if (n == (stepitm.length - 1)) {
+                document.getElementById("step-nextBtn").innerHTML = "Submit";
+            }
+            else {
+                document.getElementById("step-nextBtn").innerHTML = "Continue";
+            }
+
+            calcStep(n)
+        }
+
+        function nextPrev(n) {
+
+            // This function will figure out which tab to display
+            var stepitm = document.querySelectorAll(".b2b-step-itm");
+
+            console.log("kkl");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+
+            // Hide the current tab:
+            stepitm[currentTab].style.display = "none";
+
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+
+            // if you have reached the end of the form... :
+
+            if (currentTab >= stepitm.length) {
+                //...the form gets submitted:
+                document.getElementById("b2b-form").submit();
+                return false;
+            }
+
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var stepitm, y, i, valid = true;
+            stepitm = document.querySelectorAll(".b2b-step-itm");
+            y = stepitm[currentTab].querySelectorAll(".inpt-field");
+
+            // A loop that checks every input field in the current tab
+            for (i = 0; i < y.length; i++) {
+                if (y[i].value == "") {
+                    y[i].className += " invalid";
+                    valid = false;
+                }
+            }
+
+            return valid; // return the valid status
+        }
+
+        function calcStep(n) {
+            $(".step-num").html((n + 1));
+            $(".step-progress").css("width", ((n + 1) * 100 / 6) + "%");
+        }
+
+        //  Event listener for radio buttons
+        $('input[type=radio][name=budget]').change(function () {
+            if (this.value === 'exact') {
+                $('.budget-amount').show();
+                $('.budget-range').hide();
+            } else if (this.value === 'range') {
+                $('.budget-amount').hide();
+                $('.budget-range').show();
+            } else {
+                $('.budget-amount').hide();
+                $('.budget-range').hide();
+            }
+        });
+
+    </script>
+</body>
+
+</html>
