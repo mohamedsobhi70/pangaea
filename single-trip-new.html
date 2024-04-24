@@ -1287,8 +1287,8 @@
                                             </div>
 
                                             <div class="h-[508px] rounded-2xl overflow-hidden">
-                                                <img src="assets/images/map.png" class="w-full h-full object-cover" width="800" height="508"
-                                                    alt="map">
+                                                <img src="assets/images/map.png" class="w-full h-full object-cover"
+                                                    width="800" height="508" alt="map">
                                             </div>
 
                                         </div>
@@ -1296,9 +1296,10 @@
                                             class="border border-[#E3E3E3] rounded-2xl overflow-hidden relative itinerary-tabs">
 
                                             <div class="border-b border-[#E3E3E3]">
-                                                <div class="swiper itinerary-days-slider">
-                                                    <div class="swiper-wrapper itinerary-tabs-container">
-                                                        <div class="swiper-slide itinerary-tab-itm active"
+                                                <div class="itinerary-days relative">
+                                                    <div class="itinerary-tabs-container flex">
+
+                                                        <div class="itinerary-tab-itm basis-full lg:basis-1/3 shrink-0 active"
                                                             data-tab="day-1">
                                                             <h4
                                                                 class="text-Neutral-900 font-semibold text-xl transition-colors duration-300">
@@ -1309,7 +1310,9 @@
                                                                 Italy Rome Exploration
                                                             </p>
                                                         </div>
-                                                        <div class="swiper-slide itinerary-tab-itm" data-tab="day-2">
+
+                                                        <div class="itinerary-tab-itm basis-full lg:basis-1/3 shrink-0"
+                                                            data-tab="day-2">
                                                             <h4
                                                                 class="text-Neutral-900 font-semibold text-xl transition-colors duration-300">
                                                                 Day 2
@@ -1319,39 +1322,35 @@
                                                                 Masterpiece of Vatican
                                                             </p>
                                                         </div>
-                                                        <div class="swiper-slide itinerary-tab-itm" data-tab="day-3">
+
+                                                        <div class="itinerary-tab-itm basis-full lg:basis-1/3 shrink-0"
+                                                            data-tab="day-3">
                                                             <h4
                                                                 class="text-Neutral-900 font-semibold text-xl transition-colors duration-300">
                                                                 Day 3
                                                             </h4>
                                                             <p
                                                                 class="text-[#3F445D] truncate transition-colors duration-300">
-                                                                Masterpiece in the Sky
+                                                                Italy Rome Exploration
                                                             </p>
                                                         </div>
-                                                        <div class="swiper-slide itinerary-tab-itm" data-tab="day-4">
+
+                                                        <div class="itinerary-tab-itm basis-full lg:basis-1/3 shrink-0"
+                                                            data-tab="day-4">
                                                             <h4
                                                                 class="text-Neutral-900 font-semibold text-xl transition-colors duration-300">
                                                                 Day 4
                                                             </h4>
                                                             <p
                                                                 class="text-[#3F445D] truncate transition-colors duration-300">
-                                                                Italy Rome Exploration
+                                                                Masterpiece of Vatican
                                                             </p>
                                                         </div>
+
                                                     </div>
 
-                                                    <!-- <button
-                                                        class="swiper-button-prev w-10 h-10 rounded-full bg-white flex items-center justify-center border border-[#E0E1E1] transition-opacity duration-300 shadow-md">
-                                                        <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg"
-                                                            width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                                            <path
-                                                                d="M18.0282 26.7017L23.7064 20.6562C23.9127 20.4733 24 20.2346 24 19.9999C24 19.7653 23.9132 19.5274 23.7396 19.3437L18.0614 13.2982C17.6993 12.9154 17.0968 12.8992 16.7151 13.2609C16.3306 13.6238 16.3171 14.2306 16.6779 14.6108L21.7728 20L16.6779 25.3893C16.317 25.7696 16.3307 26.3737 16.7151 26.7392C17.06 27.1007 17.6631 27.0847 18.0282 26.7017Z"
-                                                                fill="#293138" />
-                                                        </svg>
-                                                    </button> -->
                                                     <button
-                                                        class="swiper-button-next w-10 h-10 rounded-full bg-white flex items-center justify-center border border-[#E0E1E1] transition-opacity duration-300 shadow-md">
+                                                        class="rearrange-button w-10 h-10 rounded-full bg-white flex items-center justify-center border border-[#E0E1E1] transition-opacity duration-300 shadow-md absolute top-1/2 -translate-y-1/2 end-6">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
                                                             viewBox="0 0 40 40" fill="none">
                                                             <path
@@ -1360,7 +1359,6 @@
                                                         </svg>
                                                     </button>
                                                 </div>
-
                                             </div>
                                             <div class="itinerary-tabs-content-container">
                                                 <div class="p-4 itinerary-tabs-content" data-tab="day-1">
@@ -1484,7 +1482,8 @@
                                                                 <div
                                                                     class="p-3 rounded-xl border border-[#DBDBDB] flex flex-col gap-4">
                                                                     <div class="h-[340px]">
-                                                                        <div class="swiper trip-slider h-full  flex flex-col gap-4 itinerary-cntn-slider">
+                                                                        <div
+                                                                            class="swiper trip-slider h-full  flex flex-col gap-4 itinerary-cntn-slider">
 
                                                                             <div
                                                                                 class="swiper-wrapper ease-linear rounded-lg overflow-hidden">
@@ -1795,7 +1794,6 @@
                                         </ul>
                                     </div>
 
-
                                     <!-- Cancellation policy -->
                                     <div class="flex flex-col gap-4">
                                         <h3 class="text-Neutral-900 font-Jost font-medium text-xl">
@@ -1942,66 +1940,69 @@
                     <div class="border border-[#E3E3E3] rounded-2xl overflow-hidden relative itinerary-tabs">
 
                         <div class="border-b border-[#E3E3E3]">
-                            <div class="swiper itinerary-days-slider">
-                                <div class="swiper-wrapper itinerary-tabs-container">
-                                    <div class="swiper-slide itinerary-tab-itm active" data-tab="day-1">
+                            <div class="itinerary-days relative">
+                                <div class="itinerary-tabs-container flex">
+
+                                    <div class="itinerary-tab-itm basis-full lg:basis-1/3 shrink-0 active"
+                                        data-tab="day-1">
                                         <h4
                                             class="text-Neutral-900 font-semibold text-xl transition-colors duration-300">
                                             Day 1
                                         </h4>
-                                        <p class="text-[#3F445D] truncate transition-colors duration-300">
+                                        <p
+                                            class="text-[#3F445D] truncate transition-colors duration-300">
                                             Italy Rome Exploration
                                         </p>
                                     </div>
-                                    <div class="swiper-slide itinerary-tab-itm" data-tab="day-2">
+
+                                    <div class="itinerary-tab-itm basis-full lg:basis-1/3 shrink-0"
+                                        data-tab="day-2">
                                         <h4
                                             class="text-Neutral-900 font-semibold text-xl transition-colors duration-300">
                                             Day 2
                                         </h4>
-                                        <p class="text-[#3F445D] truncate transition-colors duration-300">
+                                        <p
+                                            class="text-[#3F445D] truncate transition-colors duration-300">
                                             Masterpiece of Vatican
                                         </p>
                                     </div>
-                                    <div class="swiper-slide itinerary-tab-itm" data-tab="day-3">
+
+                                    <div class="itinerary-tab-itm basis-full lg:basis-1/3 shrink-0"
+                                        data-tab="day-3">
                                         <h4
                                             class="text-Neutral-900 font-semibold text-xl transition-colors duration-300">
                                             Day 3
                                         </h4>
-                                        <p class="text-[#3F445D] truncate transition-colors duration-300">
-                                            Masterpiece in the Sky
+                                        <p
+                                            class="text-[#3F445D] truncate transition-colors duration-300">
+                                            Italy Rome Exploration
                                         </p>
                                     </div>
-                                    <div class="swiper-slide itinerary-tab-itm" data-tab="day-4">
+
+                                    <div class="itinerary-tab-itm basis-full lg:basis-1/3 shrink-0"
+                                        data-tab="day-4">
                                         <h4
                                             class="text-Neutral-900 font-semibold text-xl transition-colors duration-300">
                                             Day 4
                                         </h4>
-                                        <p class="text-[#3F445D] truncate transition-colors duration-300">
-                                            Italy Rome Exploration
+                                        <p
+                                            class="text-[#3F445D] truncate transition-colors duration-300">
+                                            Masterpiece of Vatican
                                         </p>
                                     </div>
+
                                 </div>
 
-                                <!-- <button
-                                    class="swiper-button-prev w-10 h-10 rounded-full bg-white flex items-center justify-center border border-[#E0E1E1] transition-opacity duration-300 shadow-md">
-                                    <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-                                        viewBox="0 0 40 40" fill="none">
-                                        <path
-                                            d="M18.0282 26.7017L23.7064 20.6562C23.9127 20.4733 24 20.2346 24 19.9999C24 19.7653 23.9132 19.5274 23.7396 19.3437L18.0614 13.2982C17.6993 12.9154 17.0968 12.8992 16.7151 13.2609C16.3306 13.6238 16.3171 14.2306 16.6779 14.6108L21.7728 20L16.6779 25.3893C16.317 25.7696 16.3307 26.3737 16.7151 26.7392C17.06 27.1007 17.6631 27.0847 18.0282 26.7017Z"
-                                            fill="#293138" />
-                                    </svg>
-                                </button> -->
                                 <button
-                                    class="swiper-button-next w-10 h-10 rounded-full bg-white flex items-center justify-center border border-[#E0E1E1] transition-opacity duration-300 shadow-md">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                        fill="none">
+                                    class="rearrange-button w-10 h-10 rounded-full bg-white flex items-center justify-center border border-[#E0E1E1] transition-opacity duration-300 shadow-md absolute top-1/2 -translate-y-1/2 end-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                        viewBox="0 0 40 40" fill="none">
                                         <path
                                             d="M18.0282 26.7017L23.7064 20.6562C23.9127 20.4733 24 20.2346 24 19.9999C24 19.7653 23.9132 19.5274 23.7396 19.3437L18.0614 13.2982C17.6993 12.9154 17.0968 12.8992 16.7151 13.2609C16.3306 13.6238 16.3171 14.2306 16.6779 14.6108L21.7728 20L16.6779 25.3893C16.317 25.7696 16.3307 26.3737 16.7151 26.7392C17.06 27.1007 17.6631 27.0847 18.0282 26.7017Z"
                                             fill="#293138" />
                                     </svg>
                                 </button>
                             </div>
-
                         </div>
                         <div class="itinerary-tabs-content-container">
                             <div class="p-4 itinerary-tabs-content" data-tab="day-1">
@@ -2119,7 +2120,8 @@
 
                                             <div class="p-3 rounded-xl border border-[#DBDBDB] flex flex-col gap-4">
                                                 <div class="h-[340px]">
-                                                    <div class="swiper trip-slider h-full flex flex-col gap-4 itinerary-cntn-slider">
+                                                    <div
+                                                        class="swiper trip-slider h-full flex flex-col gap-4 itinerary-cntn-slider">
                                                         <div
                                                             class="swiper-wrapper ease-linear rounded-lg overflow-hidden">
                                                             <div class="swiper-slide relative">
@@ -2268,7 +2270,6 @@
                 </div>
             </div>
         </section>
-
     </main>
     <!-- End Main Page Content  -->
 
@@ -2551,6 +2552,55 @@
             }
         });
 
+    </script>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all .itinerary-tabs elements
+    const tabsContainers = document.querySelectorAll('.itinerary-tabs');
+
+    // Loop through each .itinerary-tabs
+    tabsContainers.forEach(tabsContainer => {
+        const tabContainer = tabsContainer.querySelector('.itinerary-tabs-container');
+
+        // Function to reorder days when a tab is clicked for each container
+        function reorderDays(clickedTab) {
+            const tabs = tabContainer.querySelectorAll('.itinerary-tab-itm');
+            const tabsArray = Array.from(tabs);
+            const clickedTabIndex = tabsArray.indexOf(clickedTab);
+
+            // Move tabs before the clicked tab to the end
+            for (let i = 0; i < clickedTabIndex; i++) {
+                tabContainer.appendChild(tabsArray[i]);
+            }
+        }
+
+        // Add click event handlers to each day tab for each container
+        tabContainer.querySelectorAll('.itinerary-tab-itm').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Reorder days when a tab is clicked
+                reorderDays(tab);
+                // Set the clicked tab as active
+                tabContainer.querySelectorAll('.itinerary-tab-itm').forEach(tab => tab.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Add click event handler for the rearrange button for each container
+        const rearrangeButton = tabsContainer.querySelector('.rearrange-button');
+        rearrangeButton.addEventListener('click', () => {
+            const activeTab = tabContainer.querySelector('.itinerary-tab-itm.active');
+            const nextTab = activeTab.nextElementSibling;
+            if (nextTab) {
+                activeTab.classList.remove("active");
+                nextTab.classList.add('active');
+                nextTab.click();
+                tabContainer.appendChild(activeTab);
+            }
+        });
+    });
+});
     </script>
 </body>
 

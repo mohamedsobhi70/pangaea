@@ -1186,10 +1186,11 @@ $(window).on("load", function () {
             container.find(".itinerary-tab-itm").on("click", function () {
                 let th = $(this),
                     itineraryContent = container.find(".itinerary-tabs-content-container");
-                th.addClass("swiper-slide-active").siblings().removeClass("swiper-slide-active");
+                th.addClass("active").siblings().removeClass("active");
 
                 itineraryContent.find(".itinerary-tabs-content").css("display", "none");
                 itineraryContent.find(`.itinerary-tabs-content[data-tab=${th.data("tab")}]`).css("display", "block");
+                
             });
         });
 

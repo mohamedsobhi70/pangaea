@@ -59,7 +59,8 @@
     <main>
         <form id="b2b-form">
             <section class="b2b-content-sec">
-                <div class="container lg:h-full grid grid-cols-1 lg:grid-cols-2 lg:gap-30">
+
+                <div class="container lg:h-full grid grid-cols-1 lg:grid-cols-2 lg:gap-30" id="steps-container">
                     <div class="p-2 pb-0 lg:p-0">
                         <div class="rounded-2xl lg:rounded-3xl overflow-hidden relative min-h-[360px] h-full">
                             <img src="assets/images/herobg.webp" width="1452" height="816"
@@ -77,6 +78,8 @@
                         <div class="flex flex-col gap-10 lg:px-16 w-full">
 
                             <div class="b2b-steps-container">
+
+                                <!-- Step 1  -->
                                 <div class="flex flex-col gap-5 b2b-step-itm" id="step-1">
                                     <!-- Who will be traveling on this trip? -->
                                     <fieldset class="flex flex-col gap-2">
@@ -149,8 +152,8 @@
 
                                                 <li>
                                                     <label class="multi-select-lbl px-2 py-1.5">
-                                                        <input type="checkbox" name="Saudi" id="Saudi"
-                                                            class="peer form-input">
+                                                        <input type="checkbox" name="destination" id="Saudi"
+                                                            value="Saudi" class="peer form-input">
                                                         <span
                                                             class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
                                                             Saudi Arabia
@@ -159,17 +162,7 @@
                                                 </li>
                                                 <li>
                                                     <label class="multi-select-lbl px-2 py-1.5">
-                                                        <input type="checkbox" name="Alula" id="Alula"
-                                                            class="peer form-input">
-                                                        <span
-                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
-                                                            Alula
-                                                        </span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="multi-select-lbl px-2 py-1.5">
-                                                        <input type="checkbox" name="Asir" id="Asir"
+                                                        <input type="checkbox" name="destination" id="Asir" value="Asir"
                                                             class="peer form-input">
                                                         <span
                                                             class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
@@ -179,31 +172,11 @@
                                                 </li>
                                                 <li>
                                                     <label class="multi-select-lbl px-2 py-1.5">
-                                                        <input type="checkbox" name="Egypt" id="Egypt"
-                                                            class="peer form-input">
+                                                        <input type="checkbox" name="destination" id="Egypt"
+                                                            value="Egypt" class="peer form-input">
                                                         <span
                                                             class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
                                                             Egypt
-                                                        </span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="multi-select-lbl px-2 py-1.5">
-                                                        <input type="checkbox" name="USA" id="USA"
-                                                            class="peer form-input">
-                                                        <span
-                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
-                                                            USA
-                                                        </span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="multi-select-lbl px-2 py-1.5">
-                                                        <input type="checkbox" name="France" id="France"
-                                                            class="peer form-input">
-                                                        <span
-                                                            class="flex-1 cursor-pointer text-neutral-700 peer-checked:text-Neutral-900 peer-checked:font-semibold transition-colors duration-300 ease-in-out">
-                                                            France
                                                         </span>
                                                     </label>
                                                 </li>
@@ -268,6 +241,7 @@
                                     </fieldset>
                                 </div>
 
+                                <!-- Step 2  -->
                                 <div class="flex flex-col gap-5 b2b-step-itm" id="step-2">
                                     <!--Choosing Trip Themes -->
                                     <fieldset class="flex flex-col gap-2">
@@ -281,7 +255,10 @@
 
                                             </h3>
                                             <span class="text-Neutral-700 text-xs">
-                                                2 themes selected
+                                                <span class="selected-themes">
+                                                    0
+                                                </span>
+                                                themes selected
                                             </span>
                                         </div>
 
@@ -349,6 +326,7 @@
 
                                 </div>
 
+                                <!-- Step 3  -->
                                 <div class="flex flex-col gap-5 b2b-step-itm" id="step-3">
 
                                     <!-- How long would you like your trip to be?-->
@@ -435,7 +413,9 @@
 
                                 </div>
 
+                                <!-- Step 4  -->
                                 <div class="flex flex-col gap-5 b2b-step-itm" id="step-4">
+
                                     <div class="flex flex-col gap-1">
                                         <h3 class="font-Jost text-Neutral-900 text-xl font-semibold -tracking-[0.4px]">
                                             Budget Preferences
@@ -444,6 +424,7 @@
                                             Tailor your budget to your group's needs.
                                         </p>
                                     </div>
+
                                     <fieldset class="flex flex-col gap-2">
                                         <label for="budget"
                                             class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
@@ -504,6 +485,7 @@
                                             class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
                                             placeholder="Enter the minimum amount (e.g., 10,000)">
                                     </fieldset>
+
                                     <fieldset class="flex flex-col gap-2 budget-range" style="display: none;">
                                         <label for="MaximumBudget"
                                             class="flex items-center gap-2 font-semibold text-Neutral-900 leading-[160%] font-Jost">
@@ -513,9 +495,12 @@
                                             class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
                                             placeholder="Enter the maximum amount (e.g., 100,000)">
                                     </fieldset>
+
                                 </div>
 
+                                <!-- Step 5  -->
                                 <div class="flex flex-col gap-5 b2b-step-itm" id="step-5">
+
                                     <div class="flex flex-col gap-1">
                                         <h3 class="font-Jost text-Neutral-900 text-xl font-semibold -tracking-[0.4px]">
                                             Contact Details
@@ -551,8 +536,8 @@
                                         <div class="flex rounded-xl overflow-hidden">
                                             <select name="counkey-phone" id="counkey-phone" required
                                                 class="min-w-24 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 font-semibold bg-[#F5F5F5]">
-                                                <option value="1">+966</option>
-                                                <option value="2">+20</option>
+                                                <option value="+966">+966</option>
+                                                <option value="+20">+20</option>
                                             </select>
                                             <input type="tel" name="phoneNum" id="phoneNum" required
                                                 class="flex-1 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
@@ -573,6 +558,7 @@
                                             class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5]"
                                             placeholder="Enter your Email">
                                     </fieldset>
+
                                 </div>
 
                             </div>
@@ -593,6 +579,139 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="container w-full lg:w-1/2 hidden" id="confirmation-container">
+                    <div class="flex flex-col gap-16">
+                        <div class="flex flex-col gap-6 pt-8 lg:pt-12">
+                            <p class="text-Neutral-700 font-semibold text-xl -tracking-[0.4px]">
+                                Summary
+                            </p>
+
+                            <div class="flex flex-col gap-6">
+                                <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
+                                    <span class="flex items-center gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/global-1.svg" width="20" height="20" alt="global">
+                                        Location
+                                    </span>
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                        Asir & Neom
+                                    </span>
+                                </div>
+                                <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
+                                    <span class="flex items-center gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/book-1.svg" width="20" height="20" alt="book">
+                                        Trip Theme
+                                    </span>
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                        Adventure & Historical
+                                    </span>
+                                </div>
+                                <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
+                                    <span class="flex items-center gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/clock-1.svg" width="20" height="20" alt="clock">
+                                        Duration
+                                    </span>
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                        2 Days / 1 Night
+                                    </span>
+                                </div>
+                                <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
+                                    <span class="flex items-center gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/calendar-1.svg" width="20" height="20"
+                                            alt="global">
+                                        Departure Date
+                                    </span>
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                        10/05/2024
+                                    </span>
+                                </div>
+                                <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
+                                    <span class="flex items-center gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/people-1.svg" width="20" height="20" alt="global">
+                                        Traveler(s)
+                                    </span>
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                        <span class="flex items-center gap-2.5">
+                                            <span class="text-Brand-Dark">11</span>
+                                            Adult
+                                            <span class="text-Brand-Dark">+</span>
+                                            <span class="text-Brand-Dark">1</span>
+                                            Child
+                                            <span class="text-Brand-Dark">= 12 traveler</span>
+
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
+                                    <span class="flex items-center gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/budget.svg" width="20" height="20" alt="budget">
+                                        Your Budget
+                                    </span>
+                                    <span class="text-Brand-Dark leading-[160%] font-semibold">
+                                        15,000 SAR
+                                    </span>
+                                </div>
+
+                                <div class="flex items-start gap-2">
+                                    <div class="flex-1 flex items-start gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
+                                        <span class="flex flex-col gap-1">
+                                            Trip Purpose
+                                            <p class="text-xs text-[#646768] leading-[160%]">
+                                                Team building retreat to foster collaboration and communication. (Click
+                                                to
+                                                expand)
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <img src="assets/images/icons/acc-down.svg" class="designpeer-toggle-icon"
+                                        width="20" height="20" alt="acc-down">
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <div class="flex-1 flex items-start gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
+                                        <span class="flex flex-col gap-1">
+                                            Special Requests
+                                            <p class="text-xs text-[#646768] leading-[160%]">
+                                                Dietary restrictions for some team members. Private tent for Sarah...
+                                                (Click
+                                                to expand)
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <img src="assets/images/icons/acc-down.svg" class="designpeer-toggle-icon"
+                                        width="20" height="20" alt="acc-down">
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <div class="flex-1 flex items-start gap-2 text-Neutral-700">
+                                        <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
+                                        <span class="flex flex-col gap-1">
+                                            Your non-negotiables
+                                            <p class="text-xs text-[#646768] leading-[160%]">
+                                                Pick-up service is a must, besides specifying a meeting point for
+                                                presentations... (Click to expand)
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <img src="assets/images/icons/acc-down.svg" class="designpeer-toggle-icon"
+                                        width="20" height="20" alt="acc-down">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div
+                            class="z-10 lg:z-auto border-t border-Neutral-100 shadow-b2bcta py-4 px-5 lg:p-0 fixed lg:static bottom-0 left-0 w-full bg-white lg:bg-transparent lg:shadow-none lg:border-t-0 flex items-center gap-5">
+                            <a href="#"
+                                class="w-14 h-14 border border-neutral-300 rounded-full flex items-center justify-center shrink-0">
+                                <img src="assets/images/icons/chevron-left.svg" width="24" height="24" alt="backIcon">
+                            </a>
+                            <input type="submit" value="Continue"
+                                class="rounded-full !bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center w-full">
+                        </div>
+                    </div>
+
+                </div>
+
             </section>
         </form>
     </main>
@@ -606,7 +725,19 @@
     <script src="assets/scripts/script.js"></script>
 
     <script>
+        document.querySelector("#b2b-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+        });
+        $(".decreace-btn").on("click", function () {
+            if ($(this).siblings("input[type=number]").val() > 0) {
+                $(this).siblings("input[type=number]").val(+$(this).siblings("input[type=number]").val() - 1);
+            }
+        })
 
+        $(".increace-btn").on("click", function () {
+            $(this).siblings("input[type=number]").val(+$(this).siblings("input[type=number]").val() + 1);
+
+        })
 
         // Display the First Step
         var currentTab = 0;
@@ -625,22 +756,18 @@
                 document.getElementById("step-prevBtn").style.display = "flex";
             }
 
-            if (n == (stepitm.length - 1)) {
-                document.getElementById("step-nextBtn").innerHTML = "Submit";
-            }
-            else {
-                document.getElementById("step-nextBtn").innerHTML = "Continue";
-            }
-
+            // if (n == (stepitm.length - 1)) {
+            //     document.getElementById("step-nextBtn").innerHTML = "Submit";
+            // }
+            // else {
+            //     document.getElementById("step-nextBtn").innerHTML = "Continue";
+            // }
             calcStep(n)
         }
 
         function nextPrev(n) {
-
             // This function will figure out which tab to display
             var stepitm = document.querySelectorAll(".b2b-step-itm");
-
-            console.log("kkl");
             // Exit the function if any field in the current tab is invalid:
             if (n == 1 && !validateForm()) return false;
 
@@ -650,39 +777,80 @@
             // Increase or decrease the current tab by 1:
             currentTab = currentTab + n;
 
-            // if you have reached the end of the form... :
+            // if you have reached the end of the form
 
             if (currentTab >= stepitm.length) {
-                //...the form gets submitted:
+                calcStep(stepitm.length)
+
+                $("#steps-container").addClass("hidden");
+
+                $("#confirmation-container").removeClass("hidden");
+
                 document.getElementById("b2b-form").submit();
                 return false;
             }
 
-            // Otherwise, display the correct tab:
             showTab(currentTab);
         }
 
         function validateForm() {
             // This function deals with validation of the form fields
-            var stepitm, y, i, valid = true;
-            stepitm = document.querySelectorAll(".b2b-step-itm");
-            y = stepitm[currentTab].querySelectorAll(".inpt-field");
-
+            var stepitm = document.querySelectorAll(".b2b-step-itm"),
+                inputFields = stepitm[currentTab].querySelectorAll(".inpt-field"),
+                valid = true,
+                i;
             // A loop that checks every input field in the current tab
-            for (i = 0; i < y.length; i++) {
-                if (y[i].value == "") {
-                    y[i].className += " invalid";
+            for (i = 0; i < inputFields.length; i++) {
+                if (inputFields[i].value == "") {
+                    inputFields[i].className += " invalid";
                     valid = false;
                 }
             }
 
             return valid; // return the valid status
         }
+        // function validateForm() {
+        //     // This function deals with validation of the form fields
+        //     var stepitm, inputs, i, valid = true;
+        //     stepitm = document.querySelectorAll(".b2b-step-itm");
+        //     inputs = stepitm[currentTab].querySelectorAll(".inpt-field");
+
+        //     // A loop that checks every input field in the current tab
+        //     inputs.forEach(function (input) {
+        //         if (input.hasAttribute('required')) {
+        //             if (input.type === 'text' || input.type === 'textarea') {
+        //                 if (input.value.trim() === "") {
+        //                     input.classList.add("invalid");
+        //                     valid = false;
+        //                 }
+        //             } else if (input.type === 'select') {
+        //                 if (input.value.trim() === "" || input.selectedIndex === 0) {
+        //                     input.classList.add("invalid");
+        //                     valid = false;
+        //                 }
+        //             } else if (input.type === 'radio') {
+        //                 var radioGroup = document.querySelectorAll("input[name='" + input.name + "']");
+        //                 var checked = Array.from(radioGroup).some(function (radio) {
+        //                     return radio.checked;
+        //                 });
+        //                 if (!checked) {
+        //                     valid = false;
+        //                     // You can add error handling logic for radio inputs here
+        //                 }
+        //             } else if (input.type === 'checkbox') {
+        //                 // Add validation logic for checkboxes if needed
+        //             }
+        //         }
+        //     });
+
+        //     return valid; // return the valid status
+        // }
 
         function calcStep(n) {
             $(".step-num").html((n + 1));
             $(".step-progress").css("width", ((n + 1) * 100 / 6) + "%");
         }
+
 
         //  Event listener for radio buttons
         $('input[type=radio][name=budget]').change(function () {
@@ -698,6 +866,19 @@
             }
         });
 
+        // Get all checkboxes
+        const checkboxes = document.querySelectorAll('input[type="checkbox"][name="themes"]');
+
+        // Add event listeners to checkboxes
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener('change', function () {
+                // Get the count of selected checkboxes
+                let selectedCount = document.querySelectorAll('input[type="checkbox"][name="themes"]:checked').length;
+
+                // Update the count display
+                document.querySelector('.selected-themes').textContent = selectedCount;
+            });
+        });
     </script>
 </body>
 
