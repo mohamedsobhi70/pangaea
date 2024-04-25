@@ -570,10 +570,10 @@
                                     <img src="assets/images/icons/chevron-left.svg" width="24" height="24"
                                         alt="backIcon">
                                 </span>
-                                <span onclick="nextPrev(1)" role="button" id="step-nextBtn"
-                                    class="b2b-nxt-btn rounded-full !bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center w-full cursor-pointer">
+                                <button onclick="nextPrev(1)" id="step-nextBtn"
+                                    class="b2b-nxt-btn rounded-full disabled:!bg-Neutral-500 !bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center w-full cursor-pointer">
                                     Continue
-                                </span>
+                                </button>
                             </div>
 
                         </div>
@@ -728,6 +728,7 @@
         document.querySelector("#b2b-form").addEventListener("submit", function (e) {
             e.preventDefault();
         });
+      
         $(".decreace-btn").on("click", function () {
             if ($(this).siblings("input[type=number]").val() > 0) {
                 $(this).siblings("input[type=number]").val(+$(this).siblings("input[type=number]").val() - 1);
@@ -739,12 +740,15 @@
 
         })
 
+        $("#step-nextBtn").on("click", function (e) {
+            e.preventDefault()
+        })
+
         // Display the First Step
         var currentTab = 0;
         showTab(currentTab);
 
         function showTab(n) {
-
             // This function will display the specified Step of the form
             var stepitm = document.querySelectorAll(".b2b-step-itm");
             stepitm[n].style.display = "flex";
@@ -755,102 +759,67 @@
             else {
                 document.getElementById("step-prevBtn").style.display = "flex";
             }
-
-            // if (n == (stepitm.length - 1)) {
-            //     document.getElementById("step-nextBtn").innerHTML = "Submit";
-            // }
-            // else {
-            //     document.getElementById("step-nextBtn").innerHTML = "Continue";
-            // }
             calcStep(n)
         }
 
         function nextPrev(n) {
-            // This function will figure out which tab to display
+            // This function will figure out which Step to display
+
             var stepitm = document.querySelectorAll(".b2b-step-itm");
-            // Exit the function if any field in the current tab is invalid:
-            if (n == 1 && !validateForm()) return false;
 
-            // Hide the current tab:
+            if (n == 1 && !validateForm(n)) return false;
+
+            // Hide the current Step and show next Step
             stepitm[currentTab].style.display = "none";
-
-            // Increase or decrease the current tab by 1:
             currentTab = currentTab + n;
 
             // if you have reached the end of the form
 
             if (currentTab >= stepitm.length) {
                 calcStep(stepitm.length)
-
                 $("#steps-container").addClass("hidden");
-
                 $("#confirmation-container").removeClass("hidden");
-
-                document.getElementById("b2b-form").submit();
                 return false;
             }
-
             showTab(currentTab);
         }
 
-        function validateForm() {
+        function validateForm(n) {
             // This function deals with validation of the form fields
             var stepitm = document.querySelectorAll(".b2b-step-itm"),
                 inputFields = stepitm[currentTab].querySelectorAll(".inpt-field"),
                 valid = true,
                 i;
+
+            console.log(inputFields);
+
+            console.log(n);
             // A loop that checks every input field in the current tab
-            for (i = 0; i < inputFields.length; i++) {
-                if (inputFields[i].value == "") {
-                    inputFields[i].className += " invalid";
-                    valid = false;
-                }
-            }
+            // for (i = 0; i < inputFields.length; i++) {
+            //     if ($("input[name='whoTravel']:checked").length > 0) {
+            //         valid = true;
+            //     }
+            //     else {
+            //         valid = false;
+            //     }
+            // }
 
-            return valid; // return the valid status
+            return valid; 
         }
-        // function validateForm() {
-        //     // This function deals with validation of the form fields
-        //     var stepitm, inputs, i, valid = true;
-        //     stepitm = document.querySelectorAll(".b2b-step-itm");
-        //     inputs = stepitm[currentTab].querySelectorAll(".inpt-field");
-
-        //     // A loop that checks every input field in the current tab
-        //     inputs.forEach(function (input) {
-        //         if (input.hasAttribute('required')) {
-        //             if (input.type === 'text' || input.type === 'textarea') {
-        //                 if (input.value.trim() === "") {
-        //                     input.classList.add("invalid");
-        //                     valid = false;
-        //                 }
-        //             } else if (input.type === 'select') {
-        //                 if (input.value.trim() === "" || input.selectedIndex === 0) {
-        //                     input.classList.add("invalid");
-        //                     valid = false;
-        //                 }
-        //             } else if (input.type === 'radio') {
-        //                 var radioGroup = document.querySelectorAll("input[name='" + input.name + "']");
-        //                 var checked = Array.from(radioGroup).some(function (radio) {
-        //                     return radio.checked;
-        //                 });
-        //                 if (!checked) {
-        //                     valid = false;
-        //                     // You can add error handling logic for radio inputs here
-        //                 }
-        //             } else if (input.type === 'checkbox') {
-        //                 // Add validation logic for checkboxes if needed
-        //             }
-        //         }
-        //     });
-
-        //     return valid; // return the valid status
-        // }
-
+      
         function calcStep(n) {
             $(".step-num").html((n + 1));
             $(".step-progress").css("width", ((n + 1) * 100 / 6) + "%");
         }
 
+        function disableNextBtn(valid){
+            if (valid) {
+                $(".b2b-nxt-btn").prop('disabled', false)
+            }
+            else {
+                $(".b2b-nxt-btn").prop('disabled', true)
+            }
+        }
 
         //  Event listener for radio buttons
         $('input[type=radio][name=budget]').change(function () {
