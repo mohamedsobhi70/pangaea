@@ -343,16 +343,20 @@
                                             <span class="text-Neutral-900 text-sm font-semibold leading-[160%] grow">
                                                 Trip Duration
                                             </span>
-                                            <div class="flex items-center gap-3">
+                                            <div class="flex items-center gap-1 text-[#515456] text-sm">
                                                 <span role="button"
                                                     class="decreace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
                                                     <img src="assets/images/icons/minus.svg" width="13" height="13"
                                                         alt="minus">
                                                 </span>
-                                                <span class="text-[#515456] text-sm">
-                                                    1 day / 0 Night
-                                                </span>
-
+                                                <input type="number" name="day-num" id="day-num" min="0" value="1"
+                                                    readonly=""
+                                                    class="text-center font-semibold bg-transparent inpt-field w-5 text-[#515456] text-sm">
+                                                day
+                                                <input type="number" name="night-num" id="night-num" min="1" value="0"
+                                                    readonly=""
+                                                    class="text-center font-semibold bg-transparent inpt-field w-5 text-[#515456] text-sm">
+                                                Night
                                                 <span role="button"
                                                     class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
                                                     <img src="assets/images/icons/add.svg" width="13" height="13"
@@ -588,43 +592,48 @@
                             </p>
 
                             <div class="flex flex-col gap-6">
+
                                 <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
                                     <span class="flex items-center gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/global-1.svg" width="20" height="20" alt="global">
                                         Location
                                     </span>
-                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold" id="user-locations">
                                         Asir & Neom
                                     </span>
                                 </div>
+
                                 <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
                                     <span class="flex items-center gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/book-1.svg" width="20" height="20" alt="book">
                                         Trip Theme
                                     </span>
-                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold" id="user-themes">
                                         Adventure & Historical
                                     </span>
                                 </div>
+
                                 <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
                                     <span class="flex items-center gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/clock-1.svg" width="20" height="20" alt="clock">
                                         Duration
                                     </span>
-                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold" id="user-duration">
                                         2 Days / 1 Night
                                     </span>
                                 </div>
+
                                 <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
                                     <span class="flex items-center gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/calendar-1.svg" width="20" height="20"
                                             alt="global">
                                         Departure Date
                                     </span>
-                                    <span class="text-Neutral-900 leading-[160%] font-semibold">
+                                    <span class="text-Neutral-900 leading-[160%] font-semibold" id="user-trip-date">
                                         10/05/2024
                                     </span>
                                 </div>
+
                                 <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
                                     <span class="flex items-center gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/people-1.svg" width="20" height="20" alt="global">
@@ -632,22 +641,23 @@
                                     </span>
                                     <span class="text-Neutral-900 leading-[160%] font-semibold">
                                         <span class="flex items-center gap-2.5">
-                                            <span class="text-Brand-Dark">11</span>
+                                            <span class="text-Brand-Dark" id="user-adult-num">11</span>
                                             Adult
                                             <span class="text-Brand-Dark">+</span>
-                                            <span class="text-Brand-Dark">1</span>
+                                            <span class="text-Brand-Dark" id="user-child-num">1</span>
                                             Child
-                                            <span class="text-Brand-Dark">= 12 traveler</span>
+                                            <span class="text-Brand-Dark" id="user-traveler-num">= 12 traveler</span>
 
                                         </span>
                                     </span>
                                 </div>
+
                                 <div class="flex justify-between lg:items-center gap-2 flex-col md:flex-row">
                                     <span class="flex items-center gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/budget.svg" width="20" height="20" alt="budget">
                                         Your Budget
                                     </span>
-                                    <span class="text-Brand-Dark leading-[160%] font-semibold">
+                                    <span class="text-Brand-Dark leading-[160%] font-semibold" id="user-budget">
                                         15,000 SAR
                                     </span>
                                 </div>
@@ -657,16 +667,21 @@
                                         <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
                                         <span class="flex flex-col gap-1">
                                             Trip Purpose
-                                            <p class="text-xs text-[#646768] leading-[160%]">
-                                                Team building retreat to foster collaboration and communication. (Click
-                                                to
-                                                expand)
+                                            <p
+                                                class="text-xs text-[#646768] leading-[160%] cursor-pointer expanded-txt">
+                                                <span class=" line-clamp-1">
+                                                    Team building retreat to foster collaboration and communication.
+                                                    Team building retreat to foster collaboration and communication.
+                                                    Team building retreat to foster collaboration and communication.
+                                                    Team building retreat to foster collaboration and communication.
+                                                </span>
                                             </p>
                                         </span>
                                     </div>
                                     <img src="assets/images/icons/acc-down.svg" class="designpeer-toggle-icon"
                                         width="20" height="20" alt="acc-down">
                                 </div>
+
                                 <div class="flex items-start gap-2">
                                     <div class="flex-1 flex items-start gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
@@ -682,6 +697,7 @@
                                     <img src="assets/images/icons/acc-down.svg" class="designpeer-toggle-icon"
                                         width="20" height="20" alt="acc-down">
                                 </div>
+
                                 <div class="flex items-start gap-2">
                                     <div class="flex-1 flex items-start gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
@@ -699,15 +715,13 @@
 
                             </div>
                         </div>
+
                         <div
                             class="z-10 lg:z-auto border-t border-Neutral-100 shadow-b2bcta py-4 px-5 lg:p-0 fixed lg:static bottom-0 left-0 w-full bg-white lg:bg-transparent lg:shadow-none lg:border-t-0 flex items-center gap-5">
-                            <a href="#"
-                                class="w-14 h-14 border border-neutral-300 rounded-full flex items-center justify-center shrink-0">
-                                <img src="assets/images/icons/chevron-left.svg" width="24" height="24" alt="backIcon">
-                            </a>
                             <input type="submit" value="Continue"
                                 class="rounded-full !bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center w-full">
                         </div>
+
                     </div>
 
                 </div>
@@ -725,20 +739,74 @@
     <script src="assets/scripts/script.js"></script>
 
     <script>
+
+        let userData = {};
+
+        function setUserData() {
+            userData.whoTravel = $("input[name='whoTravel']:checked").val();
+            userData.adultsNum = $("input[name='adults-num']").val();
+            userData.childrenNum = $("input[name='children-num']").val();
+            userData.specialRequest = $("textarea[name='special-request']").val();
+            userData.flexiblty = $("input[name='Flexiblty']:checked").val();
+            userData.budget = $("input[name='whoTravel']:checked").val();
+            userData.budgetAmount = $("input[name='BudgetAmount']").val();
+            userData.minimumBudget = $("input[name='MinimumBudget']").val();
+            userData.maximumBudget = $("input[name='MaximumBudget']").val();
+            userData.dayNum = $("input[name='day-num']").val();
+            userData.nightNum = $("input[name='night-num']").val();
+            userData.name = $("input[name='Name']").val();
+            userData.phoneNum = $("input[name='phoneNum']").val();
+            userData.email = $("input[name='Email']").val();
+
+            userData.destination = $("input[name='destination']:checked").map(function () {
+                return $(this).val();
+            }).get();
+            userData.themes = $("input[name='themes']:checked").map(function () {
+                return $(this).val();
+            }).get();
+            $("select[name='counkey-phone']").change(function () {
+                userData.counkey = $(this).val();
+            });
+
+            document.getElementById("tripdate").addEventListener("change", function () {
+                let selectedDate = new Date(document.getElementById("tripdate").value);
+                let day = selectedDate.getDate();
+                let month = selectedDate.getMonth() + 1;
+                let year = selectedDate.getFullYear();
+                userData.tripdate = day + "/" + month + "/" + year;
+            });
+        }
+
+        function confirmUserData() {
+            $("#confirmation-container #user-locations").html(userData.destination.join(", "));
+            $("#confirmation-container #user-adult-num").html(userData.adultsNum);
+            $("#confirmation-container #user-child-num").html(userData.childrenNum);
+            $("#confirmation-container #user-themes").html(userData.themes.join(", "));
+            $("#confirmation-container #user-trip-date").html(userData.tripdate);
+            $("#confirmation-container #user-budget").html(userData.budgetAmount);
+            $("#confirmation-container #user-duration").html(userData.dayNum + " Days /" + userData.nightNum + " Night");
+            $("#confirmation-container #user-traveler-num").html("= " + (+userData.adultsNum + +userData.childrenNum) + " traveler");
+
+        }
+
+
         document.querySelector("#b2b-form").addEventListener("submit", function (e) {
             e.preventDefault();
         });
-      
+
+
         $(".decreace-btn").on("click", function () {
             if ($(this).siblings("input[type=number]").val() > 0) {
                 $(this).siblings("input[type=number]").val(+$(this).siblings("input[type=number]").val() - 1);
             }
         })
 
+
         $(".increace-btn").on("click", function () {
             $(this).siblings("input[type=number]").val(+$(this).siblings("input[type=number]").val() + 1);
 
         })
+
 
         $("#step-nextBtn").on("click", function (e) {
             e.preventDefault()
@@ -746,6 +814,7 @@
 
         // Display the First Step
         var currentTab = 0;
+
         showTab(currentTab);
 
         function showTab(n) {
@@ -771,17 +840,18 @@
 
             // Hide the current Step and show next Step
             stepitm[currentTab].style.display = "none";
+
             currentTab = currentTab + n;
-
             // if you have reached the end of the form
-
             if (currentTab >= stepitm.length) {
                 calcStep(stepitm.length)
                 $("#steps-container").addClass("hidden");
                 $("#confirmation-container").removeClass("hidden");
+                confirmUserData();
                 return false;
             }
             showTab(currentTab);
+            setUserData();
         }
 
         function validateForm(n) {
@@ -791,35 +861,14 @@
                 valid = true,
                 i;
 
-            console.log(inputFields);
-
-            console.log(n);
-            // A loop that checks every input field in the current tab
-            // for (i = 0; i < inputFields.length; i++) {
-            //     if ($("input[name='whoTravel']:checked").length > 0) {
-            //         valid = true;
-            //     }
-            //     else {
-            //         valid = false;
-            //     }
-            // }
-
-            return valid; 
+            return valid;
         }
-      
+
         function calcStep(n) {
             $(".step-num").html((n + 1));
             $(".step-progress").css("width", ((n + 1) * 100 / 6) + "%");
         }
 
-        function disableNextBtn(valid){
-            if (valid) {
-                $(".b2b-nxt-btn").prop('disabled', false)
-            }
-            else {
-                $(".b2b-nxt-btn").prop('disabled', true)
-            }
-        }
 
         //  Event listener for radio buttons
         $('input[type=radio][name=budget]').change(function () {
@@ -848,6 +897,14 @@
                 document.querySelector('.selected-themes').textContent = selectedCount;
             });
         });
+
+
+        if ($(".expanded-txt").length > 0) {
+            $(".expanded-txt").click(function () {
+                $(this).find("span").toggleClass("line-clamp-1");
+            });
+        }
+
     </script>
 </body>
 
