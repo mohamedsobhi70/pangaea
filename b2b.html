@@ -675,10 +675,21 @@
 
                 <div class="container w-full lg:w-1/2 hidden" id="confirmation-container">
                     <div class="flex flex-col gap-16">
-                        <div class="flex flex-col gap-6 pt-8 lg:pt-12">
-                            <p class="text-Neutral-700 font-semibold text-xl -tracking-[0.4px]">
-                                Summary
-                            </p>
+                        <div class="flex flex-col gap-5 pt-8 lg:pt-12">
+                            <div class="flex flex-col gap-1">
+                                <p class="text-Neutral-900 text-xl font-semibold -tracking-[-0.4px]">
+                                    Please review your request summary
+                                    <span id="user-name">
+                                        [name that the user added in the previous screen]
+                                    </span>
+                                </p>
+                                <p class="text-[#646768] leading-[160%]">
+                                    Double-check before submitting your request, We’ll reach out on
+                                    <span class="text-Brand-Dark" id="user-phone-num">
+                                        [phone number that the user added in the previous screen]
+                                    </span>
+                                </p>
+                            </div>
 
                             <div class="flex flex-col gap-6">
 
@@ -979,7 +990,8 @@
             $(".step-progress").css("width", "100%");
             $("#steps-container").addClass("hidden");
             $("#confirmation-container").removeClass("hidden");
-            confirmUserData()
+            setUserData();
+            confirmUserData();
         }
 
         function confirmUserData() {
@@ -990,11 +1002,14 @@
             $("#confirmation-container #user-trip-date").html(userData.tripdate);
             $("#confirmation-container #user-duration").html(`${userData.dayNum}Days /  ${userData.nightNum}Night`);
             $("#confirmation-container #user-traveler-num").html(`= ${+userData.adultsNum + +userData.childrenNum} traveler`);
+            $("#confirmation-container #user-phone-num").html(` ${userData.counkey||"+966" + userData.phoneNum}`);
+            $("#confirmation-container #user-name").html(` ${userData.name}`);
+
             if (userData.budget === "later") {
                 $("#confirmation-container #user-budget").html("Will Decide later");
             }
             else if (userData.budget === "exact") {
-                $("#confirmation-container #user-budget").html(userData.budgetAmount+" SAR");
+                $("#confirmation-container #user-budget").html(userData.budgetAmount + " SAR");
             }
             else if (userData.budget === "range") {
                 $("#confirmation-container #user-budget").html(`${userData.minimumBudget} SAR - ${userData.maximumBudget} SAR`);
@@ -1016,6 +1031,11 @@
             nextPrev(-1);
         });
 
+        if ($(".expanded-txt").length > 0) {
+            $(".expanded-txt").click(function () {
+                $(this).find("span").toggleClass("line-clamp-1");
+            });
+        }
     </script>
 
 

@@ -3268,13 +3268,6 @@ select:focus {
   margin-top: auto;
 }
 
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
@@ -3282,16 +3275,15 @@ select:focus {
   -webkit-line-clamp: 1;
 }
 
-.\!block {
-  display: block !important;
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .block {
   display: block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -3503,6 +3495,10 @@ select:focus {
   width: 66.666667%;
 }
 
+.w-5 {
+  width: 1.25rem;
+}
+
 .w-5\/6 {
   width: 83.333333%;
 }
@@ -3570,15 +3566,6 @@ select:focus {
 
 .w-full {
   width: 100%;
-}
-
-.w-max {
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.w-5 {
-  width: 1.25rem;
 }
 
 .min-w-24 {
@@ -4700,6 +4687,10 @@ select:focus {
   line-height: 1.5;
 }
 
+.leading-\[1\] {
+  line-height: 1;
+}
+
 .-tracking-\[-0\.24px\] {
   letter-spacing: 0.24px;
 }
@@ -5056,18 +5047,18 @@ select:focus {
   transition-timing-function: linear;
 }
 
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
 .line-clamp-1 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .swiper-button-next.swiper-button-disabled,
