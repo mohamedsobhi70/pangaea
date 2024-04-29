@@ -4687,10 +4687,6 @@ select:focus {
   line-height: 1.5;
 }
 
-.leading-\[1\] {
-  line-height: 1;
-}
-
 .-tracking-\[-0\.24px\] {
   letter-spacing: 0.24px;
 }
