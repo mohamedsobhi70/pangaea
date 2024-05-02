@@ -5947,6 +5947,12 @@ a.ui-button:active,
   display: none;
 }
 
+.err-border {
+  border-width: 1px;
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(217 45 32 / var(--tw-border-opacity)) !important;
+}
+
 .placeholder\:font-normal::-moz-placeholder {
   font-weight: 400;
 }
