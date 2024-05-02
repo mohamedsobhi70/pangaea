@@ -3568,6 +3568,10 @@ select:focus {
   width: 100%;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .min-w-24 {
   min-width: 6rem;
 }

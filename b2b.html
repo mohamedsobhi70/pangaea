@@ -57,7 +57,7 @@
 
     <!-- Start Main Page Content  -->
     <main>
-        <form id="b2b-form">
+        <form id="b2b-form" action="b2b-confirmation.html">
             <section class="b2b-content-sec">
 
                 <div class="container lg:h-full grid grid-cols-1 lg:grid-cols-2 lg:gap-30" id="steps-container">
@@ -129,7 +129,8 @@
                                                     </span>
                                                 </h3>
 
-                                                <div class="relative multi-select-container bg-[#F5F5F5] rounded-xl reqinpt">
+                                                <div
+                                                    class="relative multi-select-container bg-[#F5F5F5] rounded-xl reqinpt">
                                                     <div class="flex gap-1.5 items-center flex-wrap py-3 px-4 ">
                                                         <div
                                                             class="selected-items flex-wrap flex gap-1.5 items-center overflow-hidden">
@@ -223,7 +224,7 @@
                                                                     height="13" alt="minus">
                                                             </span>
                                                             <input type="number" name="adults-num" id="adults-num"
-                                                                min="0" value="0" readonly=""
+                                                                min="0" value="0"
                                                                 class="text-Brand-Dark w-12 text-center font-semibold bg-transparent inpt-field">
                                                             <span role="button"
                                                                 class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
@@ -245,7 +246,7 @@
                                                                     height="13" alt="minus">
                                                             </span>
                                                             <input type="number" name="children-num" id="children-num"
-                                                                min="0" value="0" readonly=""
+                                                                min="0" value="0"
                                                                 class="text-Brand-Dark w-12 text-center font-semibold bg-transparent inpt-field">
                                                             <span role="button"
                                                                 class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
@@ -410,8 +411,8 @@
                                                                 height="13" alt="minus">
                                                         </span>
                                                         <input type="number" name="day-num" id="day-num" min="0"
-                                                            value="0" readonly
-                                                            class="text-center font-semibold bg-transparent inpt-field w-5 text-[#515456] text-sm">
+                                                            value="0"
+                                                            class="text-center font-semibold bg-transparent inpt-field w-7 text-[#515456] text-sm">
                                                         day
                                                         <span role="button"
                                                             class="increace-btn border border-Neutral-300 bg-Neutral-50 rounded-full p-1">
@@ -561,6 +562,9 @@
                                                 <input type="number" name="BudgetAmount" id="BudgetAmount"
                                                     class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5] reqinpt"
                                                     placeholder="Enter your exact budget (e.g., 100,000)">
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <!-- Fieldset for Budget Range -->
@@ -572,6 +576,9 @@
                                                 <input type="number" name="MinimumBudget" id="MinimumBudget"
                                                     class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5] reqinpt"
                                                     placeholder="Enter the minimum amount (e.g., 10,000)">
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <fieldset class="flex flex-col gap-2 budget-range" style="display: none;">
@@ -582,6 +589,9 @@
                                                 <input type="number" name="MaximumBudget" id="MaximumBudget"
                                                     class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5] reqinpt"
                                                     placeholder="Enter the maximum amount (e.g., 100,000)">
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                         </div>
@@ -785,7 +795,7 @@
                                     </span>
                                 </div>
 
-                                <div class="flex items-start gap-2">
+                                <!-- <div class="flex items-start gap-2">
                                     <div class="flex-1 flex items-start gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
                                         <span class="flex flex-col gap-1">
@@ -803,24 +813,28 @@
                                     </div>
                                     <img src="assets/images/icons/acc-down.svg" class="designpeer-toggle-icon"
                                         width="20" height="20" alt="acc-down">
-                                </div>
+                                </div> -->
 
                                 <div class="flex items-start gap-2">
                                     <div class="flex-1 flex items-start gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
                                         <span class="flex flex-col gap-1">
                                             Special Requests
-                                            <p class="text-xs text-[#646768] leading-[160%]">
-                                                Dietary restrictions for some team members. Private tent for Sarah...
-                                                (Click
-                                                to expand)
+                                            <p
+                                                class="text-xs text-[#646768] leading-[160%] cursor-pointer expanded-txt">
+                                                <span id="user-special-req">
+                                                    Team building retreat to foster collaboration and communication.
+                                                    Team building retreat to foster collaboration and communication.
+                                                    Team building retreat to foster collaboration and communication.
+                                                    Team building retreat to foster collaboration and communication.
+                                                </span>
                                             </p>
                                         </span>
                                     </div>
                                     <img src="assets/images/icons/acc-down.svg" class="designpeer-toggle-icon"
                                         width="20" height="20" alt="acc-down">
                                 </div>
-
+                                <!-- 
                                 <div class="flex items-start gap-2">
                                     <div class="flex-1 flex items-start gap-2 text-Neutral-700">
                                         <img src="assets/images/icons/star-1.svg" width="20" height="20" alt="star">
@@ -834,7 +848,7 @@
                                     </div>
                                     <img src="assets/images/icons/acc-down.svg" class="designpeer-toggle-icon"
                                         width="20" height="20" alt="acc-down">
-                                </div>
+                                </div> -->
 
                             </div>
                         </div>
@@ -851,7 +865,6 @@
 
                 </div>
 
-
             </section>
         </form>
     </main>
@@ -863,59 +876,6 @@
     <script src="assets/scripts/litepicker.js"></script>
     <script src="assets/scripts/swiper.js"></script>
     <script src="assets/scripts/script.js"></script>
-
-    <!-- <script>
-        function validateStep1() {
-            // let isValid = false;
-
-            // // who travel input 
-            // let whoTravelRadioButtons = document.querySelectorAll('input[name="whoTravel"]');
-            // let isRadioButtonChecked = false;
-
-            // // destination multiselect input 
-            // let selectedDestinations = document.querySelectorAll('input[name="destination"]:checked');
-            // let isDestinationSelected = selectedDestinations.length > 0;
-
-            // // adults num and childrens num inputs 
-            // let adultsNum = parseInt(document.getElementById('adults-num').value);
-            // let childrenNum = parseInt(document.getElementById('children-num').value);
-            // let isAdultsValid = adultsNum > 0;
-            // let isChildrenValid = childrenNum > 0;
-
-            // whoTravelRadioButtons.forEach(function (radioButton) {
-            //     if (radioButton.checked) {
-            //         isRadioButtonChecked = true;
-            //     }
-            // });
-
-            // if (!isRadioButtonChecked) {
-
-            //     isValid = false;
-            // }
-
-            // if (!isDestinationSelected) {
-            //     isValid = false;
-            // }
-
-            // if (!isAdultsValid) {
-            //     isValid = false;
-            // }
-
-            // if (!isChildrenValid) {
-            //     isValid = false;
-            // }
-
-            // if (isRadioButtonChecked && isDestinationSelected && (isAdultsValid || isChildrenValid)) {
-            //     console.log("valid");
-
-            // }
-            // else {
-            //     console.log("is not validated yet");
-
-            // }
-
-        }
-    </script> -->
 
     <script>
         let currentTab = 0,
@@ -1181,7 +1141,7 @@
             // If all validations pass, return true
             return true;
         }
-      
+
         function fixStepIndicator(n) {
             $(".step-num").html((n + 1));
             $(".step-progress").css("width", ((n + 1) * 100 / 6) + "%");
@@ -1201,6 +1161,7 @@
             userData.name = $("input[name='Name']").val();
             userData.phoneNum = $("input[name='phoneNum']").val();
             userData.email = $("input[name='Email']").val();
+            userData.specialReq = $("#special-request").val() || 'There Are no Requests';
 
             userData.destination = $("input[name='destination']:checked").map(function () {
                 return $(this).val();
@@ -1248,6 +1209,7 @@
             $("#confirmation-container #user-traveler-num").html(`= ${+userData.adultsNum + +userData.childrenNum} traveler`);
             $("#confirmation-container #user-phone-num").html(` ${userData.counkey || "+966" + userData.phoneNum}`);
             $("#confirmation-container #user-name").html(` ${userData.name}`);
+            $("#confirmation-container #user-special-req").html(`${userData.specialReq}`);
 
             if (userData.budget === "later") {
                 $("#confirmation-container #user-budget").html("Will Decide later");
@@ -1265,7 +1227,7 @@
             validateStep5();
             if (validateStep5()) {
                 showConfirmation();
-            } 
+            }
         });
 
         $(".b2b-nxt-btn").on("click", function (e) {
