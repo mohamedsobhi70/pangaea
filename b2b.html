@@ -114,9 +114,8 @@
                                                     </label>
 
                                                 </div>
-                                                <p class="erro-msg hidden text-[#D92D20] text-xs leading-[160%]">
-                                                    This field is required; please enter when would you like your trip
-                                                    to depart? to continue.
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
                                                 </p>
                                             </fieldset>
 
@@ -195,6 +194,9 @@
 
                                                     </ul>
                                                 </div>
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <!-- How big is your group? -->
@@ -253,6 +255,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                         </div>
@@ -342,6 +347,9 @@
                                                         </span>
                                                     </label>
                                                 </div>
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <!-- Do you have any special request for your trip? -->
@@ -412,7 +420,9 @@
                                                         </span>
                                                     </div>
                                                 </div>
-
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <!-- When would you like your trip to depart?-->
@@ -427,7 +437,9 @@
 
                                                 <input type="date" name="tripdate" id="tripdate" required
                                                     class="inpt-field py-3 px-4 rounded-xl placeholder:text-[#515456] text-[#515456] text-sm bg-[#F5F5F5]">
-
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <!-- Are you flexible with the trip date?-->
@@ -461,6 +473,9 @@
                                                     </label>
 
                                                 </div>
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                         </div>
@@ -532,6 +547,9 @@
                                                         </span>
                                                     </label>
                                                 </div>
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <!-- Fieldset for Exact Budget Amount -->
@@ -610,6 +628,9 @@
                                                 <input type="text" name="Name" id="Name" required
                                                     class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5] req-inpt"
                                                     placeholder="Enter your Name">
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <!-- Phone Number-->
@@ -631,6 +652,9 @@
                                                         class="flex-1 py-3 px-4 placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5] req-inpt"
                                                         placeholder="Enter your Whatsapp number">
                                                 </div>
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                             <!-- Email-->
@@ -645,6 +669,9 @@
                                                 <input type="email" name="Email" id="Email" required
                                                     class="py-3 px-4 rounded-xl placeholder:text-[#515456] text-Neutral-900 text-sm bg-[#F5F5F5] req-inpt"
                                                     placeholder="Enter your Email">
+                                                <p class="error-msg hidden text-[#D92D20] text-xs leading-[160%]">
+                                                    This field is required
+                                                </p>
                                             </fieldset>
 
                                         </div>
@@ -811,14 +838,12 @@
 
                             </div>
                         </div>
-<!--  hideConfirmation() -->
                         <div
                             class="z-10 lg:z-auto border-t border-Neutral-100 shadow-b2bcta py-4 px-5 lg:p-0 fixed lg:static bottom-0 left-0 w-full bg-white lg:bg-transparent lg:shadow-none lg:border-t-0 flex items-center gap-5">
                             <span role="button" onclick="hideConfirmation()"
-                            class="w-14 h-14 border border-neutral-300 rounded-full flex items-center justify-center shrink-0">
-                            <img src="assets/images/icons/chevron-left.svg" width="24" height="24"
-                                alt="backIcon">
-                        </span> <input type="submit" value="Confirm"
+                                class="w-14 h-14 border border-neutral-300 rounded-full flex items-center justify-center shrink-0">
+                                <img src="assets/images/icons/chevron-left.svg" width="24" height="24" alt="backIcon">
+                            </span> <input type="submit" value="Confirm"
                                 class="rounded-full !bg-[#DB3B3B] py-4 px-8 font-semibold font-Eczar text-white flex items-center justify-center w-full">
                         </div>
 
@@ -919,7 +944,7 @@
             if (n == 1 && !validateForm()) return false;
             allSteps.eq(currentTab).hide();
             currentTab = currentTab + n;
-            if (currentTab >= allSteps.length) {
+            if (currentTab > allSteps.length) {
                 $("#regForm").submit();
                 return false;
             }
@@ -928,22 +953,225 @@
         }
 
         function validateForm() {
-            var allSteps, y, i, valid = true;
-            allSteps = $(".b2b-step-itm");
-            y = allSteps.eq(currentTab).find(".req-inpt");
+            let valid = true;
 
-            for (i = 0; i < y.length; i++) {
-                console.log(y.eq(i).val());
-                if (y.eq(i).val() == "") {
-                    valid = false;
-                }
-            }
-            if (valid) {
-                $(".step").eq(currentTab).addClass("finish");
+            switch (currentTab) {
+                case 0: valid = validateStep1();
+                    break;
+                case 1: valid = validateStep2();
+                    break;
+                case 2: valid = validateStep3();
+                    break;
+                case 3: valid = validateStep4();
+                    break;
+                case 4: valid = validateStep5();
+                    break;
             }
             return valid;
         }
 
+        // validate step- 1
+        function validateStep1() {
+            // Validate radio buttons
+            let isRadioButtonChecked = $('input[name="whoTravel"]:checked').length > 0;
+
+            // Validate multi-select
+            let isDestinationSelected = $('input[name="destination"]:checked').length > 0;
+
+            // Validate number inputs
+            let adultsNum = parseInt($('#adults-num').val());
+            let isAdultsValid = adultsNum > 0;
+
+            // Collect all validation results
+            let validationResults = [
+                { isValid: isRadioButtonChecked, selector: 'input[name="whoTravel"]' },
+                { isValid: isDestinationSelected, selector: 'input[name="destination"]' },
+                { isValid: isAdultsValid, selector: '#adults-num' }
+            ];
+
+            // Display error messages for all invalid inputs
+            validationResults.forEach(function (result) {
+                if (!result.isValid) {
+                    $(result.selector).closest("fieldset").find(".error-msg").removeClass("hidden");
+                } else {
+                    $(result.selector).closest("fieldset").find(".error-msg").addClass("hidden");
+                }
+            });
+
+            // If any validation fails, return false
+            if (validationResults.some(result => !result.isValid)) {
+                return false;
+            }
+
+            // If all validations pass, return true
+            return true;
+        }
+
+        // validate step- 2
+        function validateStep2() {
+            // Validate checkbox inputs
+            let isThemeSelected = $('input[name="themes"]:checked').length > 0;
+
+            // Validate textarea
+            let specialRequest = $('#special-request').val().trim();
+
+            // Collect all validation results
+            let validationResults = [
+                { isValid: isThemeSelected, selector: 'input[name="themes"]' },
+            ];
+
+            // Display error messages for all invalid inputs
+            validationResults.forEach(function (result) {
+                if (!result.isValid) {
+                    $(result.selector).closest("fieldset").find(".error-msg").removeClass("hidden");
+                } else {
+                    $(result.selector).closest("fieldset").find(".error-msg").addClass("hidden");
+                }
+            });
+
+            // If any validation fails, return false
+            if (validationResults.some(result => !result.isValid)) {
+                return false;
+            }
+
+            // If all validations pass, return true
+            return true;
+        }
+
+        // validate step-3
+        function validateStep3() {
+
+            let daysNum = parseInt($('#day-num').val());
+            let isdaysValid = daysNum > 0;
+
+            // Validate trip duration
+            let tripDuration = $('input[name="tripdate"]').val();
+            let isTripDateValid = tripDuration !== '';
+
+            // Validate trip date flexibility
+            let isFlexibleChecked = $('#Flexible').is(':checked');
+            let isNotFlexibleChecked = $('#notFlexible').is(':checked');
+            let isFlexibilityValid = isFlexibleChecked || isNotFlexibleChecked;
+
+            // Collect all validation results
+            let validationResults = [
+                { isValid: isTripDateValid, selector: 'input[type="date"]' },
+                { isValid: isFlexibilityValid, selector: 'input[name="Flexiblty"]' },
+                { isValid: isdaysValid, selector: '#day-num' }
+            ];
+
+            // Display error messages for all invalid inputs
+            validationResults.forEach(function (result) {
+                if (!result.isValid) {
+                    $(result.selector).closest("fieldset").find(".error-msg").removeClass("hidden");
+                } else {
+                    $(result.selector).closest("fieldset").find(".error-msg").addClass("hidden");
+                }
+            });
+
+            // If any validation fails, return false
+            if (validationResults.some(result => !result.isValid)) {
+                return false;
+            }
+
+            // If all validations pass, return true
+            return true;
+        }
+
+        // validate step- 4
+        function validateStep4() {
+            // Validate budget selection
+            let budgetSelection = $('input[name="budget"]:checked').val();
+
+            let isBudgetSelectionValid = budgetSelection !== undefined;
+
+            // Validate budget amount or range based on the selection
+            let isBudgetAmountValid = true;
+            let isMinimumBudgetValid = true;
+            let isMaximumBudgetValid = true;
+
+            if (budgetSelection) {
+                switch (budgetSelection) {
+                    case "exact":
+                        let exactBudgetAmount = $('#BudgetAmount').val().trim();
+                        isBudgetAmountValid = exactBudgetAmount !== '';
+                        break;
+                    case "range":
+                        let minimumBudget = $('#MinimumBudget').val().trim();
+                        let maximumBudget = $('#MaximumBudget').val().trim();
+                        isMinimumBudgetValid = minimumBudget !== '';
+                        isMaximumBudgetValid = maximumBudget !== '';
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            // Collect all validation results
+            let validationResults = [
+                { isValid: isBudgetSelectionValid, selector: 'input[name="budget"]' },
+                { isValid: isBudgetAmountValid, selector: '#BudgetAmount' },
+                { isValid: isMinimumBudgetValid, selector: '#MinimumBudget' },
+                { isValid: isMaximumBudgetValid, selector: '#MaximumBudget' }
+            ];
+
+            // Display error messages for all invalid inputs
+            validationResults.forEach(function (result) {
+                if (!result.isValid) {
+                    $(result.selector).closest("fieldset").find(".error-msg").removeClass("hidden");
+                } else {
+                    $(result.selector).closest("fieldset").find(".error-msg").addClass("hidden");
+                }
+            });
+
+            // If any validation fails, return false
+            if (validationResults.some(result => !result.isValid)) {
+                return false;
+            }
+
+            // If all validations pass, return true
+            return true;
+        }
+
+        // validate step- 5
+        function validateStep5() {
+            // Validate name
+            let name = $('#Name').val().trim();
+            let isNameValid = name !== '';
+
+            // Validate phone number
+            let phoneNumber = $('#phoneNum').val().trim();
+            let isPhoneNumberValid = phoneNumber !== '';
+
+            // Validate email
+            let email = $('#Email').val().trim();
+            let isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+            // Collect all validation results
+            let validationResults = [
+                { isValid: isNameValid, selector: '#Name' },
+                { isValid: isPhoneNumberValid, selector: '#phoneNum' },
+                { isValid: isEmailValid, selector: '#Email' }
+            ];
+
+            // Display error messages for all invalid inputs
+            validationResults.forEach(function (result) {
+                if (!result.isValid) {
+                    $(result.selector).closest("fieldset").find(".error-msg").removeClass("hidden");
+                } else {
+                    $(result.selector).closest("fieldset").find(".error-msg").addClass("hidden");
+                }
+            });
+
+            // If any validation fails, return false
+            if (validationResults.some(result => !result.isValid)) {
+                return false;
+            }
+
+            // If all validations pass, return true
+            return true;
+        }
+      
         function fixStepIndicator(n) {
             $(".step-num").html((n + 1));
             $(".step-progress").css("width", ((n + 1) * 100 / 6) + "%");
@@ -999,14 +1227,14 @@
             $("#steps-container").removeClass("hidden");
             $("#confirmation-container").addClass("hidden");
         }
-      
+
         function confirmUserData() {
             $("#confirmation-container #user-locations").html(userData.destination.join(", "));
             $("#confirmation-container #user-adult-num").html(userData.adultsNum);
             $("#confirmation-container #user-child-num").html(userData.childrenNum);
             $("#confirmation-container #user-themes").html(userData.themes.join(", "));
             $("#confirmation-container #user-trip-date").html(userData.tripdate);
-            $("#confirmation-container #user-duration").html(`${userData.dayNum}Days`);
+            $("#confirmation-container #user-duration").html(`${userData.dayNum} Days`);
             $("#confirmation-container #user-traveler-num").html(`= ${+userData.adultsNum + +userData.childrenNum} traveler`);
             $("#confirmation-container #user-phone-num").html(` ${userData.counkey || "+966" + userData.phoneNum}`);
             $("#confirmation-container #user-name").html(` ${userData.name}`);
@@ -1018,13 +1246,16 @@
                 $("#confirmation-container #user-budget").html(userData.budgetAmount + " SAR");
             }
             else if (userData.budget === "range") {
-                $("#confirmation-container #user-budget").html(`${userData.minimumBudget} SAR - ${userData.maximumBudget} SAR`);
+                $("#confirmation-container #user-budget").html(`${userData.minimumBudget} - ${userData.maximumBudget} SAR`);
             }
         }
 
         $(".confirm-btn").on("click", function (e) {
             e.preventDefault();
-            showConfirmation()
+            validateStep5();
+            if (validateStep5()) {
+                showConfirmation();
+            } 
         });
 
         $(".b2b-nxt-btn").on("click", function (e) {
