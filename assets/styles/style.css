@@ -3507,6 +3507,10 @@ select:focus {
   width: 1.5rem;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .w-\[100px\] {
   width: 100px;
 }
@@ -3566,10 +3570,6 @@ select:focus {
 
 .w-full {
   width: 100%;
-}
-
-.w-7 {
-  width: 1.75rem;
 }
 
 .min-w-24 {
