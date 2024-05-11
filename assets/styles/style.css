@@ -3736,6 +3736,10 @@ select:focus {
   height: 100%;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .max-h-\[70\%\] {
   max-height: 70%;
 }
@@ -4240,6 +4244,10 @@ select:focus {
   border-width: 10px;
 }
 
+.border-4 {
+  border-width: 4px;
+}
+
 .border-y {
   border-top-width: 1px;
   border-bottom-width: 1px;
@@ -4263,6 +4271,10 @@ select:focus {
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-s-\[6px\] {
+  border-inline-start-width: 6px;
 }
 
 .border-none {
@@ -4362,6 +4374,11 @@ select:focus {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-\[\#D54736\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(213 71 54 / var(--tw-border-opacity));
+}
+
 .border-e-Neutral-200 {
   --tw-border-opacity: 1;
   border-inline-end-color: rgb(224 225 225 / var(--tw-border-opacity));
@@ -4370,6 +4387,10 @@ select:focus {
 .border-t-Neutral-200 {
   --tw-border-opacity: 1;
   border-top-color: rgb(224 225 225 / var(--tw-border-opacity));
+}
+
+.border-s-\[\] {
+  border-inline-start-color: ;
 }
 
 .\!bg-\[\#DB3B3B\] {
