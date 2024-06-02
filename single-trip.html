@@ -55,7 +55,7 @@
                         </div>
 
                         <nav class="xl:flex items-center gap-3 justify-between grow xl:grow-0 relative">
-                            
+
                             <ul class="flex flex-col xl:flex-row xl:items-center xl:gap-1 xl:justify-between xl:grow"
                                 id="nav-list">
 
@@ -274,7 +274,18 @@
                                 moreButton.addEventListener('click', function () {
                                     dropdownMenu.classList.toggle('show');
                                 });
+                                
+                                document.addEventListener('click', function (event) {
+                                    if (!dropdownMenu.contains(event.target) && !moreButton.contains(event.target)) {
+                                        console.log("yes");
+                                        dropdownMenu.classList.remove('show');
+                                    }else{
+                                        console.log("no");
+    
+                                    }
+                                });
                             });
+
                         </script>
 
                         <div class="p-5 pb-6 xl:p-0 xl:ms-auto order-first xl:order-none">
