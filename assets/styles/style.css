@@ -3108,7 +3108,7 @@ select:focus {
 
 #more-dropdown-menu {
   top: 100%;
-  inset-inline-end: 0px;
+  inset-inline-start: 94%;
   min-width: 20rem;
 }
 
