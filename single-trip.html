@@ -10,6 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
     <link rel="stylesheet" href="assets/styles/swiper.css">
     <link rel="stylesheet" href="assets/styles/lightbox.css">
     <link rel="stylesheet" href="assets/styles/style.css">
@@ -63,8 +64,12 @@
                                         <span class="grow shrink-0">
                                             Destinations
                                         </span>
-                                        <svg class="-rotate-90 xl:rotate-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="xl:group-hover:stroke-Brand-Dark" d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667" stroke="#646768" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <svg class="-rotate-90 xl:rotate-0" width="16" height="16" viewBox="0 0 16 16"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="xl:group-hover:stroke-Brand-Dark"
+                                                d="M13.2802 5.96667L8.93355 10.3133C8.42021 10.8267 7.58021 10.8267 7.06688 10.3133L2.72021 5.96667"
+                                                stroke="#646768" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
                                         </svg>
                                     </a>
 
@@ -172,7 +177,7 @@
                                                             </div>
                                                         </div>
                                                     </li>
-                                                                                                
+
                                                     <li class="submenu-nav-item-has-menu">
                                                         <span class="p-2.5 text-[#121617] block">
                                                             Africa and The Middle East
@@ -355,7 +360,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="blog.html" class="nav-link">
                                         <span class="grow shrink-0">
                                             Blog
                                         </span>
@@ -425,14 +430,10 @@
                                 moreButton.addEventListener('click', function () {
                                     dropdownMenu.classList.toggle('show');
                                 });
-                                
+
                                 document.addEventListener('click', function (event) {
                                     if (!dropdownMenu.contains(event.target) && !moreButton.contains(event.target)) {
-                                        console.log("yes");
                                         dropdownMenu.classList.remove('show');
-                                    }else{
-                                        console.log("no");
-    
                                     }
                                 });
                             });
@@ -463,8 +464,7 @@
 
                         <div class="flex flex-col xl:items-end gap-6 xl:gap-1 px-5 py-8 xl:p-0">
                             <div class="relative cur-lang">
-                                <div
-                                    class="ps-5 flex items-center justify-between gap-2.5 cursor-pointer">
+                                <div class="ps-5 flex items-center justify-between gap-2.5 cursor-pointer">
                                     <span class="text-Black xl:text-Neutral-700 text-sm grow">
                                         English
                                     </span>
@@ -600,55 +600,89 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 rounded-2xl overflow-hidden">
 
                         <div class="gallery-item lg:col-span-2 lg:row-span-2 overflow-hidden h-60 lg:h-[496px]">
-                            <img src="assets/images/tripg-1.webp" class="w-full h-full object-cover object-center"
-                                width="522" height="496" alt="trip">
+                            <a href="assets/images/tripg-1.webp" data-fancybox="trip-gallery">
+                                <img src="assets/images/tripg-1.webp" class="w-full h-full object-cover object-center"
+                                    width="522" height="496" alt="trip">
+                            </a>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="assets/images/tripg-2.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
+                            <a href="assets/images/tripg-2.webp" data-fancybox="trip-gallery">
+                                
+                                <img src="assets/images/tripg-2.webp" class="w-full h-full object-cover object-center"
+                                    width="240" height="240" alt="trip">
+                            </a>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="assets/images/tripg-3.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
+                            <a href="assets/images/tripg-3.webp" data-fancybox="trip-gallery">
+                                
+                                <img src="assets/images/tripg-3.webp" class="w-full h-full object-cover object-center"
+                                    width="240" height="240" alt="trip">
+                            </a>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="assets/images/tripg-4.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
+                            <a href="assets/images/tripg-4.webp" data-fancybox="trip-gallery">
+                               
+                                <img src="assets/images/tripg-4.webp" class="w-full h-full object-cover object-center"
+                                    width="240" height="240" alt="trip">
+                            </a>
                         </div>
 
                         <div class="gallery-item">
-                            <img src="assets/images/tripg-5.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
+                            <a href="assets/images/tripg-5.webp" data-fancybox="trip-gallery">
+                                <img src="assets/images/tripg-5.webp" class="w-full h-full object-cover object-center"
+                                    width="240" height="240" alt="trip">
+                                </a>
+                                
                         </div>
 
                         <div class="gallery-item">
-                            <img src="assets/images/tripg-4.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
+                            <a href="assets/images/tripg-4.webp" data-fancybox="trip-gallery">
+                                <img src="assets/images/tripg-4.webp" class="w-full h-full object-cover object-center"
+                                    width="240" height="240" alt="trip">
+                              
+                            </a>
                         </div>
 
                         <div class="gallery-item">
-                            <div class="absolute w-full h-full bg-black bg-opacity-50 top-0 start-0">
-                                <div
-                                    class=" flex flex-col items-center justify-center gap-4 text-Dark-1-Primary h-full">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="0.4"
-                                            d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
-                                            fill="#F5F5F5" />
-                                        <path
-                                            d="M10.7397 16.28C10.5497 16.28 10.3597 16.21 10.2097 16.06C9.91969 15.77 9.91969 15.29 10.2097 15L13.2097 12L10.2097 9C9.91969 8.71 9.91969 8.23 10.2097 7.94C10.4997 7.65 10.9797 7.65 11.2697 7.94L14.7997 11.47C15.0897 11.76 15.0897 12.24 14.7997 12.53L11.2697 16.06C11.1197 16.21 10.9297 16.28 10.7397 16.28Z"
-                                            fill="#F5F5F5" />
-                                    </svg>
-                                    <span class="">
-                                        All photos
-                                    </span>
+                            <a href="assets/images/tripg-2.webp" data-fancybox="trip-gallery">
+                                <div class="absolute w-full h-full bg-black bg-opacity-50 top-0 start-0">
+                                    <div
+                                        class=" flex flex-col items-center justify-center gap-4 text-Dark-1-Primary h-full">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.4"
+                                                d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
+                                                fill="#F5F5F5" />
+                                            <path
+                                                d="M10.7397 16.28C10.5497 16.28 10.3597 16.21 10.2097 16.06C9.91969 15.77 9.91969 15.29 10.2097 15L13.2097 12L10.2097 9C9.91969 8.71 9.91969 8.23 10.2097 7.94C10.4997 7.65 10.9797 7.65 11.2697 7.94L14.7997 11.47C15.0897 11.76 15.0897 12.24 14.7997 12.53L11.2697 16.06C11.1197 16.21 10.9297 16.28 10.7397 16.28Z"
+                                                fill="#F5F5F5" />
+                                        </svg>
+                                        <span class="">
+                                            All photos
+                                        </span>
+                                    </div>
                                 </div>
-                            </div>
-                            <img src="assets/images/tripg-2.webp" class="w-full h-full object-cover object-center"
-                                width="240" height="240" alt="trip">
+                                <img src="assets/images/tripg-2.webp" class="w-full h-full object-cover object-center"
+                                    width="240" height="240" alt="trip">
+                            </a>
+                        </div>
+                       
+                        <div class="gallery-item hidden">
+                            <a href="assets/images/tripg-5.webp" data-fancybox="trip-gallery">
+                                <img src="assets/images/tripg-5.webp" class="w-full h-full object-cover object-center"
+                                    width="240" height="240" alt="trip">
+                              
+                            </a>
+                        </div>
+                        <div class="gallery-item hidden">
+                            <a href="assets/images/tripg-3.webp" data-fancybox="trip-gallery">
+                                <img src="assets/images/tripg-3.webp" class="w-full h-full object-cover object-center"
+                                    width="240" height="240" alt="trip">
+                              
+                            </a>
                         </div>
 
                         <!-- Lightbox Overlay -->
@@ -2541,12 +2575,13 @@
     <!-- ============================================================================== -->
 
     <script src="assets/scripts/jquiry.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
     <script src="assets/scripts/lightbox.js"></script>
     <script src="assets/scripts/moment.js"></script>
     <script src="assets/scripts/litepicker.js"></script>
     <script src="assets/scripts/swiper.js"></script>
     <script src="assets/scripts/script.js"></script>
-    <script>
+    <!-- <script>
         const lightbox = document.getElementById('gallery-lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const closeBtn = document.getElementById('lightbox-close-btn');
@@ -2595,7 +2630,7 @@
                 lightbox.classList.add('hidden');
             }
         });      
-    </script>
+    </script> -->
 </body>
 
 </html>
